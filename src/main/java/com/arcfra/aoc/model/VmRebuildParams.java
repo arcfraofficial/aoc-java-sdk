@@ -1,0 +1,1549 @@
+package com.arcfra.aoc.model;
+
+
+import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+/** VmRebuildParams */
+@javax.annotation.Generated(value = "JavaAocClientCodegen")
+public class VmRebuildParams extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_OWNER = "owner";
+
+    @SerializedName(SERIALIZED_NAME_OWNER)
+    private VmOwnerParams owner;
+
+    public static final String SERIALIZED_NAME_GPU_DEVICES = "gpu_devices";
+
+    @SerializedName(SERIALIZED_NAME_GPU_DEVICES)
+    private List<VmGpuOperationParams> gpuDevices = null;
+
+    public static final String SERIALIZED_NAME_IS_FULL_COPY = "is_full_copy";
+
+    @SerializedName(SERIALIZED_NAME_IS_FULL_COPY)
+    private Boolean isFullCopy;
+
+    public static final String SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID =
+            "rebuild_from_snapshot_id";
+
+    @SerializedName(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID)
+    private String rebuildFromSnapshotId;
+
+    public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
+
+    @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
+    private VmDiskIoRestrictType maxBandwidthPolicy;
+
+    public static final String SERIALIZED_NAME_MAX_BANDWIDTH_UNIT = "max_bandwidth_unit";
+
+    @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT)
+    private BPSUnit maxBandwidthUnit;
+
+    public static final String SERIALIZED_NAME_MAX_BANDWIDTH = "max_bandwidth";
+
+    @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH)
+    private Long maxBandwidth;
+
+    public static final String SERIALIZED_NAME_MAX_IOPS_POLICY = "max_iops_policy";
+
+    @SerializedName(SERIALIZED_NAME_MAX_IOPS_POLICY)
+    private VmDiskIoRestrictType maxIopsPolicy;
+
+    public static final String SERIALIZED_NAME_MAX_IOPS = "max_iops";
+
+    @SerializedName(SERIALIZED_NAME_MAX_IOPS)
+    private Long maxIops;
+
+    public static final String SERIALIZED_NAME_IO_POLICY = "io_policy";
+
+    @SerializedName(SERIALIZED_NAME_IO_POLICY)
+    private VmDiskIoPolicy ioPolicy;
+
+    public static final String SERIALIZED_NAME_VCPU = "vcpu";
+
+    @SerializedName(SERIALIZED_NAME_VCPU)
+    private Integer vcpu;
+
+    public static final String SERIALIZED_NAME_STATUS = "status";
+
+    @SerializedName(SERIALIZED_NAME_STATUS)
+    private VmStatus status;
+
+    public static final String SERIALIZED_NAME_FIRMWARE = "firmware";
+
+    @SerializedName(SERIALIZED_NAME_FIRMWARE)
+    private VmFirmware firmware;
+
+    public static final String SERIALIZED_NAME_HA_PRIORITY = "ha_priority";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY)
+    private VmHaPriority haPriority;
+
+    public static final String SERIALIZED_NAME_HA = "ha";
+
+    @SerializedName(SERIALIZED_NAME_HA)
+    private Boolean ha;
+
+    public static final String SERIALIZED_NAME_PCI_NICS = "pci_nics";
+
+    @SerializedName(SERIALIZED_NAME_PCI_NICS)
+    private NicWhereInput pciNics;
+
+    public static final String SERIALIZED_NAME_VM_PLACEMENT_GROUP = "vm_placement_group";
+
+    @SerializedName(SERIALIZED_NAME_VM_PLACEMENT_GROUP)
+    private VmPlacementGroupWhereInput vmPlacementGroup;
+
+    public static final String SERIALIZED_NAME_VM_NICS = "vm_nics";
+
+    @SerializedName(SERIALIZED_NAME_VM_NICS)
+    private List<VmNicParams> vmNics = null;
+
+    public static final String SERIALIZED_NAME_VM_DISKS = "vm_disks";
+
+    @SerializedName(SERIALIZED_NAME_VM_DISKS)
+    private VmDiskParams vmDisks;
+
+    public static final String SERIALIZED_NAME_MEMORY_UNIT = "memory_unit";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_UNIT)
+    private ByteUnit memoryUnit;
+
+    public static final String SERIALIZED_NAME_MEMORY = "memory";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY)
+    private Long memory;
+
+    public static final String SERIALIZED_NAME_CPU_CORES = "cpu_cores";
+
+    @SerializedName(SERIALIZED_NAME_CPU_CORES)
+    private Integer cpuCores;
+
+    public static final String SERIALIZED_NAME_CPU_SOCKETS = "cpu_sockets";
+
+    @SerializedName(SERIALIZED_NAME_CPU_SOCKETS)
+    private Integer cpuSockets;
+
+    public static final String SERIALIZED_NAME_GUEST_OS_TYPE = "guest_os_type";
+
+    @SerializedName(SERIALIZED_NAME_GUEST_OS_TYPE)
+    private VmGuestsOperationSystem guestOsType;
+
+    public static final String SERIALIZED_NAME_FOLDER_ID = "folder_id";
+
+    @SerializedName(SERIALIZED_NAME_FOLDER_ID)
+    private String folderId;
+
+    public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+
+    @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+    private String description;
+
+    public static final String SERIALIZED_NAME_NAME = "name";
+
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
+
+    public static final String SERIALIZED_NAME_HOST_ID = "host_id";
+
+    @SerializedName(SERIALIZED_NAME_HOST_ID)
+    private String hostId;
+
+    public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
+
+    @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
+    private String clusterId;
+
+    public VmRebuildParams() {}
+
+    public VmRebuildParams owner(VmOwnerParams owner) {
+
+        this.owner = owner;
+        return this;
+    }
+
+    /**
+     * Get owner
+     *
+     * @return owner
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmOwnerParams getOwner() {
+        return owner;
+    }
+
+    public void setOwner(VmOwnerParams owner) {
+        this.owner = owner;
+    }
+
+    public VmRebuildParams owner_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OWNER);
+        return this;
+    }
+
+    public VmRebuildParams owner_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OWNER);
+        return this;
+    }
+
+    public void setOwner_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OWNER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OWNER);
+        }
+    }
+
+    public boolean getOwner_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OWNER);
+    }
+
+    public VmRebuildParams gpuDevices(List<VmGpuOperationParams> gpuDevices) {
+
+        this.gpuDevices = gpuDevices;
+        return this;
+    }
+
+    public VmRebuildParams addGpuDevicesItem(VmGpuOperationParams gpuDevicesItem) {
+        if (this.gpuDevices == null) {
+            this.gpuDevices = new ArrayList<VmGpuOperationParams>();
+        }
+        this.gpuDevices.add(gpuDevicesItem);
+        return this;
+    }
+
+    /**
+     * Get gpuDevices
+     *
+     * @return gpuDevices
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmGpuOperationParams> getGpuDevices() {
+        return gpuDevices;
+    }
+
+    public void setGpuDevices(List<VmGpuOperationParams> gpuDevices) {
+        this.gpuDevices = gpuDevices;
+    }
+
+    public VmRebuildParams gpuDevices_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_GPU_DEVICES);
+        return this;
+    }
+
+    public VmRebuildParams gpuDevices_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_GPU_DEVICES);
+        return this;
+    }
+
+    public void setGpuDevices_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_GPU_DEVICES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_GPU_DEVICES);
+        }
+    }
+
+    public boolean getGpuDevices_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_GPU_DEVICES);
+    }
+
+    public VmRebuildParams isFullCopy(Boolean isFullCopy) {
+
+        this.isFullCopy = isFullCopy;
+        return this;
+    }
+
+    /**
+     * Get isFullCopy
+     *
+     * @return isFullCopy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getIsFullCopy() {
+        return isFullCopy;
+    }
+
+    public void setIsFullCopy(Boolean isFullCopy) {
+        this.isFullCopy = isFullCopy;
+    }
+
+    public VmRebuildParams isFullCopy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IS_FULL_COPY);
+        return this;
+    }
+
+    public VmRebuildParams isFullCopy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IS_FULL_COPY);
+        return this;
+    }
+
+    public void setIsFullCopy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IS_FULL_COPY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IS_FULL_COPY);
+        }
+    }
+
+    public boolean getIsFullCopy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IS_FULL_COPY);
+    }
+
+    public VmRebuildParams rebuildFromSnapshotId(String rebuildFromSnapshotId) {
+
+        this.rebuildFromSnapshotId = rebuildFromSnapshotId;
+        return this;
+    }
+
+    /**
+     * Get rebuildFromSnapshotId
+     *
+     * @return rebuildFromSnapshotId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getRebuildFromSnapshotId() {
+        return rebuildFromSnapshotId;
+    }
+
+    public void setRebuildFromSnapshotId(String rebuildFromSnapshotId) {
+        this.rebuildFromSnapshotId = rebuildFromSnapshotId;
+    }
+
+    public VmRebuildParams rebuildFromSnapshotId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID);
+        return this;
+    }
+
+    public VmRebuildParams rebuildFromSnapshotId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID);
+        return this;
+    }
+
+    public void setRebuildFromSnapshotId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID);
+        }
+    }
+
+    public boolean getRebuildFromSnapshotId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REBUILD_FROM_SNAPSHOT_ID);
+    }
+
+    public VmRebuildParams maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
+
+        this.maxBandwidthPolicy = maxBandwidthPolicy;
+        return this;
+    }
+
+    /**
+     * Get maxBandwidthPolicy
+     *
+     * @return maxBandwidthPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmDiskIoRestrictType getMaxBandwidthPolicy() {
+        return maxBandwidthPolicy;
+    }
+
+    public void setMaxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
+        this.maxBandwidthPolicy = maxBandwidthPolicy;
+    }
+
+    public VmRebuildParams maxBandwidthPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY);
+        return this;
+    }
+
+    public VmRebuildParams maxBandwidthPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY);
+        return this;
+    }
+
+    public void setMaxBandwidthPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY);
+        }
+    }
+
+    public boolean getMaxBandwidthPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY);
+    }
+
+    public VmRebuildParams maxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+
+        this.maxBandwidthUnit = maxBandwidthUnit;
+        return this;
+    }
+
+    /**
+     * Get maxBandwidthUnit
+     *
+     * @return maxBandwidthUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BPSUnit getMaxBandwidthUnit() {
+        return maxBandwidthUnit;
+    }
+
+    public void setMaxBandwidthUnit(BPSUnit maxBandwidthUnit) {
+        this.maxBandwidthUnit = maxBandwidthUnit;
+    }
+
+    public VmRebuildParams maxBandwidthUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT);
+        return this;
+    }
+
+    public VmRebuildParams maxBandwidthUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT);
+        return this;
+    }
+
+    public void setMaxBandwidthUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT);
+        }
+    }
+
+    public boolean getMaxBandwidthUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MAX_BANDWIDTH_UNIT);
+    }
+
+    public VmRebuildParams maxBandwidth(Long maxBandwidth) {
+
+        this.maxBandwidth = maxBandwidth;
+        return this;
+    }
+
+    /**
+     * Get maxBandwidth
+     *
+     * @return maxBandwidth
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getMaxBandwidth() {
+        return maxBandwidth;
+    }
+
+    public void setMaxBandwidth(Long maxBandwidth) {
+        this.maxBandwidth = maxBandwidth;
+    }
+
+    public VmRebuildParams maxBandwidth_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MAX_BANDWIDTH);
+        return this;
+    }
+
+    public VmRebuildParams maxBandwidth_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MAX_BANDWIDTH);
+        return this;
+    }
+
+    public void setMaxBandwidth_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MAX_BANDWIDTH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MAX_BANDWIDTH);
+        }
+    }
+
+    public boolean getMaxBandwidth_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MAX_BANDWIDTH);
+    }
+
+    public VmRebuildParams maxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+
+        this.maxIopsPolicy = maxIopsPolicy;
+        return this;
+    }
+
+    /**
+     * Get maxIopsPolicy
+     *
+     * @return maxIopsPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmDiskIoRestrictType getMaxIopsPolicy() {
+        return maxIopsPolicy;
+    }
+
+    public void setMaxIopsPolicy(VmDiskIoRestrictType maxIopsPolicy) {
+        this.maxIopsPolicy = maxIopsPolicy;
+    }
+
+    public VmRebuildParams maxIopsPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MAX_IOPS_POLICY);
+        return this;
+    }
+
+    public VmRebuildParams maxIopsPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MAX_IOPS_POLICY);
+        return this;
+    }
+
+    public void setMaxIopsPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MAX_IOPS_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MAX_IOPS_POLICY);
+        }
+    }
+
+    public boolean getMaxIopsPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MAX_IOPS_POLICY);
+    }
+
+    public VmRebuildParams maxIops(Long maxIops) {
+
+        this.maxIops = maxIops;
+        return this;
+    }
+
+    /**
+     * Get maxIops
+     *
+     * @return maxIops
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getMaxIops() {
+        return maxIops;
+    }
+
+    public void setMaxIops(Long maxIops) {
+        this.maxIops = maxIops;
+    }
+
+    public VmRebuildParams maxIops_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MAX_IOPS);
+        return this;
+    }
+
+    public VmRebuildParams maxIops_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MAX_IOPS);
+        return this;
+    }
+
+    public void setMaxIops_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MAX_IOPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MAX_IOPS);
+        }
+    }
+
+    public boolean getMaxIops_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MAX_IOPS);
+    }
+
+    public VmRebuildParams ioPolicy(VmDiskIoPolicy ioPolicy) {
+
+        this.ioPolicy = ioPolicy;
+        return this;
+    }
+
+    /**
+     * Get ioPolicy
+     *
+     * @return ioPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmDiskIoPolicy getIoPolicy() {
+        return ioPolicy;
+    }
+
+    public void setIoPolicy(VmDiskIoPolicy ioPolicy) {
+        this.ioPolicy = ioPolicy;
+    }
+
+    public VmRebuildParams ioPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IO_POLICY);
+        return this;
+    }
+
+    public VmRebuildParams ioPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IO_POLICY);
+        return this;
+    }
+
+    public void setIoPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IO_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IO_POLICY);
+        }
+    }
+
+    public boolean getIoPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IO_POLICY);
+    }
+
+    public VmRebuildParams vcpu(Integer vcpu) {
+
+        this.vcpu = vcpu;
+        return this;
+    }
+
+    /**
+     * Get vcpu
+     *
+     * @return vcpu
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getVcpu() {
+        return vcpu;
+    }
+
+    public void setVcpu(Integer vcpu) {
+        this.vcpu = vcpu;
+    }
+
+    public VmRebuildParams vcpu_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VCPU);
+        return this;
+    }
+
+    public VmRebuildParams vcpu_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VCPU);
+        return this;
+    }
+
+    public void setVcpu_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VCPU);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VCPU);
+        }
+    }
+
+    public boolean getVcpu_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VCPU);
+    }
+
+    public VmRebuildParams status(VmStatus status) {
+
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return status
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(VmStatus status) {
+        this.status = status;
+    }
+
+    public VmRebuildParams status_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STATUS);
+        return this;
+    }
+
+    public VmRebuildParams status_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STATUS);
+        return this;
+    }
+
+    public void setStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STATUS);
+        }
+    }
+
+    public boolean getStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STATUS);
+    }
+
+    public VmRebuildParams firmware(VmFirmware firmware) {
+
+        this.firmware = firmware;
+        return this;
+    }
+
+    /**
+     * Get firmware
+     *
+     * @return firmware
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmFirmware getFirmware() {
+        return firmware;
+    }
+
+    public void setFirmware(VmFirmware firmware) {
+        this.firmware = firmware;
+    }
+
+    public VmRebuildParams firmware_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FIRMWARE);
+        return this;
+    }
+
+    public VmRebuildParams firmware_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FIRMWARE);
+        return this;
+    }
+
+    public void setFirmware_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FIRMWARE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FIRMWARE);
+        }
+    }
+
+    public boolean getFirmware_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FIRMWARE);
+    }
+
+    public VmRebuildParams haPriority(VmHaPriority haPriority) {
+
+        this.haPriority = haPriority;
+        return this;
+    }
+
+    /**
+     * Get haPriority
+     *
+     * @return haPriority
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriority() {
+        return haPriority;
+    }
+
+    public void setHaPriority(VmHaPriority haPriority) {
+        this.haPriority = haPriority;
+    }
+
+    public VmRebuildParams haPriority_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public VmRebuildParams haPriority_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public void setHaPriority_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        }
+    }
+
+    public boolean getHaPriority_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY);
+    }
+
+    public VmRebuildParams ha(Boolean ha) {
+
+        this.ha = ha;
+        return this;
+    }
+
+    /**
+     * Get ha
+     *
+     * @return ha
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getHa() {
+        return ha;
+    }
+
+    public void setHa(Boolean ha) {
+        this.ha = ha;
+    }
+
+    public VmRebuildParams ha_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA);
+        return this;
+    }
+
+    public VmRebuildParams ha_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA);
+        return this;
+    }
+
+    public void setHa_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA);
+        }
+    }
+
+    public boolean getHa_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA);
+    }
+
+    public VmRebuildParams pciNics(NicWhereInput pciNics) {
+
+        this.pciNics = pciNics;
+        return this;
+    }
+
+    /**
+     * Get pciNics
+     *
+     * @return pciNics
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NicWhereInput getPciNics() {
+        return pciNics;
+    }
+
+    public void setPciNics(NicWhereInput pciNics) {
+        this.pciNics = pciNics;
+    }
+
+    public VmRebuildParams pciNics_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PCI_NICS);
+        return this;
+    }
+
+    public VmRebuildParams pciNics_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PCI_NICS);
+        return this;
+    }
+
+    public void setPciNics_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PCI_NICS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PCI_NICS);
+        }
+    }
+
+    public boolean getPciNics_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PCI_NICS);
+    }
+
+    public VmRebuildParams vmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+
+        this.vmPlacementGroup = vmPlacementGroup;
+        return this;
+    }
+
+    /**
+     * Get vmPlacementGroup
+     *
+     * @return vmPlacementGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmPlacementGroupWhereInput getVmPlacementGroup() {
+        return vmPlacementGroup;
+    }
+
+    public void setVmPlacementGroup(VmPlacementGroupWhereInput vmPlacementGroup) {
+        this.vmPlacementGroup = vmPlacementGroup;
+    }
+
+    public VmRebuildParams vmPlacementGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_PLACEMENT_GROUP);
+        return this;
+    }
+
+    public VmRebuildParams vmPlacementGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_PLACEMENT_GROUP);
+        return this;
+    }
+
+    public void setVmPlacementGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_PLACEMENT_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_PLACEMENT_GROUP);
+        }
+    }
+
+    public boolean getVmPlacementGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_PLACEMENT_GROUP);
+    }
+
+    public VmRebuildParams vmNics(List<VmNicParams> vmNics) {
+
+        this.vmNics = vmNics;
+        return this;
+    }
+
+    public VmRebuildParams addVmNicsItem(VmNicParams vmNicsItem) {
+        if (this.vmNics == null) {
+            this.vmNics = new ArrayList<VmNicParams>();
+        }
+        this.vmNics.add(vmNicsItem);
+        return this;
+    }
+
+    /**
+     * Get vmNics
+     *
+     * @return vmNics
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmNicParams> getVmNics() {
+        return vmNics;
+    }
+
+    public void setVmNics(List<VmNicParams> vmNics) {
+        this.vmNics = vmNics;
+    }
+
+    public VmRebuildParams vmNics_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_NICS);
+        return this;
+    }
+
+    public VmRebuildParams vmNics_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_NICS);
+        return this;
+    }
+
+    public void setVmNics_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_NICS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_NICS);
+        }
+    }
+
+    public boolean getVmNics_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_NICS);
+    }
+
+    public VmRebuildParams vmDisks(VmDiskParams vmDisks) {
+
+        this.vmDisks = vmDisks;
+        return this;
+    }
+
+    /**
+     * Get vmDisks
+     *
+     * @return vmDisks
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmDiskParams getVmDisks() {
+        return vmDisks;
+    }
+
+    public void setVmDisks(VmDiskParams vmDisks) {
+        this.vmDisks = vmDisks;
+    }
+
+    public VmRebuildParams vmDisks_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_DISKS);
+        return this;
+    }
+
+    public VmRebuildParams vmDisks_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_DISKS);
+        return this;
+    }
+
+    public void setVmDisks_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_DISKS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_DISKS);
+        }
+    }
+
+    public boolean getVmDisks_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_DISKS);
+    }
+
+    public VmRebuildParams memoryUnit(ByteUnit memoryUnit) {
+
+        this.memoryUnit = memoryUnit;
+        return this;
+    }
+
+    /**
+     * Get memoryUnit
+     *
+     * @return memoryUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ByteUnit getMemoryUnit() {
+        return memoryUnit;
+    }
+
+    public void setMemoryUnit(ByteUnit memoryUnit) {
+        this.memoryUnit = memoryUnit;
+    }
+
+    public VmRebuildParams memoryUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_UNIT);
+        return this;
+    }
+
+    public VmRebuildParams memoryUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_UNIT);
+        return this;
+    }
+
+    public void setMemoryUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_UNIT);
+        }
+    }
+
+    public boolean getMemoryUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_UNIT);
+    }
+
+    public VmRebuildParams memory(Long memory) {
+
+        this.memory = memory;
+        return this;
+    }
+
+    /**
+     * Get memory
+     *
+     * @return memory
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getMemory() {
+        return memory;
+    }
+
+    public void setMemory(Long memory) {
+        this.memory = memory;
+    }
+
+    public VmRebuildParams memory_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY);
+        return this;
+    }
+
+    public VmRebuildParams memory_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY);
+        return this;
+    }
+
+    public void setMemory_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY);
+        }
+    }
+
+    public boolean getMemory_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY);
+    }
+
+    public VmRebuildParams cpuCores(Integer cpuCores) {
+
+        this.cpuCores = cpuCores;
+        return this;
+    }
+
+    /**
+     * Get cpuCores
+     *
+     * @return cpuCores
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getCpuCores() {
+        return cpuCores;
+    }
+
+    public void setCpuCores(Integer cpuCores) {
+        this.cpuCores = cpuCores;
+    }
+
+    public VmRebuildParams cpuCores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CPU_CORES);
+        return this;
+    }
+
+    public VmRebuildParams cpuCores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CPU_CORES);
+        return this;
+    }
+
+    public void setCpuCores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CPU_CORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CPU_CORES);
+        }
+    }
+
+    public boolean getCpuCores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CPU_CORES);
+    }
+
+    public VmRebuildParams cpuSockets(Integer cpuSockets) {
+
+        this.cpuSockets = cpuSockets;
+        return this;
+    }
+
+    /**
+     * Get cpuSockets
+     *
+     * @return cpuSockets
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getCpuSockets() {
+        return cpuSockets;
+    }
+
+    public void setCpuSockets(Integer cpuSockets) {
+        this.cpuSockets = cpuSockets;
+    }
+
+    public VmRebuildParams cpuSockets_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CPU_SOCKETS);
+        return this;
+    }
+
+    public VmRebuildParams cpuSockets_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CPU_SOCKETS);
+        return this;
+    }
+
+    public void setCpuSockets_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CPU_SOCKETS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CPU_SOCKETS);
+        }
+    }
+
+    public boolean getCpuSockets_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CPU_SOCKETS);
+    }
+
+    public VmRebuildParams guestOsType(VmGuestsOperationSystem guestOsType) {
+
+        this.guestOsType = guestOsType;
+        return this;
+    }
+
+    /**
+     * Get guestOsType
+     *
+     * @return guestOsType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmGuestsOperationSystem getGuestOsType() {
+        return guestOsType;
+    }
+
+    public void setGuestOsType(VmGuestsOperationSystem guestOsType) {
+        this.guestOsType = guestOsType;
+    }
+
+    public VmRebuildParams guestOsType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_GUEST_OS_TYPE);
+        return this;
+    }
+
+    public VmRebuildParams guestOsType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_GUEST_OS_TYPE);
+        return this;
+    }
+
+    public void setGuestOsType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_GUEST_OS_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_GUEST_OS_TYPE);
+        }
+    }
+
+    public boolean getGuestOsType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_GUEST_OS_TYPE);
+    }
+
+    public VmRebuildParams folderId(String folderId) {
+
+        this.folderId = folderId;
+        return this;
+    }
+
+    /**
+     * Get folderId
+     *
+     * @return folderId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getFolderId() {
+        return folderId;
+    }
+
+    public void setFolderId(String folderId) {
+        this.folderId = folderId;
+    }
+
+    public VmRebuildParams folderId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FOLDER_ID);
+        return this;
+    }
+
+    public VmRebuildParams folderId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FOLDER_ID);
+        return this;
+    }
+
+    public void setFolderId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FOLDER_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FOLDER_ID);
+        }
+    }
+
+    public boolean getFolderId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FOLDER_ID);
+    }
+
+    public VmRebuildParams description(String description) {
+
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return description
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public VmRebuildParams description_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DESCRIPTION);
+        return this;
+    }
+
+    public VmRebuildParams description_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DESCRIPTION);
+        return this;
+    }
+
+    public void setDescription_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DESCRIPTION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DESCRIPTION);
+        }
+    }
+
+    public boolean getDescription_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION);
+    }
+
+    public VmRebuildParams name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public VmRebuildParams name_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public VmRebuildParams name_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public void setName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        }
+    }
+
+    public boolean getName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    public VmRebuildParams hostId(String hostId) {
+
+        this.hostId = hostId;
+        return this;
+    }
+
+    /**
+     * Get hostId
+     *
+     * @return hostId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getHostId() {
+        return hostId;
+    }
+
+    public void setHostId(String hostId) {
+        this.hostId = hostId;
+    }
+
+    public VmRebuildParams hostId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public VmRebuildParams hostId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public void setHostId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        }
+    }
+
+    public boolean getHostId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HOST_ID);
+    }
+
+    public VmRebuildParams clusterId(String clusterId) {
+
+        this.clusterId = clusterId;
+        return this;
+    }
+
+    /**
+     * Get clusterId
+     *
+     * @return clusterId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getClusterId() {
+        return clusterId;
+    }
+
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+    }
+
+    public VmRebuildParams clusterId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public VmRebuildParams clusterId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public void setClusterId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        }
+    }
+
+    public boolean getClusterId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmRebuildParams vmRebuildParams = (VmRebuildParams) o;
+        return Objects.equals(this.owner, vmRebuildParams.owner)
+                && Objects.equals(this.gpuDevices, vmRebuildParams.gpuDevices)
+                && Objects.equals(this.isFullCopy, vmRebuildParams.isFullCopy)
+                && Objects.equals(this.rebuildFromSnapshotId, vmRebuildParams.rebuildFromSnapshotId)
+                && Objects.equals(this.maxBandwidthPolicy, vmRebuildParams.maxBandwidthPolicy)
+                && Objects.equals(this.maxBandwidthUnit, vmRebuildParams.maxBandwidthUnit)
+                && Objects.equals(this.maxBandwidth, vmRebuildParams.maxBandwidth)
+                && Objects.equals(this.maxIopsPolicy, vmRebuildParams.maxIopsPolicy)
+                && Objects.equals(this.maxIops, vmRebuildParams.maxIops)
+                && Objects.equals(this.ioPolicy, vmRebuildParams.ioPolicy)
+                && Objects.equals(this.vcpu, vmRebuildParams.vcpu)
+                && Objects.equals(this.status, vmRebuildParams.status)
+                && Objects.equals(this.firmware, vmRebuildParams.firmware)
+                && Objects.equals(this.haPriority, vmRebuildParams.haPriority)
+                && Objects.equals(this.ha, vmRebuildParams.ha)
+                && Objects.equals(this.pciNics, vmRebuildParams.pciNics)
+                && Objects.equals(this.vmPlacementGroup, vmRebuildParams.vmPlacementGroup)
+                && Objects.equals(this.vmNics, vmRebuildParams.vmNics)
+                && Objects.equals(this.vmDisks, vmRebuildParams.vmDisks)
+                && Objects.equals(this.memoryUnit, vmRebuildParams.memoryUnit)
+                && Objects.equals(this.memory, vmRebuildParams.memory)
+                && Objects.equals(this.cpuCores, vmRebuildParams.cpuCores)
+                && Objects.equals(this.cpuSockets, vmRebuildParams.cpuSockets)
+                && Objects.equals(this.guestOsType, vmRebuildParams.guestOsType)
+                && Objects.equals(this.folderId, vmRebuildParams.folderId)
+                && Objects.equals(this.description, vmRebuildParams.description)
+                && Objects.equals(this.name, vmRebuildParams.name)
+                && Objects.equals(this.hostId, vmRebuildParams.hostId)
+                && Objects.equals(this.clusterId, vmRebuildParams.clusterId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                owner,
+                gpuDevices,
+                isFullCopy,
+                rebuildFromSnapshotId,
+                maxBandwidthPolicy,
+                maxBandwidthUnit,
+                maxBandwidth,
+                maxIopsPolicy,
+                maxIops,
+                ioPolicy,
+                vcpu,
+                status,
+                firmware,
+                haPriority,
+                ha,
+                pciNics,
+                vmPlacementGroup,
+                vmNics,
+                vmDisks,
+                memoryUnit,
+                memory,
+                cpuCores,
+                cpuSockets,
+                guestOsType,
+                folderId,
+                description,
+                name,
+                hostId,
+                clusterId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmRebuildParams {\n");
+        sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+        sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
+        sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");
+        sb.append("    rebuildFromSnapshotId: ")
+                .append(toIndentedString(rebuildFromSnapshotId))
+                .append("\n");
+        sb.append("    maxBandwidthPolicy: ")
+                .append(toIndentedString(maxBandwidthPolicy))
+                .append("\n");
+        sb.append("    maxBandwidthUnit: ").append(toIndentedString(maxBandwidthUnit)).append("\n");
+        sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
+        sb.append("    maxIopsPolicy: ").append(toIndentedString(maxIopsPolicy)).append("\n");
+        sb.append("    maxIops: ").append(toIndentedString(maxIops)).append("\n");
+        sb.append("    ioPolicy: ").append(toIndentedString(ioPolicy)).append("\n");
+        sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
+        sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
+        sb.append("    haPriority: ").append(toIndentedString(haPriority)).append("\n");
+        sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+        sb.append("    pciNics: ").append(toIndentedString(pciNics)).append("\n");
+        sb.append("    vmPlacementGroup: ").append(toIndentedString(vmPlacementGroup)).append("\n");
+        sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
+        sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
+        sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");
+        sb.append("    memory: ").append(toIndentedString(memory)).append("\n");
+        sb.append("    cpuCores: ").append(toIndentedString(cpuCores)).append("\n");
+        sb.append("    cpuSockets: ").append(toIndentedString(cpuSockets)).append("\n");
+        sb.append("    guestOsType: ").append(toIndentedString(guestOsType)).append("\n");
+        sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
+        sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
+}
