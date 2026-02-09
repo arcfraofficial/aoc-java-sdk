@@ -34,6 +34,11 @@ public class VirtualPrivateCloud
     @SerializedName(SERIALIZED_NAME_ID)
     private String id;
 
+    public static final String SERIALIZED_NAME_ISOLATION_POLICIES = "isolation_policies";
+
+    @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES)
+    private List<NestedVirtualPrivateCloudIsolationPolicy> isolationPolicies = null;
+
     public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
 
     @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -246,6 +251,60 @@ public class VirtualPrivateCloud
 
     public boolean getId_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ID);
+    }
+
+    public VirtualPrivateCloud isolationPolicies(
+            List<NestedVirtualPrivateCloudIsolationPolicy> isolationPolicies) {
+
+        this.isolationPolicies = isolationPolicies;
+        return this;
+    }
+
+    public VirtualPrivateCloud addIsolationPoliciesItem(
+            NestedVirtualPrivateCloudIsolationPolicy isolationPoliciesItem) {
+        if (this.isolationPolicies == null) {
+            this.isolationPolicies = new ArrayList<NestedVirtualPrivateCloudIsolationPolicy>();
+        }
+        this.isolationPolicies.add(isolationPoliciesItem);
+        return this;
+    }
+
+    /**
+     * Get isolationPolicies
+     *
+     * @return isolationPolicies
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedVirtualPrivateCloudIsolationPolicy> getIsolationPolicies() {
+        return isolationPolicies;
+    }
+
+    public void setIsolationPolicies(
+            List<NestedVirtualPrivateCloudIsolationPolicy> isolationPolicies) {
+        this.isolationPolicies = isolationPolicies;
+    }
+
+    public VirtualPrivateCloud isolationPolicies_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES);
+        return this;
+    }
+
+    public VirtualPrivateCloud isolationPolicies_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES);
+        return this;
+    }
+
+    public void setIsolationPolicies_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES);
+        }
+    }
+
+    public boolean getIsolationPolicies_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISOLATION_POLICIES);
     }
 
     public VirtualPrivateCloud localId(String localId) {
@@ -645,6 +704,7 @@ public class VirtualPrivateCloud
                 && Objects.equals(this.description, virtualPrivateCloud.description)
                 && Objects.equals(this.entityAsyncStatus, virtualPrivateCloud.entityAsyncStatus)
                 && Objects.equals(this.id, virtualPrivateCloud.id)
+                && Objects.equals(this.isolationPolicies, virtualPrivateCloud.isolationPolicies)
                 && Objects.equals(this.localId, virtualPrivateCloud.localId)
                 && Objects.equals(this.mtu, virtualPrivateCloud.mtu)
                 && Objects.equals(this.name, virtualPrivateCloud.name)
@@ -671,6 +731,7 @@ public class VirtualPrivateCloud
                 description,
                 entityAsyncStatus,
                 id,
+                isolationPolicies,
                 localId,
                 mtu,
                 name,
@@ -700,6 +761,9 @@ public class VirtualPrivateCloud
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    isolationPolicies: ")
+                .append(toIndentedString(isolationPolicies))
+                .append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    mtu: ").append(toIndentedString(mtu)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");

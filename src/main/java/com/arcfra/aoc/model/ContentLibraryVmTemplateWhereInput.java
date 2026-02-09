@@ -776,6 +776,26 @@ public class ContentLibraryVmTemplateWhereInput
     @SerializedName(SERIALIZED_NAME_SIZE_NOT_IN)
     private List<Long> sizeNotIn = null;
 
+    public static final String SERIALIZED_NAME_USAGE = "usage";
+
+    @SerializedName(SERIALIZED_NAME_USAGE)
+    private ContentLibraryVmTemplateUsage usage;
+
+    public static final String SERIALIZED_NAME_USAGE_IN = "usage_in";
+
+    @SerializedName(SERIALIZED_NAME_USAGE_IN)
+    private List<ContentLibraryVmTemplateUsage> usageIn = null;
+
+    public static final String SERIALIZED_NAME_USAGE_NOT = "usage_not";
+
+    @SerializedName(SERIALIZED_NAME_USAGE_NOT)
+    private ContentLibraryVmTemplateUsage usageNot;
+
+    public static final String SERIALIZED_NAME_USAGE_NOT_IN = "usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_USAGE_NOT_IN)
+    private List<ContentLibraryVmTemplateUsage> usageNotIn = null;
+
     public static final String SERIALIZED_NAME_VCPU = "vcpu";
 
     @SerializedName(SERIALIZED_NAME_VCPU)
@@ -7733,6 +7753,197 @@ public class ContentLibraryVmTemplateWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_SIZE_NOT_IN);
     }
 
+    public ContentLibraryVmTemplateWhereInput usage(ContentLibraryVmTemplateUsage usage) {
+
+        this.usage = usage;
+        return this;
+    }
+
+    /**
+     * Get usage
+     *
+     * @return usage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ContentLibraryVmTemplateUsage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(ContentLibraryVmTemplateUsage usage) {
+        this.usage = usage;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public void setUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        }
+    }
+
+    public boolean getUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE);
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageIn(List<ContentLibraryVmTemplateUsage> usageIn) {
+
+        this.usageIn = usageIn;
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput addUsageInItem(
+            ContentLibraryVmTemplateUsage usageInItem) {
+        if (this.usageIn == null) {
+            this.usageIn = new ArrayList<ContentLibraryVmTemplateUsage>();
+        }
+        this.usageIn.add(usageInItem);
+        return this;
+    }
+
+    /**
+     * Get usageIn
+     *
+     * @return usageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ContentLibraryVmTemplateUsage> getUsageIn() {
+        return usageIn;
+    }
+
+    public void setUsageIn(List<ContentLibraryVmTemplateUsage> usageIn) {
+        this.usageIn = usageIn;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE_IN);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE_IN);
+        return this;
+    }
+
+    public void setUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE_IN);
+        }
+    }
+
+    public boolean getUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE_IN);
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageNot(ContentLibraryVmTemplateUsage usageNot) {
+
+        this.usageNot = usageNot;
+        return this;
+    }
+
+    /**
+     * Get usageNot
+     *
+     * @return usageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ContentLibraryVmTemplateUsage getUsageNot() {
+        return usageNot;
+    }
+
+    public void setUsageNot(ContentLibraryVmTemplateUsage usageNot) {
+        this.usageNot = usageNot;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT);
+        return this;
+    }
+
+    public void setUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT);
+        }
+    }
+
+    public boolean getUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE_NOT);
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageNotIn(
+            List<ContentLibraryVmTemplateUsage> usageNotIn) {
+
+        this.usageNotIn = usageNotIn;
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput addUsageNotInItem(
+            ContentLibraryVmTemplateUsage usageNotInItem) {
+        if (this.usageNotIn == null) {
+            this.usageNotIn = new ArrayList<ContentLibraryVmTemplateUsage>();
+        }
+        this.usageNotIn.add(usageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get usageNotIn
+     *
+     * @return usageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ContentLibraryVmTemplateUsage> getUsageNotIn() {
+        return usageNotIn;
+    }
+
+    public void setUsageNotIn(List<ContentLibraryVmTemplateUsage> usageNotIn) {
+        this.usageNotIn = usageNotIn;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT_IN);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput usageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE_NOT_IN);
+    }
+
     public ContentLibraryVmTemplateWhereInput vcpu(Integer vcpu) {
 
         this.vcpu = vcpu;
@@ -9188,6 +9399,10 @@ public class ContentLibraryVmTemplateWhereInput
                 && Objects.equals(this.sizeLte, contentLibraryVmTemplateWhereInput.sizeLte)
                 && Objects.equals(this.sizeNot, contentLibraryVmTemplateWhereInput.sizeNot)
                 && Objects.equals(this.sizeNotIn, contentLibraryVmTemplateWhereInput.sizeNotIn)
+                && Objects.equals(this.usage, contentLibraryVmTemplateWhereInput.usage)
+                && Objects.equals(this.usageIn, contentLibraryVmTemplateWhereInput.usageIn)
+                && Objects.equals(this.usageNot, contentLibraryVmTemplateWhereInput.usageNot)
+                && Objects.equals(this.usageNotIn, contentLibraryVmTemplateWhereInput.usageNotIn)
                 && Objects.equals(this.vcpu, contentLibraryVmTemplateWhereInput.vcpu)
                 && Objects.equals(this.vcpuGt, contentLibraryVmTemplateWhereInput.vcpuGt)
                 && Objects.equals(this.vcpuGte, contentLibraryVmTemplateWhereInput.vcpuGte)
@@ -9399,6 +9614,10 @@ public class ContentLibraryVmTemplateWhereInput
                 sizeLte,
                 sizeNot,
                 sizeNotIn,
+                usage,
+                usageIn,
+                usageNot,
+                usageNotIn,
                 vcpu,
                 vcpuGt,
                 vcpuGte,
@@ -9638,6 +9857,10 @@ public class ContentLibraryVmTemplateWhereInput
         sb.append("    sizeLte: ").append(toIndentedString(sizeLte)).append("\n");
         sb.append("    sizeNot: ").append(toIndentedString(sizeNot)).append("\n");
         sb.append("    sizeNotIn: ").append(toIndentedString(sizeNotIn)).append("\n");
+        sb.append("    usage: ").append(toIndentedString(usage)).append("\n");
+        sb.append("    usageIn: ").append(toIndentedString(usageIn)).append("\n");
+        sb.append("    usageNot: ").append(toIndentedString(usageNot)).append("\n");
+        sb.append("    usageNotIn: ").append(toIndentedString(usageNotIn)).append("\n");
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
         sb.append("    vcpuGt: ").append(toIndentedString(vcpuGt)).append("\n");
         sb.append("    vcpuGte: ").append(toIndentedString(vcpuGte)).append("\n");

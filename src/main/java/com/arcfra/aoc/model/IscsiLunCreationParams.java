@@ -59,6 +59,16 @@ public class IscsiLunCreationParams
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private BusinessHostGroupWhereInput businessHostGroups;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private BusinessHostWhereInput businessHosts;
+
     public static final String SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT =
             "business_host_is_same_with_parent";
 
@@ -635,6 +645,93 @@ public class IscsiLunCreationParams
 
     public boolean getName_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    public IscsiLunCreationParams businessHostGroups(
+            BusinessHostGroupWhereInput businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(BusinessHostGroupWhereInput businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public IscsiLunCreationParams businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public IscsiLunCreationParams businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public IscsiLunCreationParams businessHosts(BusinessHostWhereInput businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(BusinessHostWhereInput businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public IscsiLunCreationParams businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public IscsiLunCreationParams businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
     }
 
     public IscsiLunCreationParams businessHostIsSameWithParent(
@@ -1905,6 +2002,9 @@ public class IscsiLunCreationParams
                 && Objects.equals(this.iscsiTargetId, iscsiLunCreationParams.iscsiTargetId)
                 && Objects.equals(this.name, iscsiLunCreationParams.name)
                 && Objects.equals(
+                        this.businessHostGroups, iscsiLunCreationParams.businessHostGroups)
+                && Objects.equals(this.businessHosts, iscsiLunCreationParams.businessHosts)
+                && Objects.equals(
                         this.businessHostIsSameWithParent,
                         iscsiLunCreationParams.businessHostIsSameWithParent)
                 && Objects.equals(
@@ -1951,6 +2051,8 @@ public class IscsiLunCreationParams
                 replicaNum,
                 iscsiTargetId,
                 name,
+                businessHostGroups,
+                businessHosts,
                 businessHostIsSameWithParent,
                 configurationMethod,
                 encryptMethod,
@@ -1996,6 +2098,10 @@ public class IscsiLunCreationParams
         sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
         sb.append("    iscsiTargetId: ").append(toIndentedString(iscsiTargetId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
         sb.append("    businessHostIsSameWithParent: ")
                 .append(toIndentedString(businessHostIsSameWithParent))
                 .append("\n");

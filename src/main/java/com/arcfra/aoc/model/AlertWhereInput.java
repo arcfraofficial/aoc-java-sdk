@@ -27,6 +27,11 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_O_R)
     private List<AlertWhereInput> OR = null;
 
+    public static final String SERIALIZED_NAME_ALERT_RULE = "alert_rule";
+
+    @SerializedName(SERIALIZED_NAME_ALERT_RULE)
+    private AlertRuleWhereInput alertRule;
+
     public static final String SERIALIZED_NAME_CAUSE = "cause";
 
     @SerializedName(SERIALIZED_NAME_CAUSE)
@@ -141,6 +146,11 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
 
     @SerializedName(SERIALIZED_NAME_CREATE_TIME_NOT_IN)
     private List<String> createTimeNotIn = null;
+
+    public static final String SERIALIZED_NAME_DISK = "disk";
+
+    @SerializedName(SERIALIZED_NAME_DISK)
+    private DiskWhereInput disk;
 
     public static final String SERIALIZED_NAME_ENDED = "ended";
 
@@ -1097,6 +1107,49 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
 
     public boolean getOR_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public AlertWhereInput alertRule(AlertRuleWhereInput alertRule) {
+
+        this.alertRule = alertRule;
+        return this;
+    }
+
+    /**
+     * Get alertRule
+     *
+     * @return alertRule
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public AlertRuleWhereInput getAlertRule() {
+        return alertRule;
+    }
+
+    public void setAlertRule(AlertRuleWhereInput alertRule) {
+        this.alertRule = alertRule;
+    }
+
+    public AlertWhereInput alertRule_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALERT_RULE);
+        return this;
+    }
+
+    public AlertWhereInput alertRule_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALERT_RULE);
+        return this;
+    }
+
+    public void setAlertRule_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALERT_RULE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALERT_RULE);
+        }
+    }
+
+    public boolean getAlertRule_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALERT_RULE);
     }
 
     public AlertWhereInput cause(String cause) {
@@ -2118,6 +2171,49 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
 
     public boolean getCreateTimeNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CREATE_TIME_NOT_IN);
+    }
+
+    public AlertWhereInput disk(DiskWhereInput disk) {
+
+        this.disk = disk;
+        return this;
+    }
+
+    /**
+     * Get disk
+     *
+     * @return disk
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DiskWhereInput getDisk() {
+        return disk;
+    }
+
+    public void setDisk(DiskWhereInput disk) {
+        this.disk = disk;
+    }
+
+    public AlertWhereInput disk_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK);
+        return this;
+    }
+
+    public AlertWhereInput disk_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK);
+        return this;
+    }
+
+    public void setDisk_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK);
+        }
+    }
+
+    public boolean getDisk_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK);
     }
 
     public AlertWhereInput ended(Boolean ended) {
@@ -9032,6 +9128,7 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
         return Objects.equals(this.AND, alertWhereInput.AND)
                 && Objects.equals(this.NOT, alertWhereInput.NOT)
                 && Objects.equals(this.OR, alertWhereInput.OR)
+                && Objects.equals(this.alertRule, alertWhereInput.alertRule)
                 && Objects.equals(this.cause, alertWhereInput.cause)
                 && Objects.equals(this.causeContains, alertWhereInput.causeContains)
                 && Objects.equals(this.causeEndsWith, alertWhereInput.causeEndsWith)
@@ -9055,6 +9152,7 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
                 && Objects.equals(this.createTimeLte, alertWhereInput.createTimeLte)
                 && Objects.equals(this.createTimeNot, alertWhereInput.createTimeNot)
                 && Objects.equals(this.createTimeNotIn, alertWhereInput.createTimeNotIn)
+                && Objects.equals(this.disk, alertWhereInput.disk)
                 && Objects.equals(this.ended, alertWhereInput.ended)
                 && Objects.equals(this.endedNot, alertWhereInput.endedNot)
                 && Objects.equals(this.host, alertWhereInput.host)
@@ -9246,6 +9344,7 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
                 AND,
                 NOT,
                 OR,
+                alertRule,
                 cause,
                 causeContains,
                 causeEndsWith,
@@ -9269,6 +9368,7 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
                 createTimeLte,
                 createTimeNot,
                 createTimeNotIn,
+                disk,
                 ended,
                 endedNot,
                 host,
@@ -9441,6 +9541,7 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    alertRule: ").append(toIndentedString(alertRule)).append("\n");
         sb.append("    cause: ").append(toIndentedString(cause)).append("\n");
         sb.append("    causeContains: ").append(toIndentedString(causeContains)).append("\n");
         sb.append("    causeEndsWith: ").append(toIndentedString(causeEndsWith)).append("\n");
@@ -9466,6 +9567,7 @@ public class AlertWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
         sb.append("    createTimeLte: ").append(toIndentedString(createTimeLte)).append("\n");
         sb.append("    createTimeNot: ").append(toIndentedString(createTimeNot)).append("\n");
         sb.append("    createTimeNotIn: ").append(toIndentedString(createTimeNotIn)).append("\n");
+        sb.append("    disk: ").append(toIndentedString(disk)).append("\n");
         sb.append("    ended: ").append(toIndentedString(ended)).append("\n");
         sb.append("    endedNot: ").append(toIndentedString(endedNot)).append("\n");
         sb.append("    host: ").append(toIndentedString(host)).append("\n");

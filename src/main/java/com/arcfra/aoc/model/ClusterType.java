@@ -10,7 +10,13 @@ import java.io.IOException;
 /** Gets or Sets ClusterType */
 @JsonAdapter(ClusterType.Adapter.class)
 public enum ClusterType {
-    ACOS("ACOS"),
+    BLUESHARK("BLUESHARK"),
+
+    SMTX_ELF("SMTX_ELF"),
+
+    SMTX_OS("SMTX_OS"),
+
+    SMTX_ZBS("SMTX_ZBS"),
 
     CLUSTERTYPE_UNSUPPORTED_ENUM("CLUSTERTYPE_UNSUPPORTED_ENUM");
     private String value;

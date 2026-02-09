@@ -8,54 +8,54 @@ import java.util.Objects;
 /** CommonHeader */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class CommonHeader extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
-    public static final String SERIALIZED_NAME_X_AOC_REQUEST_ID = "x-aoc-request-id";
+    public static final String SERIALIZED_NAME_X_TOWER_REQUEST_ID = "x-tower-request-id";
 
-    @SerializedName(SERIALIZED_NAME_X_AOC_REQUEST_ID)
-    private String xAocRequestId;
+    @SerializedName(SERIALIZED_NAME_X_TOWER_REQUEST_ID)
+    private String xTowerRequestId;
 
     public CommonHeader() {}
 
-    public CommonHeader xAocRequestId(String xAocRequestId) {
+    public CommonHeader xTowerRequestId(String xTowerRequestId) {
 
-        this.xAocRequestId = xAocRequestId;
+        this.xTowerRequestId = xTowerRequestId;
         return this;
     }
 
     /**
-     * Get xAocRequestId
+     * Get xTowerRequestId
      *
-     * @return xAocRequestId
+     * @return xTowerRequestId
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(required = true, value = "")
-    public String getxAocRequestId() {
-        return xAocRequestId;
+    public String getxTowerRequestId() {
+        return xTowerRequestId;
     }
 
-    public void setxAocRequestId(String xAocRequestId) {
-        this.xAocRequestId = xAocRequestId;
+    public void setxTowerRequestId(String xTowerRequestId) {
+        this.xTowerRequestId = xTowerRequestId;
     }
 
-    public CommonHeader xAocRequestId_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_X_AOC_REQUEST_ID);
+    public CommonHeader xTowerRequestId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_X_TOWER_REQUEST_ID);
         return this;
     }
 
-    public CommonHeader xAocRequestId_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_X_AOC_REQUEST_ID);
+    public CommonHeader xTowerRequestId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_X_TOWER_REQUEST_ID);
         return this;
     }
 
-    public void setXAocRequestId_IsExplictlyNull(boolean isExplictlyNull) {
+    public void setXTowerRequestId_IsExplictlyNull(boolean isExplictlyNull) {
         if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_X_AOC_REQUEST_ID);
+            this._isPresent_.add(SERIALIZED_NAME_X_TOWER_REQUEST_ID);
         } else {
-            this._isPresent_.remove(SERIALIZED_NAME_X_AOC_REQUEST_ID);
+            this._isPresent_.remove(SERIALIZED_NAME_X_TOWER_REQUEST_ID);
         }
     }
 
-    public boolean getXAocRequestId_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_X_AOC_REQUEST_ID);
+    public boolean getXTowerRequestId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_X_TOWER_REQUEST_ID);
     }
 
     @Override
@@ -67,19 +67,19 @@ public class CommonHeader extends com.arcfra.aoc.ConditionalNullable.Conditional
             return false;
         }
         CommonHeader commonHeader = (CommonHeader) o;
-        return Objects.equals(this.xAocRequestId, commonHeader.xAocRequestId);
+        return Objects.equals(this.xTowerRequestId, commonHeader.xTowerRequestId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(xAocRequestId);
+        return Objects.hash(xTowerRequestId);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class CommonHeader {\n");
-        sb.append("    xAocRequestId: ").append(toIndentedString(xAocRequestId)).append("\n");
+        sb.append("    xTowerRequestId: ").append(toIndentedString(xTowerRequestId)).append("\n");
         sb.append("}");
         return sb.toString();
     }

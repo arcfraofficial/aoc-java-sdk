@@ -10,6 +10,10 @@ import java.io.IOException;
 /** Gets or Sets UploadResourceType */
 @JsonAdapter(UploadResourceType.Adapter.class)
 public enum UploadResourceType {
+    CLOUDTOWER_APPLICATION_PACKAGE("CLOUDTOWER_APPLICATION_PACKAGE"),
+
+    CLOUDTOWER_K8S_APP_PACKAGE("CLOUDTOWER_K8S_APP_PACKAGE"),
+
     CLUSTER_IMAGE("CLUSTER_IMAGE"),
 
     CLUSTER_IMAGE_META("CLUSTER_IMAGE_META"),

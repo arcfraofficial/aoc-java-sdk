@@ -10,6 +10,10 @@ import java.io.IOException;
 /** Gets or Sets VmOrderByInput */
 @JsonAdapter(VmOrderByInput.Adapter.class)
 public enum VmOrderByInput {
+    ANTI_MALWARE_ENABLED_ASC("anti_malware_enabled_ASC"),
+
+    ANTI_MALWARE_ENABLED_DESC("anti_malware_enabled_DESC"),
+
     BIOS_UUID_ASC("bios_uuid_ASC"),
 
     BIOS_UUID_DESC("bios_uuid_DESC"),
@@ -45,6 +49,10 @@ public enum VmOrderByInput {
     DNS_SERVERS_ASC("dns_servers_ASC"),
 
     DNS_SERVERS_DESC("dns_servers_DESC"),
+
+    DPI_ENABLED_ASC("dpi_enabled_ASC"),
+
+    DPI_ENABLED_DESC("dpi_enabled_DESC"),
 
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
@@ -93,6 +101,14 @@ public enum VmOrderByInput {
     INTERNAL_ASC("internal_ASC"),
 
     INTERNAL_DESC("internal_DESC"),
+
+    INTERNAL_PRODUCT_ASC("internal_product_ASC"),
+
+    INTERNAL_PRODUCT_DESC("internal_product_DESC"),
+
+    INTERNAL_PRODUCT_NAME_ASC("internal_product_name_ASC"),
+
+    INTERNAL_PRODUCT_NAME_DESC("internal_product_name_DESC"),
 
     IO_POLICY_ASC("io_policy_ASC"),
 

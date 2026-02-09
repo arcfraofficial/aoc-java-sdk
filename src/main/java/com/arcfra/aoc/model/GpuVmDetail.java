@@ -82,6 +82,11 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
     @SerializedName(SERIALIZED_NAME_SNAPSHOTS)
     private List<NestedVmSnapshot> snapshots = null;
 
+    public static final String SERIALIZED_NAME_SNAPSHOT_PLAN = "snapshot_plan";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN)
+    private NestedSnapshotPlan snapshotPlan;
+
     public static final String SERIALIZED_NAME_SIZE = "size";
 
     @SerializedName(SERIALIZED_NAME_SIZE)
@@ -276,6 +281,11 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
     private EntityAsyncStatus entityAsyncStatus;
+
+    public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS = "entity_filter_results";
+
+    @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS)
+    private List<NestedVmEntityFilterResult> entityFilterResults = null;
 
     public static final String SERIALIZED_NAME_DNS_SERVERS = "dns_servers";
 
@@ -964,6 +974,49 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
 
     public boolean getSnapshots_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOTS);
+    }
+
+    public GpuVmDetail snapshotPlan(NestedSnapshotPlan snapshotPlan) {
+
+        this.snapshotPlan = snapshotPlan;
+        return this;
+    }
+
+    /**
+     * Get snapshotPlan
+     *
+     * @return snapshotPlan
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedSnapshotPlan getSnapshotPlan() {
+        return snapshotPlan;
+    }
+
+    public void setSnapshotPlan(NestedSnapshotPlan snapshotPlan) {
+        this.snapshotPlan = snapshotPlan;
+    }
+
+    public GpuVmDetail snapshotPlan_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        return this;
+    }
+
+    public GpuVmDetail snapshotPlan_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        return this;
+    }
+
+    public void setSnapshotPlan_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        }
+    }
+
+    public boolean getSnapshotPlan_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_PLAN);
     }
 
     public GpuVmDetail size(Long size) {
@@ -2672,6 +2725,58 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
         return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
     }
 
+    public GpuVmDetail entityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
+
+        this.entityFilterResults = entityFilterResults;
+        return this;
+    }
+
+    public GpuVmDetail addEntityFilterResultsItem(
+            NestedVmEntityFilterResult entityFilterResultsItem) {
+        if (this.entityFilterResults == null) {
+            this.entityFilterResults = new ArrayList<NestedVmEntityFilterResult>();
+        }
+        this.entityFilterResults.add(entityFilterResultsItem);
+        return this;
+    }
+
+    /**
+     * Get entityFilterResults
+     *
+     * @return entityFilterResults
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedVmEntityFilterResult> getEntityFilterResults() {
+        return entityFilterResults;
+    }
+
+    public void setEntityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
+        this.entityFilterResults = entityFilterResults;
+    }
+
+    public GpuVmDetail entityFilterResults_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        return this;
+    }
+
+    public GpuVmDetail entityFilterResults_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        return this;
+    }
+
+    public void setEntityFilterResults_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        }
+    }
+
+    public boolean getEntityFilterResults_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+    }
+
     public GpuVmDetail dnsServers(String dnsServers) {
 
         this.dnsServers = dnsServers;
@@ -3082,6 +3187,7 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 && Objects.equals(this.uniqueSize, gpuVmDetail.uniqueSize)
                 && Objects.equals(this.status, gpuVmDetail.status)
                 && Objects.equals(this.snapshots, gpuVmDetail.snapshots)
+                && Objects.equals(this.snapshotPlan, gpuVmDetail.snapshotPlan)
                 && Objects.equals(this.size, gpuVmDetail.size)
                 && Objects.equals(this.provisionedSize, gpuVmDetail.provisionedSize)
                 && Objects.equals(this._protected, gpuVmDetail._protected)
@@ -3121,6 +3227,7 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 && Objects.equals(this.folder, gpuVmDetail.folder)
                 && Objects.equals(this.firmware, gpuVmDetail.firmware)
                 && Objects.equals(this.entityAsyncStatus, gpuVmDetail.entityAsyncStatus)
+                && Objects.equals(this.entityFilterResults, gpuVmDetail.entityFilterResults)
                 && Objects.equals(this.dnsServers, gpuVmDetail.dnsServers)
                 && Objects.equals(this.description, gpuVmDetail.description)
                 && Objects.equals(this.deletedAt, gpuVmDetail.deletedAt)
@@ -3158,6 +3265,7 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 uniqueSize,
                 status,
                 snapshots,
+                snapshotPlan,
                 size,
                 provisionedSize,
                 _protected,
@@ -3197,6 +3305,7 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 folder,
                 firmware,
                 entityAsyncStatus,
+                entityFilterResults,
                 dnsServers,
                 description,
                 deletedAt,
@@ -3235,6 +3344,7 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
         sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
         sb.append("    status: ").append(toIndentedString(status)).append("\n");
         sb.append("    snapshots: ").append(toIndentedString(snapshots)).append("\n");
+        sb.append("    snapshotPlan: ").append(toIndentedString(snapshotPlan)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
         sb.append("    provisionedSize: ").append(toIndentedString(provisionedSize)).append("\n");
         sb.append("    _protected: ").append(toIndentedString(_protected)).append("\n");
@@ -3279,6 +3389,9 @@ public class GpuVmDetail extends com.arcfra.aoc.ConditionalNullable.ConditionalN
         sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    entityFilterResults: ")
+                .append(toIndentedString(entityFilterResults))
                 .append("\n");
         sb.append("    dnsServers: ").append(toIndentedString(dnsServers)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");

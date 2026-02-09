@@ -448,6 +448,11 @@ public class VirtualPrivateCloudRouteWhereInput
     @SerializedName(SERIALIZED_NAME_ROUTER_GATEWAY)
     private VirtualPrivateCloudRouterGatewayWhereInput routerGateway;
 
+    public static final String SERIALIZED_NAME_VPC_PEERING = "vpc_peering";
+
+    @SerializedName(SERIALIZED_NAME_VPC_PEERING)
+    private VirtualPrivateCloudPeeringWhereInput vpcPeering;
+
     public VirtualPrivateCloudRouteWhereInput() {}
 
     public VirtualPrivateCloudRouteWhereInput AND(List<VirtualPrivateCloudRouteWhereInput> AND) {
@@ -4229,6 +4234,50 @@ public class VirtualPrivateCloudRouteWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_ROUTER_GATEWAY);
     }
 
+    public VirtualPrivateCloudRouteWhereInput vpcPeering(
+            VirtualPrivateCloudPeeringWhereInput vpcPeering) {
+
+        this.vpcPeering = vpcPeering;
+        return this;
+    }
+
+    /**
+     * Get vpcPeering
+     *
+     * @return vpcPeering
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VirtualPrivateCloudPeeringWhereInput getVpcPeering() {
+        return vpcPeering;
+    }
+
+    public void setVpcPeering(VirtualPrivateCloudPeeringWhereInput vpcPeering) {
+        this.vpcPeering = vpcPeering;
+    }
+
+    public VirtualPrivateCloudRouteWhereInput vpcPeering_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VPC_PEERING);
+        return this;
+    }
+
+    public VirtualPrivateCloudRouteWhereInput vpcPeering_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VPC_PEERING);
+        return this;
+    }
+
+    public void setVpcPeering_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VPC_PEERING);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VPC_PEERING);
+        }
+    }
+
+    public boolean getVpcPeering_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VPC_PEERING);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -4411,7 +4460,8 @@ public class VirtualPrivateCloudRouteWhereInput
                         this.nextHopTypeNotIn, virtualPrivateCloudRouteWhereInput.nextHopTypeNotIn)
                 && Objects.equals(this.routeTable, virtualPrivateCloudRouteWhereInput.routeTable)
                 && Objects.equals(
-                        this.routerGateway, virtualPrivateCloudRouteWhereInput.routerGateway);
+                        this.routerGateway, virtualPrivateCloudRouteWhereInput.routerGateway)
+                && Objects.equals(this.vpcPeering, virtualPrivateCloudRouteWhereInput.vpcPeering);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -4509,7 +4559,8 @@ public class VirtualPrivateCloudRouteWhereInput
                 nextHopTypeNot,
                 nextHopTypeNotIn,
                 routeTable,
-                routerGateway);
+                routerGateway,
+                vpcPeering);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4667,6 +4718,7 @@ public class VirtualPrivateCloudRouteWhereInput
         sb.append("    nextHopTypeNotIn: ").append(toIndentedString(nextHopTypeNotIn)).append("\n");
         sb.append("    routeTable: ").append(toIndentedString(routeTable)).append("\n");
         sb.append("    routerGateway: ").append(toIndentedString(routerGateway)).append("\n");
+        sb.append("    vpcPeering: ").append(toIndentedString(vpcPeering)).append("\n");
         sb.append("}");
         return sb.toString();
     }

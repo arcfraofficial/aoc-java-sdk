@@ -57,6 +57,16 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
     @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
     private Long bpsWrMaxLength;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private List<NestedBusinessHostGroup> businessHostGroups = null;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private List<NestedBusinessHost> businessHosts = null;
+
     public static final String SERIALIZED_NAME_CHAP_ENABLED = "chap_enabled";
 
     @SerializedName(SERIALIZED_NAME_CHAP_ENABLED)
@@ -196,6 +206,11 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
 
     @SerializedName(SERIALIZED_NAME_IQN_WHITELIST)
     private String iqnWhitelist;
+
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS = "iscsi_connections";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS)
+    private List<NestedIscsiConnection> iscsiConnections = null;
 
     public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM = "iscsi_luns_num";
 
@@ -639,6 +654,108 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
 
     public boolean getBpsWrMaxLength_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
+    }
+
+    public IscsiTarget businessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    public IscsiTarget addBusinessHostGroupsItem(NestedBusinessHostGroup businessHostGroupsItem) {
+        if (this.businessHostGroups == null) {
+            this.businessHostGroups = new ArrayList<NestedBusinessHostGroup>();
+        }
+        this.businessHostGroups.add(businessHostGroupsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHostGroup> getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public IscsiTarget businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public IscsiTarget businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public IscsiTarget businessHosts(List<NestedBusinessHost> businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    public IscsiTarget addBusinessHostsItem(NestedBusinessHost businessHostsItem) {
+        if (this.businessHosts == null) {
+            this.businessHosts = new ArrayList<NestedBusinessHost>();
+        }
+        this.businessHosts.add(businessHostsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHost> getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(List<NestedBusinessHost> businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public IscsiTarget businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public IscsiTarget businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
     }
 
     public IscsiTarget chapEnabled(Boolean chapEnabled) {
@@ -1853,6 +1970,57 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
         return this._isPresent_.contains(SERIALIZED_NAME_IQN_WHITELIST);
     }
 
+    public IscsiTarget iscsiConnections(List<NestedIscsiConnection> iscsiConnections) {
+
+        this.iscsiConnections = iscsiConnections;
+        return this;
+    }
+
+    public IscsiTarget addIscsiConnectionsItem(NestedIscsiConnection iscsiConnectionsItem) {
+        if (this.iscsiConnections == null) {
+            this.iscsiConnections = new ArrayList<NestedIscsiConnection>();
+        }
+        this.iscsiConnections.add(iscsiConnectionsItem);
+        return this;
+    }
+
+    /**
+     * Get iscsiConnections
+     *
+     * @return iscsiConnections
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedIscsiConnection> getIscsiConnections() {
+        return iscsiConnections;
+    }
+
+    public void setIscsiConnections(List<NestedIscsiConnection> iscsiConnections) {
+        this.iscsiConnections = iscsiConnections;
+    }
+
+    public IscsiTarget iscsiConnections_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        return this;
+    }
+
+    public IscsiTarget iscsiConnections_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        return this;
+    }
+
+    public void setIscsiConnections_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        }
+    }
+
+    public boolean getIscsiConnections_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+    }
+
     public IscsiTarget iscsiLunsNum(Integer iscsiLunsNum) {
 
         this.iscsiLunsNum = iscsiLunsNum;
@@ -2360,6 +2528,8 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 && Objects.equals(this.bpsWr, iscsiTarget.bpsWr)
                 && Objects.equals(this.bpsWrMax, iscsiTarget.bpsWrMax)
                 && Objects.equals(this.bpsWrMaxLength, iscsiTarget.bpsWrMaxLength)
+                && Objects.equals(this.businessHostGroups, iscsiTarget.businessHostGroups)
+                && Objects.equals(this.businessHosts, iscsiTarget.businessHosts)
                 && Objects.equals(this.chapEnabled, iscsiTarget.chapEnabled)
                 && Objects.equals(this.chapName, iscsiTarget.chapName)
                 && Objects.equals(this.chapSecret, iscsiTarget.chapSecret)
@@ -2388,6 +2558,7 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 && Objects.equals(this.ipWhitelist, iscsiTarget.ipWhitelist)
                 && Objects.equals(this.iqnName, iscsiTarget.iqnName)
                 && Objects.equals(this.iqnWhitelist, iscsiTarget.iqnWhitelist)
+                && Objects.equals(this.iscsiConnections, iscsiTarget.iscsiConnections)
                 && Objects.equals(this.iscsiLunsNum, iscsiTarget.iscsiLunsNum)
                 && Objects.equals(this.labels, iscsiTarget.labels)
                 && Objects.equals(this.localId, iscsiTarget.localId)
@@ -2422,6 +2593,8 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 bpsWr,
                 bpsWrMax,
                 bpsWrMaxLength,
+                businessHostGroups,
+                businessHosts,
                 chapEnabled,
                 chapName,
                 chapSecret,
@@ -2450,6 +2623,7 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
                 ipWhitelist,
                 iqnName,
                 iqnWhitelist,
+                iscsiConnections,
                 iscsiLunsNum,
                 labels,
                 localId,
@@ -2483,6 +2657,10 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
         sb.append("    bpsWr: ").append(toIndentedString(bpsWr)).append("\n");
         sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
         sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
         sb.append("    chapEnabled: ").append(toIndentedString(chapEnabled)).append("\n");
         sb.append("    chapName: ").append(toIndentedString(chapName)).append("\n");
         sb.append("    chapSecret: ").append(toIndentedString(chapSecret)).append("\n");
@@ -2517,6 +2695,7 @@ public class IscsiTarget extends com.arcfra.aoc.ConditionalNullable.ConditionalN
         sb.append("    ipWhitelist: ").append(toIndentedString(ipWhitelist)).append("\n");
         sb.append("    iqnName: ").append(toIndentedString(iqnName)).append("\n");
         sb.append("    iqnWhitelist: ").append(toIndentedString(iqnWhitelist)).append("\n");
+        sb.append("    iscsiConnections: ").append(toIndentedString(iscsiConnections)).append("\n");
         sb.append("    iscsiLunsNum: ").append(toIndentedString(iscsiLunsNum)).append("\n");
         sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");

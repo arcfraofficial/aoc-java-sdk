@@ -506,6 +506,24 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
     @SerializedName(SERIALIZED_NAME_BPS_WR_NOT_IN)
     private List<Long> bpsWrNotIn = null;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY =
+            "business_host_groups_every";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY)
+    private BusinessHostGroupWhereInput businessHostGroupsEvery;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE =
+            "business_host_groups_none";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE)
+    private BusinessHostGroupWhereInput businessHostGroupsNone;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME =
+            "business_host_groups_some";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME)
+    private BusinessHostGroupWhereInput businessHostGroupsSome;
+
     public static final String SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT =
             "business_host_is_same_with_parent";
 
@@ -517,6 +535,21 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
 
     @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT_NOT)
     private Boolean businessHostIsSameWithParentNot;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_EVERY = "business_hosts_every";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY)
+    private BusinessHostWhereInput businessHostsEvery;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_NONE = "business_hosts_none";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_NONE)
+    private BusinessHostWhereInput businessHostsNone;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_SOME = "business_hosts_some";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_SOME)
+    private BusinessHostWhereInput businessHostsSome;
 
     public static final String SERIALIZED_NAME_CONFIGURATION_METHOD = "configuration_method";
 
@@ -539,6 +572,11 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
 
     @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN)
     private List<ConfigurationMethod> configurationMethodNotIn = null;
+
+    public static final String SERIALIZED_NAME_CONSISTENCY_GROUP = "consistency_group";
+
+    @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP)
+    private ConsistencyGroupWhereInput consistencyGroup;
 
     public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
             "downgraded_prioritized_space";
@@ -1472,6 +1510,21 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT_IN)
     private List<Integer> replicaNumNotIn = null;
 
+    public static final String SERIALIZED_NAME_REPLICATION_PLANS_EVERY = "replication_plans_every";
+
+    @SerializedName(SERIALIZED_NAME_REPLICATION_PLANS_EVERY)
+    private ReplicationPlanWhereInput replicationPlansEvery;
+
+    public static final String SERIALIZED_NAME_REPLICATION_PLANS_NONE = "replication_plans_none";
+
+    @SerializedName(SERIALIZED_NAME_REPLICATION_PLANS_NONE)
+    private ReplicationPlanWhereInput replicationPlansNone;
+
+    public static final String SERIALIZED_NAME_REPLICATION_PLANS_SOME = "replication_plans_some";
+
+    @SerializedName(SERIALIZED_NAME_REPLICATION_PLANS_SOME)
+    private ReplicationPlanWhereInput replicationPlansSome;
+
     public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
 
     @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
@@ -1571,6 +1624,21 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
 
     @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN)
     private List<Integer> snapshotNumNotIn = null;
+
+    public static final String SERIALIZED_NAME_SNAPSHOT_PLANS_EVERY = "snapshot_plans_every";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLANS_EVERY)
+    private SnapshotPlanWhereInput snapshotPlansEvery;
+
+    public static final String SERIALIZED_NAME_SNAPSHOT_PLANS_NONE = "snapshot_plans_none";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLANS_NONE)
+    private SnapshotPlanWhereInput snapshotPlansNone;
+
+    public static final String SERIALIZED_NAME_SNAPSHOT_PLANS_SOME = "snapshot_plans_some";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLANS_SOME)
+    private SnapshotPlanWhereInput snapshotPlansSome;
 
     public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
 
@@ -6191,6 +6259,138 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_NOT_IN);
     }
 
+    public IscsiLunWhereInput businessHostGroupsEvery(
+            BusinessHostGroupWhereInput businessHostGroupsEvery) {
+
+        this.businessHostGroupsEvery = businessHostGroupsEvery;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsEvery
+     *
+     * @return businessHostGroupsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsEvery() {
+        return businessHostGroupsEvery;
+    }
+
+    public void setBusinessHostGroupsEvery(BusinessHostGroupWhereInput businessHostGroupsEvery) {
+        this.businessHostGroupsEvery = businessHostGroupsEvery;
+    }
+
+    public IscsiLunWhereInput businessHostGroupsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        return this;
+    }
+
+    public IscsiLunWhereInput businessHostGroupsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        return this;
+    }
+
+    public void setBusinessHostGroupsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        }
+    }
+
+    public boolean getBusinessHostGroupsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+    }
+
+    public IscsiLunWhereInput businessHostGroupsNone(
+            BusinessHostGroupWhereInput businessHostGroupsNone) {
+
+        this.businessHostGroupsNone = businessHostGroupsNone;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsNone
+     *
+     * @return businessHostGroupsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsNone() {
+        return businessHostGroupsNone;
+    }
+
+    public void setBusinessHostGroupsNone(BusinessHostGroupWhereInput businessHostGroupsNone) {
+        this.businessHostGroupsNone = businessHostGroupsNone;
+    }
+
+    public IscsiLunWhereInput businessHostGroupsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        return this;
+    }
+
+    public IscsiLunWhereInput businessHostGroupsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        return this;
+    }
+
+    public void setBusinessHostGroupsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        }
+    }
+
+    public boolean getBusinessHostGroupsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+    }
+
+    public IscsiLunWhereInput businessHostGroupsSome(
+            BusinessHostGroupWhereInput businessHostGroupsSome) {
+
+        this.businessHostGroupsSome = businessHostGroupsSome;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsSome
+     *
+     * @return businessHostGroupsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsSome() {
+        return businessHostGroupsSome;
+    }
+
+    public void setBusinessHostGroupsSome(BusinessHostGroupWhereInput businessHostGroupsSome) {
+        this.businessHostGroupsSome = businessHostGroupsSome;
+    }
+
+    public IscsiLunWhereInput businessHostGroupsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        return this;
+    }
+
+    public IscsiLunWhereInput businessHostGroupsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        return this;
+    }
+
+    public void setBusinessHostGroupsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        }
+    }
+
+    public boolean getBusinessHostGroupsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+    }
+
     public IscsiLunWhereInput businessHostIsSameWithParent(Boolean businessHostIsSameWithParent) {
 
         this.businessHostIsSameWithParent = businessHostIsSameWithParent;
@@ -6276,6 +6476,135 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
 
     public boolean getBusinessHostIsSameWithParentNot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT_NOT);
+    }
+
+    public IscsiLunWhereInput businessHostsEvery(BusinessHostWhereInput businessHostsEvery) {
+
+        this.businessHostsEvery = businessHostsEvery;
+        return this;
+    }
+
+    /**
+     * Get businessHostsEvery
+     *
+     * @return businessHostsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsEvery() {
+        return businessHostsEvery;
+    }
+
+    public void setBusinessHostsEvery(BusinessHostWhereInput businessHostsEvery) {
+        this.businessHostsEvery = businessHostsEvery;
+    }
+
+    public IscsiLunWhereInput businessHostsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        return this;
+    }
+
+    public IscsiLunWhereInput businessHostsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        return this;
+    }
+
+    public void setBusinessHostsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        }
+    }
+
+    public boolean getBusinessHostsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+    }
+
+    public IscsiLunWhereInput businessHostsNone(BusinessHostWhereInput businessHostsNone) {
+
+        this.businessHostsNone = businessHostsNone;
+        return this;
+    }
+
+    /**
+     * Get businessHostsNone
+     *
+     * @return businessHostsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsNone() {
+        return businessHostsNone;
+    }
+
+    public void setBusinessHostsNone(BusinessHostWhereInput businessHostsNone) {
+        this.businessHostsNone = businessHostsNone;
+    }
+
+    public IscsiLunWhereInput businessHostsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        return this;
+    }
+
+    public IscsiLunWhereInput businessHostsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        return this;
+    }
+
+    public void setBusinessHostsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        }
+    }
+
+    public boolean getBusinessHostsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+    }
+
+    public IscsiLunWhereInput businessHostsSome(BusinessHostWhereInput businessHostsSome) {
+
+        this.businessHostsSome = businessHostsSome;
+        return this;
+    }
+
+    /**
+     * Get businessHostsSome
+     *
+     * @return businessHostsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsSome() {
+        return businessHostsSome;
+    }
+
+    public void setBusinessHostsSome(BusinessHostWhereInput businessHostsSome) {
+        this.businessHostsSome = businessHostsSome;
+    }
+
+    public IscsiLunWhereInput businessHostsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        return this;
+    }
+
+    public IscsiLunWhereInput businessHostsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        return this;
+    }
+
+    public void setBusinessHostsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        }
+    }
+
+    public boolean getBusinessHostsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
     }
 
     public IscsiLunWhereInput configurationMethod(ConfigurationMethod configurationMethod) {
@@ -6468,6 +6797,49 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
 
     public boolean getConfigurationMethodNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN);
+    }
+
+    public IscsiLunWhereInput consistencyGroup(ConsistencyGroupWhereInput consistencyGroup) {
+
+        this.consistencyGroup = consistencyGroup;
+        return this;
+    }
+
+    /**
+     * Get consistencyGroup
+     *
+     * @return consistencyGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConsistencyGroupWhereInput getConsistencyGroup() {
+        return consistencyGroup;
+    }
+
+    public void setConsistencyGroup(ConsistencyGroupWhereInput consistencyGroup) {
+        this.consistencyGroup = consistencyGroup;
+    }
+
+    public IscsiLunWhereInput consistencyGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUP);
+        return this;
+    }
+
+    public IscsiLunWhereInput consistencyGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUP);
+        return this;
+    }
+
+    public void setConsistencyGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUP);
+        }
+    }
+
+    public boolean getConsistencyGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONSISTENCY_GROUP);
     }
 
     public IscsiLunWhereInput downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
@@ -14725,6 +15097,136 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM_NOT_IN);
     }
 
+    public IscsiLunWhereInput replicationPlansEvery(
+            ReplicationPlanWhereInput replicationPlansEvery) {
+
+        this.replicationPlansEvery = replicationPlansEvery;
+        return this;
+    }
+
+    /**
+     * Get replicationPlansEvery
+     *
+     * @return replicationPlansEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationPlanWhereInput getReplicationPlansEvery() {
+        return replicationPlansEvery;
+    }
+
+    public void setReplicationPlansEvery(ReplicationPlanWhereInput replicationPlansEvery) {
+        this.replicationPlansEvery = replicationPlansEvery;
+    }
+
+    public IscsiLunWhereInput replicationPlansEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public IscsiLunWhereInput replicationPlansEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public void setReplicationPlansEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        }
+    }
+
+    public boolean getReplicationPlansEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+    }
+
+    public IscsiLunWhereInput replicationPlansNone(ReplicationPlanWhereInput replicationPlansNone) {
+
+        this.replicationPlansNone = replicationPlansNone;
+        return this;
+    }
+
+    /**
+     * Get replicationPlansNone
+     *
+     * @return replicationPlansNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationPlanWhereInput getReplicationPlansNone() {
+        return replicationPlansNone;
+    }
+
+    public void setReplicationPlansNone(ReplicationPlanWhereInput replicationPlansNone) {
+        this.replicationPlansNone = replicationPlansNone;
+    }
+
+    public IscsiLunWhereInput replicationPlansNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public IscsiLunWhereInput replicationPlansNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public void setReplicationPlansNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        }
+    }
+
+    public boolean getReplicationPlansNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+    }
+
+    public IscsiLunWhereInput replicationPlansSome(ReplicationPlanWhereInput replicationPlansSome) {
+
+        this.replicationPlansSome = replicationPlansSome;
+        return this;
+    }
+
+    /**
+     * Get replicationPlansSome
+     *
+     * @return replicationPlansSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationPlanWhereInput getReplicationPlansSome() {
+        return replicationPlansSome;
+    }
+
+    public void setReplicationPlansSome(ReplicationPlanWhereInput replicationPlansSome) {
+        this.replicationPlansSome = replicationPlansSome;
+    }
+
+    public IscsiLunWhereInput replicationPlansSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public IscsiLunWhereInput replicationPlansSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public void setReplicationPlansSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        }
+    }
+
+    public boolean getReplicationPlansSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+    }
+
     public IscsiLunWhereInput resiliencyType(ResiliencyType resiliencyType) {
 
         this.resiliencyType = resiliencyType;
@@ -15631,6 +16133,135 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
 
     public boolean getSnapshotNumNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_NUM_NOT_IN);
+    }
+
+    public IscsiLunWhereInput snapshotPlansEvery(SnapshotPlanWhereInput snapshotPlansEvery) {
+
+        this.snapshotPlansEvery = snapshotPlansEvery;
+        return this;
+    }
+
+    /**
+     * Get snapshotPlansEvery
+     *
+     * @return snapshotPlansEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SnapshotPlanWhereInput getSnapshotPlansEvery() {
+        return snapshotPlansEvery;
+    }
+
+    public void setSnapshotPlansEvery(SnapshotPlanWhereInput snapshotPlansEvery) {
+        this.snapshotPlansEvery = snapshotPlansEvery;
+    }
+
+    public IscsiLunWhereInput snapshotPlansEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS_EVERY);
+        return this;
+    }
+
+    public IscsiLunWhereInput snapshotPlansEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS_EVERY);
+        return this;
+    }
+
+    public void setSnapshotPlansEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS_EVERY);
+        }
+    }
+
+    public boolean getSnapshotPlansEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_PLANS_EVERY);
+    }
+
+    public IscsiLunWhereInput snapshotPlansNone(SnapshotPlanWhereInput snapshotPlansNone) {
+
+        this.snapshotPlansNone = snapshotPlansNone;
+        return this;
+    }
+
+    /**
+     * Get snapshotPlansNone
+     *
+     * @return snapshotPlansNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SnapshotPlanWhereInput getSnapshotPlansNone() {
+        return snapshotPlansNone;
+    }
+
+    public void setSnapshotPlansNone(SnapshotPlanWhereInput snapshotPlansNone) {
+        this.snapshotPlansNone = snapshotPlansNone;
+    }
+
+    public IscsiLunWhereInput snapshotPlansNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS_NONE);
+        return this;
+    }
+
+    public IscsiLunWhereInput snapshotPlansNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS_NONE);
+        return this;
+    }
+
+    public void setSnapshotPlansNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS_NONE);
+        }
+    }
+
+    public boolean getSnapshotPlansNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_PLANS_NONE);
+    }
+
+    public IscsiLunWhereInput snapshotPlansSome(SnapshotPlanWhereInput snapshotPlansSome) {
+
+        this.snapshotPlansSome = snapshotPlansSome;
+        return this;
+    }
+
+    /**
+     * Get snapshotPlansSome
+     *
+     * @return snapshotPlansSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SnapshotPlanWhereInput getSnapshotPlansSome() {
+        return snapshotPlansSome;
+    }
+
+    public void setSnapshotPlansSome(SnapshotPlanWhereInput snapshotPlansSome) {
+        this.snapshotPlansSome = snapshotPlansSome;
+    }
+
+    public IscsiLunWhereInput snapshotPlansSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS_SOME);
+        return this;
+    }
+
+    public IscsiLunWhereInput snapshotPlansSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS_SOME);
+        return this;
+    }
+
+    public void setSnapshotPlansSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS_SOME);
+        }
+    }
+
+    public boolean getSnapshotPlansSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_PLANS_SOME);
     }
 
     public IscsiLunWhereInput stripeNum(Integer stripeNum) {
@@ -17900,11 +18531,20 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 && Objects.equals(this.bpsWrNot, iscsiLunWhereInput.bpsWrNot)
                 && Objects.equals(this.bpsWrNotIn, iscsiLunWhereInput.bpsWrNotIn)
                 && Objects.equals(
+                        this.businessHostGroupsEvery, iscsiLunWhereInput.businessHostGroupsEvery)
+                && Objects.equals(
+                        this.businessHostGroupsNone, iscsiLunWhereInput.businessHostGroupsNone)
+                && Objects.equals(
+                        this.businessHostGroupsSome, iscsiLunWhereInput.businessHostGroupsSome)
+                && Objects.equals(
                         this.businessHostIsSameWithParent,
                         iscsiLunWhereInput.businessHostIsSameWithParent)
                 && Objects.equals(
                         this.businessHostIsSameWithParentNot,
                         iscsiLunWhereInput.businessHostIsSameWithParentNot)
+                && Objects.equals(this.businessHostsEvery, iscsiLunWhereInput.businessHostsEvery)
+                && Objects.equals(this.businessHostsNone, iscsiLunWhereInput.businessHostsNone)
+                && Objects.equals(this.businessHostsSome, iscsiLunWhereInput.businessHostsSome)
                 && Objects.equals(this.configurationMethod, iscsiLunWhereInput.configurationMethod)
                 && Objects.equals(
                         this.configurationMethodIn, iscsiLunWhereInput.configurationMethodIn)
@@ -17912,6 +18552,7 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                         this.configurationMethodNot, iscsiLunWhereInput.configurationMethodNot)
                 && Objects.equals(
                         this.configurationMethodNotIn, iscsiLunWhereInput.configurationMethodNotIn)
+                && Objects.equals(this.consistencyGroup, iscsiLunWhereInput.consistencyGroup)
                 && Objects.equals(
                         this.downgradedPrioritizedSpace,
                         iscsiLunWhereInput.downgradedPrioritizedSpace)
@@ -18117,6 +18758,12 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 && Objects.equals(this.replicaNumLte, iscsiLunWhereInput.replicaNumLte)
                 && Objects.equals(this.replicaNumNot, iscsiLunWhereInput.replicaNumNot)
                 && Objects.equals(this.replicaNumNotIn, iscsiLunWhereInput.replicaNumNotIn)
+                && Objects.equals(
+                        this.replicationPlansEvery, iscsiLunWhereInput.replicationPlansEvery)
+                && Objects.equals(
+                        this.replicationPlansNone, iscsiLunWhereInput.replicationPlansNone)
+                && Objects.equals(
+                        this.replicationPlansSome, iscsiLunWhereInput.replicationPlansSome)
                 && Objects.equals(this.resiliencyType, iscsiLunWhereInput.resiliencyType)
                 && Objects.equals(this.resiliencyTypeIn, iscsiLunWhereInput.resiliencyTypeIn)
                 && Objects.equals(this.resiliencyTypeNot, iscsiLunWhereInput.resiliencyTypeNot)
@@ -18137,6 +18784,9 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 && Objects.equals(this.snapshotNumLte, iscsiLunWhereInput.snapshotNumLte)
                 && Objects.equals(this.snapshotNumNot, iscsiLunWhereInput.snapshotNumNot)
                 && Objects.equals(this.snapshotNumNotIn, iscsiLunWhereInput.snapshotNumNotIn)
+                && Objects.equals(this.snapshotPlansEvery, iscsiLunWhereInput.snapshotPlansEvery)
+                && Objects.equals(this.snapshotPlansNone, iscsiLunWhereInput.snapshotPlansNone)
+                && Objects.equals(this.snapshotPlansSome, iscsiLunWhereInput.snapshotPlansSome)
                 && Objects.equals(this.stripeNum, iscsiLunWhereInput.stripeNum)
                 && Objects.equals(this.stripeNumGt, iscsiLunWhereInput.stripeNumGt)
                 && Objects.equals(this.stripeNumGte, iscsiLunWhereInput.stripeNumGte)
@@ -18304,12 +18954,19 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 bpsWrMaxNotIn,
                 bpsWrNot,
                 bpsWrNotIn,
+                businessHostGroupsEvery,
+                businessHostGroupsNone,
+                businessHostGroupsSome,
                 businessHostIsSameWithParent,
                 businessHostIsSameWithParentNot,
+                businessHostsEvery,
+                businessHostsNone,
+                businessHostsSome,
                 configurationMethod,
                 configurationMethodIn,
                 configurationMethodNot,
                 configurationMethodNotIn,
+                consistencyGroup,
                 downgradedPrioritizedSpace,
                 downgradedPrioritizedSpaceGt,
                 downgradedPrioritizedSpaceGte,
@@ -18494,6 +19151,9 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 replicaNumLte,
                 replicaNumNot,
                 replicaNumNotIn,
+                replicationPlansEvery,
+                replicationPlansNone,
+                replicationPlansSome,
                 resiliencyType,
                 resiliencyTypeIn,
                 resiliencyTypeNot,
@@ -18514,6 +19174,9 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 snapshotNumLte,
                 snapshotNumNot,
                 snapshotNumNotIn,
+                snapshotPlansEvery,
+                snapshotPlansNone,
+                snapshotPlansSome,
                 stripeNum,
                 stripeNumGt,
                 stripeNumGte,
@@ -18720,11 +19383,29 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         sb.append("    bpsWrMaxNotIn: ").append(toIndentedString(bpsWrMaxNotIn)).append("\n");
         sb.append("    bpsWrNot: ").append(toIndentedString(bpsWrNot)).append("\n");
         sb.append("    bpsWrNotIn: ").append(toIndentedString(bpsWrNotIn)).append("\n");
+        sb.append("    businessHostGroupsEvery: ")
+                .append(toIndentedString(businessHostGroupsEvery))
+                .append("\n");
+        sb.append("    businessHostGroupsNone: ")
+                .append(toIndentedString(businessHostGroupsNone))
+                .append("\n");
+        sb.append("    businessHostGroupsSome: ")
+                .append(toIndentedString(businessHostGroupsSome))
+                .append("\n");
         sb.append("    businessHostIsSameWithParent: ")
                 .append(toIndentedString(businessHostIsSameWithParent))
                 .append("\n");
         sb.append("    businessHostIsSameWithParentNot: ")
                 .append(toIndentedString(businessHostIsSameWithParentNot))
+                .append("\n");
+        sb.append("    businessHostsEvery: ")
+                .append(toIndentedString(businessHostsEvery))
+                .append("\n");
+        sb.append("    businessHostsNone: ")
+                .append(toIndentedString(businessHostsNone))
+                .append("\n");
+        sb.append("    businessHostsSome: ")
+                .append(toIndentedString(businessHostsSome))
                 .append("\n");
         sb.append("    configurationMethod: ")
                 .append(toIndentedString(configurationMethod))
@@ -18738,6 +19419,7 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         sb.append("    configurationMethodNotIn: ")
                 .append(toIndentedString(configurationMethodNotIn))
                 .append("\n");
+        sb.append("    consistencyGroup: ").append(toIndentedString(consistencyGroup)).append("\n");
         sb.append("    downgradedPrioritizedSpace: ")
                 .append(toIndentedString(downgradedPrioritizedSpace))
                 .append("\n");
@@ -18996,6 +19678,15 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         sb.append("    replicaNumLte: ").append(toIndentedString(replicaNumLte)).append("\n");
         sb.append("    replicaNumNot: ").append(toIndentedString(replicaNumNot)).append("\n");
         sb.append("    replicaNumNotIn: ").append(toIndentedString(replicaNumNotIn)).append("\n");
+        sb.append("    replicationPlansEvery: ")
+                .append(toIndentedString(replicationPlansEvery))
+                .append("\n");
+        sb.append("    replicationPlansNone: ")
+                .append(toIndentedString(replicationPlansNone))
+                .append("\n");
+        sb.append("    replicationPlansSome: ")
+                .append(toIndentedString(replicationPlansSome))
+                .append("\n");
         sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
         sb.append("    resiliencyTypeIn: ").append(toIndentedString(resiliencyTypeIn)).append("\n");
         sb.append("    resiliencyTypeNot: ")
@@ -19020,6 +19711,15 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         sb.append("    snapshotNumLte: ").append(toIndentedString(snapshotNumLte)).append("\n");
         sb.append("    snapshotNumNot: ").append(toIndentedString(snapshotNumNot)).append("\n");
         sb.append("    snapshotNumNotIn: ").append(toIndentedString(snapshotNumNotIn)).append("\n");
+        sb.append("    snapshotPlansEvery: ")
+                .append(toIndentedString(snapshotPlansEvery))
+                .append("\n");
+        sb.append("    snapshotPlansNone: ")
+                .append(toIndentedString(snapshotPlansNone))
+                .append("\n");
+        sb.append("    snapshotPlansSome: ")
+                .append(toIndentedString(snapshotPlansSome))
+                .append("\n");
         sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
         sb.append("    stripeNumGt: ").append(toIndentedString(stripeNumGt)).append("\n");
         sb.append("    stripeNumGte: ").append(toIndentedString(stripeNumGte)).append("\n");

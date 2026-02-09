@@ -776,6 +776,11 @@ public class VmSnapshotWhereInput
     @SerializedName(SERIALIZED_NAME_SIZE_NOT_IN)
     private List<Long> sizeNotIn = null;
 
+    public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshot_group";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
+    private SnapshotGroupWhereInput snapshotGroup;
+
     public static final String SERIALIZED_NAME_VCPU = "vcpu";
 
     @SerializedName(SERIALIZED_NAME_VCPU)
@@ -7646,6 +7651,49 @@ public class VmSnapshotWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_SIZE_NOT_IN);
     }
 
+    public VmSnapshotWhereInput snapshotGroup(SnapshotGroupWhereInput snapshotGroup) {
+
+        this.snapshotGroup = snapshotGroup;
+        return this;
+    }
+
+    /**
+     * Get snapshotGroup
+     *
+     * @return snapshotGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SnapshotGroupWhereInput getSnapshotGroup() {
+        return snapshotGroup;
+    }
+
+    public void setSnapshotGroup(SnapshotGroupWhereInput snapshotGroup) {
+        this.snapshotGroup = snapshotGroup;
+    }
+
+    public VmSnapshotWhereInput snapshotGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public VmSnapshotWhereInput snapshotGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public void setSnapshotGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        }
+    }
+
+    public boolean getSnapshotGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_GROUP);
+    }
+
     public VmSnapshotWhereInput vcpu(Integer vcpu) {
 
         this.vcpu = vcpu;
@@ -8314,6 +8362,7 @@ public class VmSnapshotWhereInput
                 && Objects.equals(this.sizeLte, vmSnapshotWhereInput.sizeLte)
                 && Objects.equals(this.sizeNot, vmSnapshotWhereInput.sizeNot)
                 && Objects.equals(this.sizeNotIn, vmSnapshotWhereInput.sizeNotIn)
+                && Objects.equals(this.snapshotGroup, vmSnapshotWhereInput.snapshotGroup)
                 && Objects.equals(this.vcpu, vmSnapshotWhereInput.vcpu)
                 && Objects.equals(this.vcpuGt, vmSnapshotWhereInput.vcpuGt)
                 && Objects.equals(this.vcpuGte, vmSnapshotWhereInput.vcpuGte)
@@ -8490,6 +8539,7 @@ public class VmSnapshotWhereInput
                 sizeLte,
                 sizeNot,
                 sizeNotIn,
+                snapshotGroup,
                 vcpu,
                 vcpuGt,
                 vcpuGte,
@@ -8727,6 +8777,7 @@ public class VmSnapshotWhereInput
         sb.append("    sizeLte: ").append(toIndentedString(sizeLte)).append("\n");
         sb.append("    sizeNot: ").append(toIndentedString(sizeNot)).append("\n");
         sb.append("    sizeNotIn: ").append(toIndentedString(sizeNotIn)).append("\n");
+        sb.append("    snapshotGroup: ").append(toIndentedString(snapshotGroup)).append("\n");
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
         sb.append("    vcpuGt: ").append(toIndentedString(vcpuGt)).append("\n");
         sb.append("    vcpuGte: ").append(toIndentedString(vcpuGte)).append("\n");

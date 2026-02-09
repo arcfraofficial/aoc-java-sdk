@@ -12,6 +12,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /** Alert */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class Alert extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ALERT_RULE = "alert_rule";
+
+    @SerializedName(SERIALIZED_NAME_ALERT_RULE)
+    private NestedAlertRule alertRule;
+
     public static final String SERIALIZED_NAME_CAUSE = "cause";
 
     @SerializedName(SERIALIZED_NAME_CAUSE)
@@ -26,6 +31,11 @@ public class Alert extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
 
     @SerializedName(SERIALIZED_NAME_CREATE_TIME)
     private String createTime;
+
+    public static final String SERIALIZED_NAME_DISK = "disk";
+
+    @SerializedName(SERIALIZED_NAME_DISK)
+    private NestedDisk disk;
 
     public static final String SERIALIZED_NAME_ENDED = "ended";
 
@@ -108,6 +118,49 @@ public class Alert extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
     private List<NestedVm> vms = null;
 
     public Alert() {}
+
+    public Alert alertRule(NestedAlertRule alertRule) {
+
+        this.alertRule = alertRule;
+        return this;
+    }
+
+    /**
+     * Get alertRule
+     *
+     * @return alertRule
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedAlertRule getAlertRule() {
+        return alertRule;
+    }
+
+    public void setAlertRule(NestedAlertRule alertRule) {
+        this.alertRule = alertRule;
+    }
+
+    public Alert alertRule_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALERT_RULE);
+        return this;
+    }
+
+    public Alert alertRule_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALERT_RULE);
+        return this;
+    }
+
+    public void setAlertRule_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALERT_RULE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALERT_RULE);
+        }
+    }
+
+    public boolean getAlertRule_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALERT_RULE);
+    }
 
     public Alert cause(String cause) {
 
@@ -236,6 +289,49 @@ public class Alert extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
 
     public boolean getCreateTime_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CREATE_TIME);
+    }
+
+    public Alert disk(NestedDisk disk) {
+
+        this.disk = disk;
+        return this;
+    }
+
+    /**
+     * Get disk
+     *
+     * @return disk
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedDisk getDisk() {
+        return disk;
+    }
+
+    public void setDisk(NestedDisk disk) {
+        this.disk = disk;
+    }
+
+    public Alert disk_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK);
+        return this;
+    }
+
+    public Alert disk_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK);
+        return this;
+    }
+
+    public void setDisk_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK);
+        }
+    }
+
+    public boolean getDisk_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK);
     }
 
     public Alert ended(Boolean ended) {
@@ -943,9 +1039,11 @@ public class Alert extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
             return false;
         }
         Alert alert = (Alert) o;
-        return Objects.equals(this.cause, alert.cause)
+        return Objects.equals(this.alertRule, alert.alertRule)
+                && Objects.equals(this.cause, alert.cause)
                 && Objects.equals(this.cluster, alert.cluster)
                 && Objects.equals(this.createTime, alert.createTime)
+                && Objects.equals(this.disk, alert.disk)
                 && Objects.equals(this.ended, alert.ended)
                 && Objects.equals(this.host, alert.host)
                 && Objects.equals(this.id, alert.id)
@@ -976,9 +1074,11 @@ public class Alert extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
     @Override
     public int hashCode() {
         return Objects.hash(
+                alertRule,
                 cause,
                 cluster,
                 createTime,
+                disk,
                 ended,
                 host,
                 id,
@@ -1008,9 +1108,11 @@ public class Alert extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class Alert {\n");
+        sb.append("    alertRule: ").append(toIndentedString(alertRule)).append("\n");
         sb.append("    cause: ").append(toIndentedString(cause)).append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
         sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
+        sb.append("    disk: ").append(toIndentedString(disk)).append("\n");
         sb.append("    ended: ").append(toIndentedString(ended)).append("\n");
         sb.append("    host: ").append(toIndentedString(host)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");

@@ -12,6 +12,16 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /** Vm */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ANTI_MALWARE_ENABLED = "anti_malware_enabled";
+
+    @SerializedName(SERIALIZED_NAME_ANTI_MALWARE_ENABLED)
+    private Boolean antiMalwareEnabled;
+
+    public static final String SERIALIZED_NAME_BACKUP_PLANS = "backup_plans";
+
+    @SerializedName(SERIALIZED_NAME_BACKUP_PLANS)
+    private List<NestedBackupPlan> backupPlans = null;
+
     public static final String SERIALIZED_NAME_BIOS_UUID = "bios_uuid";
 
     @SerializedName(SERIALIZED_NAME_BIOS_UUID)
@@ -62,10 +72,20 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
     @SerializedName(SERIALIZED_NAME_DNS_SERVERS)
     private String dnsServers;
 
+    public static final String SERIALIZED_NAME_DPI_ENABLED = "dpi_enabled";
+
+    @SerializedName(SERIALIZED_NAME_DPI_ENABLED)
+    private Boolean dpiEnabled;
+
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
     private EntityAsyncStatus entityAsyncStatus;
+
+    public static final String SERIALIZED_NAME_ENTITY_FILTER_RESULTS = "entity_filter_results";
+
+    @SerializedName(SERIALIZED_NAME_ENTITY_FILTER_RESULTS)
+    private List<NestedVmEntityFilterResult> entityFilterResults = null;
 
     public static final String SERIALIZED_NAME_FIRMWARE = "firmware";
 
@@ -136,6 +156,16 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
 
     @SerializedName(SERIALIZED_NAME_INTERNAL)
     private Boolean internal;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT = "internal_product";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT)
+    private String internalProduct;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME = "internal_product_name";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME)
+    private String internalProductName;
 
     public static final String SERIALIZED_NAME_IO_POLICY = "io_policy";
 
@@ -262,6 +292,11 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
     @SerializedName(SERIALIZED_NAME_SIZE)
     private Long size;
 
+    public static final String SERIALIZED_NAME_SNAPSHOT_PLAN = "snapshot_plan";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLAN)
+    private NestedSnapshotPlan snapshotPlan;
+
     public static final String SERIALIZED_NAME_SNAPSHOTS = "snapshots";
 
     @SerializedName(SERIALIZED_NAME_SNAPSHOTS)
@@ -343,6 +378,100 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
     private Boolean winOpt;
 
     public Vm() {}
+
+    public Vm antiMalwareEnabled(Boolean antiMalwareEnabled) {
+
+        this.antiMalwareEnabled = antiMalwareEnabled;
+        return this;
+    }
+
+    /**
+     * Get antiMalwareEnabled
+     *
+     * @return antiMalwareEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getAntiMalwareEnabled() {
+        return antiMalwareEnabled;
+    }
+
+    public void setAntiMalwareEnabled(Boolean antiMalwareEnabled) {
+        this.antiMalwareEnabled = antiMalwareEnabled;
+    }
+
+    public Vm antiMalwareEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        return this;
+    }
+
+    public Vm antiMalwareEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        return this;
+    }
+
+    public void setAntiMalwareEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        }
+    }
+
+    public boolean getAntiMalwareEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+    }
+
+    public Vm backupPlans(List<NestedBackupPlan> backupPlans) {
+
+        this.backupPlans = backupPlans;
+        return this;
+    }
+
+    public Vm addBackupPlansItem(NestedBackupPlan backupPlansItem) {
+        if (this.backupPlans == null) {
+            this.backupPlans = new ArrayList<NestedBackupPlan>();
+        }
+        this.backupPlans.add(backupPlansItem);
+        return this;
+    }
+
+    /**
+     * Get backupPlans
+     *
+     * @return backupPlans
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBackupPlan> getBackupPlans() {
+        return backupPlans;
+    }
+
+    public void setBackupPlans(List<NestedBackupPlan> backupPlans) {
+        this.backupPlans = backupPlans;
+    }
+
+    public Vm backupPlans_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS);
+        return this;
+    }
+
+    public Vm backupPlans_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS);
+        return this;
+    }
+
+    public void setBackupPlans_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS);
+        }
+    }
+
+    public boolean getBackupPlans_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BACKUP_PLANS);
+    }
 
     public Vm biosUuid(String biosUuid) {
 
@@ -774,6 +903,49 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
         return this._isPresent_.contains(SERIALIZED_NAME_DNS_SERVERS);
     }
 
+    public Vm dpiEnabled(Boolean dpiEnabled) {
+
+        this.dpiEnabled = dpiEnabled;
+        return this;
+    }
+
+    /**
+     * Get dpiEnabled
+     *
+     * @return dpiEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDpiEnabled() {
+        return dpiEnabled;
+    }
+
+    public void setDpiEnabled(Boolean dpiEnabled) {
+        this.dpiEnabled = dpiEnabled;
+    }
+
+    public Vm dpiEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public Vm dpiEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public void setDpiEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        }
+    }
+
+    public boolean getDpiEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DPI_ENABLED);
+    }
+
     public Vm entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
 
         this.entityAsyncStatus = entityAsyncStatus;
@@ -815,6 +987,57 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
 
     public boolean getEntityAsyncStatus_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+    }
+
+    public Vm entityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
+
+        this.entityFilterResults = entityFilterResults;
+        return this;
+    }
+
+    public Vm addEntityFilterResultsItem(NestedVmEntityFilterResult entityFilterResultsItem) {
+        if (this.entityFilterResults == null) {
+            this.entityFilterResults = new ArrayList<NestedVmEntityFilterResult>();
+        }
+        this.entityFilterResults.add(entityFilterResultsItem);
+        return this;
+    }
+
+    /**
+     * Get entityFilterResults
+     *
+     * @return entityFilterResults
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedVmEntityFilterResult> getEntityFilterResults() {
+        return entityFilterResults;
+    }
+
+    public void setEntityFilterResults(List<NestedVmEntityFilterResult> entityFilterResults) {
+        this.entityFilterResults = entityFilterResults;
+    }
+
+    public Vm entityFilterResults_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        return this;
+    }
+
+    public Vm entityFilterResults_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        return this;
+    }
+
+    public void setEntityFilterResults_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
+        }
+    }
+
+    public boolean getEntityFilterResults_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_FILTER_RESULTS);
     }
 
     public Vm firmware(VmFirmware firmware) {
@@ -1425,6 +1648,92 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
 
     public boolean getInternal_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL);
+    }
+
+    public Vm internalProduct(String internalProduct) {
+
+        this.internalProduct = internalProduct;
+        return this;
+    }
+
+    /**
+     * Get internalProduct
+     *
+     * @return internalProduct
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProduct() {
+        return internalProduct;
+    }
+
+    public void setInternalProduct(String internalProduct) {
+        this.internalProduct = internalProduct;
+    }
+
+    public Vm internalProduct_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        return this;
+    }
+
+    public Vm internalProduct_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        return this;
+    }
+
+    public void setInternalProduct_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        }
+    }
+
+    public boolean getInternalProduct_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT);
+    }
+
+    public Vm internalProductName(String internalProductName) {
+
+        this.internalProductName = internalProductName;
+        return this;
+    }
+
+    /**
+     * Get internalProductName
+     *
+     * @return internalProductName
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductName() {
+        return internalProductName;
+    }
+
+    public void setInternalProductName(String internalProductName) {
+        this.internalProductName = internalProductName;
+    }
+
+    public Vm internalProductName_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        return this;
+    }
+
+    public Vm internalProductName_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        return this;
+    }
+
+    public void setInternalProductName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        }
+    }
+
+    public boolean getInternalProductName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
     }
 
     public Vm ioPolicy(VmDiskIoPolicy ioPolicy) {
@@ -2523,6 +2832,49 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
         return this._isPresent_.contains(SERIALIZED_NAME_SIZE);
     }
 
+    public Vm snapshotPlan(NestedSnapshotPlan snapshotPlan) {
+
+        this.snapshotPlan = snapshotPlan;
+        return this;
+    }
+
+    /**
+     * Get snapshotPlan
+     *
+     * @return snapshotPlan
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedSnapshotPlan getSnapshotPlan() {
+        return snapshotPlan;
+    }
+
+    public void setSnapshotPlan(NestedSnapshotPlan snapshotPlan) {
+        this.snapshotPlan = snapshotPlan;
+    }
+
+    public Vm snapshotPlan_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        return this;
+    }
+
+    public Vm snapshotPlan_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        return this;
+    }
+
+    public void setSnapshotPlan_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLAN);
+        }
+    }
+
+    public boolean getSnapshotPlan_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_PLAN);
+    }
+
     public Vm snapshots(List<NestedVmSnapshot> snapshots) {
 
         this.snapshots = snapshots;
@@ -3260,7 +3612,9 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
             return false;
         }
         Vm vm = (Vm) o;
-        return Objects.equals(this.biosUuid, vm.biosUuid)
+        return Objects.equals(this.antiMalwareEnabled, vm.antiMalwareEnabled)
+                && Objects.equals(this.backupPlans, vm.backupPlans)
+                && Objects.equals(this.biosUuid, vm.biosUuid)
                 && Objects.equals(this.clockOffset, vm.clockOffset)
                 && Objects.equals(this.cloudInitSupported, vm.cloudInitSupported)
                 && Objects.equals(this.cluster, vm.cluster)
@@ -3270,7 +3624,9 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
                 && Objects.equals(this.deletedAt, vm.deletedAt)
                 && Objects.equals(this.description, vm.description)
                 && Objects.equals(this.dnsServers, vm.dnsServers)
+                && Objects.equals(this.dpiEnabled, vm.dpiEnabled)
                 && Objects.equals(this.entityAsyncStatus, vm.entityAsyncStatus)
+                && Objects.equals(this.entityFilterResults, vm.entityFilterResults)
                 && Objects.equals(this.firmware, vm.firmware)
                 && Objects.equals(this.folder, vm.folder)
                 && Objects.equals(this.gpuDevices, vm.gpuDevices)
@@ -3285,6 +3641,8 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
                 && Objects.equals(this.id, vm.id)
                 && Objects.equals(this.inRecycleBin, vm.inRecycleBin)
                 && Objects.equals(this.internal, vm.internal)
+                && Objects.equals(this.internalProduct, vm.internalProduct)
+                && Objects.equals(this.internalProductName, vm.internalProductName)
                 && Objects.equals(this.ioPolicy, vm.ioPolicy)
                 && Objects.equals(this.ips, vm.ips)
                 && Objects.equals(this.isolationPolicy, vm.isolationPolicy)
@@ -3310,6 +3668,7 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
                 && Objects.equals(this._protected, vm._protected)
                 && Objects.equals(this.provisionedSize, vm.provisionedSize)
                 && Objects.equals(this.size, vm.size)
+                && Objects.equals(this.snapshotPlan, vm.snapshotPlan)
                 && Objects.equals(this.snapshots, vm.snapshots)
                 && Objects.equals(this.status, vm.status)
                 && Objects.equals(this.uniqueLogicalSize, vm.uniqueLogicalSize)
@@ -3340,6 +3699,8 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
     @Override
     public int hashCode() {
         return Objects.hash(
+                antiMalwareEnabled,
+                backupPlans,
                 biosUuid,
                 clockOffset,
                 cloudInitSupported,
@@ -3350,7 +3711,9 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
                 deletedAt,
                 description,
                 dnsServers,
+                dpiEnabled,
                 entityAsyncStatus,
+                entityFilterResults,
                 firmware,
                 folder,
                 gpuDevices,
@@ -3365,6 +3728,8 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
                 id,
                 inRecycleBin,
                 internal,
+                internalProduct,
+                internalProductName,
                 ioPolicy,
                 ips,
                 isolationPolicy,
@@ -3390,6 +3755,7 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
                 _protected,
                 provisionedSize,
                 size,
+                snapshotPlan,
                 snapshots,
                 status,
                 uniqueLogicalSize,
@@ -3419,6 +3785,10 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class Vm {\n");
+        sb.append("    antiMalwareEnabled: ")
+                .append(toIndentedString(antiMalwareEnabled))
+                .append("\n");
+        sb.append("    backupPlans: ").append(toIndentedString(backupPlans)).append("\n");
         sb.append("    biosUuid: ").append(toIndentedString(biosUuid)).append("\n");
         sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
         sb.append("    cloudInitSupported: ")
@@ -3431,8 +3801,12 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
         sb.append("    deletedAt: ").append(toIndentedString(deletedAt)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    dnsServers: ").append(toIndentedString(dnsServers)).append("\n");
+        sb.append("    dpiEnabled: ").append(toIndentedString(dpiEnabled)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    entityFilterResults: ")
+                .append(toIndentedString(entityFilterResults))
                 .append("\n");
         sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
         sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
@@ -3448,6 +3822,10 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    inRecycleBin: ").append(toIndentedString(inRecycleBin)).append("\n");
         sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
+        sb.append("    internalProduct: ").append(toIndentedString(internalProduct)).append("\n");
+        sb.append("    internalProductName: ")
+                .append(toIndentedString(internalProductName))
+                .append("\n");
         sb.append("    ioPolicy: ").append(toIndentedString(ioPolicy)).append("\n");
         sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
         sb.append("    isolationPolicy: ").append(toIndentedString(isolationPolicy)).append("\n");
@@ -3477,6 +3855,7 @@ public class Vm extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePo
         sb.append("    _protected: ").append(toIndentedString(_protected)).append("\n");
         sb.append("    provisionedSize: ").append(toIndentedString(provisionedSize)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
+        sb.append("    snapshotPlan: ").append(toIndentedString(snapshotPlan)).append("\n");
         sb.append("    snapshots: ").append(toIndentedString(snapshots)).append("\n");
         sb.append("    status: ").append(toIndentedString(status)).append("\n");
         sb.append("    uniqueLogicalSize: ")

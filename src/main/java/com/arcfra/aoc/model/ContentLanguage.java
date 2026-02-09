@@ -10,7 +10,11 @@ import java.io.IOException;
 /** Gets or Sets ContentLanguage */
 @JsonAdapter(ContentLanguage.Adapter.class)
 public enum ContentLanguage {
+    ZH_CN("zh-CN"),
+
     EN_US("en-US"),
+
+    STAR("*"),
 
     CONTENTLANGUAGE_UNSUPPORTED_ENUM("CONTENTLANGUAGE_UNSUPPORTED_ENUM");
     private String value;

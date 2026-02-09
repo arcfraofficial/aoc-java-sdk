@@ -124,6 +124,42 @@ public class LoadBalancerServiceWhereInput
     @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
     private String idStartsWith;
 
+    public static final String SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_EVERY =
+            "load_balancer_instance_groups_every";
+
+    @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_EVERY)
+    private LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsEvery;
+
+    public static final String SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_NONE =
+            "load_balancer_instance_groups_none";
+
+    @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_NONE)
+    private LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsNone;
+
+    public static final String SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_SOME =
+            "load_balancer_instance_groups_some";
+
+    @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_SOME)
+    private LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsSome;
+
+    public static final String SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_EVERY =
+            "load_balancer_instances_every";
+
+    @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_EVERY)
+    private LoadBalancerInstanceWhereInput loadBalancerInstancesEvery;
+
+    public static final String SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_NONE =
+            "load_balancer_instances_none";
+
+    @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_NONE)
+    private LoadBalancerInstanceWhereInput loadBalancerInstancesNone;
+
+    public static final String SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_SOME =
+            "load_balancer_instances_some";
+
+    @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_SOME)
+    private LoadBalancerInstanceWhereInput loadBalancerInstancesSome;
+
     public static final String SERIALIZED_NAME_PHASE = "phase";
 
     @SerializedName(SERIALIZED_NAME_PHASE)
@@ -158,6 +194,21 @@ public class LoadBalancerServiceWhereInput
 
     @SerializedName(SERIALIZED_NAME_VM_INSTANCES_SOME)
     private VmWhereInput vmInstancesSome;
+
+    public static final String SERIALIZED_NAME_VNET_BONDS_EVERY = "vnet_bonds_every";
+
+    @SerializedName(SERIALIZED_NAME_VNET_BONDS_EVERY)
+    private VnetBondWhereInput vnetBondsEvery;
+
+    public static final String SERIALIZED_NAME_VNET_BONDS_NONE = "vnet_bonds_none";
+
+    @SerializedName(SERIALIZED_NAME_VNET_BONDS_NONE)
+    private VnetBondWhereInput vnetBondsNone;
+
+    public static final String SERIALIZED_NAME_VNET_BONDS_SOME = "vnet_bonds_some";
+
+    @SerializedName(SERIALIZED_NAME_VNET_BONDS_SOME)
+    private VnetBondWhereInput vnetBondsSome;
 
     public LoadBalancerServiceWhereInput() {}
 
@@ -1169,6 +1220,276 @@ public class LoadBalancerServiceWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_ID_STARTS_WITH);
     }
 
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsEvery(
+            LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsEvery) {
+
+        this.loadBalancerInstanceGroupsEvery = loadBalancerInstanceGroupsEvery;
+        return this;
+    }
+
+    /**
+     * Get loadBalancerInstanceGroupsEvery
+     *
+     * @return loadBalancerInstanceGroupsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public LoadBalancerInstanceGroupWhereInput getLoadBalancerInstanceGroupsEvery() {
+        return loadBalancerInstanceGroupsEvery;
+    }
+
+    public void setLoadBalancerInstanceGroupsEvery(
+            LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsEvery) {
+        this.loadBalancerInstanceGroupsEvery = loadBalancerInstanceGroupsEvery;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_EVERY);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_EVERY);
+        return this;
+    }
+
+    public void setLoadBalancerInstanceGroupsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_EVERY);
+        }
+    }
+
+    public boolean getLoadBalancerInstanceGroupsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_EVERY);
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsNone(
+            LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsNone) {
+
+        this.loadBalancerInstanceGroupsNone = loadBalancerInstanceGroupsNone;
+        return this;
+    }
+
+    /**
+     * Get loadBalancerInstanceGroupsNone
+     *
+     * @return loadBalancerInstanceGroupsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public LoadBalancerInstanceGroupWhereInput getLoadBalancerInstanceGroupsNone() {
+        return loadBalancerInstanceGroupsNone;
+    }
+
+    public void setLoadBalancerInstanceGroupsNone(
+            LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsNone) {
+        this.loadBalancerInstanceGroupsNone = loadBalancerInstanceGroupsNone;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_NONE);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_NONE);
+        return this;
+    }
+
+    public void setLoadBalancerInstanceGroupsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_NONE);
+        }
+    }
+
+    public boolean getLoadBalancerInstanceGroupsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_NONE);
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsSome(
+            LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsSome) {
+
+        this.loadBalancerInstanceGroupsSome = loadBalancerInstanceGroupsSome;
+        return this;
+    }
+
+    /**
+     * Get loadBalancerInstanceGroupsSome
+     *
+     * @return loadBalancerInstanceGroupsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public LoadBalancerInstanceGroupWhereInput getLoadBalancerInstanceGroupsSome() {
+        return loadBalancerInstanceGroupsSome;
+    }
+
+    public void setLoadBalancerInstanceGroupsSome(
+            LoadBalancerInstanceGroupWhereInput loadBalancerInstanceGroupsSome) {
+        this.loadBalancerInstanceGroupsSome = loadBalancerInstanceGroupsSome;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_SOME);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstanceGroupsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_SOME);
+        return this;
+    }
+
+    public void setLoadBalancerInstanceGroupsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_SOME);
+        }
+    }
+
+    public boolean getLoadBalancerInstanceGroupsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE_GROUPS_SOME);
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesEvery(
+            LoadBalancerInstanceWhereInput loadBalancerInstancesEvery) {
+
+        this.loadBalancerInstancesEvery = loadBalancerInstancesEvery;
+        return this;
+    }
+
+    /**
+     * Get loadBalancerInstancesEvery
+     *
+     * @return loadBalancerInstancesEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public LoadBalancerInstanceWhereInput getLoadBalancerInstancesEvery() {
+        return loadBalancerInstancesEvery;
+    }
+
+    public void setLoadBalancerInstancesEvery(
+            LoadBalancerInstanceWhereInput loadBalancerInstancesEvery) {
+        this.loadBalancerInstancesEvery = loadBalancerInstancesEvery;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_EVERY);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_EVERY);
+        return this;
+    }
+
+    public void setLoadBalancerInstancesEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_EVERY);
+        }
+    }
+
+    public boolean getLoadBalancerInstancesEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_EVERY);
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesNone(
+            LoadBalancerInstanceWhereInput loadBalancerInstancesNone) {
+
+        this.loadBalancerInstancesNone = loadBalancerInstancesNone;
+        return this;
+    }
+
+    /**
+     * Get loadBalancerInstancesNone
+     *
+     * @return loadBalancerInstancesNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public LoadBalancerInstanceWhereInput getLoadBalancerInstancesNone() {
+        return loadBalancerInstancesNone;
+    }
+
+    public void setLoadBalancerInstancesNone(
+            LoadBalancerInstanceWhereInput loadBalancerInstancesNone) {
+        this.loadBalancerInstancesNone = loadBalancerInstancesNone;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_NONE);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_NONE);
+        return this;
+    }
+
+    public void setLoadBalancerInstancesNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_NONE);
+        }
+    }
+
+    public boolean getLoadBalancerInstancesNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_NONE);
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesSome(
+            LoadBalancerInstanceWhereInput loadBalancerInstancesSome) {
+
+        this.loadBalancerInstancesSome = loadBalancerInstancesSome;
+        return this;
+    }
+
+    /**
+     * Get loadBalancerInstancesSome
+     *
+     * @return loadBalancerInstancesSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public LoadBalancerInstanceWhereInput getLoadBalancerInstancesSome() {
+        return loadBalancerInstancesSome;
+    }
+
+    public void setLoadBalancerInstancesSome(
+            LoadBalancerInstanceWhereInput loadBalancerInstancesSome) {
+        this.loadBalancerInstancesSome = loadBalancerInstancesSome;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_SOME);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput loadBalancerInstancesSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_SOME);
+        return this;
+    }
+
+    public void setLoadBalancerInstancesSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_SOME);
+        }
+    }
+
+    public boolean getLoadBalancerInstancesSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOAD_BALANCER_INSTANCES_SOME);
+    }
+
     public LoadBalancerServiceWhereInput phase(EverouteClusterPhase phase) {
 
         this.phase = phase;
@@ -1486,6 +1807,135 @@ public class LoadBalancerServiceWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_VM_INSTANCES_SOME);
     }
 
+    public LoadBalancerServiceWhereInput vnetBondsEvery(VnetBondWhereInput vnetBondsEvery) {
+
+        this.vnetBondsEvery = vnetBondsEvery;
+        return this;
+    }
+
+    /**
+     * Get vnetBondsEvery
+     *
+     * @return vnetBondsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VnetBondWhereInput getVnetBondsEvery() {
+        return vnetBondsEvery;
+    }
+
+    public void setVnetBondsEvery(VnetBondWhereInput vnetBondsEvery) {
+        this.vnetBondsEvery = vnetBondsEvery;
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VNET_BONDS_EVERY);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VNET_BONDS_EVERY);
+        return this;
+    }
+
+    public void setVnetBondsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VNET_BONDS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VNET_BONDS_EVERY);
+        }
+    }
+
+    public boolean getVnetBondsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VNET_BONDS_EVERY);
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsNone(VnetBondWhereInput vnetBondsNone) {
+
+        this.vnetBondsNone = vnetBondsNone;
+        return this;
+    }
+
+    /**
+     * Get vnetBondsNone
+     *
+     * @return vnetBondsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VnetBondWhereInput getVnetBondsNone() {
+        return vnetBondsNone;
+    }
+
+    public void setVnetBondsNone(VnetBondWhereInput vnetBondsNone) {
+        this.vnetBondsNone = vnetBondsNone;
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VNET_BONDS_NONE);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VNET_BONDS_NONE);
+        return this;
+    }
+
+    public void setVnetBondsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VNET_BONDS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VNET_BONDS_NONE);
+        }
+    }
+
+    public boolean getVnetBondsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VNET_BONDS_NONE);
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsSome(VnetBondWhereInput vnetBondsSome) {
+
+        this.vnetBondsSome = vnetBondsSome;
+        return this;
+    }
+
+    /**
+     * Get vnetBondsSome
+     *
+     * @return vnetBondsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VnetBondWhereInput getVnetBondsSome() {
+        return vnetBondsSome;
+    }
+
+    public void setVnetBondsSome(VnetBondWhereInput vnetBondsSome) {
+        this.vnetBondsSome = vnetBondsSome;
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VNET_BONDS_SOME);
+        return this;
+    }
+
+    public LoadBalancerServiceWhereInput vnetBondsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VNET_BONDS_SOME);
+        return this;
+    }
+
+    public void setVnetBondsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VNET_BONDS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VNET_BONDS_SOME);
+        }
+    }
+
+    public boolean getVnetBondsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VNET_BONDS_SOME);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -1526,6 +1976,24 @@ public class LoadBalancerServiceWhereInput
                 && Objects.equals(
                         this.idNotStartsWith, loadBalancerServiceWhereInput.idNotStartsWith)
                 && Objects.equals(this.idStartsWith, loadBalancerServiceWhereInput.idStartsWith)
+                && Objects.equals(
+                        this.loadBalancerInstanceGroupsEvery,
+                        loadBalancerServiceWhereInput.loadBalancerInstanceGroupsEvery)
+                && Objects.equals(
+                        this.loadBalancerInstanceGroupsNone,
+                        loadBalancerServiceWhereInput.loadBalancerInstanceGroupsNone)
+                && Objects.equals(
+                        this.loadBalancerInstanceGroupsSome,
+                        loadBalancerServiceWhereInput.loadBalancerInstanceGroupsSome)
+                && Objects.equals(
+                        this.loadBalancerInstancesEvery,
+                        loadBalancerServiceWhereInput.loadBalancerInstancesEvery)
+                && Objects.equals(
+                        this.loadBalancerInstancesNone,
+                        loadBalancerServiceWhereInput.loadBalancerInstancesNone)
+                && Objects.equals(
+                        this.loadBalancerInstancesSome,
+                        loadBalancerServiceWhereInput.loadBalancerInstancesSome)
                 && Objects.equals(this.phase, loadBalancerServiceWhereInput.phase)
                 && Objects.equals(this.phaseIn, loadBalancerServiceWhereInput.phaseIn)
                 && Objects.equals(this.phaseNot, loadBalancerServiceWhereInput.phaseNot)
@@ -1535,7 +2003,10 @@ public class LoadBalancerServiceWhereInput
                 && Objects.equals(
                         this.vmInstancesNone, loadBalancerServiceWhereInput.vmInstancesNone)
                 && Objects.equals(
-                        this.vmInstancesSome, loadBalancerServiceWhereInput.vmInstancesSome);
+                        this.vmInstancesSome, loadBalancerServiceWhereInput.vmInstancesSome)
+                && Objects.equals(this.vnetBondsEvery, loadBalancerServiceWhereInput.vnetBondsEvery)
+                && Objects.equals(this.vnetBondsNone, loadBalancerServiceWhereInput.vnetBondsNone)
+                && Objects.equals(this.vnetBondsSome, loadBalancerServiceWhereInput.vnetBondsSome);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -1572,13 +2043,22 @@ public class LoadBalancerServiceWhereInput
                 idNotIn,
                 idNotStartsWith,
                 idStartsWith,
+                loadBalancerInstanceGroupsEvery,
+                loadBalancerInstanceGroupsNone,
+                loadBalancerInstanceGroupsSome,
+                loadBalancerInstancesEvery,
+                loadBalancerInstancesNone,
+                loadBalancerInstancesSome,
                 phase,
                 phaseIn,
                 phaseNot,
                 phaseNotIn,
                 vmInstancesEvery,
                 vmInstancesNone,
-                vmInstancesSome);
+                vmInstancesSome,
+                vnetBondsEvery,
+                vnetBondsNone,
+                vnetBondsSome);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1622,6 +2102,24 @@ public class LoadBalancerServiceWhereInput
         sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
         sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
         sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+        sb.append("    loadBalancerInstanceGroupsEvery: ")
+                .append(toIndentedString(loadBalancerInstanceGroupsEvery))
+                .append("\n");
+        sb.append("    loadBalancerInstanceGroupsNone: ")
+                .append(toIndentedString(loadBalancerInstanceGroupsNone))
+                .append("\n");
+        sb.append("    loadBalancerInstanceGroupsSome: ")
+                .append(toIndentedString(loadBalancerInstanceGroupsSome))
+                .append("\n");
+        sb.append("    loadBalancerInstancesEvery: ")
+                .append(toIndentedString(loadBalancerInstancesEvery))
+                .append("\n");
+        sb.append("    loadBalancerInstancesNone: ")
+                .append(toIndentedString(loadBalancerInstancesNone))
+                .append("\n");
+        sb.append("    loadBalancerInstancesSome: ")
+                .append(toIndentedString(loadBalancerInstancesSome))
+                .append("\n");
         sb.append("    phase: ").append(toIndentedString(phase)).append("\n");
         sb.append("    phaseIn: ").append(toIndentedString(phaseIn)).append("\n");
         sb.append("    phaseNot: ").append(toIndentedString(phaseNot)).append("\n");
@@ -1629,6 +2127,9 @@ public class LoadBalancerServiceWhereInput
         sb.append("    vmInstancesEvery: ").append(toIndentedString(vmInstancesEvery)).append("\n");
         sb.append("    vmInstancesNone: ").append(toIndentedString(vmInstancesNone)).append("\n");
         sb.append("    vmInstancesSome: ").append(toIndentedString(vmInstancesSome)).append("\n");
+        sb.append("    vnetBondsEvery: ").append(toIndentedString(vnetBondsEvery)).append("\n");
+        sb.append("    vnetBondsNone: ").append(toIndentedString(vnetBondsNone)).append("\n");
+        sb.append("    vnetBondsSome: ").append(toIndentedString(vnetBondsSome)).append("\n");
         sb.append("}");
         return sb.toString();
     }

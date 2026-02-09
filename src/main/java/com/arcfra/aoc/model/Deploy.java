@@ -3,7 +3,9 @@ package com.arcfra.aoc.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Arrays;
 import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /** Deploy */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
@@ -12,6 +14,11 @@ public class Deploy extends com.arcfra.aoc.ConditionalNullable.ConditionalNullab
 
     @SerializedName(SERIALIZED_NAME_ID)
     private String id;
+
+    public static final String SERIALIZED_NAME_LICENSE = "license";
+
+    @SerializedName(SERIALIZED_NAME_LICENSE)
+    private NestedLicense license;
 
     public static final String SERIALIZED_NAME_VERSION = "version";
 
@@ -61,6 +68,49 @@ public class Deploy extends com.arcfra.aoc.ConditionalNullable.ConditionalNullab
 
     public boolean getId_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ID);
+    }
+
+    public Deploy license(NestedLicense license) {
+
+        this.license = license;
+        return this;
+    }
+
+    /**
+     * Get license
+     *
+     * @return license
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedLicense getLicense() {
+        return license;
+    }
+
+    public void setLicense(NestedLicense license) {
+        this.license = license;
+    }
+
+    public Deploy license_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LICENSE);
+        return this;
+    }
+
+    public Deploy license_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LICENSE);
+        return this;
+    }
+
+    public void setLicense_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LICENSE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LICENSE);
+        }
+    }
+
+    public boolean getLicense_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LICENSE);
     }
 
     public Deploy version(String version) {
@@ -115,12 +165,30 @@ public class Deploy extends com.arcfra.aoc.ConditionalNullable.ConditionalNullab
             return false;
         }
         Deploy deploy = (Deploy) o;
-        return Objects.equals(this.id, deploy.id) && Objects.equals(this.version, deploy.version);
+        return Objects.equals(this.id, deploy.id)
+                && Objects.equals(this.license, deploy.license)
+                && Objects.equals(this.version, deploy.version);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, version);
+        return Objects.hash(id, license, version);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
     }
 
     @Override
@@ -128,6 +196,7 @@ public class Deploy extends com.arcfra.aoc.ConditionalNullable.ConditionalNullab
         StringBuilder sb = new StringBuilder();
         sb.append("class Deploy {\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    license: ").append(toIndentedString(license)).append("\n");
         sb.append("    version: ").append(toIndentedString(version)).append("\n");
         sb.append("}");
         return sb.toString();

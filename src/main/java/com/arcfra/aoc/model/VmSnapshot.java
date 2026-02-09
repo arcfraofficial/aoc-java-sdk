@@ -122,6 +122,11 @@ public class VmSnapshot extends com.arcfra.aoc.ConditionalNullable.ConditionalNu
     @SerializedName(SERIALIZED_NAME_SIZE)
     private Long size;
 
+    public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshot_group";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
+    private NestedSnapshotGroup snapshotGroup;
+
     public static final String SERIALIZED_NAME_VCPU = "vcpu";
 
     @SerializedName(SERIALIZED_NAME_VCPU)
@@ -1103,6 +1108,49 @@ public class VmSnapshot extends com.arcfra.aoc.ConditionalNullable.ConditionalNu
         return this._isPresent_.contains(SERIALIZED_NAME_SIZE);
     }
 
+    public VmSnapshot snapshotGroup(NestedSnapshotGroup snapshotGroup) {
+
+        this.snapshotGroup = snapshotGroup;
+        return this;
+    }
+
+    /**
+     * Get snapshotGroup
+     *
+     * @return snapshotGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedSnapshotGroup getSnapshotGroup() {
+        return snapshotGroup;
+    }
+
+    public void setSnapshotGroup(NestedSnapshotGroup snapshotGroup) {
+        this.snapshotGroup = snapshotGroup;
+    }
+
+    public VmSnapshot snapshotGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public VmSnapshot snapshotGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public void setSnapshotGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        }
+    }
+
+    public boolean getSnapshotGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_GROUP);
+    }
+
     public VmSnapshot vcpu(Integer vcpu) {
 
         this.vcpu = vcpu;
@@ -1365,6 +1413,7 @@ public class VmSnapshot extends com.arcfra.aoc.ConditionalNullable.ConditionalNu
                 && Objects.equals(this.memory, vmSnapshot.memory)
                 && Objects.equals(this.name, vmSnapshot.name)
                 && Objects.equals(this.size, vmSnapshot.size)
+                && Objects.equals(this.snapshotGroup, vmSnapshot.snapshotGroup)
                 && Objects.equals(this.vcpu, vmSnapshot.vcpu)
                 && Objects.equals(this.vm, vmSnapshot.vm)
                 && Objects.equals(this.vmDisks, vmSnapshot.vmDisks)
@@ -1406,6 +1455,7 @@ public class VmSnapshot extends com.arcfra.aoc.ConditionalNullable.ConditionalNu
                 memory,
                 name,
                 size,
+                snapshotGroup,
                 vcpu,
                 vm,
                 vmDisks,
@@ -1450,6 +1500,7 @@ public class VmSnapshot extends com.arcfra.aoc.ConditionalNullable.ConditionalNu
         sb.append("    memory: ").append(toIndentedString(memory)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
+        sb.append("    snapshotGroup: ").append(toIndentedString(snapshotGroup)).append("\n");
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
         sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
         sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");

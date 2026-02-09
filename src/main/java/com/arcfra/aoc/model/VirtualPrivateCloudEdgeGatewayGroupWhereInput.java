@@ -360,6 +360,11 @@ public class VirtualPrivateCloudEdgeGatewayGroupWhereInput
     @SerializedName(SERIALIZED_NAME_PRIMARY_EDGE_GATEWAY_ID_STARTS_WITH)
     private String primaryEdgeGatewayIdStartsWith;
 
+    public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
+
+    @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
+    private VirtualPrivateCloudServiceWhereInput vpcService;
+
     public VirtualPrivateCloudEdgeGatewayGroupWhereInput() {}
 
     public VirtualPrivateCloudEdgeGatewayGroupWhereInput AND(
@@ -3362,6 +3367,50 @@ public class VirtualPrivateCloudEdgeGatewayGroupWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_PRIMARY_EDGE_GATEWAY_ID_STARTS_WITH);
     }
 
+    public VirtualPrivateCloudEdgeGatewayGroupWhereInput vpcService(
+            VirtualPrivateCloudServiceWhereInput vpcService) {
+
+        this.vpcService = vpcService;
+        return this;
+    }
+
+    /**
+     * Get vpcService
+     *
+     * @return vpcService
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VirtualPrivateCloudServiceWhereInput getVpcService() {
+        return vpcService;
+    }
+
+    public void setVpcService(VirtualPrivateCloudServiceWhereInput vpcService) {
+        this.vpcService = vpcService;
+    }
+
+    public VirtualPrivateCloudEdgeGatewayGroupWhereInput vpcService_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VPC_SERVICE);
+        return this;
+    }
+
+    public VirtualPrivateCloudEdgeGatewayGroupWhereInput vpcService_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VPC_SERVICE);
+        return this;
+    }
+
+    public void setVpcService_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VPC_SERVICE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VPC_SERVICE);
+        }
+    }
+
+    public boolean getVpcService_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VPC_SERVICE);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -3538,7 +3587,9 @@ public class VirtualPrivateCloudEdgeGatewayGroupWhereInput
                 && Objects.equals(
                         this.primaryEdgeGatewayIdStartsWith,
                         virtualPrivateCloudEdgeGatewayGroupWhereInput
-                                .primaryEdgeGatewayIdStartsWith);
+                                .primaryEdgeGatewayIdStartsWith)
+                && Objects.equals(
+                        this.vpcService, virtualPrivateCloudEdgeGatewayGroupWhereInput.vpcService);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -3618,7 +3669,8 @@ public class VirtualPrivateCloudEdgeGatewayGroupWhereInput
                 primaryEdgeGatewayIdNotEndsWith,
                 primaryEdgeGatewayIdNotIn,
                 primaryEdgeGatewayIdNotStartsWith,
-                primaryEdgeGatewayIdStartsWith);
+                primaryEdgeGatewayIdStartsWith,
+                vpcService);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3750,6 +3802,7 @@ public class VirtualPrivateCloudEdgeGatewayGroupWhereInput
         sb.append("    primaryEdgeGatewayIdStartsWith: ")
                 .append(toIndentedString(primaryEdgeGatewayIdStartsWith))
                 .append("\n");
+        sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
         sb.append("}");
         return sb.toString();
     }

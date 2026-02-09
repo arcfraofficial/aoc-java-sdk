@@ -23,6 +23,7 @@ import com.arcfra.aoc.model.VmAddGpuDeviceParams;
 import com.arcfra.aoc.model.VmAddNicParams;
 import com.arcfra.aoc.model.VmCloneParams;
 import com.arcfra.aoc.model.VmConnection;
+import com.arcfra.aoc.model.VmCreateVmFromContentLibraryTemplateBatchParams;
 import com.arcfra.aoc.model.VmCreateVmFromContentLibraryTemplateParams;
 import com.arcfra.aoc.model.VmCreateVmFromTemplateParams;
 import com.arcfra.aoc.model.VmCreationParams;
@@ -44,6 +45,7 @@ import com.arcfra.aoc.model.VmRemoveNicByWhereParams;
 import com.arcfra.aoc.model.VmRemoveNicParams;
 import com.arcfra.aoc.model.VmResetGuestOsPasswordParams;
 import com.arcfra.aoc.model.VmRollbackParams;
+import com.arcfra.aoc.model.VmSetVmDiskResidentInCacheParams;
 import com.arcfra.aoc.model.VmStartParams;
 import com.arcfra.aoc.model.VmToggleCdRomDisableParams;
 import com.arcfra.aoc.model.VmUpdateAdvancedOptionsParams;
@@ -56,9 +58,11 @@ import com.arcfra.aoc.model.VmUpdateNicParams;
 import com.arcfra.aoc.model.VmUpdateNicQosOptionsParams;
 import com.arcfra.aoc.model.VmUpdateOwnerParams;
 import com.arcfra.aoc.model.VmUpdateParams;
+import com.arcfra.aoc.model.VmUpdateVpcNicParams;
 import com.arcfra.aoc.model.VmVncInfo;
 import com.arcfra.aoc.model.WithTaskDeleteVm;
 import com.arcfra.aoc.model.WithTaskVm;
+import com.arcfra.aoc.model.WithTaskVmArray;
 import com.arcfra.aoc.model.WithTaskVmExportFile;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
@@ -1840,6 +1844,180 @@ public class VmApi {
         return localVarCall;
     }
     /**
+     * Build call for createVmFromContentLibraryTemplateBatch
+     *
+     * @param vmCreateVmFromContentLibraryTemplateBatchParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createVmFromContentLibraryTemplateBatchCall(
+            VmCreateVmFromContentLibraryTemplateBatchParams
+                    vmCreateVmFromContentLibraryTemplateBatchParams,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmCreateVmFromContentLibraryTemplateBatchParams;
+
+        // create path and map variables
+        String localVarPath = "/create-vm-from-content-library-template-batch";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createVmFromContentLibraryTemplateBatchValidateBeforeCall(
+            VmCreateVmFromContentLibraryTemplateBatchParams
+                    vmCreateVmFromContentLibraryTemplateBatchParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'vmCreateVmFromContentLibraryTemplateBatchParams' is set
+        if (vmCreateVmFromContentLibraryTemplateBatchParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter"
+                            + " 'vmCreateVmFromContentLibraryTemplateBatchParams' when calling"
+                            + " createVmFromContentLibraryTemplateBatch(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                createVmFromContentLibraryTemplateBatchCall(
+                        vmCreateVmFromContentLibraryTemplateBatchParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param vmCreateVmFromContentLibraryTemplateBatchParams (required)
+     * @return WithTaskVmArray
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public WithTaskVmArray createVmFromContentLibraryTemplateBatch(
+            VmCreateVmFromContentLibraryTemplateBatchParams
+                    vmCreateVmFromContentLibraryTemplateBatchParams)
+            throws ApiException {
+        ApiResponse<WithTaskVmArray> localVarResp =
+                createVmFromContentLibraryTemplateBatchWithHttpInfo(
+                        vmCreateVmFromContentLibraryTemplateBatchParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param vmCreateVmFromContentLibraryTemplateBatchParams (required)
+     * @return ApiResponse&lt;WithTaskVmArray&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<WithTaskVmArray> createVmFromContentLibraryTemplateBatchWithHttpInfo(
+            VmCreateVmFromContentLibraryTemplateBatchParams
+                    vmCreateVmFromContentLibraryTemplateBatchParams)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                createVmFromContentLibraryTemplateBatchValidateBeforeCall(
+                        vmCreateVmFromContentLibraryTemplateBatchParams, null);
+        Type localVarReturnType = new TypeToken<WithTaskVmArray>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param vmCreateVmFromContentLibraryTemplateBatchParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createVmFromContentLibraryTemplateBatchAsync(
+            VmCreateVmFromContentLibraryTemplateBatchParams
+                    vmCreateVmFromContentLibraryTemplateBatchParams,
+            final ApiCallback<WithTaskVmArray> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                createVmFromContentLibraryTemplateBatchValidateBeforeCall(
+                        vmCreateVmFromContentLibraryTemplateBatchParams, _callback);
+        Type localVarReturnType = new TypeToken<WithTaskVmArray>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for createVmFromTemplate
      *
      * @param vmCreateVmFromTemplateParams (required)
@@ -3091,7 +3269,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -3175,7 +3353,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -3194,7 +3372,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -3218,7 +3396,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -3243,7 +3421,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -3329,7 +3507,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -3350,7 +3528,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -3375,7 +3553,7 @@ public class VmApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -6362,6 +6540,169 @@ public class VmApi {
         return localVarCall;
     }
     /**
+     * Build call for setVmDiskResidentInCache
+     *
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call setVmDiskResidentInCacheCall(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmSetVmDiskResidentInCacheParams;
+
+        // create path and map variables
+        String localVarPath = "/set-vm-disk-resident-in-cache";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call setVmDiskResidentInCacheValidateBeforeCall(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'vmSetVmDiskResidentInCacheParams' is set
+        if (vmSetVmDiskResidentInCacheParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'vmSetVmDiskResidentInCacheParams' when"
+                            + " calling setVmDiskResidentInCache(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                setVmDiskResidentInCacheCall(vmSetVmDiskResidentInCacheParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskVm> setVmDiskResidentInCache(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp =
+                setVmDiskResidentInCacheWithHttpInfo(vmSetVmDiskResidentInCacheParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskVm>> setVmDiskResidentInCacheWithHttpInfo(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                setVmDiskResidentInCacheValidateBeforeCall(vmSetVmDiskResidentInCacheParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call setVmDiskResidentInCacheAsync(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams,
+            final ApiCallback<List<WithTaskVm>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                setVmDiskResidentInCacheValidateBeforeCall(
+                        vmSetVmDiskResidentInCacheParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for shutDownVm
      *
      * @param vmOperateParams (required)
@@ -8575,6 +8916,169 @@ public class VmApi {
 
         okhttp3.Call localVarCall =
                 updateVmNicQosOptionValidateBeforeCall(vmUpdateNicQosOptionsParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateVmNicVpcInfo
+     *
+     * @param vmUpdateVpcNicParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateVmNicVpcInfoCall(
+            VmUpdateVpcNicParams vmUpdateVpcNicParams, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmUpdateVpcNicParams;
+
+        // create path and map variables
+        String localVarPath = "/update-vm-vpc-nic";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateVmNicVpcInfoValidateBeforeCall(
+            VmUpdateVpcNicParams vmUpdateVpcNicParams, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'vmUpdateVpcNicParams' is set
+        if (vmUpdateVpcNicParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'vmUpdateVpcNicParams' when calling"
+                            + " updateVmNicVpcInfo(Async)");
+        }
+
+        okhttp3.Call localVarCall = updateVmNicVpcInfoCall(vmUpdateVpcNicParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param vmUpdateVpcNicParams (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskVm> updateVmNicVpcInfo(VmUpdateVpcNicParams vmUpdateVpcNicParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp =
+                updateVmNicVpcInfoWithHttpInfo(vmUpdateVpcNicParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param vmUpdateVpcNicParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskVm>> updateVmNicVpcInfoWithHttpInfo(
+            VmUpdateVpcNicParams vmUpdateVpcNicParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateVmNicVpcInfoValidateBeforeCall(vmUpdateVpcNicParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param vmUpdateVpcNicParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 304 </td><td> Not modified </td><td>  -  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateVmNicVpcInfoAsync(
+            VmUpdateVpcNicParams vmUpdateVpcNicParams,
+            final ApiCallback<List<WithTaskVm>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                updateVmNicVpcInfoValidateBeforeCall(vmUpdateVpcNicParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

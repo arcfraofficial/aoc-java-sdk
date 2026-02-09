@@ -106,6 +106,26 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
     @SerializedName(SERIALIZED_NAME_DATA_IP)
     private String dataIp;
 
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
+
+    public static final String SERIALIZED_NAME_DISK_POOLS = "disk_pools";
+
+    @SerializedName(SERIALIZED_NAME_DISK_POOLS)
+    private List<NestedDiskPool> diskPools = null;
+
+    public static final String SERIALIZED_NAME_DISKS = "disks";
+
+    @SerializedName(SERIALIZED_NAME_DISKS)
+    private List<NestedDisk> disks = null;
+
     public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
             "downgraded_prioritized_space";
 
@@ -116,6 +136,11 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
     private EntityAsyncStatus entityAsyncStatus;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -156,6 +181,11 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_IOMMU)
     private IommuStatus iommu;
+
+    public static final String SERIALIZED_NAME_IPMI = "ipmi";
+
+    @SerializedName(SERIALIZED_NAME_IPMI)
+    private NestedIpmi ipmi;
 
     public static final String SERIALIZED_NAME_IS_OS_IN_RAID1 = "is_os_in_raid1";
 
@@ -270,6 +300,11 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_PMEM_DIMM_COUNT)
     private Integer pmemDimmCount;
+
+    public static final String SERIALIZED_NAME_PMEM_DIMMS = "pmem_dimms";
+
+    @SerializedName(SERIALIZED_NAME_PMEM_DIMMS)
+    private List<NestedPmemDimm> pmemDimms = null;
 
     public static final String SERIALIZED_NAME_PMEM_DISK_COUNT = "pmem_disk_count";
 
@@ -433,11 +468,21 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
     @SerializedName(SERIALIZED_NAME_VMS)
     private List<NestedVm> vms = null;
 
+    public static final String SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT = "vsphereEsxiAccount";
+
+    @SerializedName(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT)
+    private NestedVsphereEsxiAccount vsphereEsxiAccount;
+
     public static final String SERIALIZED_NAME_WITH_FASTER_SSD_AS_CACHE =
             "with_faster_ssd_as_cache";
 
     @SerializedName(SERIALIZED_NAME_WITH_FASTER_SSD_AS_CACHE)
     private Boolean withFasterSsdAsCache;
+
+    public static final String SERIALIZED_NAME_ZONE = "zone";
+
+    @SerializedName(SERIALIZED_NAME_ZONE)
+    private NestedZone zone;
 
     public Host() {}
 
@@ -1230,6 +1275,194 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         return this._isPresent_.contains(SERIALIZED_NAME_DATA_IP);
     }
 
+    public Host dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public Host dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public Host dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public Host dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public Host dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public Host dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+    }
+
+    public Host diskPools(List<NestedDiskPool> diskPools) {
+
+        this.diskPools = diskPools;
+        return this;
+    }
+
+    public Host addDiskPoolsItem(NestedDiskPool diskPoolsItem) {
+        if (this.diskPools == null) {
+            this.diskPools = new ArrayList<NestedDiskPool>();
+        }
+        this.diskPools.add(diskPoolsItem);
+        return this;
+    }
+
+    /**
+     * Get diskPools
+     *
+     * @return diskPools
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedDiskPool> getDiskPools() {
+        return diskPools;
+    }
+
+    public void setDiskPools(List<NestedDiskPool> diskPools) {
+        this.diskPools = diskPools;
+    }
+
+    public Host diskPools_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS);
+        return this;
+    }
+
+    public Host diskPools_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS);
+        return this;
+    }
+
+    public void setDiskPools_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS);
+        }
+    }
+
+    public boolean getDiskPools_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK_POOLS);
+    }
+
+    public Host disks(List<NestedDisk> disks) {
+
+        this.disks = disks;
+        return this;
+    }
+
+    public Host addDisksItem(NestedDisk disksItem) {
+        if (this.disks == null) {
+            this.disks = new ArrayList<NestedDisk>();
+        }
+        this.disks.add(disksItem);
+        return this;
+    }
+
+    /**
+     * Get disks
+     *
+     * @return disks
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedDisk> getDisks() {
+        return disks;
+    }
+
+    public void setDisks(List<NestedDisk> disks) {
+        this.disks = disks;
+    }
+
+    public Host disks_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISKS);
+        return this;
+    }
+
+    public Host disks_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISKS);
+        return this;
+    }
+
+    public void setDisks_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISKS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISKS);
+        }
+    }
+
+    public boolean getDisks_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISKS);
+    }
+
     public Host downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
 
         this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
@@ -1314,6 +1547,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getEntityAsyncStatus_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+    }
+
+    public Host failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public Host failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public Host failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
     }
 
     public Host failureDataSpace(Long failureDataSpace) {
@@ -1666,6 +1942,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getIommu_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_IOMMU);
+    }
+
+    public Host ipmi(NestedIpmi ipmi) {
+
+        this.ipmi = ipmi;
+        return this;
+    }
+
+    /**
+     * Get ipmi
+     *
+     * @return ipmi
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedIpmi getIpmi() {
+        return ipmi;
+    }
+
+    public void setIpmi(NestedIpmi ipmi) {
+        this.ipmi = ipmi;
+    }
+
+    public Host ipmi_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IPMI);
+        return this;
+    }
+
+    public Host ipmi_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IPMI);
+        return this;
+    }
+
+    public void setIpmi_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IPMI);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IPMI);
+        }
+    }
+
+    public boolean getIpmi_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IPMI);
     }
 
     public Host isOsInRaid1(Boolean isOsInRaid1) {
@@ -2628,6 +2947,57 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getPmemDimmCount_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_PMEM_DIMM_COUNT);
+    }
+
+    public Host pmemDimms(List<NestedPmemDimm> pmemDimms) {
+
+        this.pmemDimms = pmemDimms;
+        return this;
+    }
+
+    public Host addPmemDimmsItem(NestedPmemDimm pmemDimmsItem) {
+        if (this.pmemDimms == null) {
+            this.pmemDimms = new ArrayList<NestedPmemDimm>();
+        }
+        this.pmemDimms.add(pmemDimmsItem);
+        return this;
+    }
+
+    /**
+     * Get pmemDimms
+     *
+     * @return pmemDimms
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedPmemDimm> getPmemDimms() {
+        return pmemDimms;
+    }
+
+    public void setPmemDimms(List<NestedPmemDimm> pmemDimms) {
+        this.pmemDimms = pmemDimms;
+    }
+
+    public Host pmemDimms_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PMEM_DIMMS);
+        return this;
+    }
+
+    public Host pmemDimms_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PMEM_DIMMS);
+        return this;
+    }
+
+    public void setPmemDimms_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PMEM_DIMMS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PMEM_DIMMS);
+        }
+    }
+
+    public boolean getPmemDimms_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PMEM_DIMMS);
     }
 
     public Host pmemDiskCount(Integer pmemDiskCount) {
@@ -4022,6 +4392,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         return this._isPresent_.contains(SERIALIZED_NAME_VMS);
     }
 
+    public Host vsphereEsxiAccount(NestedVsphereEsxiAccount vsphereEsxiAccount) {
+
+        this.vsphereEsxiAccount = vsphereEsxiAccount;
+        return this;
+    }
+
+    /**
+     * Get vsphereEsxiAccount
+     *
+     * @return vsphereEsxiAccount
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedVsphereEsxiAccount getVsphereEsxiAccount() {
+        return vsphereEsxiAccount;
+    }
+
+    public void setVsphereEsxiAccount(NestedVsphereEsxiAccount vsphereEsxiAccount) {
+        this.vsphereEsxiAccount = vsphereEsxiAccount;
+    }
+
+    public Host vsphereEsxiAccount_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT);
+        return this;
+    }
+
+    public Host vsphereEsxiAccount_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT);
+        return this;
+    }
+
+    public void setVsphereEsxiAccount_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT);
+        }
+    }
+
+    public boolean getVsphereEsxiAccount_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VSPHERE_ESXI_ACCOUNT);
+    }
+
     public Host withFasterSsdAsCache(Boolean withFasterSsdAsCache) {
 
         this.withFasterSsdAsCache = withFasterSsdAsCache;
@@ -4065,6 +4478,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         return this._isPresent_.contains(SERIALIZED_NAME_WITH_FASTER_SSD_AS_CACHE);
     }
 
+    public Host zone(NestedZone zone) {
+
+        this.zone = zone;
+        return this;
+    }
+
+    /**
+     * Get zone
+     *
+     * @return zone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedZone getZone() {
+        return zone;
+    }
+
+    public void setZone(NestedZone zone) {
+        this.zone = zone;
+    }
+
+    public Host zone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ZONE);
+        return this;
+    }
+
+    public Host zone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ZONE);
+        return this;
+    }
+
+    public void setZone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ZONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ZONE);
+        }
+    }
+
+    public boolean getZone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ZONE);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -4094,8 +4550,13 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.cpuTemperatureCelsius, host.cpuTemperatureCelsius)
                 && Objects.equals(this.cpuVendor, host.cpuVendor)
                 && Objects.equals(this.dataIp, host.dataIp)
+                && Objects.equals(this.dirtyCacheSpace, host.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheUsage, host.dirtyCacheUsage)
+                && Objects.equals(this.diskPools, host.diskPools)
+                && Objects.equals(this.disks, host.disks)
                 && Objects.equals(this.downgradedPrioritizedSpace, host.downgradedPrioritizedSpace)
                 && Objects.equals(this.entityAsyncStatus, host.entityAsyncStatus)
+                && Objects.equals(this.failureCacheSpace, host.failureCacheSpace)
                 && Objects.equals(this.failureDataSpace, host.failureDataSpace)
                 && Objects.equals(this.gpuDevices, host.gpuDevices)
                 && Objects.equals(this.hddDataCapacity, host.hddDataCapacity)
@@ -4104,6 +4565,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.hypervisorIp, host.hypervisorIp)
                 && Objects.equals(this.id, host.id)
                 && Objects.equals(this.iommu, host.iommu)
+                && Objects.equals(this.ipmi, host.ipmi)
                 && Objects.equals(this.isOsInRaid1, host.isOsInRaid1)
                 && Objects.equals(this.labels, host.labels)
                 && Objects.equals(this.localId, host.localId)
@@ -4126,6 +4588,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.plannedPrioritizedSpace, host.plannedPrioritizedSpace)
                 && Objects.equals(this.pmemDimmCapacity, host.pmemDimmCapacity)
                 && Objects.equals(this.pmemDimmCount, host.pmemDimmCount)
+                && Objects.equals(this.pmemDimms, host.pmemDimms)
                 && Objects.equals(this.pmemDiskCount, host.pmemDiskCount)
                 && Objects.equals(this.prioSpacePercentage, host.prioSpacePercentage)
                 && Objects.equals(this.provisionedCpuCores, host.provisionedCpuCores)
@@ -4158,7 +4621,9 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.vmNum, host.vmNum)
                 && Objects.equals(this.vmotionIp, host.vmotionIp)
                 && Objects.equals(this.vms, host.vms)
-                && Objects.equals(this.withFasterSsdAsCache, host.withFasterSsdAsCache);
+                && Objects.equals(this.vsphereEsxiAccount, host.vsphereEsxiAccount)
+                && Objects.equals(this.withFasterSsdAsCache, host.withFasterSsdAsCache)
+                && Objects.equals(this.zone, host.zone);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -4191,8 +4656,13 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 cpuTemperatureCelsius,
                 cpuVendor,
                 dataIp,
+                dirtyCacheSpace,
+                dirtyCacheUsage,
+                diskPools,
+                disks,
                 downgradedPrioritizedSpace,
                 entityAsyncStatus,
+                failureCacheSpace,
                 failureDataSpace,
                 gpuDevices,
                 hddDataCapacity,
@@ -4201,6 +4671,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 hypervisorIp,
                 id,
                 iommu,
+                ipmi,
                 isOsInRaid1,
                 labels,
                 localId,
@@ -4223,6 +4694,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 plannedPrioritizedSpace,
                 pmemDimmCapacity,
                 pmemDimmCount,
+                pmemDimms,
                 pmemDiskCount,
                 prioSpacePercentage,
                 provisionedCpuCores,
@@ -4255,7 +4727,9 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 vmNum,
                 vmotionIp,
                 vms,
-                withFasterSsdAsCache);
+                vsphereEsxiAccount,
+                withFasterSsdAsCache,
+                zone);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4301,11 +4775,18 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 .append("\n");
         sb.append("    cpuVendor: ").append(toIndentedString(cpuVendor)).append("\n");
         sb.append("    dataIp: ").append(toIndentedString(dataIp)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
+        sb.append("    diskPools: ").append(toIndentedString(diskPools)).append("\n");
+        sb.append("    disks: ").append(toIndentedString(disks)).append("\n");
         sb.append("    downgradedPrioritizedSpace: ")
                 .append(toIndentedString(downgradedPrioritizedSpace))
                 .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
                 .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
@@ -4315,6 +4796,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         sb.append("    hypervisorIp: ").append(toIndentedString(hypervisorIp)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    iommu: ").append(toIndentedString(iommu)).append("\n");
+        sb.append("    ipmi: ").append(toIndentedString(ipmi)).append("\n");
         sb.append("    isOsInRaid1: ").append(toIndentedString(isOsInRaid1)).append("\n");
         sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
@@ -4353,6 +4835,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 .append("\n");
         sb.append("    pmemDimmCapacity: ").append(toIndentedString(pmemDimmCapacity)).append("\n");
         sb.append("    pmemDimmCount: ").append(toIndentedString(pmemDimmCount)).append("\n");
+        sb.append("    pmemDimms: ").append(toIndentedString(pmemDimms)).append("\n");
         sb.append("    pmemDiskCount: ").append(toIndentedString(pmemDiskCount)).append("\n");
         sb.append("    prioSpacePercentage: ")
                 .append(toIndentedString(prioSpacePercentage))
@@ -4399,9 +4882,13 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         sb.append("    vmNum: ").append(toIndentedString(vmNum)).append("\n");
         sb.append("    vmotionIp: ").append(toIndentedString(vmotionIp)).append("\n");
         sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
+        sb.append("    vsphereEsxiAccount: ")
+                .append(toIndentedString(vsphereEsxiAccount))
+                .append("\n");
         sb.append("    withFasterSsdAsCache: ")
                 .append(toIndentedString(withFasterSsdAsCache))
                 .append("\n");
+        sb.append("    zone: ").append(toIndentedString(zone)).append("\n");
         sb.append("}");
         return sb.toString();
     }

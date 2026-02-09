@@ -70,15 +70,51 @@ public class AddLabelsToResourcesParamsData
     @SerializedName(SERIALIZED_NAME_VDSES)
     private VdsWhereInput vdses;
 
+    public static final String SERIALIZED_NAME_NVMF_SUBSYSTEMS = "nvmf_subsystems";
+
+    @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEMS)
+    private NvmfSubsystemWhereInput nvmfSubsystems;
+
+    public static final String SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS =
+            "nvmf_namespace_snapshots";
+
+    @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS)
+    private NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshots;
+
+    public static final String SERIALIZED_NAME_NVMF_NAMESPACES = "nvmf_namespaces";
+
+    @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACES)
+    private NvmfNamespaceWhereInput nvmfNamespaces;
+
     public static final String SERIALIZED_NAME_NICS = "nics";
 
     @SerializedName(SERIALIZED_NAME_NICS)
     private NicWhereInput nics;
 
+    public static final String SERIALIZED_NAME_NFS_INODES = "nfs_inodes";
+
+    @SerializedName(SERIALIZED_NAME_NFS_INODES)
+    private NfsInodeWhereInput nfsInodes;
+
+    public static final String SERIALIZED_NAME_NFS_EXPORTS = "nfs_exports";
+
+    @SerializedName(SERIALIZED_NAME_NFS_EXPORTS)
+    private NfsExportWhereInput nfsExports;
+
+    public static final String SERIALIZED_NAME_NAMESPACE_GROUPS = "namespace_groups";
+
+    @SerializedName(SERIALIZED_NAME_NAMESPACE_GROUPS)
+    private NamespaceGroupWhereInput namespaceGroups;
+
     public static final String SERIALIZED_NAME_ISCSI_TARGETS = "iscsi_targets";
 
     @SerializedName(SERIALIZED_NAME_ISCSI_TARGETS)
     private IscsiTargetWhereInput iscsiTargets;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS = "iscsi_lun_snapshots";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS)
+    private IscsiLunSnapshotWhereInput iscsiLunSnapshots;
 
     public static final String SERIALIZED_NAME_ISCSI_LUNS = "iscsi_luns";
 
@@ -95,10 +131,26 @@ public class AddLabelsToResourcesParamsData
     @SerializedName(SERIALIZED_NAME_ELF_IMAGES)
     private ElfImageWhereInput elfImages;
 
+    public static final String SERIALIZED_NAME_DISKS = "disks";
+
+    @SerializedName(SERIALIZED_NAME_DISKS)
+    private DiskWhereInput disks;
+
     public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
 
     @SerializedName(SERIALIZED_NAME_DATACENTERS)
     private DatacenterWhereInput datacenters;
+
+    public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS =
+            "consistency_group_snapshots";
+
+    @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS)
+    private ConsistencyGroupSnapshotWhereInput consistencyGroupSnapshots;
+
+    public static final String SERIALIZED_NAME_CONSISTENCY_GROUPS = "consistency_groups";
+
+    @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUPS)
+    private ConsistencyGroupWhereInput consistencyGroups;
 
     public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
 
@@ -629,6 +681,136 @@ public class AddLabelsToResourcesParamsData
         return this._isPresent_.contains(SERIALIZED_NAME_VDSES);
     }
 
+    public AddLabelsToResourcesParamsData nvmfSubsystems(NvmfSubsystemWhereInput nvmfSubsystems) {
+
+        this.nvmfSubsystems = nvmfSubsystems;
+        return this;
+    }
+
+    /**
+     * Get nvmfSubsystems
+     *
+     * @return nvmfSubsystems
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NvmfSubsystemWhereInput getNvmfSubsystems() {
+        return nvmfSubsystems;
+    }
+
+    public void setNvmfSubsystems(NvmfSubsystemWhereInput nvmfSubsystems) {
+        this.nvmfSubsystems = nvmfSubsystems;
+    }
+
+    public AddLabelsToResourcesParamsData nvmfSubsystems_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NVMF_SUBSYSTEMS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData nvmfSubsystems_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NVMF_SUBSYSTEMS);
+        return this;
+    }
+
+    public void setNvmfSubsystems_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NVMF_SUBSYSTEMS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NVMF_SUBSYSTEMS);
+        }
+    }
+
+    public boolean getNvmfSubsystems_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NVMF_SUBSYSTEMS);
+    }
+
+    public AddLabelsToResourcesParamsData nvmfNamespaceSnapshots(
+            NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshots) {
+
+        this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
+        return this;
+    }
+
+    /**
+     * Get nvmfNamespaceSnapshots
+     *
+     * @return nvmfNamespaceSnapshots
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NvmfNamespaceSnapshotWhereInput getNvmfNamespaceSnapshots() {
+        return nvmfNamespaceSnapshots;
+    }
+
+    public void setNvmfNamespaceSnapshots(NvmfNamespaceSnapshotWhereInput nvmfNamespaceSnapshots) {
+        this.nvmfNamespaceSnapshots = nvmfNamespaceSnapshots;
+    }
+
+    public AddLabelsToResourcesParamsData nvmfNamespaceSnapshots_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData nvmfNamespaceSnapshots_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS);
+        return this;
+    }
+
+    public void setNvmfNamespaceSnapshots_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS);
+        }
+    }
+
+    public boolean getNvmfNamespaceSnapshots_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NVMF_NAMESPACE_SNAPSHOTS);
+    }
+
+    public AddLabelsToResourcesParamsData nvmfNamespaces(NvmfNamespaceWhereInput nvmfNamespaces) {
+
+        this.nvmfNamespaces = nvmfNamespaces;
+        return this;
+    }
+
+    /**
+     * Get nvmfNamespaces
+     *
+     * @return nvmfNamespaces
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NvmfNamespaceWhereInput getNvmfNamespaces() {
+        return nvmfNamespaces;
+    }
+
+    public void setNvmfNamespaces(NvmfNamespaceWhereInput nvmfNamespaces) {
+        this.nvmfNamespaces = nvmfNamespaces;
+    }
+
+    public AddLabelsToResourcesParamsData nvmfNamespaces_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NVMF_NAMESPACES);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData nvmfNamespaces_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NVMF_NAMESPACES);
+        return this;
+    }
+
+    public void setNvmfNamespaces_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NVMF_NAMESPACES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NVMF_NAMESPACES);
+        }
+    }
+
+    public boolean getNvmfNamespaces_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NVMF_NAMESPACES);
+    }
+
     public AddLabelsToResourcesParamsData nics(NicWhereInput nics) {
 
         this.nics = nics;
@@ -672,6 +854,136 @@ public class AddLabelsToResourcesParamsData
         return this._isPresent_.contains(SERIALIZED_NAME_NICS);
     }
 
+    public AddLabelsToResourcesParamsData nfsInodes(NfsInodeWhereInput nfsInodes) {
+
+        this.nfsInodes = nfsInodes;
+        return this;
+    }
+
+    /**
+     * Get nfsInodes
+     *
+     * @return nfsInodes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NfsInodeWhereInput getNfsInodes() {
+        return nfsInodes;
+    }
+
+    public void setNfsInodes(NfsInodeWhereInput nfsInodes) {
+        this.nfsInodes = nfsInodes;
+    }
+
+    public AddLabelsToResourcesParamsData nfsInodes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NFS_INODES);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData nfsInodes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NFS_INODES);
+        return this;
+    }
+
+    public void setNfsInodes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NFS_INODES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NFS_INODES);
+        }
+    }
+
+    public boolean getNfsInodes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NFS_INODES);
+    }
+
+    public AddLabelsToResourcesParamsData nfsExports(NfsExportWhereInput nfsExports) {
+
+        this.nfsExports = nfsExports;
+        return this;
+    }
+
+    /**
+     * Get nfsExports
+     *
+     * @return nfsExports
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NfsExportWhereInput getNfsExports() {
+        return nfsExports;
+    }
+
+    public void setNfsExports(NfsExportWhereInput nfsExports) {
+        this.nfsExports = nfsExports;
+    }
+
+    public AddLabelsToResourcesParamsData nfsExports_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NFS_EXPORTS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData nfsExports_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NFS_EXPORTS);
+        return this;
+    }
+
+    public void setNfsExports_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NFS_EXPORTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NFS_EXPORTS);
+        }
+    }
+
+    public boolean getNfsExports_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NFS_EXPORTS);
+    }
+
+    public AddLabelsToResourcesParamsData namespaceGroups(
+            NamespaceGroupWhereInput namespaceGroups) {
+
+        this.namespaceGroups = namespaceGroups;
+        return this;
+    }
+
+    /**
+     * Get namespaceGroups
+     *
+     * @return namespaceGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NamespaceGroupWhereInput getNamespaceGroups() {
+        return namespaceGroups;
+    }
+
+    public void setNamespaceGroups(NamespaceGroupWhereInput namespaceGroups) {
+        this.namespaceGroups = namespaceGroups;
+    }
+
+    public AddLabelsToResourcesParamsData namespaceGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAMESPACE_GROUPS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData namespaceGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAMESPACE_GROUPS);
+        return this;
+    }
+
+    public void setNamespaceGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAMESPACE_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAMESPACE_GROUPS);
+        }
+    }
+
+    public boolean getNamespaceGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAMESPACE_GROUPS);
+    }
+
     public AddLabelsToResourcesParamsData iscsiTargets(IscsiTargetWhereInput iscsiTargets) {
 
         this.iscsiTargets = iscsiTargets;
@@ -713,6 +1025,50 @@ public class AddLabelsToResourcesParamsData
 
     public boolean getIscsiTargets_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_TARGETS);
+    }
+
+    public AddLabelsToResourcesParamsData iscsiLunSnapshots(
+            IscsiLunSnapshotWhereInput iscsiLunSnapshots) {
+
+        this.iscsiLunSnapshots = iscsiLunSnapshots;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunSnapshots
+     *
+     * @return iscsiLunSnapshots
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiLunSnapshotWhereInput getIscsiLunSnapshots() {
+        return iscsiLunSnapshots;
+    }
+
+    public void setIscsiLunSnapshots(IscsiLunSnapshotWhereInput iscsiLunSnapshots) {
+        this.iscsiLunSnapshots = iscsiLunSnapshots;
+    }
+
+    public AddLabelsToResourcesParamsData iscsiLunSnapshots_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData iscsiLunSnapshots_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS);
+        return this;
+    }
+
+    public void setIscsiLunSnapshots_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS);
+        }
+    }
+
+    public boolean getIscsiLunSnapshots_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUN_SNAPSHOTS);
     }
 
     public AddLabelsToResourcesParamsData iscsiLuns(IscsiLunWhereInput iscsiLuns) {
@@ -844,6 +1200,49 @@ public class AddLabelsToResourcesParamsData
         return this._isPresent_.contains(SERIALIZED_NAME_ELF_IMAGES);
     }
 
+    public AddLabelsToResourcesParamsData disks(DiskWhereInput disks) {
+
+        this.disks = disks;
+        return this;
+    }
+
+    /**
+     * Get disks
+     *
+     * @return disks
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DiskWhereInput getDisks() {
+        return disks;
+    }
+
+    public void setDisks(DiskWhereInput disks) {
+        this.disks = disks;
+    }
+
+    public AddLabelsToResourcesParamsData disks_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISKS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData disks_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISKS);
+        return this;
+    }
+
+    public void setDisks_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISKS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISKS);
+        }
+    }
+
+    public boolean getDisks_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISKS);
+    }
+
     public AddLabelsToResourcesParamsData datacenters(DatacenterWhereInput datacenters) {
 
         this.datacenters = datacenters;
@@ -885,6 +1284,95 @@ public class AddLabelsToResourcesParamsData
 
     public boolean getDatacenters_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DATACENTERS);
+    }
+
+    public AddLabelsToResourcesParamsData consistencyGroupSnapshots(
+            ConsistencyGroupSnapshotWhereInput consistencyGroupSnapshots) {
+
+        this.consistencyGroupSnapshots = consistencyGroupSnapshots;
+        return this;
+    }
+
+    /**
+     * Get consistencyGroupSnapshots
+     *
+     * @return consistencyGroupSnapshots
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConsistencyGroupSnapshotWhereInput getConsistencyGroupSnapshots() {
+        return consistencyGroupSnapshots;
+    }
+
+    public void setConsistencyGroupSnapshots(
+            ConsistencyGroupSnapshotWhereInput consistencyGroupSnapshots) {
+        this.consistencyGroupSnapshots = consistencyGroupSnapshots;
+    }
+
+    public AddLabelsToResourcesParamsData consistencyGroupSnapshots_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData consistencyGroupSnapshots_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS);
+        return this;
+    }
+
+    public void setConsistencyGroupSnapshots_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS);
+        }
+    }
+
+    public boolean getConsistencyGroupSnapshots_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOTS);
+    }
+
+    public AddLabelsToResourcesParamsData consistencyGroups(
+            ConsistencyGroupWhereInput consistencyGroups) {
+
+        this.consistencyGroups = consistencyGroups;
+        return this;
+    }
+
+    /**
+     * Get consistencyGroups
+     *
+     * @return consistencyGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConsistencyGroupWhereInput getConsistencyGroups() {
+        return consistencyGroups;
+    }
+
+    public void setConsistencyGroups(ConsistencyGroupWhereInput consistencyGroups) {
+        this.consistencyGroups = consistencyGroups;
+    }
+
+    public AddLabelsToResourcesParamsData consistencyGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUPS);
+        return this;
+    }
+
+    public AddLabelsToResourcesParamsData consistencyGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUPS);
+        return this;
+    }
+
+    public void setConsistencyGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUPS);
+        }
+    }
+
+    public boolean getConsistencyGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONSISTENCY_GROUPS);
     }
 
     public AddLabelsToResourcesParamsData clusters(ClusterWhereInput clusters) {
@@ -959,12 +1447,31 @@ public class AddLabelsToResourcesParamsData
                 && Objects.equals(this.vmSnapshots, addLabelsToResourcesParamsData.vmSnapshots)
                 && Objects.equals(this.vlans, addLabelsToResourcesParamsData.vlans)
                 && Objects.equals(this.vdses, addLabelsToResourcesParamsData.vdses)
+                && Objects.equals(
+                        this.nvmfSubsystems, addLabelsToResourcesParamsData.nvmfSubsystems)
+                && Objects.equals(
+                        this.nvmfNamespaceSnapshots,
+                        addLabelsToResourcesParamsData.nvmfNamespaceSnapshots)
+                && Objects.equals(
+                        this.nvmfNamespaces, addLabelsToResourcesParamsData.nvmfNamespaces)
                 && Objects.equals(this.nics, addLabelsToResourcesParamsData.nics)
+                && Objects.equals(this.nfsInodes, addLabelsToResourcesParamsData.nfsInodes)
+                && Objects.equals(this.nfsExports, addLabelsToResourcesParamsData.nfsExports)
+                && Objects.equals(
+                        this.namespaceGroups, addLabelsToResourcesParamsData.namespaceGroups)
                 && Objects.equals(this.iscsiTargets, addLabelsToResourcesParamsData.iscsiTargets)
+                && Objects.equals(
+                        this.iscsiLunSnapshots, addLabelsToResourcesParamsData.iscsiLunSnapshots)
                 && Objects.equals(this.iscsiLuns, addLabelsToResourcesParamsData.iscsiLuns)
                 && Objects.equals(this.hosts, addLabelsToResourcesParamsData.hosts)
                 && Objects.equals(this.elfImages, addLabelsToResourcesParamsData.elfImages)
+                && Objects.equals(this.disks, addLabelsToResourcesParamsData.disks)
                 && Objects.equals(this.datacenters, addLabelsToResourcesParamsData.datacenters)
+                && Objects.equals(
+                        this.consistencyGroupSnapshots,
+                        addLabelsToResourcesParamsData.consistencyGroupSnapshots)
+                && Objects.equals(
+                        this.consistencyGroups, addLabelsToResourcesParamsData.consistencyGroups)
                 && Objects.equals(this.clusters, addLabelsToResourcesParamsData.clusters);
     }
 
@@ -983,12 +1490,22 @@ public class AddLabelsToResourcesParamsData
                 vmSnapshots,
                 vlans,
                 vdses,
+                nvmfSubsystems,
+                nvmfNamespaceSnapshots,
+                nvmfNamespaces,
                 nics,
+                nfsInodes,
+                nfsExports,
+                namespaceGroups,
                 iscsiTargets,
+                iscsiLunSnapshots,
                 iscsiLuns,
                 hosts,
                 elfImages,
+                disks,
                 datacenters,
+                consistencyGroupSnapshots,
+                consistencyGroups,
                 clusters);
     }
 
@@ -1016,12 +1533,30 @@ public class AddLabelsToResourcesParamsData
         sb.append("    vmSnapshots: ").append(toIndentedString(vmSnapshots)).append("\n");
         sb.append("    vlans: ").append(toIndentedString(vlans)).append("\n");
         sb.append("    vdses: ").append(toIndentedString(vdses)).append("\n");
+        sb.append("    nvmfSubsystems: ").append(toIndentedString(nvmfSubsystems)).append("\n");
+        sb.append("    nvmfNamespaceSnapshots: ")
+                .append(toIndentedString(nvmfNamespaceSnapshots))
+                .append("\n");
+        sb.append("    nvmfNamespaces: ").append(toIndentedString(nvmfNamespaces)).append("\n");
         sb.append("    nics: ").append(toIndentedString(nics)).append("\n");
+        sb.append("    nfsInodes: ").append(toIndentedString(nfsInodes)).append("\n");
+        sb.append("    nfsExports: ").append(toIndentedString(nfsExports)).append("\n");
+        sb.append("    namespaceGroups: ").append(toIndentedString(namespaceGroups)).append("\n");
         sb.append("    iscsiTargets: ").append(toIndentedString(iscsiTargets)).append("\n");
+        sb.append("    iscsiLunSnapshots: ")
+                .append(toIndentedString(iscsiLunSnapshots))
+                .append("\n");
         sb.append("    iscsiLuns: ").append(toIndentedString(iscsiLuns)).append("\n");
         sb.append("    hosts: ").append(toIndentedString(hosts)).append("\n");
         sb.append("    elfImages: ").append(toIndentedString(elfImages)).append("\n");
+        sb.append("    disks: ").append(toIndentedString(disks)).append("\n");
         sb.append("    datacenters: ").append(toIndentedString(datacenters)).append("\n");
+        sb.append("    consistencyGroupSnapshots: ")
+                .append(toIndentedString(consistencyGroupSnapshots))
+                .append("\n");
+        sb.append("    consistencyGroups: ")
+                .append(toIndentedString(consistencyGroups))
+                .append("\n");
         sb.append("    clusters: ").append(toIndentedString(clusters)).append("\n");
         sb.append("}");
         return sb.toString();

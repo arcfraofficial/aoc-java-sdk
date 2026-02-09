@@ -66,7 +66,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -152,7 +152,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -173,7 +173,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -197,7 +197,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -224,7 +224,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -313,7 +313,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -335,7 +335,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -361,7 +361,7 @@ public class SvtImageApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>

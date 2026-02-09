@@ -54,6 +54,14 @@ public enum ClusterOrderByInput {
 
     DATA_REDUCTION_SAVING_DESC("data_reduction_saving_DESC"),
 
+    DIRTY_CACHE_SPACE_ASC("dirty_cache_space_ASC"),
+
+    DIRTY_CACHE_SPACE_DESC("dirty_cache_space_DESC"),
+
+    DIRTY_CACHE_USAGE_ASC("dirty_cache_usage_ASC"),
+
+    DIRTY_CACHE_USAGE_DESC("dirty_cache_usage_DESC"),
+
     DISCONNECTED_DATE_ASC("disconnected_date_ASC"),
 
     DISCONNECTED_DATE_DESC("disconnected_date_DESC"),
@@ -73,6 +81,10 @@ public enum ClusterOrderByInput {
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+
+    FAILURE_CACHE_SPACE_ASC("failure_cache_space_ASC"),
+
+    FAILURE_CACHE_SPACE_DESC("failure_cache_space_DESC"),
 
     FAILURE_DATA_SPACE_ASC("failure_data_space_ASC"),
 

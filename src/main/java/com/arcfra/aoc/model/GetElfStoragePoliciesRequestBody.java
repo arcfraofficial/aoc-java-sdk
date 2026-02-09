@@ -41,6 +41,11 @@ public class GetElfStoragePoliciesRequestBody
     @SerializedName(SERIALIZED_NAME_SKIP)
     private Integer skip;
 
+    public static final String SERIALIZED_NAME_WHERE = "where";
+
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private ElfStoragePolicyWhereInput where;
+
     public GetElfStoragePoliciesRequestBody() {}
 
     public GetElfStoragePoliciesRequestBody after(String after) {
@@ -301,6 +306,49 @@ public class GetElfStoragePoliciesRequestBody
         return this._isPresent_.contains(SERIALIZED_NAME_SKIP);
     }
 
+    public GetElfStoragePoliciesRequestBody where(ElfStoragePolicyWhereInput where) {
+
+        this.where = where;
+        return this;
+    }
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ElfStoragePolicyWhereInput getWhere() {
+        return where;
+    }
+
+    public void setWhere(ElfStoragePolicyWhereInput where) {
+        this.where = where;
+    }
+
+    public GetElfStoragePoliciesRequestBody where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public GetElfStoragePoliciesRequestBody where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -316,7 +364,8 @@ public class GetElfStoragePoliciesRequestBody
                 && Objects.equals(this.first, getElfStoragePoliciesRequestBody.first)
                 && Objects.equals(this.last, getElfStoragePoliciesRequestBody.last)
                 && Objects.equals(this.orderBy, getElfStoragePoliciesRequestBody.orderBy)
-                && Objects.equals(this.skip, getElfStoragePoliciesRequestBody.skip);
+                && Objects.equals(this.skip, getElfStoragePoliciesRequestBody.skip)
+                && Objects.equals(this.where, getElfStoragePoliciesRequestBody.where);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -330,7 +379,7 @@ public class GetElfStoragePoliciesRequestBody
 
     @Override
     public int hashCode() {
-        return Objects.hash(after, before, first, last, orderBy, skip);
+        return Objects.hash(after, before, first, last, orderBy, skip, where);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -350,6 +399,7 @@ public class GetElfStoragePoliciesRequestBody
         sb.append("    last: ").append(toIndentedString(last)).append("\n");
         sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
         sb.append("    skip: ").append(toIndentedString(skip)).append("\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
         sb.append("}");
         return sb.toString();
     }

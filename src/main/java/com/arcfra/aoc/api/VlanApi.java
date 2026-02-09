@@ -9,6 +9,8 @@ import com.arcfra.aoc.Configuration;
 import com.arcfra.aoc.Pair;
 import com.arcfra.aoc.model.GetVlansConnectionRequestBody;
 import com.arcfra.aoc.model.GetVlansRequestBody;
+import com.arcfra.aoc.model.ManagementVlanUpdationParams;
+import com.arcfra.aoc.model.MigrationVlanUpdationParams;
 import com.arcfra.aoc.model.Vlan;
 import com.arcfra.aoc.model.VlanConnection;
 import com.arcfra.aoc.model.VlanDeletionParams;
@@ -384,7 +386,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -470,7 +472,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -489,7 +491,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -513,7 +515,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -538,7 +540,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -627,7 +629,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -648,7 +650,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -673,7 +675,7 @@ public class VlanApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -687,6 +689,325 @@ public class VlanApi {
         okhttp3.Call localVarCall =
                 getVlansConnectionValidateBeforeCall(getVlansConnectionRequestBody, _callback);
         Type localVarReturnType = new TypeToken<VlanConnection>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateManagementVlan
+     *
+     * @param managementVlanUpdationParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateManagementVlanCall(
+            ManagementVlanUpdationParams managementVlanUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = managementVlanUpdationParams;
+
+        // create path and map variables
+        String localVarPath = "/update-management-vlan";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateManagementVlanValidateBeforeCall(
+            ManagementVlanUpdationParams managementVlanUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'managementVlanUpdationParams' is set
+        if (managementVlanUpdationParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'managementVlanUpdationParams' when calling"
+                            + " updateManagementVlan(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                updateManagementVlanCall(managementVlanUpdationParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param managementVlanUpdationParams (required)
+     * @return List&lt;WithTaskVlan&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskVlan> updateManagementVlan(
+            ManagementVlanUpdationParams managementVlanUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskVlan>> localVarResp =
+                updateManagementVlanWithHttpInfo(managementVlanUpdationParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param managementVlanUpdationParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVlan&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskVlan>> updateManagementVlanWithHttpInfo(
+            ManagementVlanUpdationParams managementVlanUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateManagementVlanValidateBeforeCall(managementVlanUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVlan>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param managementVlanUpdationParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateManagementVlanAsync(
+            ManagementVlanUpdationParams managementVlanUpdationParams,
+            final ApiCallback<List<WithTaskVlan>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                updateManagementVlanValidateBeforeCall(managementVlanUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVlan>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateMigrationVlan
+     *
+     * @param migrationVlanUpdationParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateMigrationVlanCall(
+            MigrationVlanUpdationParams migrationVlanUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = migrationVlanUpdationParams;
+
+        // create path and map variables
+        String localVarPath = "/update-migration-vlan";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateMigrationVlanValidateBeforeCall(
+            MigrationVlanUpdationParams migrationVlanUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'migrationVlanUpdationParams' is set
+        if (migrationVlanUpdationParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'migrationVlanUpdationParams' when calling"
+                            + " updateMigrationVlan(Async)");
+        }
+
+        okhttp3.Call localVarCall = updateMigrationVlanCall(migrationVlanUpdationParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param migrationVlanUpdationParams (required)
+     * @return List&lt;WithTaskVlan&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskVlan> updateMigrationVlan(
+            MigrationVlanUpdationParams migrationVlanUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskVlan>> localVarResp =
+                updateMigrationVlanWithHttpInfo(migrationVlanUpdationParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param migrationVlanUpdationParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVlan&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskVlan>> updateMigrationVlanWithHttpInfo(
+            MigrationVlanUpdationParams migrationVlanUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateMigrationVlanValidateBeforeCall(migrationVlanUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVlan>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param migrationVlanUpdationParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateMigrationVlanAsync(
+            MigrationVlanUpdationParams migrationVlanUpdationParams,
+            final ApiCallback<List<WithTaskVlan>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                updateMigrationVlanValidateBeforeCall(migrationVlanUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVlan>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

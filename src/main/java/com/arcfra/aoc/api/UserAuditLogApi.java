@@ -11,6 +11,8 @@ import com.arcfra.aoc.model.GetUserAuditLogsConnectionRequestBody;
 import com.arcfra.aoc.model.GetUserAuditLogsRequestBody;
 import com.arcfra.aoc.model.UserAuditLog;
 import com.arcfra.aoc.model.UserAuditLogConnection;
+import com.arcfra.aoc.model.UserAuditLogCreationParams;
+import com.arcfra.aoc.model.WithTaskUserAuditLog;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -56,6 +58,167 @@ public class UserAuditLogApi {
     }
 
     /**
+     * Build call for createUserAuditLog
+     *
+     * @param userAuditLogCreationParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createUserAuditLogCall(
+            List<UserAuditLogCreationParams> userAuditLogCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = userAuditLogCreationParams;
+
+        // create path and map variables
+        String localVarPath = "/create-user-audit-log";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createUserAuditLogValidateBeforeCall(
+            List<UserAuditLogCreationParams> userAuditLogCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'userAuditLogCreationParams' is set
+        if (userAuditLogCreationParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'userAuditLogCreationParams' when calling"
+                            + " createUserAuditLog(Async)");
+        }
+
+        okhttp3.Call localVarCall = createUserAuditLogCall(userAuditLogCreationParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param userAuditLogCreationParams (required)
+     * @return List&lt;WithTaskUserAuditLog&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskUserAuditLog> createUserAuditLog(
+            List<UserAuditLogCreationParams> userAuditLogCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskUserAuditLog>> localVarResp =
+                createUserAuditLogWithHttpInfo(userAuditLogCreationParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param userAuditLogCreationParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskUserAuditLog&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskUserAuditLog>> createUserAuditLogWithHttpInfo(
+            List<UserAuditLogCreationParams> userAuditLogCreationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                createUserAuditLogValidateBeforeCall(userAuditLogCreationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskUserAuditLog>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param userAuditLogCreationParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call createUserAuditLogAsync(
+            List<UserAuditLogCreationParams> userAuditLogCreationParams,
+            final ApiCallback<List<WithTaskUserAuditLog>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                createUserAuditLogValidateBeforeCall(userAuditLogCreationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskUserAuditLog>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getUserAuditLogs
      *
      * @param getUserAuditLogsRequestBody (required)
@@ -65,7 +228,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -151,7 +314,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -172,7 +335,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -197,7 +360,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -224,7 +387,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -313,7 +476,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -335,7 +498,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
@@ -362,7 +525,7 @@ public class UserAuditLogApi {
      * @http.response.details
      *     <table summary="Response Details" border="1">
      * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
      * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>

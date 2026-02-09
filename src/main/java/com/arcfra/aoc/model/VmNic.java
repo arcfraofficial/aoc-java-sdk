@@ -3,13 +3,20 @@ package com.arcfra.aoc.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** VmNic */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_DPI_ENABLED = "dpi_enabled";
+
+    @SerializedName(SERIALIZED_NAME_DPI_ENABLED)
+    private Boolean dpiEnabled;
+
     public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT =
             "egress_rate_limit_burst_in_bit";
 
@@ -37,6 +44,17 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
 
     @SerializedName(SERIALIZED_NAME_GATEWAY)
     private String gateway;
+
+    public static final String SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES = "guest_info_ip_addresses";
+
+    @SerializedName(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES)
+    private List<String> guestInfoIpAddresses = new ArrayList<String>();
+
+    public static final String SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES_V6 =
+            "guest_info_ip_addresses_v6";
+
+    @SerializedName(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES_V6)
+    private List<String> guestInfoIpAddressesV6 = new ArrayList<String>();
 
     public static final String SERIALIZED_NAME_ID = "id";
 
@@ -121,7 +139,55 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
     @SerializedName(SERIALIZED_NAME_VM)
     private NestedVm vm;
 
+    public static final String SERIALIZED_NAME_VPC_NIC = "vpc_nic";
+
+    @SerializedName(SERIALIZED_NAME_VPC_NIC)
+    private NestedVirtualPrivateCloudNic vpcNic;
+
     public VmNic() {}
+
+    public VmNic dpiEnabled(Boolean dpiEnabled) {
+
+        this.dpiEnabled = dpiEnabled;
+        return this;
+    }
+
+    /**
+     * Get dpiEnabled
+     *
+     * @return dpiEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDpiEnabled() {
+        return dpiEnabled;
+    }
+
+    public void setDpiEnabled(Boolean dpiEnabled) {
+        this.dpiEnabled = dpiEnabled;
+    }
+
+    public VmNic dpiEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public VmNic dpiEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public void setDpiEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        }
+    }
+
+    public boolean getDpiEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DPI_ENABLED);
+    }
 
     public VmNic egressRateLimitBurstInBit(Double egressRateLimitBurstInBit) {
 
@@ -336,6 +402,102 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
 
     public boolean getGateway_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_GATEWAY);
+    }
+
+    public VmNic guestInfoIpAddresses(List<String> guestInfoIpAddresses) {
+
+        this.guestInfoIpAddresses = guestInfoIpAddresses;
+        return this;
+    }
+
+    public VmNic addGuestInfoIpAddressesItem(String guestInfoIpAddressesItem) {
+        this.guestInfoIpAddresses.add(guestInfoIpAddressesItem);
+        return this;
+    }
+
+    /**
+     * Get guestInfoIpAddresses
+     *
+     * @return guestInfoIpAddresses
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public List<String> getGuestInfoIpAddresses() {
+        return guestInfoIpAddresses;
+    }
+
+    public void setGuestInfoIpAddresses(List<String> guestInfoIpAddresses) {
+        this.guestInfoIpAddresses = guestInfoIpAddresses;
+    }
+
+    public VmNic guestInfoIpAddresses_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES);
+        return this;
+    }
+
+    public VmNic guestInfoIpAddresses_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES);
+        return this;
+    }
+
+    public void setGuestInfoIpAddresses_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES);
+        }
+    }
+
+    public boolean getGuestInfoIpAddresses_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES);
+    }
+
+    public VmNic guestInfoIpAddressesV6(List<String> guestInfoIpAddressesV6) {
+
+        this.guestInfoIpAddressesV6 = guestInfoIpAddressesV6;
+        return this;
+    }
+
+    public VmNic addGuestInfoIpAddressesV6Item(String guestInfoIpAddressesV6Item) {
+        this.guestInfoIpAddressesV6.add(guestInfoIpAddressesV6Item);
+        return this;
+    }
+
+    /**
+     * Get guestInfoIpAddressesV6
+     *
+     * @return guestInfoIpAddressesV6
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public List<String> getGuestInfoIpAddressesV6() {
+        return guestInfoIpAddressesV6;
+    }
+
+    public void setGuestInfoIpAddressesV6(List<String> guestInfoIpAddressesV6) {
+        this.guestInfoIpAddressesV6 = guestInfoIpAddressesV6;
+    }
+
+    public VmNic guestInfoIpAddressesV6_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES_V6);
+        return this;
+    }
+
+    public VmNic guestInfoIpAddressesV6_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES_V6);
+        return this;
+    }
+
+    public void setGuestInfoIpAddressesV6_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES_V6);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES_V6);
+        }
+    }
+
+    public boolean getGuestInfoIpAddressesV6_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_GUEST_INFO_IP_ADDRESSES_V6);
     }
 
     public VmNic id(String id) {
@@ -1026,6 +1188,49 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
         return this._isPresent_.contains(SERIALIZED_NAME_VM);
     }
 
+    public VmNic vpcNic(NestedVirtualPrivateCloudNic vpcNic) {
+
+        this.vpcNic = vpcNic;
+        return this;
+    }
+
+    /**
+     * Get vpcNic
+     *
+     * @return vpcNic
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedVirtualPrivateCloudNic getVpcNic() {
+        return vpcNic;
+    }
+
+    public void setVpcNic(NestedVirtualPrivateCloudNic vpcNic) {
+        this.vpcNic = vpcNic;
+    }
+
+    public VmNic vpcNic_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VPC_NIC);
+        return this;
+    }
+
+    public VmNic vpcNic_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VPC_NIC);
+        return this;
+    }
+
+    public void setVpcNic_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VPC_NIC);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VPC_NIC);
+        }
+    }
+
+    public boolean getVpcNic_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VPC_NIC);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -1035,12 +1240,15 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
             return false;
         }
         VmNic vmNic = (VmNic) o;
-        return Objects.equals(this.egressRateLimitBurstInBit, vmNic.egressRateLimitBurstInBit)
+        return Objects.equals(this.dpiEnabled, vmNic.dpiEnabled)
+                && Objects.equals(this.egressRateLimitBurstInBit, vmNic.egressRateLimitBurstInBit)
                 && Objects.equals(this.egressRateLimitEnabled, vmNic.egressRateLimitEnabled)
                 && Objects.equals(
                         this.egressRateLimitMaxRateInBitps, vmNic.egressRateLimitMaxRateInBitps)
                 && Objects.equals(this.enabled, vmNic.enabled)
                 && Objects.equals(this.gateway, vmNic.gateway)
+                && Objects.equals(this.guestInfoIpAddresses, vmNic.guestInfoIpAddresses)
+                && Objects.equals(this.guestInfoIpAddressesV6, vmNic.guestInfoIpAddressesV6)
                 && Objects.equals(this.id, vmNic.id)
                 && Objects.equals(this.ingressRateLimitBurstInBit, vmNic.ingressRateLimitBurstInBit)
                 && Objects.equals(this.ingressRateLimitEnabled, vmNic.ingressRateLimitEnabled)
@@ -1057,7 +1265,8 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
                 && Objects.equals(this.subnetMask, vmNic.subnetMask)
                 && Objects.equals(this.type, vmNic.type)
                 && Objects.equals(this.vlan, vmNic.vlan)
-                && Objects.equals(this.vm, vmNic.vm);
+                && Objects.equals(this.vm, vmNic.vm)
+                && Objects.equals(this.vpcNic, vmNic.vpcNic);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -1072,11 +1281,14 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
     @Override
     public int hashCode() {
         return Objects.hash(
+                dpiEnabled,
                 egressRateLimitBurstInBit,
                 egressRateLimitEnabled,
                 egressRateLimitMaxRateInBitps,
                 enabled,
                 gateway,
+                guestInfoIpAddresses,
+                guestInfoIpAddressesV6,
                 id,
                 ingressRateLimitBurstInBit,
                 ingressRateLimitEnabled,
@@ -1092,7 +1304,8 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
                 subnetMask,
                 type,
                 vlan,
-                vm);
+                vm,
+                vpcNic);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1106,6 +1319,7 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class VmNic {\n");
+        sb.append("    dpiEnabled: ").append(toIndentedString(dpiEnabled)).append("\n");
         sb.append("    egressRateLimitBurstInBit: ")
                 .append(toIndentedString(egressRateLimitBurstInBit))
                 .append("\n");
@@ -1117,6 +1331,12 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
                 .append("\n");
         sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
         sb.append("    gateway: ").append(toIndentedString(gateway)).append("\n");
+        sb.append("    guestInfoIpAddresses: ")
+                .append(toIndentedString(guestInfoIpAddresses))
+                .append("\n");
+        sb.append("    guestInfoIpAddressesV6: ")
+                .append(toIndentedString(guestInfoIpAddressesV6))
+                .append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    ingressRateLimitBurstInBit: ")
                 .append(toIndentedString(ingressRateLimitBurstInBit))
@@ -1139,6 +1359,7 @@ public class VmNic extends com.arcfra.aoc.ConditionalNullable.ConditionalNullabl
         sb.append("    type: ").append(toIndentedString(type)).append("\n");
         sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
         sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
+        sb.append("    vpcNic: ").append(toIndentedString(vpcNic)).append("\n");
         sb.append("}");
         return sb.toString();
     }

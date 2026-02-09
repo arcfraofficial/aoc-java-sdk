@@ -12,6 +12,12 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /** IscsiLunSnapshot */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT =
+            "consistency_group_snapshot";
+
+    @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
+    private NestedConsistencyGroupSnapshot consistencyGroupSnapshot;
+
     public static final String SERIALIZED_NAME_EC_K = "ec_k";
 
     @SerializedName(SERIALIZED_NAME_EC_K)
@@ -67,12 +73,62 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
     private ResiliencyType resiliencyType;
 
+    public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshot_group";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
+    private NestedSnapshotGroup snapshotGroup;
+
     public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
 
     @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
     private Long uniqueSize;
 
     public IscsiLunSnapshot() {}
+
+    public IscsiLunSnapshot consistencyGroupSnapshot(
+            NestedConsistencyGroupSnapshot consistencyGroupSnapshot) {
+
+        this.consistencyGroupSnapshot = consistencyGroupSnapshot;
+        return this;
+    }
+
+    /**
+     * Get consistencyGroupSnapshot
+     *
+     * @return consistencyGroupSnapshot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedConsistencyGroupSnapshot getConsistencyGroupSnapshot() {
+        return consistencyGroupSnapshot;
+    }
+
+    public void setConsistencyGroupSnapshot(
+            NestedConsistencyGroupSnapshot consistencyGroupSnapshot) {
+        this.consistencyGroupSnapshot = consistencyGroupSnapshot;
+    }
+
+    public IscsiLunSnapshot consistencyGroupSnapshot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT);
+        return this;
+    }
+
+    public IscsiLunSnapshot consistencyGroupSnapshot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT);
+        return this;
+    }
+
+    public void setConsistencyGroupSnapshot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT);
+        }
+    }
+
+    public boolean getConsistencyGroupSnapshot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT);
+    }
 
     public IscsiLunSnapshot ecK(Integer ecK) {
 
@@ -555,6 +611,49 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
     }
 
+    public IscsiLunSnapshot snapshotGroup(NestedSnapshotGroup snapshotGroup) {
+
+        this.snapshotGroup = snapshotGroup;
+        return this;
+    }
+
+    /**
+     * Get snapshotGroup
+     *
+     * @return snapshotGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedSnapshotGroup getSnapshotGroup() {
+        return snapshotGroup;
+    }
+
+    public void setSnapshotGroup(NestedSnapshotGroup snapshotGroup) {
+        this.snapshotGroup = snapshotGroup;
+    }
+
+    public IscsiLunSnapshot snapshotGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public IscsiLunSnapshot snapshotGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public void setSnapshotGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        }
+    }
+
+    public boolean getSnapshotGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_GROUP);
+    }
+
     public IscsiLunSnapshot uniqueSize(Long uniqueSize) {
 
         this.uniqueSize = uniqueSize;
@@ -607,7 +706,9 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
             return false;
         }
         IscsiLunSnapshot iscsiLunSnapshot = (IscsiLunSnapshot) o;
-        return Objects.equals(this.ecK, iscsiLunSnapshot.ecK)
+        return Objects.equals(
+                        this.consistencyGroupSnapshot, iscsiLunSnapshot.consistencyGroupSnapshot)
+                && Objects.equals(this.ecK, iscsiLunSnapshot.ecK)
                 && Objects.equals(this.ecM, iscsiLunSnapshot.ecM)
                 && Objects.equals(this.entityAsyncStatus, iscsiLunSnapshot.entityAsyncStatus)
                 && Objects.equals(this.id, iscsiLunSnapshot.id)
@@ -618,6 +719,7 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
                 && Objects.equals(this.localId, iscsiLunSnapshot.localId)
                 && Objects.equals(this.name, iscsiLunSnapshot.name)
                 && Objects.equals(this.resiliencyType, iscsiLunSnapshot.resiliencyType)
+                && Objects.equals(this.snapshotGroup, iscsiLunSnapshot.snapshotGroup)
                 && Objects.equals(this.uniqueSize, iscsiLunSnapshot.uniqueSize);
     }
 
@@ -633,6 +735,7 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
     @Override
     public int hashCode() {
         return Objects.hash(
+                consistencyGroupSnapshot,
                 ecK,
                 ecM,
                 entityAsyncStatus,
@@ -644,6 +747,7 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
                 localId,
                 name,
                 resiliencyType,
+                snapshotGroup,
                 uniqueSize);
     }
 
@@ -658,6 +762,9 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class IscsiLunSnapshot {\n");
+        sb.append("    consistencyGroupSnapshot: ")
+                .append(toIndentedString(consistencyGroupSnapshot))
+                .append("\n");
         sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
         sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
         sb.append("    entityAsyncStatus: ")
@@ -671,6 +778,7 @@ public class IscsiLunSnapshot extends com.arcfra.aoc.ConditionalNullable.Conditi
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
+        sb.append("    snapshotGroup: ").append(toIndentedString(snapshotGroup)).append("\n");
         sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
         sb.append("}");
         return sb.toString();

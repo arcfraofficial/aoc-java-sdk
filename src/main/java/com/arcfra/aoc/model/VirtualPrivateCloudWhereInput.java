@@ -240,6 +240,22 @@ public class VirtualPrivateCloudWhereInput
     @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
     private String idStartsWith;
 
+    public static final String SERIALIZED_NAME_ISOLATION_POLICIES_EVERY =
+            "isolation_policies_every";
+
+    @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES_EVERY)
+    private VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesEvery;
+
+    public static final String SERIALIZED_NAME_ISOLATION_POLICIES_NONE = "isolation_policies_none";
+
+    @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES_NONE)
+    private VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesNone;
+
+    public static final String SERIALIZED_NAME_ISOLATION_POLICIES_SOME = "isolation_policies_some";
+
+    @SerializedName(SERIALIZED_NAME_ISOLATION_POLICIES_SOME)
+    private VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesSome;
+
     public static final String SERIALIZED_NAME_LOCAL_ID = "local_id";
 
     @SerializedName(SERIALIZED_NAME_LOCAL_ID)
@@ -2438,6 +2454,141 @@ public class VirtualPrivateCloudWhereInput
 
     public boolean getIdStartsWith_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ID_STARTS_WITH);
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesEvery(
+            VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesEvery) {
+
+        this.isolationPoliciesEvery = isolationPoliciesEvery;
+        return this;
+    }
+
+    /**
+     * Get isolationPoliciesEvery
+     *
+     * @return isolationPoliciesEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VirtualPrivateCloudIsolationPolicyWhereInput getIsolationPoliciesEvery() {
+        return isolationPoliciesEvery;
+    }
+
+    public void setIsolationPoliciesEvery(
+            VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesEvery) {
+        this.isolationPoliciesEvery = isolationPoliciesEvery;
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES_EVERY);
+        return this;
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES_EVERY);
+        return this;
+    }
+
+    public void setIsolationPoliciesEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES_EVERY);
+        }
+    }
+
+    public boolean getIsolationPoliciesEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISOLATION_POLICIES_EVERY);
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesNone(
+            VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesNone) {
+
+        this.isolationPoliciesNone = isolationPoliciesNone;
+        return this;
+    }
+
+    /**
+     * Get isolationPoliciesNone
+     *
+     * @return isolationPoliciesNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VirtualPrivateCloudIsolationPolicyWhereInput getIsolationPoliciesNone() {
+        return isolationPoliciesNone;
+    }
+
+    public void setIsolationPoliciesNone(
+            VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesNone) {
+        this.isolationPoliciesNone = isolationPoliciesNone;
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES_NONE);
+        return this;
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES_NONE);
+        return this;
+    }
+
+    public void setIsolationPoliciesNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES_NONE);
+        }
+    }
+
+    public boolean getIsolationPoliciesNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISOLATION_POLICIES_NONE);
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesSome(
+            VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesSome) {
+
+        this.isolationPoliciesSome = isolationPoliciesSome;
+        return this;
+    }
+
+    /**
+     * Get isolationPoliciesSome
+     *
+     * @return isolationPoliciesSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VirtualPrivateCloudIsolationPolicyWhereInput getIsolationPoliciesSome() {
+        return isolationPoliciesSome;
+    }
+
+    public void setIsolationPoliciesSome(
+            VirtualPrivateCloudIsolationPolicyWhereInput isolationPoliciesSome) {
+        this.isolationPoliciesSome = isolationPoliciesSome;
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES_SOME);
+        return this;
+    }
+
+    public VirtualPrivateCloudWhereInput isolationPoliciesSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES_SOME);
+        return this;
+    }
+
+    public void setIsolationPoliciesSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISOLATION_POLICIES_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISOLATION_POLICIES_SOME);
+        }
+    }
+
+    public boolean getIsolationPoliciesSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISOLATION_POLICIES_SOME);
     }
 
     public VirtualPrivateCloudWhereInput localId(String localId) {
@@ -4701,6 +4852,15 @@ public class VirtualPrivateCloudWhereInput
                 && Objects.equals(
                         this.idNotStartsWith, virtualPrivateCloudWhereInput.idNotStartsWith)
                 && Objects.equals(this.idStartsWith, virtualPrivateCloudWhereInput.idStartsWith)
+                && Objects.equals(
+                        this.isolationPoliciesEvery,
+                        virtualPrivateCloudWhereInput.isolationPoliciesEvery)
+                && Objects.equals(
+                        this.isolationPoliciesNone,
+                        virtualPrivateCloudWhereInput.isolationPoliciesNone)
+                && Objects.equals(
+                        this.isolationPoliciesSome,
+                        virtualPrivateCloudWhereInput.isolationPoliciesSome)
                 && Objects.equals(this.localId, virtualPrivateCloudWhereInput.localId)
                 && Objects.equals(
                         this.localIdContains, virtualPrivateCloudWhereInput.localIdContains)
@@ -4829,6 +4989,9 @@ public class VirtualPrivateCloudWhereInput
                 idNotIn,
                 idNotStartsWith,
                 idStartsWith,
+                isolationPoliciesEvery,
+                isolationPoliciesNone,
+                isolationPoliciesSome,
                 localId,
                 localIdContains,
                 localIdEndsWith,
@@ -4970,6 +5133,15 @@ public class VirtualPrivateCloudWhereInput
         sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
         sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
         sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+        sb.append("    isolationPoliciesEvery: ")
+                .append(toIndentedString(isolationPoliciesEvery))
+                .append("\n");
+        sb.append("    isolationPoliciesNone: ")
+                .append(toIndentedString(isolationPoliciesNone))
+                .append("\n");
+        sb.append("    isolationPoliciesSome: ")
+                .append(toIndentedString(isolationPoliciesSome))
+                .append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    localIdContains: ").append(toIndentedString(localIdContains)).append("\n");
         sb.append("    localIdEndsWith: ").append(toIndentedString(localIdEndsWith)).append("\n");

@@ -11,6 +11,16 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class IscsiTargetCommonParams
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private BusinessHostGroupWhereInput businessHostGroups;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private BusinessHostWhereInput businessHosts;
+
     public static final String SERIALIZED_NAME_CONFIGURATION_ADAPTIVE = "configuration_adaptive";
 
     @SerializedName(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE)
@@ -207,6 +217,93 @@ public class IscsiTargetCommonParams
     private String ipWhitelist;
 
     public IscsiTargetCommonParams() {}
+
+    public IscsiTargetCommonParams businessHostGroups(
+            BusinessHostGroupWhereInput businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(BusinessHostGroupWhereInput businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public IscsiTargetCommonParams businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public IscsiTargetCommonParams businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public IscsiTargetCommonParams businessHosts(BusinessHostWhereInput businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(BusinessHostWhereInput businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public IscsiTargetCommonParams businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public IscsiTargetCommonParams businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
+    }
 
     public IscsiTargetCommonParams configurationAdaptive(Boolean configurationAdaptive) {
 
@@ -1904,7 +2001,9 @@ public class IscsiTargetCommonParams
             return false;
         }
         IscsiTargetCommonParams iscsiTargetCommonParams = (IscsiTargetCommonParams) o;
-        return Objects.equals(
+        return Objects.equals(this.businessHostGroups, iscsiTargetCommonParams.businessHostGroups)
+                && Objects.equals(this.businessHosts, iscsiTargetCommonParams.businessHosts)
+                && Objects.equals(
                         this.configurationAdaptive, iscsiTargetCommonParams.configurationAdaptive)
                 && Objects.equals(
                         this.configurationMethod, iscsiTargetCommonParams.configurationMethod)
@@ -1950,6 +2049,8 @@ public class IscsiTargetCommonParams
     @Override
     public int hashCode() {
         return Objects.hash(
+                businessHostGroups,
+                businessHosts,
                 configurationAdaptive,
                 configurationMethod,
                 encryptMethod,
@@ -1995,6 +2096,10 @@ public class IscsiTargetCommonParams
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class IscsiTargetCommonParams {\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
         sb.append("    configurationAdaptive: ")
                 .append(toIndentedString(configurationAdaptive))
                 .append("\n");

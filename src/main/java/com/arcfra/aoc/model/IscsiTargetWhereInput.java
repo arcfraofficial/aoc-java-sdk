@@ -390,6 +390,39 @@ public class IscsiTargetWhereInput
     @SerializedName(SERIALIZED_NAME_BPS_WR_NOT_IN)
     private List<Long> bpsWrNotIn = null;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY =
+            "business_host_groups_every";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY)
+    private BusinessHostGroupWhereInput businessHostGroupsEvery;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE =
+            "business_host_groups_none";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE)
+    private BusinessHostGroupWhereInput businessHostGroupsNone;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME =
+            "business_host_groups_some";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME)
+    private BusinessHostGroupWhereInput businessHostGroupsSome;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_EVERY = "business_hosts_every";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY)
+    private BusinessHostWhereInput businessHostsEvery;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_NONE = "business_hosts_none";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_NONE)
+    private BusinessHostWhereInput businessHostsNone;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_SOME = "business_hosts_some";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_SOME)
+    private BusinessHostWhereInput businessHostsSome;
+
     public static final String SERIALIZED_NAME_CHAP_ENABLED = "chap_enabled";
 
     @SerializedName(SERIALIZED_NAME_CHAP_ENABLED)
@@ -1486,6 +1519,21 @@ public class IscsiTargetWhereInput
 
     @SerializedName(SERIALIZED_NAME_IQN_WHITELIST_STARTS_WITH)
     private String iqnWhitelistStartsWith;
+
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY = "iscsi_connections_every";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY)
+    private IscsiConnectionWhereInput iscsiConnectionsEvery;
+
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE = "iscsi_connections_none";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE)
+    private IscsiConnectionWhereInput iscsiConnectionsNone;
+
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME = "iscsi_connections_some";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME)
+    private IscsiConnectionWhereInput iscsiConnectionsSome;
 
     public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM = "iscsi_luns_num";
 
@@ -5251,6 +5299,267 @@ public class IscsiTargetWhereInput
 
     public boolean getBpsWrNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_NOT_IN);
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsEvery(
+            BusinessHostGroupWhereInput businessHostGroupsEvery) {
+
+        this.businessHostGroupsEvery = businessHostGroupsEvery;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsEvery
+     *
+     * @return businessHostGroupsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsEvery() {
+        return businessHostGroupsEvery;
+    }
+
+    public void setBusinessHostGroupsEvery(BusinessHostGroupWhereInput businessHostGroupsEvery) {
+        this.businessHostGroupsEvery = businessHostGroupsEvery;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        return this;
+    }
+
+    public void setBusinessHostGroupsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        }
+    }
+
+    public boolean getBusinessHostGroupsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsNone(
+            BusinessHostGroupWhereInput businessHostGroupsNone) {
+
+        this.businessHostGroupsNone = businessHostGroupsNone;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsNone
+     *
+     * @return businessHostGroupsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsNone() {
+        return businessHostGroupsNone;
+    }
+
+    public void setBusinessHostGroupsNone(BusinessHostGroupWhereInput businessHostGroupsNone) {
+        this.businessHostGroupsNone = businessHostGroupsNone;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        return this;
+    }
+
+    public void setBusinessHostGroupsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        }
+    }
+
+    public boolean getBusinessHostGroupsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsSome(
+            BusinessHostGroupWhereInput businessHostGroupsSome) {
+
+        this.businessHostGroupsSome = businessHostGroupsSome;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsSome
+     *
+     * @return businessHostGroupsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsSome() {
+        return businessHostGroupsSome;
+    }
+
+    public void setBusinessHostGroupsSome(BusinessHostGroupWhereInput businessHostGroupsSome) {
+        this.businessHostGroupsSome = businessHostGroupsSome;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        return this;
+    }
+
+    public void setBusinessHostGroupsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        }
+    }
+
+    public boolean getBusinessHostGroupsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+    }
+
+    public IscsiTargetWhereInput businessHostsEvery(BusinessHostWhereInput businessHostsEvery) {
+
+        this.businessHostsEvery = businessHostsEvery;
+        return this;
+    }
+
+    /**
+     * Get businessHostsEvery
+     *
+     * @return businessHostsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsEvery() {
+        return businessHostsEvery;
+    }
+
+    public void setBusinessHostsEvery(BusinessHostWhereInput businessHostsEvery) {
+        this.businessHostsEvery = businessHostsEvery;
+    }
+
+    public IscsiTargetWhereInput businessHostsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        return this;
+    }
+
+    public void setBusinessHostsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        }
+    }
+
+    public boolean getBusinessHostsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+    }
+
+    public IscsiTargetWhereInput businessHostsNone(BusinessHostWhereInput businessHostsNone) {
+
+        this.businessHostsNone = businessHostsNone;
+        return this;
+    }
+
+    /**
+     * Get businessHostsNone
+     *
+     * @return businessHostsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsNone() {
+        return businessHostsNone;
+    }
+
+    public void setBusinessHostsNone(BusinessHostWhereInput businessHostsNone) {
+        this.businessHostsNone = businessHostsNone;
+    }
+
+    public IscsiTargetWhereInput businessHostsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        return this;
+    }
+
+    public void setBusinessHostsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        }
+    }
+
+    public boolean getBusinessHostsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+    }
+
+    public IscsiTargetWhereInput businessHostsSome(BusinessHostWhereInput businessHostsSome) {
+
+        this.businessHostsSome = businessHostsSome;
+        return this;
+    }
+
+    /**
+     * Get businessHostsSome
+     *
+     * @return businessHostsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsSome() {
+        return businessHostsSome;
+    }
+
+    public void setBusinessHostsSome(BusinessHostWhereInput businessHostsSome) {
+        this.businessHostsSome = businessHostsSome;
+    }
+
+    public IscsiTargetWhereInput businessHostsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        return this;
+    }
+
+    public void setBusinessHostsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        }
+    }
+
+    public boolean getBusinessHostsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
     }
 
     public IscsiTargetWhereInput chapEnabled(Boolean chapEnabled) {
@@ -14858,6 +15167,138 @@ public class IscsiTargetWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_IQN_WHITELIST_STARTS_WITH);
     }
 
+    public IscsiTargetWhereInput iscsiConnectionsEvery(
+            IscsiConnectionWhereInput iscsiConnectionsEvery) {
+
+        this.iscsiConnectionsEvery = iscsiConnectionsEvery;
+        return this;
+    }
+
+    /**
+     * Get iscsiConnectionsEvery
+     *
+     * @return iscsiConnectionsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiConnectionWhereInput getIscsiConnectionsEvery() {
+        return iscsiConnectionsEvery;
+    }
+
+    public void setIscsiConnectionsEvery(IscsiConnectionWhereInput iscsiConnectionsEvery) {
+        this.iscsiConnectionsEvery = iscsiConnectionsEvery;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        return this;
+    }
+
+    public void setIscsiConnectionsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        }
+    }
+
+    public boolean getIscsiConnectionsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsNone(
+            IscsiConnectionWhereInput iscsiConnectionsNone) {
+
+        this.iscsiConnectionsNone = iscsiConnectionsNone;
+        return this;
+    }
+
+    /**
+     * Get iscsiConnectionsNone
+     *
+     * @return iscsiConnectionsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiConnectionWhereInput getIscsiConnectionsNone() {
+        return iscsiConnectionsNone;
+    }
+
+    public void setIscsiConnectionsNone(IscsiConnectionWhereInput iscsiConnectionsNone) {
+        this.iscsiConnectionsNone = iscsiConnectionsNone;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        return this;
+    }
+
+    public void setIscsiConnectionsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        }
+    }
+
+    public boolean getIscsiConnectionsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsSome(
+            IscsiConnectionWhereInput iscsiConnectionsSome) {
+
+        this.iscsiConnectionsSome = iscsiConnectionsSome;
+        return this;
+    }
+
+    /**
+     * Get iscsiConnectionsSome
+     *
+     * @return iscsiConnectionsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiConnectionWhereInput getIscsiConnectionsSome() {
+        return iscsiConnectionsSome;
+    }
+
+    public void setIscsiConnectionsSome(IscsiConnectionWhereInput iscsiConnectionsSome) {
+        this.iscsiConnectionsSome = iscsiConnectionsSome;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        return this;
+    }
+
+    public void setIscsiConnectionsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        }
+    }
+
+    public boolean getIscsiConnectionsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+    }
+
     public IscsiTargetWhereInput iscsiLunsNum(Integer iscsiLunsNum) {
 
         this.iscsiLunsNum = iscsiLunsNum;
@@ -18239,6 +18680,15 @@ public class IscsiTargetWhereInput
                 && Objects.equals(this.bpsWrMaxNotIn, iscsiTargetWhereInput.bpsWrMaxNotIn)
                 && Objects.equals(this.bpsWrNot, iscsiTargetWhereInput.bpsWrNot)
                 && Objects.equals(this.bpsWrNotIn, iscsiTargetWhereInput.bpsWrNotIn)
+                && Objects.equals(
+                        this.businessHostGroupsEvery, iscsiTargetWhereInput.businessHostGroupsEvery)
+                && Objects.equals(
+                        this.businessHostGroupsNone, iscsiTargetWhereInput.businessHostGroupsNone)
+                && Objects.equals(
+                        this.businessHostGroupsSome, iscsiTargetWhereInput.businessHostGroupsSome)
+                && Objects.equals(this.businessHostsEvery, iscsiTargetWhereInput.businessHostsEvery)
+                && Objects.equals(this.businessHostsNone, iscsiTargetWhereInput.businessHostsNone)
+                && Objects.equals(this.businessHostsSome, iscsiTargetWhereInput.businessHostsSome)
                 && Objects.equals(this.chapEnabled, iscsiTargetWhereInput.chapEnabled)
                 && Objects.equals(this.chapEnabledNot, iscsiTargetWhereInput.chapEnabledNot)
                 && Objects.equals(this.chapName, iscsiTargetWhereInput.chapName)
@@ -18496,6 +18946,12 @@ public class IscsiTargetWhereInput
                         iscsiTargetWhereInput.iqnWhitelistNotStartsWith)
                 && Objects.equals(
                         this.iqnWhitelistStartsWith, iscsiTargetWhereInput.iqnWhitelistStartsWith)
+                && Objects.equals(
+                        this.iscsiConnectionsEvery, iscsiTargetWhereInput.iscsiConnectionsEvery)
+                && Objects.equals(
+                        this.iscsiConnectionsNone, iscsiTargetWhereInput.iscsiConnectionsNone)
+                && Objects.equals(
+                        this.iscsiConnectionsSome, iscsiTargetWhereInput.iscsiConnectionsSome)
                 && Objects.equals(this.iscsiLunsNum, iscsiTargetWhereInput.iscsiLunsNum)
                 && Objects.equals(this.iscsiLunsNumGt, iscsiTargetWhereInput.iscsiLunsNumGt)
                 && Objects.equals(this.iscsiLunsNumGte, iscsiTargetWhereInput.iscsiLunsNumGte)
@@ -18661,6 +19117,12 @@ public class IscsiTargetWhereInput
                 bpsWrMaxNotIn,
                 bpsWrNot,
                 bpsWrNotIn,
+                businessHostGroupsEvery,
+                businessHostGroupsNone,
+                businessHostGroupsSome,
+                businessHostsEvery,
+                businessHostsNone,
+                businessHostsSome,
                 chapEnabled,
                 chapEnabledNot,
                 chapName,
@@ -18876,6 +19338,9 @@ public class IscsiTargetWhereInput
                 iqnWhitelistNotIn,
                 iqnWhitelistNotStartsWith,
                 iqnWhitelistStartsWith,
+                iscsiConnectionsEvery,
+                iscsiConnectionsNone,
+                iscsiConnectionsSome,
                 iscsiLunsNum,
                 iscsiLunsNumGt,
                 iscsiLunsNumGte,
@@ -19056,6 +19521,24 @@ public class IscsiTargetWhereInput
         sb.append("    bpsWrMaxNotIn: ").append(toIndentedString(bpsWrMaxNotIn)).append("\n");
         sb.append("    bpsWrNot: ").append(toIndentedString(bpsWrNot)).append("\n");
         sb.append("    bpsWrNotIn: ").append(toIndentedString(bpsWrNotIn)).append("\n");
+        sb.append("    businessHostGroupsEvery: ")
+                .append(toIndentedString(businessHostGroupsEvery))
+                .append("\n");
+        sb.append("    businessHostGroupsNone: ")
+                .append(toIndentedString(businessHostGroupsNone))
+                .append("\n");
+        sb.append("    businessHostGroupsSome: ")
+                .append(toIndentedString(businessHostGroupsSome))
+                .append("\n");
+        sb.append("    businessHostsEvery: ")
+                .append(toIndentedString(businessHostsEvery))
+                .append("\n");
+        sb.append("    businessHostsNone: ")
+                .append(toIndentedString(businessHostsNone))
+                .append("\n");
+        sb.append("    businessHostsSome: ")
+                .append(toIndentedString(businessHostsSome))
+                .append("\n");
         sb.append("    chapEnabled: ").append(toIndentedString(chapEnabled)).append("\n");
         sb.append("    chapEnabledNot: ").append(toIndentedString(chapEnabledNot)).append("\n");
         sb.append("    chapName: ").append(toIndentedString(chapName)).append("\n");
@@ -19388,6 +19871,15 @@ public class IscsiTargetWhereInput
                 .append("\n");
         sb.append("    iqnWhitelistStartsWith: ")
                 .append(toIndentedString(iqnWhitelistStartsWith))
+                .append("\n");
+        sb.append("    iscsiConnectionsEvery: ")
+                .append(toIndentedString(iscsiConnectionsEvery))
+                .append("\n");
+        sb.append("    iscsiConnectionsNone: ")
+                .append(toIndentedString(iscsiConnectionsNone))
+                .append("\n");
+        sb.append("    iscsiConnectionsSome: ")
+                .append(toIndentedString(iscsiConnectionsSome))
                 .append("\n");
         sb.append("    iscsiLunsNum: ").append(toIndentedString(iscsiLunsNum)).append("\n");
         sb.append("    iscsiLunsNumGt: ").append(toIndentedString(iscsiLunsNumGt)).append("\n");

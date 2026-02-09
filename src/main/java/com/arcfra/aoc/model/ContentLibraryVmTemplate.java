@@ -128,6 +128,11 @@ public class ContentLibraryVmTemplate
     @SerializedName(SERIALIZED_NAME_TEMPLATE_CONFIG)
     private NestedTemplateConfig templateConfig;
 
+    public static final String SERIALIZED_NAME_USAGE = "usage";
+
+    @SerializedName(SERIALIZED_NAME_USAGE)
+    private ContentLibraryVmTemplateUsage usage;
+
     public static final String SERIALIZED_NAME_VCPU = "vcpu";
 
     @SerializedName(SERIALIZED_NAME_VCPU)
@@ -1175,6 +1180,49 @@ public class ContentLibraryVmTemplate
         return this._isPresent_.contains(SERIALIZED_NAME_TEMPLATE_CONFIG);
     }
 
+    public ContentLibraryVmTemplate usage(ContentLibraryVmTemplateUsage usage) {
+
+        this.usage = usage;
+        return this;
+    }
+
+    /**
+     * Get usage
+     *
+     * @return usage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ContentLibraryVmTemplateUsage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(ContentLibraryVmTemplateUsage usage) {
+        this.usage = usage;
+    }
+
+    public ContentLibraryVmTemplate usage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public ContentLibraryVmTemplate usage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public void setUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        }
+    }
+
+    public boolean getUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE);
+    }
+
     public ContentLibraryVmTemplate vcpu(Integer vcpu) {
 
         this.vcpu = vcpu;
@@ -1591,6 +1639,7 @@ public class ContentLibraryVmTemplate
                 && Objects.equals(this.os, contentLibraryVmTemplate.os)
                 && Objects.equals(this.size, contentLibraryVmTemplate.size)
                 && Objects.equals(this.templateConfig, contentLibraryVmTemplate.templateConfig)
+                && Objects.equals(this.usage, contentLibraryVmTemplate.usage)
                 && Objects.equals(this.vcpu, contentLibraryVmTemplate.vcpu)
                 && Objects.equals(this.videoType, contentLibraryVmTemplate.videoType)
                 && Objects.equals(this.vmDisks, contentLibraryVmTemplate.vmDisks)
@@ -1636,6 +1685,7 @@ public class ContentLibraryVmTemplate
                 os,
                 size,
                 templateConfig,
+                usage,
                 vcpu,
                 videoType,
                 vmDisks,
@@ -1686,6 +1736,7 @@ public class ContentLibraryVmTemplate
         sb.append("    os: ").append(toIndentedString(os)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
         sb.append("    templateConfig: ").append(toIndentedString(templateConfig)).append("\n");
+        sb.append("    usage: ").append(toIndentedString(usage)).append("\n");
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
         sb.append("    videoType: ").append(toIndentedString(videoType)).append("\n");
         sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
