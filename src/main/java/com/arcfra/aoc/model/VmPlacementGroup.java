@@ -57,6 +57,11 @@ public class VmPlacementGroup extends com.arcfra.aoc.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name;
 
+    public static final String SERIALIZED_NAME_USAGE = "usage";
+
+    @SerializedName(SERIALIZED_NAME_USAGE)
+    private VmPlacementGroupUsage usage;
+
     public static final String SERIALIZED_NAME_VM_HOST_MUST_ENABLED = "vm_host_must_enabled";
 
     @SerializedName(SERIALIZED_NAME_VM_HOST_MUST_ENABLED)
@@ -492,6 +497,49 @@ public class VmPlacementGroup extends com.arcfra.aoc.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_NAME);
     }
 
+    public VmPlacementGroup usage(VmPlacementGroupUsage usage) {
+
+        this.usage = usage;
+        return this;
+    }
+
+    /**
+     * Get usage
+     *
+     * @return usage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmPlacementGroupUsage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(VmPlacementGroupUsage usage) {
+        this.usage = usage;
+    }
+
+    public VmPlacementGroup usage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public VmPlacementGroup usage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public void setUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        }
+    }
+
+    public boolean getUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE);
+    }
+
     public VmPlacementGroup vmHostMustEnabled(Boolean vmHostMustEnabled) {
 
         this.vmHostMustEnabled = vmHostMustEnabled;
@@ -921,6 +969,7 @@ public class VmPlacementGroup extends com.arcfra.aoc.ConditionalNullable.Conditi
                 && Objects.equals(this.localId, vmPlacementGroup.localId)
                 && Objects.equals(this.localUpdatedAt, vmPlacementGroup.localUpdatedAt)
                 && Objects.equals(this.name, vmPlacementGroup.name)
+                && Objects.equals(this.usage, vmPlacementGroup.usage)
                 && Objects.equals(this.vmHostMustEnabled, vmPlacementGroup.vmHostMustEnabled)
                 && Objects.equals(this.vmHostMustHostUuids, vmPlacementGroup.vmHostMustHostUuids)
                 && Objects.equals(this.vmHostMustPolicy, vmPlacementGroup.vmHostMustPolicy)
@@ -954,6 +1003,7 @@ public class VmPlacementGroup extends com.arcfra.aoc.ConditionalNullable.Conditi
                 localId,
                 localUpdatedAt,
                 name,
+                usage,
                 vmHostMustEnabled,
                 vmHostMustHostUuids,
                 vmHostMustPolicy,
@@ -987,6 +1037,7 @@ public class VmPlacementGroup extends com.arcfra.aoc.ConditionalNullable.Conditi
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    localUpdatedAt: ").append(toIndentedString(localUpdatedAt)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    usage: ").append(toIndentedString(usage)).append("\n");
         sb.append("    vmHostMustEnabled: ")
                 .append(toIndentedString(vmHostMustEnabled))
                 .append("\n");

@@ -10,6 +10,10 @@ import java.io.IOException;
 /** Gets or Sets VmNicOrderByInput */
 @JsonAdapter(VmNicOrderByInput.Adapter.class)
 public enum VmNicOrderByInput {
+    DPI_ENABLED_ASC("dpi_enabled_ASC"),
+
+    DPI_ENABLED_DESC("dpi_enabled_DESC"),
+
     EGRESS_RATE_LIMIT_BURST_IN_BIT_ASC("egress_rate_limit_burst_in_bit_ASC"),
 
     EGRESS_RATE_LIMIT_BURST_IN_BIT_DESC("egress_rate_limit_burst_in_bit_DESC"),

@@ -48,6 +48,11 @@ public class ContentLibraryVmTemplate
     @SerializedName(SERIALIZED_NAME_CREATED_AT)
     private String createdAt;
 
+    public static final String SERIALIZED_NAME_DATASTORES = "datastores";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES)
+    private List<NestedDatastore> datastores = null;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -128,6 +133,11 @@ public class ContentLibraryVmTemplate
     @SerializedName(SERIALIZED_NAME_TEMPLATE_CONFIG)
     private NestedTemplateConfig templateConfig;
 
+    public static final String SERIALIZED_NAME_USAGE = "usage";
+
+    @SerializedName(SERIALIZED_NAME_USAGE)
+    private ContentLibraryVmTemplateUsage usage;
+
     public static final String SERIALIZED_NAME_VCPU = "vcpu";
 
     @SerializedName(SERIALIZED_NAME_VCPU)
@@ -147,6 +157,11 @@ public class ContentLibraryVmTemplate
 
     @SerializedName(SERIALIZED_NAME_VM_NICS)
     private List<NestedContentLibraryVmTemplateNic> vmNics = null;
+
+    public static final String SERIALIZED_NAME_VM_TEMPLATE_CONFIGS = "vm_template_configs";
+
+    @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS)
+    private List<NestedVmTemplateConfig> vmTemplateConfigs = null;
 
     public static final String SERIALIZED_NAME_VM_TEMPLATE_UUIDS = "vm_template_uuids";
 
@@ -477,6 +492,57 @@ public class ContentLibraryVmTemplate
 
     public boolean getCreatedAt_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT);
+    }
+
+    public ContentLibraryVmTemplate datastores(List<NestedDatastore> datastores) {
+
+        this.datastores = datastores;
+        return this;
+    }
+
+    public ContentLibraryVmTemplate addDatastoresItem(NestedDatastore datastoresItem) {
+        if (this.datastores == null) {
+            this.datastores = new ArrayList<NestedDatastore>();
+        }
+        this.datastores.add(datastoresItem);
+        return this;
+    }
+
+    /**
+     * Get datastores
+     *
+     * @return datastores
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedDatastore> getDatastores() {
+        return datastores;
+    }
+
+    public void setDatastores(List<NestedDatastore> datastores) {
+        this.datastores = datastores;
+    }
+
+    public ContentLibraryVmTemplate datastores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES);
+        return this;
+    }
+
+    public ContentLibraryVmTemplate datastores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES);
+        return this;
+    }
+
+    public void setDatastores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES);
+        }
+    }
+
+    public boolean getDatastores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES);
     }
 
     public ContentLibraryVmTemplate description(String description) {
@@ -1175,6 +1241,49 @@ public class ContentLibraryVmTemplate
         return this._isPresent_.contains(SERIALIZED_NAME_TEMPLATE_CONFIG);
     }
 
+    public ContentLibraryVmTemplate usage(ContentLibraryVmTemplateUsage usage) {
+
+        this.usage = usage;
+        return this;
+    }
+
+    /**
+     * Get usage
+     *
+     * @return usage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ContentLibraryVmTemplateUsage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(ContentLibraryVmTemplateUsage usage) {
+        this.usage = usage;
+    }
+
+    public ContentLibraryVmTemplate usage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public ContentLibraryVmTemplate usage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public void setUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        }
+    }
+
+    public boolean getUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE);
+    }
+
     public ContentLibraryVmTemplate vcpu(Integer vcpu) {
 
         this.vcpu = vcpu;
@@ -1361,6 +1470,59 @@ public class ContentLibraryVmTemplate
 
     public boolean getVmNics_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_VM_NICS);
+    }
+
+    public ContentLibraryVmTemplate vmTemplateConfigs(
+            List<NestedVmTemplateConfig> vmTemplateConfigs) {
+
+        this.vmTemplateConfigs = vmTemplateConfigs;
+        return this;
+    }
+
+    public ContentLibraryVmTemplate addVmTemplateConfigsItem(
+            NestedVmTemplateConfig vmTemplateConfigsItem) {
+        if (this.vmTemplateConfigs == null) {
+            this.vmTemplateConfigs = new ArrayList<NestedVmTemplateConfig>();
+        }
+        this.vmTemplateConfigs.add(vmTemplateConfigsItem);
+        return this;
+    }
+
+    /**
+     * Get vmTemplateConfigs
+     *
+     * @return vmTemplateConfigs
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedVmTemplateConfig> getVmTemplateConfigs() {
+        return vmTemplateConfigs;
+    }
+
+    public void setVmTemplateConfigs(List<NestedVmTemplateConfig> vmTemplateConfigs) {
+        this.vmTemplateConfigs = vmTemplateConfigs;
+    }
+
+    public ContentLibraryVmTemplate vmTemplateConfigs_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS);
+        return this;
+    }
+
+    public ContentLibraryVmTemplate vmTemplateConfigs_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS);
+        return this;
+    }
+
+    public void setVmTemplateConfigs_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS);
+        }
+    }
+
+    public boolean getVmTemplateConfigs_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS);
     }
 
     public ContentLibraryVmTemplate vmTemplateUuids(List<String> vmTemplateUuids) {
@@ -1573,6 +1735,7 @@ public class ContentLibraryVmTemplate
                 && Objects.equals(this.cpu, contentLibraryVmTemplate.cpu)
                 && Objects.equals(this.cpuModel, contentLibraryVmTemplate.cpuModel)
                 && Objects.equals(this.createdAt, contentLibraryVmTemplate.createdAt)
+                && Objects.equals(this.datastores, contentLibraryVmTemplate.datastores)
                 && Objects.equals(this.description, contentLibraryVmTemplate.description)
                 && Objects.equals(
                         this.entityAsyncStatus, contentLibraryVmTemplate.entityAsyncStatus)
@@ -1591,10 +1754,13 @@ public class ContentLibraryVmTemplate
                 && Objects.equals(this.os, contentLibraryVmTemplate.os)
                 && Objects.equals(this.size, contentLibraryVmTemplate.size)
                 && Objects.equals(this.templateConfig, contentLibraryVmTemplate.templateConfig)
+                && Objects.equals(this.usage, contentLibraryVmTemplate.usage)
                 && Objects.equals(this.vcpu, contentLibraryVmTemplate.vcpu)
                 && Objects.equals(this.videoType, contentLibraryVmTemplate.videoType)
                 && Objects.equals(this.vmDisks, contentLibraryVmTemplate.vmDisks)
                 && Objects.equals(this.vmNics, contentLibraryVmTemplate.vmNics)
+                && Objects.equals(
+                        this.vmTemplateConfigs, contentLibraryVmTemplate.vmTemplateConfigs)
                 && Objects.equals(this.vmTemplateUuids, contentLibraryVmTemplate.vmTemplateUuids)
                 && Objects.equals(this.vmTemplates, contentLibraryVmTemplate.vmTemplates)
                 && Objects.equals(this.winOpt, contentLibraryVmTemplate.winOpt)
@@ -1620,6 +1786,7 @@ public class ContentLibraryVmTemplate
                 cpu,
                 cpuModel,
                 createdAt,
+                datastores,
                 description,
                 entityAsyncStatus,
                 firmware,
@@ -1636,10 +1803,12 @@ public class ContentLibraryVmTemplate
                 os,
                 size,
                 templateConfig,
+                usage,
                 vcpu,
                 videoType,
                 vmDisks,
                 vmNics,
+                vmTemplateConfigs,
                 vmTemplateUuids,
                 vmTemplates,
                 winOpt,
@@ -1666,6 +1835,7 @@ public class ContentLibraryVmTemplate
         sb.append("    cpu: ").append(toIndentedString(cpu)).append("\n");
         sb.append("    cpuModel: ").append(toIndentedString(cpuModel)).append("\n");
         sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+        sb.append("    datastores: ").append(toIndentedString(datastores)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
@@ -1686,10 +1856,14 @@ public class ContentLibraryVmTemplate
         sb.append("    os: ").append(toIndentedString(os)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
         sb.append("    templateConfig: ").append(toIndentedString(templateConfig)).append("\n");
+        sb.append("    usage: ").append(toIndentedString(usage)).append("\n");
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
         sb.append("    videoType: ").append(toIndentedString(videoType)).append("\n");
         sb.append("    vmDisks: ").append(toIndentedString(vmDisks)).append("\n");
         sb.append("    vmNics: ").append(toIndentedString(vmNics)).append("\n");
+        sb.append("    vmTemplateConfigs: ")
+                .append(toIndentedString(vmTemplateConfigs))
+                .append("\n");
         sb.append("    vmTemplateUuids: ").append(toIndentedString(vmTemplateUuids)).append("\n");
         sb.append("    vmTemplates: ").append(toIndentedString(vmTemplates)).append("\n");
         sb.append("    winOpt: ").append(toIndentedString(winOpt)).append("\n");

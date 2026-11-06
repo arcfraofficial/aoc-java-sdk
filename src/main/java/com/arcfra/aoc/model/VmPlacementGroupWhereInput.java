@@ -428,6 +428,26 @@ public class VmPlacementGroupWhereInput
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
     private String nameStartsWith;
 
+    public static final String SERIALIZED_NAME_USAGE = "usage";
+
+    @SerializedName(SERIALIZED_NAME_USAGE)
+    private VmPlacementGroupUsage usage;
+
+    public static final String SERIALIZED_NAME_USAGE_IN = "usage_in";
+
+    @SerializedName(SERIALIZED_NAME_USAGE_IN)
+    private List<VmPlacementGroupUsage> usageIn = null;
+
+    public static final String SERIALIZED_NAME_USAGE_NOT = "usage_not";
+
+    @SerializedName(SERIALIZED_NAME_USAGE_NOT)
+    private VmPlacementGroupUsage usageNot;
+
+    public static final String SERIALIZED_NAME_USAGE_NOT_IN = "usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_USAGE_NOT_IN)
+    private List<VmPlacementGroupUsage> usageNotIn = null;
+
     public static final String SERIALIZED_NAME_VM_HOST_MUST_ENABLED = "vm_host_must_enabled";
 
     @SerializedName(SERIALIZED_NAME_VM_HOST_MUST_ENABLED)
@@ -4221,6 +4241,194 @@ public class VmPlacementGroupWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NAME_STARTS_WITH);
     }
 
+    public VmPlacementGroupWhereInput usage(VmPlacementGroupUsage usage) {
+
+        this.usage = usage;
+        return this;
+    }
+
+    /**
+     * Get usage
+     *
+     * @return usage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmPlacementGroupUsage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(VmPlacementGroupUsage usage) {
+        this.usage = usage;
+    }
+
+    public VmPlacementGroupWhereInput usage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public VmPlacementGroupWhereInput usage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        return this;
+    }
+
+    public void setUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE);
+        }
+    }
+
+    public boolean getUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE);
+    }
+
+    public VmPlacementGroupWhereInput usageIn(List<VmPlacementGroupUsage> usageIn) {
+
+        this.usageIn = usageIn;
+        return this;
+    }
+
+    public VmPlacementGroupWhereInput addUsageInItem(VmPlacementGroupUsage usageInItem) {
+        if (this.usageIn == null) {
+            this.usageIn = new ArrayList<VmPlacementGroupUsage>();
+        }
+        this.usageIn.add(usageInItem);
+        return this;
+    }
+
+    /**
+     * Get usageIn
+     *
+     * @return usageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmPlacementGroupUsage> getUsageIn() {
+        return usageIn;
+    }
+
+    public void setUsageIn(List<VmPlacementGroupUsage> usageIn) {
+        this.usageIn = usageIn;
+    }
+
+    public VmPlacementGroupWhereInput usageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE_IN);
+        return this;
+    }
+
+    public VmPlacementGroupWhereInput usageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE_IN);
+        return this;
+    }
+
+    public void setUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE_IN);
+        }
+    }
+
+    public boolean getUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE_IN);
+    }
+
+    public VmPlacementGroupWhereInput usageNot(VmPlacementGroupUsage usageNot) {
+
+        this.usageNot = usageNot;
+        return this;
+    }
+
+    /**
+     * Get usageNot
+     *
+     * @return usageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmPlacementGroupUsage getUsageNot() {
+        return usageNot;
+    }
+
+    public void setUsageNot(VmPlacementGroupUsage usageNot) {
+        this.usageNot = usageNot;
+    }
+
+    public VmPlacementGroupWhereInput usageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT);
+        return this;
+    }
+
+    public VmPlacementGroupWhereInput usageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT);
+        return this;
+    }
+
+    public void setUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT);
+        }
+    }
+
+    public boolean getUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE_NOT);
+    }
+
+    public VmPlacementGroupWhereInput usageNotIn(List<VmPlacementGroupUsage> usageNotIn) {
+
+        this.usageNotIn = usageNotIn;
+        return this;
+    }
+
+    public VmPlacementGroupWhereInput addUsageNotInItem(VmPlacementGroupUsage usageNotInItem) {
+        if (this.usageNotIn == null) {
+            this.usageNotIn = new ArrayList<VmPlacementGroupUsage>();
+        }
+        this.usageNotIn.add(usageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get usageNotIn
+     *
+     * @return usageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmPlacementGroupUsage> getUsageNotIn() {
+        return usageNotIn;
+    }
+
+    public void setUsageNotIn(List<VmPlacementGroupUsage> usageNotIn) {
+        this.usageNotIn = usageNotIn;
+    }
+
+    public VmPlacementGroupWhereInput usageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT_IN);
+        return this;
+    }
+
+    public VmPlacementGroupWhereInput usageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USAGE_NOT_IN);
+    }
+
     public VmPlacementGroupWhereInput vmHostMustEnabled(Boolean vmHostMustEnabled) {
 
         this.vmHostMustEnabled = vmHostMustEnabled;
@@ -5358,6 +5566,10 @@ public class VmPlacementGroupWhereInput
                 && Objects.equals(
                         this.nameNotStartsWith, vmPlacementGroupWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameStartsWith, vmPlacementGroupWhereInput.nameStartsWith)
+                && Objects.equals(this.usage, vmPlacementGroupWhereInput.usage)
+                && Objects.equals(this.usageIn, vmPlacementGroupWhereInput.usageIn)
+                && Objects.equals(this.usageNot, vmPlacementGroupWhereInput.usageNot)
+                && Objects.equals(this.usageNotIn, vmPlacementGroupWhereInput.usageNotIn)
                 && Objects.equals(
                         this.vmHostMustEnabled, vmPlacementGroupWhereInput.vmHostMustEnabled)
                 && Objects.equals(
@@ -5501,6 +5713,10 @@ public class VmPlacementGroupWhereInput
                 nameNotIn,
                 nameNotStartsWith,
                 nameStartsWith,
+                usage,
+                usageIn,
+                usageNot,
+                usageNotIn,
                 vmHostMustEnabled,
                 vmHostMustEnabledNot,
                 vmHostMustHostUuidsEvery,
@@ -5665,6 +5881,10 @@ public class VmPlacementGroupWhereInput
                 .append(toIndentedString(nameNotStartsWith))
                 .append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
+        sb.append("    usage: ").append(toIndentedString(usage)).append("\n");
+        sb.append("    usageIn: ").append(toIndentedString(usageIn)).append("\n");
+        sb.append("    usageNot: ").append(toIndentedString(usageNot)).append("\n");
+        sb.append("    usageNotIn: ").append(toIndentedString(usageNotIn)).append("\n");
         sb.append("    vmHostMustEnabled: ")
                 .append(toIndentedString(vmHostMustEnabled))
                 .append("\n");

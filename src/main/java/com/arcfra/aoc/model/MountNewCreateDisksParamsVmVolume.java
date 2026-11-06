@@ -14,6 +14,11 @@ public class MountNewCreateDisksParamsVmVolume
     @SerializedName(SERIALIZED_NAME_RESIDENT_IN_CACHE)
     private Boolean residentInCache;
 
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private VmVolumeProvisionPolicy provisionPolicy;
+
     public static final String SERIALIZED_NAME_ELF_EC_STORAGE_POLICY = "elf_ec_storage_policy";
 
     @SerializedName(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY)
@@ -93,6 +98,50 @@ public class MountNewCreateDisksParamsVmVolume
 
     public boolean getResidentInCache_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+    }
+
+    public MountNewCreateDisksParamsVmVolume provisionPolicy(
+            VmVolumeProvisionPolicy provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmVolumeProvisionPolicy getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public MountNewCreateDisksParamsVmVolume provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public MountNewCreateDisksParamsVmVolume provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
     }
 
     public MountNewCreateDisksParamsVmVolume elfEcStoragePolicy(
@@ -413,6 +462,8 @@ public class MountNewCreateDisksParamsVmVolume
         return Objects.equals(
                         this.residentInCache, mountNewCreateDisksParamsVmVolume.residentInCache)
                 && Objects.equals(
+                        this.provisionPolicy, mountNewCreateDisksParamsVmVolume.provisionPolicy)
+                && Objects.equals(
                         this.elfEcStoragePolicy,
                         mountNewCreateDisksParamsVmVolume.elfEcStoragePolicy)
                 && Objects.equals(
@@ -430,6 +481,7 @@ public class MountNewCreateDisksParamsVmVolume
     public int hashCode() {
         return Objects.hash(
                 residentInCache,
+                provisionPolicy,
                 elfEcStoragePolicy,
                 elfReplicaStoragePolicy,
                 elfStoragePolicy,
@@ -444,6 +496,7 @@ public class MountNewCreateDisksParamsVmVolume
         StringBuilder sb = new StringBuilder();
         sb.append("class MountNewCreateDisksParamsVmVolume {\n");
         sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
         sb.append("    elfEcStoragePolicy: ")
                 .append(toIndentedString(elfEcStoragePolicy))
                 .append("\n");

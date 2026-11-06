@@ -14,6 +14,10 @@ public enum ClusterOrderByInput {
 
     ACCESS_WRITE_COMPRESS_ENABLED_DESC("access_write_compress_enabled_DESC"),
 
+    ALLOCATED_MEMORY_BYTES_ASC("allocated_memory_bytes_ASC"),
+
+    ALLOCATED_MEMORY_BYTES_DESC("allocated_memory_bytes_DESC"),
+
     ALLOCATED_PRIORITIZED_SPACE_ASC("allocated_prioritized_space_ASC"),
 
     ALLOCATED_PRIORITIZED_SPACE_DESC("allocated_prioritized_space_DESC"),
@@ -33,6 +37,14 @@ public enum ClusterOrderByInput {
     AUTO_CONVERGE_ASC("auto_converge_ASC"),
 
     AUTO_CONVERGE_DESC("auto_converge_DESC"),
+
+    CAP_SNAPSHOT_UNIQUE_SIZE_ASC("cap_snapshot_unique_size_ASC"),
+
+    CAP_SNAPSHOT_UNIQUE_SIZE_DESC("cap_snapshot_unique_size_DESC"),
+
+    CAP_VOLUME_UNIQUE_SIZE_ASC("cap_volume_unique_size_ASC"),
+
+    CAP_VOLUME_UNIQUE_SIZE_DESC("cap_volume_unique_size_DESC"),
 
     COMMITED_MEMORY_BYTES_ASC("commited_memory_bytes_ASC"),
 
@@ -54,6 +66,14 @@ public enum ClusterOrderByInput {
 
     DATA_REDUCTION_SAVING_DESC("data_reduction_saving_DESC"),
 
+    DIRTY_CACHE_SPACE_ASC("dirty_cache_space_ASC"),
+
+    DIRTY_CACHE_SPACE_DESC("dirty_cache_space_DESC"),
+
+    DIRTY_CACHE_USAGE_ASC("dirty_cache_usage_ASC"),
+
+    DIRTY_CACHE_USAGE_DESC("dirty_cache_usage_DESC"),
+
     DISCONNECTED_DATE_ASC("disconnected_date_ASC"),
 
     DISCONNECTED_DATE_DESC("disconnected_date_DESC"),
@@ -73,6 +93,10 @@ public enum ClusterOrderByInput {
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+
+    FAILURE_CACHE_SPACE_ASC("failure_cache_space_ASC"),
+
+    FAILURE_CACHE_SPACE_DESC("failure_cache_space_DESC"),
 
     FAILURE_DATA_SPACE_ASC("failure_data_space_ASC"),
 
@@ -154,6 +178,10 @@ public enum ClusterOrderByInput {
 
     MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_DESC("max_physical_data_capacity_per_node_DESC"),
 
+    MEMORY_ALLOCATION_RATE_ASC("memory_allocation_rate_ASC"),
+
+    MEMORY_ALLOCATION_RATE_DESC("memory_allocation_rate_DESC"),
+
     METRO_AVAILABILITY_CHECKLIST_ASC("metro_availability_checklist_ASC"),
 
     METRO_AVAILABILITY_CHECKLIST_DESC("metro_availability_checklist_DESC"),
@@ -201,6 +229,14 @@ public enum ClusterOrderByInput {
     OVERALL_EFFICIENCY_ASC("overall_efficiency_ASC"),
 
     OVERALL_EFFICIENCY_DESC("overall_efficiency_DESC"),
+
+    OVERCOMMIT_MEMORY_RATIO_ASC("overcommit_memory_ratio_ASC"),
+
+    OVERCOMMIT_MEMORY_RATIO_DESC("overcommit_memory_ratio_DESC"),
+
+    OVERPROVISION_RATIO_ASC("overprovision_ratio_ASC"),
+
+    OVERPROVISION_RATIO_DESC("overprovision_ratio_DESC"),
 
     PERF_ALLOCATED_DATA_SPACE_ASC("perf_allocated_data_space_ASC"),
 

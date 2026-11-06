@@ -199,6 +199,11 @@ public class IscsiLun extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
     private Integer replicaNum;
 
+    public static final String SERIALIZED_NAME_REPLICATION_PLANS = "replication_plans";
+
+    @SerializedName(SERIALIZED_NAME_REPLICATION_PLANS)
+    private List<NestedReplicationPlan> replicationPlans = null;
+
     public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
 
     @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
@@ -1845,6 +1850,57 @@ public class IscsiLun extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM);
     }
 
+    public IscsiLun replicationPlans(List<NestedReplicationPlan> replicationPlans) {
+
+        this.replicationPlans = replicationPlans;
+        return this;
+    }
+
+    public IscsiLun addReplicationPlansItem(NestedReplicationPlan replicationPlansItem) {
+        if (this.replicationPlans == null) {
+            this.replicationPlans = new ArrayList<NestedReplicationPlan>();
+        }
+        this.replicationPlans.add(replicationPlansItem);
+        return this;
+    }
+
+    /**
+     * Get replicationPlans
+     *
+     * @return replicationPlans
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedReplicationPlan> getReplicationPlans() {
+        return replicationPlans;
+    }
+
+    public void setReplicationPlans(List<NestedReplicationPlan> replicationPlans) {
+        this.replicationPlans = replicationPlans;
+    }
+
+    public IscsiLun replicationPlans_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS);
+        return this;
+    }
+
+    public IscsiLun replicationPlans_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS);
+        return this;
+    }
+
+    public void setReplicationPlans_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS);
+        }
+    }
+
+    public boolean getReplicationPlans_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_PLANS);
+    }
+
     public IscsiLun resiliencyType(ResiliencyType resiliencyType) {
 
         this.resiliencyType = resiliencyType;
@@ -2280,6 +2336,7 @@ public class IscsiLun extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
                 && Objects.equals(this.name, iscsiLun.name)
                 && Objects.equals(this.prioritized, iscsiLun.prioritized)
                 && Objects.equals(this.replicaNum, iscsiLun.replicaNum)
+                && Objects.equals(this.replicationPlans, iscsiLun.replicationPlans)
                 && Objects.equals(this.resiliencyType, iscsiLun.resiliencyType)
                 && Objects.equals(this.sharedSize, iscsiLun.sharedSize)
                 && Objects.equals(this.snapshotNum, iscsiLun.snapshotNum)
@@ -2340,6 +2397,7 @@ public class IscsiLun extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
                 name,
                 prioritized,
                 replicaNum,
+                replicationPlans,
                 resiliencyType,
                 sharedSize,
                 snapshotNum,
@@ -2409,6 +2467,7 @@ public class IscsiLun extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
         sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
+        sb.append("    replicationPlans: ").append(toIndentedString(replicationPlans)).append("\n");
         sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
         sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
         sb.append("    snapshotNum: ").append(toIndentedString(snapshotNum)).append("\n");

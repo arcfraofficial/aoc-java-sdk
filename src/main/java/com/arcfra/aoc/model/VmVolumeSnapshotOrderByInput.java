@@ -34,6 +34,10 @@ public enum VmVolumeSnapshotOrderByInput {
 
     ELF_STORAGE_POLICY_REPLICA_NUM_DESC("elf_storage_policy_replica_num_DESC"),
 
+    ELF_STORAGE_POLICY_STRIPE_NUM_ASC("elf_storage_policy_stripe_num_ASC"),
+
+    ELF_STORAGE_POLICY_STRIPE_NUM_DESC("elf_storage_policy_stripe_num_DESC"),
+
     ELF_STORAGE_POLICY_THIN_PROVISION_ASC("elf_storage_policy_thin_provision_ASC"),
 
     ELF_STORAGE_POLICY_THIN_PROVISION_DESC("elf_storage_policy_thin_provision_DESC"),
@@ -57,6 +61,10 @@ public enum VmVolumeSnapshotOrderByInput {
     NAME_ASC("name_ASC"),
 
     NAME_DESC("name_DESC"),
+
+    PROVISION_POLICY_ASC("provision_policy_ASC"),
+
+    PROVISION_POLICY_DESC("provision_policy_DESC"),
 
     RESIDENT_IN_CACHE_ASC("resident_in_cache_ASC"),
 

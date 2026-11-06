@@ -32,14 +32,14 @@ We haven't published sdk to maven central repository yet, to use Aoc Java SDK, y
 
 ```java
 ApiClient client = new ApiClient();
-client.setBasePath("http://192.168.96.133/v2/api");
+client.setBasePath("http://aoc.example.com/v2/api");
 ```
 
 > If using self-signed certificate, use `setVerifyingSsl` to ignore ssl verification
 
 ```java
 ApiClient client = new ApiClient();
-client.setBasePath("https://192.168.96.133/v2/api");
+client.setBasePath("https://aoc.example.com/v2/api");
 client.setVerifyingSsl(false);
 ```
 
@@ -109,6 +109,42 @@ VmStartParams startParams = new VmStartParams()
 List<WithTaskVm> startedVms = vmApi.startVm(startParams);
 List<String> tasks = startedVms.stream().map(startedVm -> startedVm.getTaskId()).collect(Collectors.toList());
 TaskUtil.WaitTasks(tasks, client);
+```
+
+#### Create `ActivePassiveApiClient` instance
+
+AOC introduced multi-management-IP active-passive deployment in version 4.9.0. To access such AOC deployments, you can use `ActivePassiveApiClient` to configure multiple endpoints for the same active-passive cluster. At any given time, it is expected that at most one active endpoint exists. The order of endpoints passed in does not represent the active-passive relationship; the client will select the current active endpoint based on probing results.
+
+```java
+ActivePassiveApiClient client = new ActivePassiveApiClient(
+    "https://aoc-a.example.com",
+    "https://aoc-b.example.com");
+
+LoginInput loginInput = new LoginInput()
+    .username("<username>")
+    .password("<password>")
+    .source(UserSource.LOCAL);
+WithTaskLoginResponse token = new UserApi(client).login(loginInput);
+ClientUtil.login(token.getData().getToken(), client);
+
+VmApi vmApi = new VmApi(client);
+```
+
+#### Failover strategies
+
+`ActivePassiveApiClient` supports the following failover strategies:
+
+- `AUTO_FAILOVER`: The default strategy. When there is no cached active endpoint, it attempts to probe and cache the current active endpoint; after a request returns 307, it automatically re-probes and retries once; after a network I/O exception occurs, it clears the cache but does not automatically retry.
+- `MANUAL_FAILOVER`: After a request returns 307, it does not automatically re-probe or retry. Clearing the cache is handled by the caller for failover. The rest of the business logic is consistent with `AUTO_FAILOVER`.
+- `ALWAYS_PROBE`: Does not cache the active endpoint. Re-probes the active endpoint before each request; after a request returns 307, it does not automatically retry.
+
+If you need to specify a failover strategy, you can pass it in when creating the instance:
+
+```java
+ActivePassiveApiClient client = new ActivePassiveApiClient(
+    ActivePassiveFailoverStrategy.MANUAL_FAILOVER,
+    "https://aoc-a.example.com",
+    "https://aoc-b.example.com");
 ```
 
 #### Async

@@ -194,6 +194,53 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
     @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT_IN)
     private List<Long> allocatableMemoryBytesNotIn = null;
 
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES = "allocated_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES)
+    private Long allocatedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT =
+            "allocated_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT)
+    private Long allocatedMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE =
+            "allocated_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE)
+    private Long allocatedMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN =
+            "allocated_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN)
+    private List<Long> allocatedMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT =
+            "allocated_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT)
+    private Long allocatedMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE =
+            "allocated_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE)
+    private Long allocatedMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT =
+            "allocated_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT)
+    private Long allocatedMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN =
+            "allocated_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN)
+    private List<Long> allocatedMemoryBytesNotIn = null;
+
     public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
             "allocated_prioritized_space";
 
@@ -778,6 +825,88 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
     @SerializedName(SERIALIZED_NAME_DATA_IP_STARTS_WITH)
     private String dataIpStartsWith;
 
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT = "dirty_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT)
+    private Long dirtyCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE = "dirty_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE)
+    private Long dirtyCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN = "dirty_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN)
+    private List<Long> dirtyCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT = "dirty_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT)
+    private Long dirtyCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE = "dirty_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE)
+    private Long dirtyCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT = "dirty_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT)
+    private Long dirtyCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN =
+            "dirty_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN)
+    private List<Long> dirtyCacheSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT = "dirty_cache_usage_gt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT)
+    private Double dirtyCacheUsageGt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE = "dirty_cache_usage_gte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE)
+    private Double dirtyCacheUsageGte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN = "dirty_cache_usage_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN)
+    private List<Double> dirtyCacheUsageIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT = "dirty_cache_usage_lt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT)
+    private Double dirtyCacheUsageLt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE = "dirty_cache_usage_lte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE)
+    private Double dirtyCacheUsageLte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT = "dirty_cache_usage_not";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT)
+    private Double dirtyCacheUsageNot;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN =
+            "dirty_cache_usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN)
+    private List<Double> dirtyCacheUsageNotIn = null;
+
     public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
             "downgraded_prioritized_space";
 
@@ -846,6 +975,47 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
     private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT = "failure_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT)
+    private Long failureCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE = "failure_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE)
+    private Long failureCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN = "failure_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN)
+    private List<Long> failureCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT = "failure_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT)
+    private Long failureCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE = "failure_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE)
+    private Long failureCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT = "failure_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT)
+    private Long failureCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN =
+            "failure_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN)
+    private List<Long> failureCacheSpaceNotIn = null;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -1330,6 +1500,65 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
     @SerializedName(SERIALIZED_NAME_MANAGEMENT_IP_STARTS_WITH)
     private String managementIpStartsWith;
 
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE = "memory_allocation_rate";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE)
+    private Double memoryAllocationRate;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT =
+            "memory_allocation_rate_gt";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT)
+    private Double memoryAllocationRateGt;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE =
+            "memory_allocation_rate_gte";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE)
+    private Double memoryAllocationRateGte;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN =
+            "memory_allocation_rate_in";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN)
+    private List<Double> memoryAllocationRateIn = null;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT =
+            "memory_allocation_rate_lt";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT)
+    private Double memoryAllocationRateLt;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE =
+            "memory_allocation_rate_lte";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE)
+    private Double memoryAllocationRateLte;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT =
+            "memory_allocation_rate_not";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT)
+    private Double memoryAllocationRateNot;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN =
+            "memory_allocation_rate_not_in";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN)
+    private List<Double> memoryAllocationRateNotIn = null;
+
+    public static final String SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED =
+            "memory_overcommit_enabled";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED)
+    private Boolean memoryOvercommitEnabled;
+
+    public static final String SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED_NOT =
+            "memory_overcommit_enabled_not";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED_NOT)
+    private Boolean memoryOvercommitEnabledNot;
+
     public static final String SERIALIZED_NAME_MERGED_STATUS = "merged_status";
 
     @SerializedName(SERIALIZED_NAME_MERGED_STATUS)
@@ -1744,6 +1973,148 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     @SerializedName(SERIALIZED_NAME_OS_VERSION_STARTS_WITH)
     private String osVersionStartsWith;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES =
+            "overcommit_active_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES)
+    private Long overcommitActiveMemoryBytes;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GT =
+            "overcommit_active_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GT)
+    private Long overcommitActiveMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GTE =
+            "overcommit_active_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GTE)
+    private Long overcommitActiveMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_IN =
+            "overcommit_active_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_IN)
+    private List<Long> overcommitActiveMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LT =
+            "overcommit_active_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LT)
+    private Long overcommitActiveMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LTE =
+            "overcommit_active_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LTE)
+    private Long overcommitActiveMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT =
+            "overcommit_active_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT)
+    private Long overcommitActiveMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT_IN =
+            "overcommit_active_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT_IN)
+    private List<Long> overcommitActiveMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES = "overcommit_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES)
+    private Long overcommitMemoryBytes;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GT =
+            "overcommit_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GT)
+    private Long overcommitMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GTE =
+            "overcommit_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GTE)
+    private Long overcommitMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_IN =
+            "overcommit_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_IN)
+    private List<Long> overcommitMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LT =
+            "overcommit_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LT)
+    private Long overcommitMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LTE =
+            "overcommit_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LTE)
+    private Long overcommitMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT =
+            "overcommit_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT)
+    private Long overcommitMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT_IN =
+            "overcommit_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT_IN)
+    private List<Long> overcommitMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO = "overcommit_memory_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO)
+    private Double overcommitMemoryRatio;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT =
+            "overcommit_memory_ratio_gt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT)
+    private Double overcommitMemoryRatioGt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE =
+            "overcommit_memory_ratio_gte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE)
+    private Double overcommitMemoryRatioGte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN =
+            "overcommit_memory_ratio_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN)
+    private List<Double> overcommitMemoryRatioIn = null;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT =
+            "overcommit_memory_ratio_lt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT)
+    private Double overcommitMemoryRatioLt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE =
+            "overcommit_memory_ratio_lte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE)
+    private Double overcommitMemoryRatioLte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT =
+            "overcommit_memory_ratio_not";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT)
+    private Double overcommitMemoryRatioNot;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN =
+            "overcommit_memory_ratio_not_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN)
+    private List<Double> overcommitMemoryRatioNotIn = null;
 
     public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
             "perf_allocated_data_space";
@@ -2289,6 +2660,149 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN)
     private List<Long> provisionedMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES = "reserved_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES)
+    private Long reservedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GT =
+            "reserved_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GT)
+    private Long reservedMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GTE =
+            "reserved_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GTE)
+    private Long reservedMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES_IN =
+            "reserved_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_IN)
+    private List<Long> reservedMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LT =
+            "reserved_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LT)
+    private Long reservedMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LTE =
+            "reserved_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LTE)
+    private Long reservedMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT =
+            "reserved_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT)
+    private Long reservedMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT_IN =
+            "reserved_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT_IN)
+    private List<Long> reservedMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES =
+            "running_pause_overcommit_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES)
+    private Long runningPauseOvercommitMemoryBytes;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GT =
+            "running_pause_overcommit_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GT)
+    private Long runningPauseOvercommitMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GTE =
+            "running_pause_overcommit_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GTE)
+    private Long runningPauseOvercommitMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_IN =
+            "running_pause_overcommit_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_IN)
+    private List<Long> runningPauseOvercommitMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LT =
+            "running_pause_overcommit_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LT)
+    private Long runningPauseOvercommitMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LTE =
+            "running_pause_overcommit_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LTE)
+    private Long runningPauseOvercommitMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT =
+            "running_pause_overcommit_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT)
+    private Long runningPauseOvercommitMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT_IN =
+            "running_pause_overcommit_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT_IN)
+    private List<Long> runningPauseOvercommitMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES =
+            "running_pause_reserved_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES)
+    private Long runningPauseReservedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GT =
+            "running_pause_reserved_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GT)
+    private Long runningPauseReservedMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GTE =
+            "running_pause_reserved_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GTE)
+    private Long runningPauseReservedMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_IN =
+            "running_pause_reserved_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_IN)
+    private List<Long> runningPauseReservedMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LT =
+            "running_pause_reserved_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LT)
+    private Long runningPauseReservedMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LTE =
+            "running_pause_reserved_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LTE)
+    private Long runningPauseReservedMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT =
+            "running_pause_reserved_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT)
+    private Long runningPauseReservedMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT_IN =
+            "running_pause_reserved_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT_IN)
+    private List<Long> runningPauseReservedMemoryBytesNotIn = null;
 
     public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES =
             "running_pause_vm_memory_bytes";
@@ -3006,6 +3520,53 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
     @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN)
     private List<Long> totalDataCapacityNotIn = null;
 
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES = "total_logical_cpu_cores";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES)
+    private Integer totalLogicalCpuCores;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT =
+            "total_logical_cpu_cores_gt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT)
+    private Integer totalLogicalCpuCoresGt;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE =
+            "total_logical_cpu_cores_gte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE)
+    private Integer totalLogicalCpuCoresGte;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN =
+            "total_logical_cpu_cores_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN)
+    private List<Integer> totalLogicalCpuCoresIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT =
+            "total_logical_cpu_cores_lt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT)
+    private Integer totalLogicalCpuCoresLt;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE =
+            "total_logical_cpu_cores_lte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE)
+    private Integer totalLogicalCpuCoresLte;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT =
+            "total_logical_cpu_cores_not";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT)
+    private Integer totalLogicalCpuCoresNot;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN =
+            "total_logical_cpu_cores_not_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN)
+    private List<Integer> totalLogicalCpuCoresNotIn = null;
+
     public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
 
     @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
@@ -3046,6 +3607,54 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN)
     private List<Long> totalMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES =
+            "total_physical_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES)
+    private Long totalPhysicalMemoryBytes;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GT =
+            "total_physical_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GT)
+    private Long totalPhysicalMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GTE =
+            "total_physical_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GTE)
+    private Long totalPhysicalMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_IN =
+            "total_physical_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_IN)
+    private List<Long> totalPhysicalMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LT =
+            "total_physical_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LT)
+    private Long totalPhysicalMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LTE =
+            "total_physical_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LTE)
+    private Long totalPhysicalMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT =
+            "total_physical_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT)
+    private Long totalPhysicalMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT_IN =
+            "total_physical_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT_IN)
+    private List<Long> totalPhysicalMemoryBytesNotIn = null;
 
     public static final String SERIALIZED_NAME_USB_DEVICES_EVERY = "usb_devices_every";
 
@@ -4953,6 +5562,366 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     public boolean getAllocatableMemoryBytesNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput allocatedMemoryBytes(Long allocatedMemoryBytes) {
+
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytes
+     *
+     * @return allocatedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytes() {
+        return allocatedMemoryBytes;
+    }
+
+    public void setAllocatedMemoryBytes(Long allocatedMemoryBytes) {
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+    }
+
+    public HostWhereInput allocatedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+    }
+
+    public HostWhereInput allocatedMemoryBytesGt(Long allocatedMemoryBytesGt) {
+
+        this.allocatedMemoryBytesGt = allocatedMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesGt
+     *
+     * @return allocatedMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesGt() {
+        return allocatedMemoryBytesGt;
+    }
+
+    public void setAllocatedMemoryBytesGt(Long allocatedMemoryBytesGt) {
+        this.allocatedMemoryBytesGt = allocatedMemoryBytesGt;
+    }
+
+    public HostWhereInput allocatedMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput allocatedMemoryBytesGte(Long allocatedMemoryBytesGte) {
+
+        this.allocatedMemoryBytesGte = allocatedMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesGte
+     *
+     * @return allocatedMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesGte() {
+        return allocatedMemoryBytesGte;
+    }
+
+    public void setAllocatedMemoryBytesGte(Long allocatedMemoryBytesGte) {
+        this.allocatedMemoryBytesGte = allocatedMemoryBytesGte;
+    }
+
+    public HostWhereInput allocatedMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput allocatedMemoryBytesIn(List<Long> allocatedMemoryBytesIn) {
+
+        this.allocatedMemoryBytesIn = allocatedMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addAllocatedMemoryBytesInItem(Long allocatedMemoryBytesInItem) {
+        if (this.allocatedMemoryBytesIn == null) {
+            this.allocatedMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.allocatedMemoryBytesIn.add(allocatedMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesIn
+     *
+     * @return allocatedMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedMemoryBytesIn() {
+        return allocatedMemoryBytesIn;
+    }
+
+    public void setAllocatedMemoryBytesIn(List<Long> allocatedMemoryBytesIn) {
+        this.allocatedMemoryBytesIn = allocatedMemoryBytesIn;
+    }
+
+    public HostWhereInput allocatedMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput allocatedMemoryBytesLt(Long allocatedMemoryBytesLt) {
+
+        this.allocatedMemoryBytesLt = allocatedMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesLt
+     *
+     * @return allocatedMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesLt() {
+        return allocatedMemoryBytesLt;
+    }
+
+    public void setAllocatedMemoryBytesLt(Long allocatedMemoryBytesLt) {
+        this.allocatedMemoryBytesLt = allocatedMemoryBytesLt;
+    }
+
+    public HostWhereInput allocatedMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput allocatedMemoryBytesLte(Long allocatedMemoryBytesLte) {
+
+        this.allocatedMemoryBytesLte = allocatedMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesLte
+     *
+     * @return allocatedMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesLte() {
+        return allocatedMemoryBytesLte;
+    }
+
+    public void setAllocatedMemoryBytesLte(Long allocatedMemoryBytesLte) {
+        this.allocatedMemoryBytesLte = allocatedMemoryBytesLte;
+    }
+
+    public HostWhereInput allocatedMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput allocatedMemoryBytesNot(Long allocatedMemoryBytesNot) {
+
+        this.allocatedMemoryBytesNot = allocatedMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesNot
+     *
+     * @return allocatedMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesNot() {
+        return allocatedMemoryBytesNot;
+    }
+
+    public void setAllocatedMemoryBytesNot(Long allocatedMemoryBytesNot) {
+        this.allocatedMemoryBytesNot = allocatedMemoryBytesNot;
+    }
+
+    public HostWhereInput allocatedMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput allocatedMemoryBytesNotIn(List<Long> allocatedMemoryBytesNotIn) {
+
+        this.allocatedMemoryBytesNotIn = allocatedMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addAllocatedMemoryBytesNotInItem(Long allocatedMemoryBytesNotInItem) {
+        if (this.allocatedMemoryBytesNotIn == null) {
+            this.allocatedMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.allocatedMemoryBytesNotIn.add(allocatedMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesNotIn
+     *
+     * @return allocatedMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedMemoryBytesNotIn() {
+        return allocatedMemoryBytesNotIn;
+    }
+
+    public void setAllocatedMemoryBytesNotIn(List<Long> allocatedMemoryBytesNotIn) {
+        this.allocatedMemoryBytesNotIn = allocatedMemoryBytesNotIn;
+    }
+
+    public HostWhereInput allocatedMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput allocatedMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
     }
 
     public HostWhereInput allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
@@ -9916,6 +10885,726 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
         return this._isPresent_.contains(SERIALIZED_NAME_DATA_IP_STARTS_WITH);
     }
 
+    public HostWhereInput dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public HostWhereInput dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public HostWhereInput dirtyCacheSpaceGt(Long dirtyCacheSpaceGt) {
+
+        this.dirtyCacheSpaceGt = dirtyCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceGt
+     *
+     * @return dirtyCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceGt() {
+        return dirtyCacheSpaceGt;
+    }
+
+    public void setDirtyCacheSpaceGt(Long dirtyCacheSpaceGt) {
+        this.dirtyCacheSpaceGt = dirtyCacheSpaceGt;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+    }
+
+    public HostWhereInput dirtyCacheSpaceGte(Long dirtyCacheSpaceGte) {
+
+        this.dirtyCacheSpaceGte = dirtyCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceGte
+     *
+     * @return dirtyCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceGte() {
+        return dirtyCacheSpaceGte;
+    }
+
+    public void setDirtyCacheSpaceGte(Long dirtyCacheSpaceGte) {
+        this.dirtyCacheSpaceGte = dirtyCacheSpaceGte;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+    }
+
+    public HostWhereInput dirtyCacheSpaceIn(List<Long> dirtyCacheSpaceIn) {
+
+        this.dirtyCacheSpaceIn = dirtyCacheSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheSpaceInItem(Long dirtyCacheSpaceInItem) {
+        if (this.dirtyCacheSpaceIn == null) {
+            this.dirtyCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.dirtyCacheSpaceIn.add(dirtyCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceIn
+     *
+     * @return dirtyCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDirtyCacheSpaceIn() {
+        return dirtyCacheSpaceIn;
+    }
+
+    public void setDirtyCacheSpaceIn(List<Long> dirtyCacheSpaceIn) {
+        this.dirtyCacheSpaceIn = dirtyCacheSpaceIn;
+    }
+
+    public HostWhereInput dirtyCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+    }
+
+    public HostWhereInput dirtyCacheSpaceLt(Long dirtyCacheSpaceLt) {
+
+        this.dirtyCacheSpaceLt = dirtyCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceLt
+     *
+     * @return dirtyCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceLt() {
+        return dirtyCacheSpaceLt;
+    }
+
+    public void setDirtyCacheSpaceLt(Long dirtyCacheSpaceLt) {
+        this.dirtyCacheSpaceLt = dirtyCacheSpaceLt;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+    }
+
+    public HostWhereInput dirtyCacheSpaceLte(Long dirtyCacheSpaceLte) {
+
+        this.dirtyCacheSpaceLte = dirtyCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceLte
+     *
+     * @return dirtyCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceLte() {
+        return dirtyCacheSpaceLte;
+    }
+
+    public void setDirtyCacheSpaceLte(Long dirtyCacheSpaceLte) {
+        this.dirtyCacheSpaceLte = dirtyCacheSpaceLte;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+    }
+
+    public HostWhereInput dirtyCacheSpaceNot(Long dirtyCacheSpaceNot) {
+
+        this.dirtyCacheSpaceNot = dirtyCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceNot
+     *
+     * @return dirtyCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceNot() {
+        return dirtyCacheSpaceNot;
+    }
+
+    public void setDirtyCacheSpaceNot(Long dirtyCacheSpaceNot) {
+        this.dirtyCacheSpaceNot = dirtyCacheSpaceNot;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+    }
+
+    public HostWhereInput dirtyCacheSpaceNotIn(List<Long> dirtyCacheSpaceNotIn) {
+
+        this.dirtyCacheSpaceNotIn = dirtyCacheSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheSpaceNotInItem(Long dirtyCacheSpaceNotInItem) {
+        if (this.dirtyCacheSpaceNotIn == null) {
+            this.dirtyCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.dirtyCacheSpaceNotIn.add(dirtyCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceNotIn
+     *
+     * @return dirtyCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDirtyCacheSpaceNotIn() {
+        return dirtyCacheSpaceNotIn;
+    }
+
+    public void setDirtyCacheSpaceNotIn(List<Long> dirtyCacheSpaceNotIn) {
+        this.dirtyCacheSpaceNotIn = dirtyCacheSpaceNotIn;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public HostWhereInput dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+    }
+
+    public HostWhereInput dirtyCacheUsageGt(Double dirtyCacheUsageGt) {
+
+        this.dirtyCacheUsageGt = dirtyCacheUsageGt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageGt
+     *
+     * @return dirtyCacheUsageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageGt() {
+        return dirtyCacheUsageGt;
+    }
+
+    public void setDirtyCacheUsageGt(Double dirtyCacheUsageGt) {
+        this.dirtyCacheUsageGt = dirtyCacheUsageGt;
+    }
+
+    public HostWhereInput dirtyCacheUsageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+    }
+
+    public HostWhereInput dirtyCacheUsageGte(Double dirtyCacheUsageGte) {
+
+        this.dirtyCacheUsageGte = dirtyCacheUsageGte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageGte
+     *
+     * @return dirtyCacheUsageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageGte() {
+        return dirtyCacheUsageGte;
+    }
+
+    public void setDirtyCacheUsageGte(Double dirtyCacheUsageGte) {
+        this.dirtyCacheUsageGte = dirtyCacheUsageGte;
+    }
+
+    public HostWhereInput dirtyCacheUsageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        return this;
+    }
+
+    public void setDirtyCacheUsageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        }
+    }
+
+    public boolean getDirtyCacheUsageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+    }
+
+    public HostWhereInput dirtyCacheUsageIn(List<Double> dirtyCacheUsageIn) {
+
+        this.dirtyCacheUsageIn = dirtyCacheUsageIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheUsageInItem(Double dirtyCacheUsageInItem) {
+        if (this.dirtyCacheUsageIn == null) {
+            this.dirtyCacheUsageIn = new ArrayList<Double>();
+        }
+        this.dirtyCacheUsageIn.add(dirtyCacheUsageInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageIn
+     *
+     * @return dirtyCacheUsageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDirtyCacheUsageIn() {
+        return dirtyCacheUsageIn;
+    }
+
+    public void setDirtyCacheUsageIn(List<Double> dirtyCacheUsageIn) {
+        this.dirtyCacheUsageIn = dirtyCacheUsageIn;
+    }
+
+    public HostWhereInput dirtyCacheUsageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        return this;
+    }
+
+    public void setDirtyCacheUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        }
+    }
+
+    public boolean getDirtyCacheUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+    }
+
+    public HostWhereInput dirtyCacheUsageLt(Double dirtyCacheUsageLt) {
+
+        this.dirtyCacheUsageLt = dirtyCacheUsageLt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageLt
+     *
+     * @return dirtyCacheUsageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageLt() {
+        return dirtyCacheUsageLt;
+    }
+
+    public void setDirtyCacheUsageLt(Double dirtyCacheUsageLt) {
+        this.dirtyCacheUsageLt = dirtyCacheUsageLt;
+    }
+
+    public HostWhereInput dirtyCacheUsageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+    }
+
+    public HostWhereInput dirtyCacheUsageLte(Double dirtyCacheUsageLte) {
+
+        this.dirtyCacheUsageLte = dirtyCacheUsageLte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageLte
+     *
+     * @return dirtyCacheUsageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageLte() {
+        return dirtyCacheUsageLte;
+    }
+
+    public void setDirtyCacheUsageLte(Double dirtyCacheUsageLte) {
+        this.dirtyCacheUsageLte = dirtyCacheUsageLte;
+    }
+
+    public HostWhereInput dirtyCacheUsageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        return this;
+    }
+
+    public void setDirtyCacheUsageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        }
+    }
+
+    public boolean getDirtyCacheUsageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+    }
+
+    public HostWhereInput dirtyCacheUsageNot(Double dirtyCacheUsageNot) {
+
+        this.dirtyCacheUsageNot = dirtyCacheUsageNot;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageNot
+     *
+     * @return dirtyCacheUsageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageNot() {
+        return dirtyCacheUsageNot;
+    }
+
+    public void setDirtyCacheUsageNot(Double dirtyCacheUsageNot) {
+        this.dirtyCacheUsageNot = dirtyCacheUsageNot;
+    }
+
+    public HostWhereInput dirtyCacheUsageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+    }
+
+    public HostWhereInput dirtyCacheUsageNotIn(List<Double> dirtyCacheUsageNotIn) {
+
+        this.dirtyCacheUsageNotIn = dirtyCacheUsageNotIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheUsageNotInItem(Double dirtyCacheUsageNotInItem) {
+        if (this.dirtyCacheUsageNotIn == null) {
+            this.dirtyCacheUsageNotIn = new ArrayList<Double>();
+        }
+        this.dirtyCacheUsageNotIn.add(dirtyCacheUsageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageNotIn
+     *
+     * @return dirtyCacheUsageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDirtyCacheUsageNotIn() {
+        return dirtyCacheUsageNotIn;
+    }
+
+    public void setDirtyCacheUsageNotIn(List<Double> dirtyCacheUsageNotIn) {
+        this.dirtyCacheUsageNotIn = dirtyCacheUsageNotIn;
+    }
+
+    public HostWhereInput dirtyCacheUsageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setDirtyCacheUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getDirtyCacheUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+    }
+
     public HostWhereInput downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
 
         this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
@@ -10466,6 +12155,366 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     public boolean getEntityAsyncStatusNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN);
+    }
+
+    public HostWhereInput failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public HostWhereInput failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+    }
+
+    public HostWhereInput failureCacheSpaceGt(Long failureCacheSpaceGt) {
+
+        this.failureCacheSpaceGt = failureCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceGt
+     *
+     * @return failureCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceGt() {
+        return failureCacheSpaceGt;
+    }
+
+    public void setFailureCacheSpaceGt(Long failureCacheSpaceGt) {
+        this.failureCacheSpaceGt = failureCacheSpaceGt;
+    }
+
+    public HostWhereInput failureCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+    }
+
+    public HostWhereInput failureCacheSpaceGte(Long failureCacheSpaceGte) {
+
+        this.failureCacheSpaceGte = failureCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceGte
+     *
+     * @return failureCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceGte() {
+        return failureCacheSpaceGte;
+    }
+
+    public void setFailureCacheSpaceGte(Long failureCacheSpaceGte) {
+        this.failureCacheSpaceGte = failureCacheSpaceGte;
+    }
+
+    public HostWhereInput failureCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setFailureCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getFailureCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+    }
+
+    public HostWhereInput failureCacheSpaceIn(List<Long> failureCacheSpaceIn) {
+
+        this.failureCacheSpaceIn = failureCacheSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addFailureCacheSpaceInItem(Long failureCacheSpaceInItem) {
+        if (this.failureCacheSpaceIn == null) {
+            this.failureCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.failureCacheSpaceIn.add(failureCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceIn
+     *
+     * @return failureCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getFailureCacheSpaceIn() {
+        return failureCacheSpaceIn;
+    }
+
+    public void setFailureCacheSpaceIn(List<Long> failureCacheSpaceIn) {
+        this.failureCacheSpaceIn = failureCacheSpaceIn;
+    }
+
+    public HostWhereInput failureCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setFailureCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getFailureCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+    }
+
+    public HostWhereInput failureCacheSpaceLt(Long failureCacheSpaceLt) {
+
+        this.failureCacheSpaceLt = failureCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceLt
+     *
+     * @return failureCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceLt() {
+        return failureCacheSpaceLt;
+    }
+
+    public void setFailureCacheSpaceLt(Long failureCacheSpaceLt) {
+        this.failureCacheSpaceLt = failureCacheSpaceLt;
+    }
+
+    public HostWhereInput failureCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+    }
+
+    public HostWhereInput failureCacheSpaceLte(Long failureCacheSpaceLte) {
+
+        this.failureCacheSpaceLte = failureCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceLte
+     *
+     * @return failureCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceLte() {
+        return failureCacheSpaceLte;
+    }
+
+    public void setFailureCacheSpaceLte(Long failureCacheSpaceLte) {
+        this.failureCacheSpaceLte = failureCacheSpaceLte;
+    }
+
+    public HostWhereInput failureCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setFailureCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getFailureCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+    }
+
+    public HostWhereInput failureCacheSpaceNot(Long failureCacheSpaceNot) {
+
+        this.failureCacheSpaceNot = failureCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceNot
+     *
+     * @return failureCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceNot() {
+        return failureCacheSpaceNot;
+    }
+
+    public void setFailureCacheSpaceNot(Long failureCacheSpaceNot) {
+        this.failureCacheSpaceNot = failureCacheSpaceNot;
+    }
+
+    public HostWhereInput failureCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+    }
+
+    public HostWhereInput failureCacheSpaceNotIn(List<Long> failureCacheSpaceNotIn) {
+
+        this.failureCacheSpaceNotIn = failureCacheSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addFailureCacheSpaceNotInItem(Long failureCacheSpaceNotInItem) {
+        if (this.failureCacheSpaceNotIn == null) {
+            this.failureCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.failureCacheSpaceNotIn.add(failureCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceNotIn
+     *
+     * @return failureCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getFailureCacheSpaceNotIn() {
+        return failureCacheSpaceNotIn;
+    }
+
+    public void setFailureCacheSpaceNotIn(List<Long> failureCacheSpaceNotIn) {
+        this.failureCacheSpaceNotIn = failureCacheSpaceNotIn;
+    }
+
+    public HostWhereInput failureCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setFailureCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getFailureCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
     }
 
     public HostWhereInput failureDataSpace(Long failureDataSpace) {
@@ -14638,6 +16687,452 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
         return this._isPresent_.contains(SERIALIZED_NAME_MANAGEMENT_IP_STARTS_WITH);
     }
 
+    public HostWhereInput memoryAllocationRate(Double memoryAllocationRate) {
+
+        this.memoryAllocationRate = memoryAllocationRate;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRate
+     *
+     * @return memoryAllocationRate
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRate() {
+        return memoryAllocationRate;
+    }
+
+    public void setMemoryAllocationRate(Double memoryAllocationRate) {
+        this.memoryAllocationRate = memoryAllocationRate;
+    }
+
+    public HostWhereInput memoryAllocationRate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public void setMemoryAllocationRate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        }
+    }
+
+    public boolean getMemoryAllocationRate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+    }
+
+    public HostWhereInput memoryAllocationRateGt(Double memoryAllocationRateGt) {
+
+        this.memoryAllocationRateGt = memoryAllocationRateGt;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateGt
+     *
+     * @return memoryAllocationRateGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateGt() {
+        return memoryAllocationRateGt;
+    }
+
+    public void setMemoryAllocationRateGt(Double memoryAllocationRateGt) {
+        this.memoryAllocationRateGt = memoryAllocationRateGt;
+    }
+
+    public HostWhereInput memoryAllocationRateGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRateGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        return this;
+    }
+
+    public void setMemoryAllocationRateGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        }
+    }
+
+    public boolean getMemoryAllocationRateGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+    }
+
+    public HostWhereInput memoryAllocationRateGte(Double memoryAllocationRateGte) {
+
+        this.memoryAllocationRateGte = memoryAllocationRateGte;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateGte
+     *
+     * @return memoryAllocationRateGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateGte() {
+        return memoryAllocationRateGte;
+    }
+
+    public void setMemoryAllocationRateGte(Double memoryAllocationRateGte) {
+        this.memoryAllocationRateGte = memoryAllocationRateGte;
+    }
+
+    public HostWhereInput memoryAllocationRateGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRateGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        return this;
+    }
+
+    public void setMemoryAllocationRateGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        }
+    }
+
+    public boolean getMemoryAllocationRateGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+    }
+
+    public HostWhereInput memoryAllocationRateIn(List<Double> memoryAllocationRateIn) {
+
+        this.memoryAllocationRateIn = memoryAllocationRateIn;
+        return this;
+    }
+
+    public HostWhereInput addMemoryAllocationRateInItem(Double memoryAllocationRateInItem) {
+        if (this.memoryAllocationRateIn == null) {
+            this.memoryAllocationRateIn = new ArrayList<Double>();
+        }
+        this.memoryAllocationRateIn.add(memoryAllocationRateInItem);
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateIn
+     *
+     * @return memoryAllocationRateIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getMemoryAllocationRateIn() {
+        return memoryAllocationRateIn;
+    }
+
+    public void setMemoryAllocationRateIn(List<Double> memoryAllocationRateIn) {
+        this.memoryAllocationRateIn = memoryAllocationRateIn;
+    }
+
+    public HostWhereInput memoryAllocationRateIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRateIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        return this;
+    }
+
+    public void setMemoryAllocationRateIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        }
+    }
+
+    public boolean getMemoryAllocationRateIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+    }
+
+    public HostWhereInput memoryAllocationRateLt(Double memoryAllocationRateLt) {
+
+        this.memoryAllocationRateLt = memoryAllocationRateLt;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateLt
+     *
+     * @return memoryAllocationRateLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateLt() {
+        return memoryAllocationRateLt;
+    }
+
+    public void setMemoryAllocationRateLt(Double memoryAllocationRateLt) {
+        this.memoryAllocationRateLt = memoryAllocationRateLt;
+    }
+
+    public HostWhereInput memoryAllocationRateLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRateLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        return this;
+    }
+
+    public void setMemoryAllocationRateLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        }
+    }
+
+    public boolean getMemoryAllocationRateLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+    }
+
+    public HostWhereInput memoryAllocationRateLte(Double memoryAllocationRateLte) {
+
+        this.memoryAllocationRateLte = memoryAllocationRateLte;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateLte
+     *
+     * @return memoryAllocationRateLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateLte() {
+        return memoryAllocationRateLte;
+    }
+
+    public void setMemoryAllocationRateLte(Double memoryAllocationRateLte) {
+        this.memoryAllocationRateLte = memoryAllocationRateLte;
+    }
+
+    public HostWhereInput memoryAllocationRateLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRateLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        return this;
+    }
+
+    public void setMemoryAllocationRateLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        }
+    }
+
+    public boolean getMemoryAllocationRateLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+    }
+
+    public HostWhereInput memoryAllocationRateNot(Double memoryAllocationRateNot) {
+
+        this.memoryAllocationRateNot = memoryAllocationRateNot;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateNot
+     *
+     * @return memoryAllocationRateNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateNot() {
+        return memoryAllocationRateNot;
+    }
+
+    public void setMemoryAllocationRateNot(Double memoryAllocationRateNot) {
+        this.memoryAllocationRateNot = memoryAllocationRateNot;
+    }
+
+    public HostWhereInput memoryAllocationRateNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRateNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        return this;
+    }
+
+    public void setMemoryAllocationRateNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        }
+    }
+
+    public boolean getMemoryAllocationRateNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+    }
+
+    public HostWhereInput memoryAllocationRateNotIn(List<Double> memoryAllocationRateNotIn) {
+
+        this.memoryAllocationRateNotIn = memoryAllocationRateNotIn;
+        return this;
+    }
+
+    public HostWhereInput addMemoryAllocationRateNotInItem(Double memoryAllocationRateNotInItem) {
+        if (this.memoryAllocationRateNotIn == null) {
+            this.memoryAllocationRateNotIn = new ArrayList<Double>();
+        }
+        this.memoryAllocationRateNotIn.add(memoryAllocationRateNotInItem);
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateNotIn
+     *
+     * @return memoryAllocationRateNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getMemoryAllocationRateNotIn() {
+        return memoryAllocationRateNotIn;
+    }
+
+    public void setMemoryAllocationRateNotIn(List<Double> memoryAllocationRateNotIn) {
+        this.memoryAllocationRateNotIn = memoryAllocationRateNotIn;
+    }
+
+    public HostWhereInput memoryAllocationRateNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput memoryAllocationRateNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        return this;
+    }
+
+    public void setMemoryAllocationRateNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        }
+    }
+
+    public boolean getMemoryAllocationRateNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+    }
+
+    public HostWhereInput memoryOvercommitEnabled(Boolean memoryOvercommitEnabled) {
+
+        this.memoryOvercommitEnabled = memoryOvercommitEnabled;
+        return this;
+    }
+
+    /**
+     * Get memoryOvercommitEnabled
+     *
+     * @return memoryOvercommitEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getMemoryOvercommitEnabled() {
+        return memoryOvercommitEnabled;
+    }
+
+    public void setMemoryOvercommitEnabled(Boolean memoryOvercommitEnabled) {
+        this.memoryOvercommitEnabled = memoryOvercommitEnabled;
+    }
+
+    public HostWhereInput memoryOvercommitEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        return this;
+    }
+
+    public HostWhereInput memoryOvercommitEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        return this;
+    }
+
+    public void setMemoryOvercommitEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        }
+    }
+
+    public boolean getMemoryOvercommitEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+    }
+
+    public HostWhereInput memoryOvercommitEnabledNot(Boolean memoryOvercommitEnabledNot) {
+
+        this.memoryOvercommitEnabledNot = memoryOvercommitEnabledNot;
+        return this;
+    }
+
+    /**
+     * Get memoryOvercommitEnabledNot
+     *
+     * @return memoryOvercommitEnabledNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getMemoryOvercommitEnabledNot() {
+        return memoryOvercommitEnabledNot;
+    }
+
+    public void setMemoryOvercommitEnabledNot(Boolean memoryOvercommitEnabledNot) {
+        this.memoryOvercommitEnabledNot = memoryOvercommitEnabledNot;
+    }
+
+    public HostWhereInput memoryOvercommitEnabledNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED_NOT);
+        return this;
+    }
+
+    public HostWhereInput memoryOvercommitEnabledNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED_NOT);
+        return this;
+    }
+
+    public void setMemoryOvercommitEnabledNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED_NOT);
+        }
+    }
+
+    public boolean getMemoryOvercommitEnabledNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED_NOT);
+    }
+
     public HostWhereInput mergedStatus(HostMergedStatus mergedStatus) {
 
         this.mergedStatus = mergedStatus;
@@ -18231,6 +20726,1089 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     public boolean getOsVersionStartsWith_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_OS_VERSION_STARTS_WITH);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytes(Long overcommitActiveMemoryBytes) {
+
+        this.overcommitActiveMemoryBytes = overcommitActiveMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytes
+     *
+     * @return overcommitActiveMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitActiveMemoryBytes() {
+        return overcommitActiveMemoryBytes;
+    }
+
+    public void setOvercommitActiveMemoryBytes(Long overcommitActiveMemoryBytes) {
+        this.overcommitActiveMemoryBytes = overcommitActiveMemoryBytes;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesGt(Long overcommitActiveMemoryBytesGt) {
+
+        this.overcommitActiveMemoryBytesGt = overcommitActiveMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytesGt
+     *
+     * @return overcommitActiveMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitActiveMemoryBytesGt() {
+        return overcommitActiveMemoryBytesGt;
+    }
+
+    public void setOvercommitActiveMemoryBytesGt(Long overcommitActiveMemoryBytesGt) {
+        this.overcommitActiveMemoryBytesGt = overcommitActiveMemoryBytesGt;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesGte(Long overcommitActiveMemoryBytesGte) {
+
+        this.overcommitActiveMemoryBytesGte = overcommitActiveMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytesGte
+     *
+     * @return overcommitActiveMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitActiveMemoryBytesGte() {
+        return overcommitActiveMemoryBytesGte;
+    }
+
+    public void setOvercommitActiveMemoryBytesGte(Long overcommitActiveMemoryBytesGte) {
+        this.overcommitActiveMemoryBytesGte = overcommitActiveMemoryBytesGte;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesIn(List<Long> overcommitActiveMemoryBytesIn) {
+
+        this.overcommitActiveMemoryBytesIn = overcommitActiveMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addOvercommitActiveMemoryBytesInItem(
+            Long overcommitActiveMemoryBytesInItem) {
+        if (this.overcommitActiveMemoryBytesIn == null) {
+            this.overcommitActiveMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.overcommitActiveMemoryBytesIn.add(overcommitActiveMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytesIn
+     *
+     * @return overcommitActiveMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getOvercommitActiveMemoryBytesIn() {
+        return overcommitActiveMemoryBytesIn;
+    }
+
+    public void setOvercommitActiveMemoryBytesIn(List<Long> overcommitActiveMemoryBytesIn) {
+        this.overcommitActiveMemoryBytesIn = overcommitActiveMemoryBytesIn;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesLt(Long overcommitActiveMemoryBytesLt) {
+
+        this.overcommitActiveMemoryBytesLt = overcommitActiveMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytesLt
+     *
+     * @return overcommitActiveMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitActiveMemoryBytesLt() {
+        return overcommitActiveMemoryBytesLt;
+    }
+
+    public void setOvercommitActiveMemoryBytesLt(Long overcommitActiveMemoryBytesLt) {
+        this.overcommitActiveMemoryBytesLt = overcommitActiveMemoryBytesLt;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesLte(Long overcommitActiveMemoryBytesLte) {
+
+        this.overcommitActiveMemoryBytesLte = overcommitActiveMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytesLte
+     *
+     * @return overcommitActiveMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitActiveMemoryBytesLte() {
+        return overcommitActiveMemoryBytesLte;
+    }
+
+    public void setOvercommitActiveMemoryBytesLte(Long overcommitActiveMemoryBytesLte) {
+        this.overcommitActiveMemoryBytesLte = overcommitActiveMemoryBytesLte;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesNot(Long overcommitActiveMemoryBytesNot) {
+
+        this.overcommitActiveMemoryBytesNot = overcommitActiveMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytesNot
+     *
+     * @return overcommitActiveMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitActiveMemoryBytesNot() {
+        return overcommitActiveMemoryBytesNot;
+    }
+
+    public void setOvercommitActiveMemoryBytesNot(Long overcommitActiveMemoryBytesNot) {
+        this.overcommitActiveMemoryBytesNot = overcommitActiveMemoryBytesNot;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesNotIn(
+            List<Long> overcommitActiveMemoryBytesNotIn) {
+
+        this.overcommitActiveMemoryBytesNotIn = overcommitActiveMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addOvercommitActiveMemoryBytesNotInItem(
+            Long overcommitActiveMemoryBytesNotInItem) {
+        if (this.overcommitActiveMemoryBytesNotIn == null) {
+            this.overcommitActiveMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.overcommitActiveMemoryBytesNotIn.add(overcommitActiveMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytesNotIn
+     *
+     * @return overcommitActiveMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getOvercommitActiveMemoryBytesNotIn() {
+        return overcommitActiveMemoryBytesNotIn;
+    }
+
+    public void setOvercommitActiveMemoryBytesNotIn(List<Long> overcommitActiveMemoryBytesNotIn) {
+        this.overcommitActiveMemoryBytesNotIn = overcommitActiveMemoryBytesNotIn;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput overcommitActiveMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput overcommitMemoryBytes(Long overcommitMemoryBytes) {
+
+        this.overcommitMemoryBytes = overcommitMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytes
+     *
+     * @return overcommitMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitMemoryBytes() {
+        return overcommitMemoryBytes;
+    }
+
+    public void setOvercommitMemoryBytes(Long overcommitMemoryBytes) {
+        this.overcommitMemoryBytes = overcommitMemoryBytes;
+    }
+
+    public HostWhereInput overcommitMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+    }
+
+    public HostWhereInput overcommitMemoryBytesGt(Long overcommitMemoryBytesGt) {
+
+        this.overcommitMemoryBytesGt = overcommitMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytesGt
+     *
+     * @return overcommitMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitMemoryBytesGt() {
+        return overcommitMemoryBytesGt;
+    }
+
+    public void setOvercommitMemoryBytesGt(Long overcommitMemoryBytesGt) {
+        this.overcommitMemoryBytesGt = overcommitMemoryBytesGt;
+    }
+
+    public HostWhereInput overcommitMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput overcommitMemoryBytesGte(Long overcommitMemoryBytesGte) {
+
+        this.overcommitMemoryBytesGte = overcommitMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytesGte
+     *
+     * @return overcommitMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitMemoryBytesGte() {
+        return overcommitMemoryBytesGte;
+    }
+
+    public void setOvercommitMemoryBytesGte(Long overcommitMemoryBytesGte) {
+        this.overcommitMemoryBytesGte = overcommitMemoryBytesGte;
+    }
+
+    public HostWhereInput overcommitMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput overcommitMemoryBytesIn(List<Long> overcommitMemoryBytesIn) {
+
+        this.overcommitMemoryBytesIn = overcommitMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addOvercommitMemoryBytesInItem(Long overcommitMemoryBytesInItem) {
+        if (this.overcommitMemoryBytesIn == null) {
+            this.overcommitMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.overcommitMemoryBytesIn.add(overcommitMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytesIn
+     *
+     * @return overcommitMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getOvercommitMemoryBytesIn() {
+        return overcommitMemoryBytesIn;
+    }
+
+    public void setOvercommitMemoryBytesIn(List<Long> overcommitMemoryBytesIn) {
+        this.overcommitMemoryBytesIn = overcommitMemoryBytesIn;
+    }
+
+    public HostWhereInput overcommitMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput overcommitMemoryBytesLt(Long overcommitMemoryBytesLt) {
+
+        this.overcommitMemoryBytesLt = overcommitMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytesLt
+     *
+     * @return overcommitMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitMemoryBytesLt() {
+        return overcommitMemoryBytesLt;
+    }
+
+    public void setOvercommitMemoryBytesLt(Long overcommitMemoryBytesLt) {
+        this.overcommitMemoryBytesLt = overcommitMemoryBytesLt;
+    }
+
+    public HostWhereInput overcommitMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput overcommitMemoryBytesLte(Long overcommitMemoryBytesLte) {
+
+        this.overcommitMemoryBytesLte = overcommitMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytesLte
+     *
+     * @return overcommitMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitMemoryBytesLte() {
+        return overcommitMemoryBytesLte;
+    }
+
+    public void setOvercommitMemoryBytesLte(Long overcommitMemoryBytesLte) {
+        this.overcommitMemoryBytesLte = overcommitMemoryBytesLte;
+    }
+
+    public HostWhereInput overcommitMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput overcommitMemoryBytesNot(Long overcommitMemoryBytesNot) {
+
+        this.overcommitMemoryBytesNot = overcommitMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytesNot
+     *
+     * @return overcommitMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitMemoryBytesNot() {
+        return overcommitMemoryBytesNot;
+    }
+
+    public void setOvercommitMemoryBytesNot(Long overcommitMemoryBytesNot) {
+        this.overcommitMemoryBytesNot = overcommitMemoryBytesNot;
+    }
+
+    public HostWhereInput overcommitMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput overcommitMemoryBytesNotIn(List<Long> overcommitMemoryBytesNotIn) {
+
+        this.overcommitMemoryBytesNotIn = overcommitMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addOvercommitMemoryBytesNotInItem(Long overcommitMemoryBytesNotInItem) {
+        if (this.overcommitMemoryBytesNotIn == null) {
+            this.overcommitMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.overcommitMemoryBytesNotIn.add(overcommitMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytesNotIn
+     *
+     * @return overcommitMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getOvercommitMemoryBytesNotIn() {
+        return overcommitMemoryBytesNotIn;
+    }
+
+    public void setOvercommitMemoryBytesNotIn(List<Long> overcommitMemoryBytesNotIn) {
+        this.overcommitMemoryBytesNotIn = overcommitMemoryBytesNotIn;
+    }
+
+    public HostWhereInput overcommitMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput overcommitMemoryRatio(Double overcommitMemoryRatio) {
+
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatio
+     *
+     * @return overcommitMemoryRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatio() {
+        return overcommitMemoryRatio;
+    }
+
+    public void setOvercommitMemoryRatio(Double overcommitMemoryRatio) {
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+    }
+
+    public HostWhereInput overcommitMemoryRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+    }
+
+    public HostWhereInput overcommitMemoryRatioGt(Double overcommitMemoryRatioGt) {
+
+        this.overcommitMemoryRatioGt = overcommitMemoryRatioGt;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioGt
+     *
+     * @return overcommitMemoryRatioGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioGt() {
+        return overcommitMemoryRatioGt;
+    }
+
+    public void setOvercommitMemoryRatioGt(Double overcommitMemoryRatioGt) {
+        this.overcommitMemoryRatioGt = overcommitMemoryRatioGt;
+    }
+
+    public HostWhereInput overcommitMemoryRatioGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatioGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+    }
+
+    public HostWhereInput overcommitMemoryRatioGte(Double overcommitMemoryRatioGte) {
+
+        this.overcommitMemoryRatioGte = overcommitMemoryRatioGte;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioGte
+     *
+     * @return overcommitMemoryRatioGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioGte() {
+        return overcommitMemoryRatioGte;
+    }
+
+    public void setOvercommitMemoryRatioGte(Double overcommitMemoryRatioGte) {
+        this.overcommitMemoryRatioGte = overcommitMemoryRatioGte;
+    }
+
+    public HostWhereInput overcommitMemoryRatioGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatioGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+    }
+
+    public HostWhereInput overcommitMemoryRatioIn(List<Double> overcommitMemoryRatioIn) {
+
+        this.overcommitMemoryRatioIn = overcommitMemoryRatioIn;
+        return this;
+    }
+
+    public HostWhereInput addOvercommitMemoryRatioInItem(Double overcommitMemoryRatioInItem) {
+        if (this.overcommitMemoryRatioIn == null) {
+            this.overcommitMemoryRatioIn = new ArrayList<Double>();
+        }
+        this.overcommitMemoryRatioIn.add(overcommitMemoryRatioInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioIn
+     *
+     * @return overcommitMemoryRatioIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOvercommitMemoryRatioIn() {
+        return overcommitMemoryRatioIn;
+    }
+
+    public void setOvercommitMemoryRatioIn(List<Double> overcommitMemoryRatioIn) {
+        this.overcommitMemoryRatioIn = overcommitMemoryRatioIn;
+    }
+
+    public HostWhereInput overcommitMemoryRatioIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatioIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+    }
+
+    public HostWhereInput overcommitMemoryRatioLt(Double overcommitMemoryRatioLt) {
+
+        this.overcommitMemoryRatioLt = overcommitMemoryRatioLt;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioLt
+     *
+     * @return overcommitMemoryRatioLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioLt() {
+        return overcommitMemoryRatioLt;
+    }
+
+    public void setOvercommitMemoryRatioLt(Double overcommitMemoryRatioLt) {
+        this.overcommitMemoryRatioLt = overcommitMemoryRatioLt;
+    }
+
+    public HostWhereInput overcommitMemoryRatioLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatioLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+    }
+
+    public HostWhereInput overcommitMemoryRatioLte(Double overcommitMemoryRatioLte) {
+
+        this.overcommitMemoryRatioLte = overcommitMemoryRatioLte;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioLte
+     *
+     * @return overcommitMemoryRatioLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioLte() {
+        return overcommitMemoryRatioLte;
+    }
+
+    public void setOvercommitMemoryRatioLte(Double overcommitMemoryRatioLte) {
+        this.overcommitMemoryRatioLte = overcommitMemoryRatioLte;
+    }
+
+    public HostWhereInput overcommitMemoryRatioLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatioLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+    }
+
+    public HostWhereInput overcommitMemoryRatioNot(Double overcommitMemoryRatioNot) {
+
+        this.overcommitMemoryRatioNot = overcommitMemoryRatioNot;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioNot
+     *
+     * @return overcommitMemoryRatioNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioNot() {
+        return overcommitMemoryRatioNot;
+    }
+
+    public void setOvercommitMemoryRatioNot(Double overcommitMemoryRatioNot) {
+        this.overcommitMemoryRatioNot = overcommitMemoryRatioNot;
+    }
+
+    public HostWhereInput overcommitMemoryRatioNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatioNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+    }
+
+    public HostWhereInput overcommitMemoryRatioNotIn(List<Double> overcommitMemoryRatioNotIn) {
+
+        this.overcommitMemoryRatioNotIn = overcommitMemoryRatioNotIn;
+        return this;
+    }
+
+    public HostWhereInput addOvercommitMemoryRatioNotInItem(Double overcommitMemoryRatioNotInItem) {
+        if (this.overcommitMemoryRatioNotIn == null) {
+            this.overcommitMemoryRatioNotIn = new ArrayList<Double>();
+        }
+        this.overcommitMemoryRatioNotIn.add(overcommitMemoryRatioNotInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioNotIn
+     *
+     * @return overcommitMemoryRatioNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOvercommitMemoryRatioNotIn() {
+        return overcommitMemoryRatioNotIn;
+    }
+
+    public void setOvercommitMemoryRatioNotIn(List<Double> overcommitMemoryRatioNotIn) {
+        this.overcommitMemoryRatioNotIn = overcommitMemoryRatioNotIn;
+    }
+
+    public HostWhereInput overcommitMemoryRatioNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput overcommitMemoryRatioNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
     }
 
     public HostWhereInput perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
@@ -22552,6 +26130,1110 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     public boolean getProvisionedMemoryBytesNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput reservedMemoryBytes(Long reservedMemoryBytes) {
+
+        this.reservedMemoryBytes = reservedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytes
+     *
+     * @return reservedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getReservedMemoryBytes() {
+        return reservedMemoryBytes;
+    }
+
+    public void setReservedMemoryBytes(Long reservedMemoryBytes) {
+        this.reservedMemoryBytes = reservedMemoryBytes;
+    }
+
+    public HostWhereInput reservedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setReservedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getReservedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+    }
+
+    public HostWhereInput reservedMemoryBytesGt(Long reservedMemoryBytesGt) {
+
+        this.reservedMemoryBytesGt = reservedMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytesGt
+     *
+     * @return reservedMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getReservedMemoryBytesGt() {
+        return reservedMemoryBytesGt;
+    }
+
+    public void setReservedMemoryBytesGt(Long reservedMemoryBytesGt) {
+        this.reservedMemoryBytesGt = reservedMemoryBytesGt;
+    }
+
+    public HostWhereInput reservedMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setReservedMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getReservedMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput reservedMemoryBytesGte(Long reservedMemoryBytesGte) {
+
+        this.reservedMemoryBytesGte = reservedMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytesGte
+     *
+     * @return reservedMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getReservedMemoryBytesGte() {
+        return reservedMemoryBytesGte;
+    }
+
+    public void setReservedMemoryBytesGte(Long reservedMemoryBytesGte) {
+        this.reservedMemoryBytesGte = reservedMemoryBytesGte;
+    }
+
+    public HostWhereInput reservedMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setReservedMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getReservedMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput reservedMemoryBytesIn(List<Long> reservedMemoryBytesIn) {
+
+        this.reservedMemoryBytesIn = reservedMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addReservedMemoryBytesInItem(Long reservedMemoryBytesInItem) {
+        if (this.reservedMemoryBytesIn == null) {
+            this.reservedMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.reservedMemoryBytesIn.add(reservedMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytesIn
+     *
+     * @return reservedMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getReservedMemoryBytesIn() {
+        return reservedMemoryBytesIn;
+    }
+
+    public void setReservedMemoryBytesIn(List<Long> reservedMemoryBytesIn) {
+        this.reservedMemoryBytesIn = reservedMemoryBytesIn;
+    }
+
+    public HostWhereInput reservedMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setReservedMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getReservedMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput reservedMemoryBytesLt(Long reservedMemoryBytesLt) {
+
+        this.reservedMemoryBytesLt = reservedMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytesLt
+     *
+     * @return reservedMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getReservedMemoryBytesLt() {
+        return reservedMemoryBytesLt;
+    }
+
+    public void setReservedMemoryBytesLt(Long reservedMemoryBytesLt) {
+        this.reservedMemoryBytesLt = reservedMemoryBytesLt;
+    }
+
+    public HostWhereInput reservedMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setReservedMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getReservedMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput reservedMemoryBytesLte(Long reservedMemoryBytesLte) {
+
+        this.reservedMemoryBytesLte = reservedMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytesLte
+     *
+     * @return reservedMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getReservedMemoryBytesLte() {
+        return reservedMemoryBytesLte;
+    }
+
+    public void setReservedMemoryBytesLte(Long reservedMemoryBytesLte) {
+        this.reservedMemoryBytesLte = reservedMemoryBytesLte;
+    }
+
+    public HostWhereInput reservedMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setReservedMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getReservedMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput reservedMemoryBytesNot(Long reservedMemoryBytesNot) {
+
+        this.reservedMemoryBytesNot = reservedMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytesNot
+     *
+     * @return reservedMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getReservedMemoryBytesNot() {
+        return reservedMemoryBytesNot;
+    }
+
+    public void setReservedMemoryBytesNot(Long reservedMemoryBytesNot) {
+        this.reservedMemoryBytesNot = reservedMemoryBytesNot;
+    }
+
+    public HostWhereInput reservedMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setReservedMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getReservedMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput reservedMemoryBytesNotIn(List<Long> reservedMemoryBytesNotIn) {
+
+        this.reservedMemoryBytesNotIn = reservedMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addReservedMemoryBytesNotInItem(Long reservedMemoryBytesNotInItem) {
+        if (this.reservedMemoryBytesNotIn == null) {
+            this.reservedMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.reservedMemoryBytesNotIn.add(reservedMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytesNotIn
+     *
+     * @return reservedMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getReservedMemoryBytesNotIn() {
+        return reservedMemoryBytesNotIn;
+    }
+
+    public void setReservedMemoryBytesNotIn(List<Long> reservedMemoryBytesNotIn) {
+        this.reservedMemoryBytesNotIn = reservedMemoryBytesNotIn;
+    }
+
+    public HostWhereInput reservedMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput reservedMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setReservedMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getReservedMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytes(
+            Long runningPauseOvercommitMemoryBytes) {
+
+        this.runningPauseOvercommitMemoryBytes = runningPauseOvercommitMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytes
+     *
+     * @return runningPauseOvercommitMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseOvercommitMemoryBytes() {
+        return runningPauseOvercommitMemoryBytes;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytes(Long runningPauseOvercommitMemoryBytes) {
+        this.runningPauseOvercommitMemoryBytes = runningPauseOvercommitMemoryBytes;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesGt(
+            Long runningPauseOvercommitMemoryBytesGt) {
+
+        this.runningPauseOvercommitMemoryBytesGt = runningPauseOvercommitMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytesGt
+     *
+     * @return runningPauseOvercommitMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseOvercommitMemoryBytesGt() {
+        return runningPauseOvercommitMemoryBytesGt;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesGt(Long runningPauseOvercommitMemoryBytesGt) {
+        this.runningPauseOvercommitMemoryBytesGt = runningPauseOvercommitMemoryBytesGt;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesGte(
+            Long runningPauseOvercommitMemoryBytesGte) {
+
+        this.runningPauseOvercommitMemoryBytesGte = runningPauseOvercommitMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytesGte
+     *
+     * @return runningPauseOvercommitMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseOvercommitMemoryBytesGte() {
+        return runningPauseOvercommitMemoryBytesGte;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesGte(Long runningPauseOvercommitMemoryBytesGte) {
+        this.runningPauseOvercommitMemoryBytesGte = runningPauseOvercommitMemoryBytesGte;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesIn(
+            List<Long> runningPauseOvercommitMemoryBytesIn) {
+
+        this.runningPauseOvercommitMemoryBytesIn = runningPauseOvercommitMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addRunningPauseOvercommitMemoryBytesInItem(
+            Long runningPauseOvercommitMemoryBytesInItem) {
+        if (this.runningPauseOvercommitMemoryBytesIn == null) {
+            this.runningPauseOvercommitMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.runningPauseOvercommitMemoryBytesIn.add(runningPauseOvercommitMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytesIn
+     *
+     * @return runningPauseOvercommitMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getRunningPauseOvercommitMemoryBytesIn() {
+        return runningPauseOvercommitMemoryBytesIn;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesIn(
+            List<Long> runningPauseOvercommitMemoryBytesIn) {
+        this.runningPauseOvercommitMemoryBytesIn = runningPauseOvercommitMemoryBytesIn;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesLt(
+            Long runningPauseOvercommitMemoryBytesLt) {
+
+        this.runningPauseOvercommitMemoryBytesLt = runningPauseOvercommitMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytesLt
+     *
+     * @return runningPauseOvercommitMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseOvercommitMemoryBytesLt() {
+        return runningPauseOvercommitMemoryBytesLt;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesLt(Long runningPauseOvercommitMemoryBytesLt) {
+        this.runningPauseOvercommitMemoryBytesLt = runningPauseOvercommitMemoryBytesLt;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesLte(
+            Long runningPauseOvercommitMemoryBytesLte) {
+
+        this.runningPauseOvercommitMemoryBytesLte = runningPauseOvercommitMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytesLte
+     *
+     * @return runningPauseOvercommitMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseOvercommitMemoryBytesLte() {
+        return runningPauseOvercommitMemoryBytesLte;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesLte(Long runningPauseOvercommitMemoryBytesLte) {
+        this.runningPauseOvercommitMemoryBytesLte = runningPauseOvercommitMemoryBytesLte;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesNot(
+            Long runningPauseOvercommitMemoryBytesNot) {
+
+        this.runningPauseOvercommitMemoryBytesNot = runningPauseOvercommitMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytesNot
+     *
+     * @return runningPauseOvercommitMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseOvercommitMemoryBytesNot() {
+        return runningPauseOvercommitMemoryBytesNot;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesNot(Long runningPauseOvercommitMemoryBytesNot) {
+        this.runningPauseOvercommitMemoryBytesNot = runningPauseOvercommitMemoryBytesNot;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesNotIn(
+            List<Long> runningPauseOvercommitMemoryBytesNotIn) {
+
+        this.runningPauseOvercommitMemoryBytesNotIn = runningPauseOvercommitMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addRunningPauseOvercommitMemoryBytesNotInItem(
+            Long runningPauseOvercommitMemoryBytesNotInItem) {
+        if (this.runningPauseOvercommitMemoryBytesNotIn == null) {
+            this.runningPauseOvercommitMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.runningPauseOvercommitMemoryBytesNotIn.add(runningPauseOvercommitMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytesNotIn
+     *
+     * @return runningPauseOvercommitMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getRunningPauseOvercommitMemoryBytesNotIn() {
+        return runningPauseOvercommitMemoryBytesNotIn;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesNotIn(
+            List<Long> runningPauseOvercommitMemoryBytesNotIn) {
+        this.runningPauseOvercommitMemoryBytesNotIn = runningPauseOvercommitMemoryBytesNotIn;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput runningPauseOvercommitMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(
+                SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytes(Long runningPauseReservedMemoryBytes) {
+
+        this.runningPauseReservedMemoryBytes = runningPauseReservedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytes
+     *
+     * @return runningPauseReservedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseReservedMemoryBytes() {
+        return runningPauseReservedMemoryBytes;
+    }
+
+    public void setRunningPauseReservedMemoryBytes(Long runningPauseReservedMemoryBytes) {
+        this.runningPauseReservedMemoryBytes = runningPauseReservedMemoryBytes;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesGt(
+            Long runningPauseReservedMemoryBytesGt) {
+
+        this.runningPauseReservedMemoryBytesGt = runningPauseReservedMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytesGt
+     *
+     * @return runningPauseReservedMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseReservedMemoryBytesGt() {
+        return runningPauseReservedMemoryBytesGt;
+    }
+
+    public void setRunningPauseReservedMemoryBytesGt(Long runningPauseReservedMemoryBytesGt) {
+        this.runningPauseReservedMemoryBytesGt = runningPauseReservedMemoryBytesGt;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesGte(
+            Long runningPauseReservedMemoryBytesGte) {
+
+        this.runningPauseReservedMemoryBytesGte = runningPauseReservedMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytesGte
+     *
+     * @return runningPauseReservedMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseReservedMemoryBytesGte() {
+        return runningPauseReservedMemoryBytesGte;
+    }
+
+    public void setRunningPauseReservedMemoryBytesGte(Long runningPauseReservedMemoryBytesGte) {
+        this.runningPauseReservedMemoryBytesGte = runningPauseReservedMemoryBytesGte;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesIn(
+            List<Long> runningPauseReservedMemoryBytesIn) {
+
+        this.runningPauseReservedMemoryBytesIn = runningPauseReservedMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addRunningPauseReservedMemoryBytesInItem(
+            Long runningPauseReservedMemoryBytesInItem) {
+        if (this.runningPauseReservedMemoryBytesIn == null) {
+            this.runningPauseReservedMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.runningPauseReservedMemoryBytesIn.add(runningPauseReservedMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytesIn
+     *
+     * @return runningPauseReservedMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getRunningPauseReservedMemoryBytesIn() {
+        return runningPauseReservedMemoryBytesIn;
+    }
+
+    public void setRunningPauseReservedMemoryBytesIn(List<Long> runningPauseReservedMemoryBytesIn) {
+        this.runningPauseReservedMemoryBytesIn = runningPauseReservedMemoryBytesIn;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesLt(
+            Long runningPauseReservedMemoryBytesLt) {
+
+        this.runningPauseReservedMemoryBytesLt = runningPauseReservedMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytesLt
+     *
+     * @return runningPauseReservedMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseReservedMemoryBytesLt() {
+        return runningPauseReservedMemoryBytesLt;
+    }
+
+    public void setRunningPauseReservedMemoryBytesLt(Long runningPauseReservedMemoryBytesLt) {
+        this.runningPauseReservedMemoryBytesLt = runningPauseReservedMemoryBytesLt;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesLte(
+            Long runningPauseReservedMemoryBytesLte) {
+
+        this.runningPauseReservedMemoryBytesLte = runningPauseReservedMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytesLte
+     *
+     * @return runningPauseReservedMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseReservedMemoryBytesLte() {
+        return runningPauseReservedMemoryBytesLte;
+    }
+
+    public void setRunningPauseReservedMemoryBytesLte(Long runningPauseReservedMemoryBytesLte) {
+        this.runningPauseReservedMemoryBytesLte = runningPauseReservedMemoryBytesLte;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesNot(
+            Long runningPauseReservedMemoryBytesNot) {
+
+        this.runningPauseReservedMemoryBytesNot = runningPauseReservedMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytesNot
+     *
+     * @return runningPauseReservedMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseReservedMemoryBytesNot() {
+        return runningPauseReservedMemoryBytesNot;
+    }
+
+    public void setRunningPauseReservedMemoryBytesNot(Long runningPauseReservedMemoryBytesNot) {
+        this.runningPauseReservedMemoryBytesNot = runningPauseReservedMemoryBytesNot;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesNotIn(
+            List<Long> runningPauseReservedMemoryBytesNotIn) {
+
+        this.runningPauseReservedMemoryBytesNotIn = runningPauseReservedMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addRunningPauseReservedMemoryBytesNotInItem(
+            Long runningPauseReservedMemoryBytesNotInItem) {
+        if (this.runningPauseReservedMemoryBytesNotIn == null) {
+            this.runningPauseReservedMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.runningPauseReservedMemoryBytesNotIn.add(runningPauseReservedMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytesNotIn
+     *
+     * @return runningPauseReservedMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getRunningPauseReservedMemoryBytesNotIn() {
+        return runningPauseReservedMemoryBytesNotIn;
+    }
+
+    public void setRunningPauseReservedMemoryBytesNotIn(
+            List<Long> runningPauseReservedMemoryBytesNotIn) {
+        this.runningPauseReservedMemoryBytesNotIn = runningPauseReservedMemoryBytesNotIn;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput runningPauseReservedMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(
+                SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES_NOT_IN);
     }
 
     public HostWhereInput runningPauseVmMemoryBytes(Long runningPauseVmMemoryBytes) {
@@ -28848,6 +33530,366 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN);
     }
 
+    public HostWhereInput totalLogicalCpuCores(Integer totalLogicalCpuCores) {
+
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCores
+     *
+     * @return totalLogicalCpuCores
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCores() {
+        return totalLogicalCpuCores;
+    }
+
+    public void setTotalLogicalCpuCores(Integer totalLogicalCpuCores) {
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+    }
+
+    public HostWhereInput totalLogicalCpuCores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGt(Integer totalLogicalCpuCoresGt) {
+
+        this.totalLogicalCpuCoresGt = totalLogicalCpuCoresGt;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresGt
+     *
+     * @return totalLogicalCpuCoresGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresGt() {
+        return totalLogicalCpuCoresGt;
+    }
+
+    public void setTotalLogicalCpuCoresGt(Integer totalLogicalCpuCoresGt) {
+        this.totalLogicalCpuCoresGt = totalLogicalCpuCoresGt;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGte(Integer totalLogicalCpuCoresGte) {
+
+        this.totalLogicalCpuCoresGte = totalLogicalCpuCoresGte;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresGte
+     *
+     * @return totalLogicalCpuCoresGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresGte() {
+        return totalLogicalCpuCoresGte;
+    }
+
+    public void setTotalLogicalCpuCoresGte(Integer totalLogicalCpuCoresGte) {
+        this.totalLogicalCpuCoresGte = totalLogicalCpuCoresGte;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresIn(List<Integer> totalLogicalCpuCoresIn) {
+
+        this.totalLogicalCpuCoresIn = totalLogicalCpuCoresIn;
+        return this;
+    }
+
+    public HostWhereInput addTotalLogicalCpuCoresInItem(Integer totalLogicalCpuCoresInItem) {
+        if (this.totalLogicalCpuCoresIn == null) {
+            this.totalLogicalCpuCoresIn = new ArrayList<Integer>();
+        }
+        this.totalLogicalCpuCoresIn.add(totalLogicalCpuCoresInItem);
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresIn
+     *
+     * @return totalLogicalCpuCoresIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getTotalLogicalCpuCoresIn() {
+        return totalLogicalCpuCoresIn;
+    }
+
+    public void setTotalLogicalCpuCoresIn(List<Integer> totalLogicalCpuCoresIn) {
+        this.totalLogicalCpuCoresIn = totalLogicalCpuCoresIn;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLt(Integer totalLogicalCpuCoresLt) {
+
+        this.totalLogicalCpuCoresLt = totalLogicalCpuCoresLt;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresLt
+     *
+     * @return totalLogicalCpuCoresLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresLt() {
+        return totalLogicalCpuCoresLt;
+    }
+
+    public void setTotalLogicalCpuCoresLt(Integer totalLogicalCpuCoresLt) {
+        this.totalLogicalCpuCoresLt = totalLogicalCpuCoresLt;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLte(Integer totalLogicalCpuCoresLte) {
+
+        this.totalLogicalCpuCoresLte = totalLogicalCpuCoresLte;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresLte
+     *
+     * @return totalLogicalCpuCoresLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresLte() {
+        return totalLogicalCpuCoresLte;
+    }
+
+    public void setTotalLogicalCpuCoresLte(Integer totalLogicalCpuCoresLte) {
+        this.totalLogicalCpuCoresLte = totalLogicalCpuCoresLte;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNot(Integer totalLogicalCpuCoresNot) {
+
+        this.totalLogicalCpuCoresNot = totalLogicalCpuCoresNot;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresNot
+     *
+     * @return totalLogicalCpuCoresNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresNot() {
+        return totalLogicalCpuCoresNot;
+    }
+
+    public void setTotalLogicalCpuCoresNot(Integer totalLogicalCpuCoresNot) {
+        this.totalLogicalCpuCoresNot = totalLogicalCpuCoresNot;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNotIn(List<Integer> totalLogicalCpuCoresNotIn) {
+
+        this.totalLogicalCpuCoresNotIn = totalLogicalCpuCoresNotIn;
+        return this;
+    }
+
+    public HostWhereInput addTotalLogicalCpuCoresNotInItem(Integer totalLogicalCpuCoresNotInItem) {
+        if (this.totalLogicalCpuCoresNotIn == null) {
+            this.totalLogicalCpuCoresNotIn = new ArrayList<Integer>();
+        }
+        this.totalLogicalCpuCoresNotIn.add(totalLogicalCpuCoresNotInItem);
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresNotIn
+     *
+     * @return totalLogicalCpuCoresNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getTotalLogicalCpuCoresNotIn() {
+        return totalLogicalCpuCoresNotIn;
+    }
+
+    public void setTotalLogicalCpuCoresNotIn(List<Integer> totalLogicalCpuCoresNotIn) {
+        this.totalLogicalCpuCoresNotIn = totalLogicalCpuCoresNotIn;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+    }
+
     public HostWhereInput totalMemoryBytes(Long totalMemoryBytes) {
 
         this.totalMemoryBytes = totalMemoryBytes;
@@ -29206,6 +34248,367 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
 
     public boolean getTotalMemoryBytesNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytes(Long totalPhysicalMemoryBytes) {
+
+        this.totalPhysicalMemoryBytes = totalPhysicalMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytes
+     *
+     * @return totalPhysicalMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPhysicalMemoryBytes() {
+        return totalPhysicalMemoryBytes;
+    }
+
+    public void setTotalPhysicalMemoryBytes(Long totalPhysicalMemoryBytes) {
+        this.totalPhysicalMemoryBytes = totalPhysicalMemoryBytes;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesGt(Long totalPhysicalMemoryBytesGt) {
+
+        this.totalPhysicalMemoryBytesGt = totalPhysicalMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytesGt
+     *
+     * @return totalPhysicalMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPhysicalMemoryBytesGt() {
+        return totalPhysicalMemoryBytesGt;
+    }
+
+    public void setTotalPhysicalMemoryBytesGt(Long totalPhysicalMemoryBytesGt) {
+        this.totalPhysicalMemoryBytesGt = totalPhysicalMemoryBytesGt;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesGte(Long totalPhysicalMemoryBytesGte) {
+
+        this.totalPhysicalMemoryBytesGte = totalPhysicalMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytesGte
+     *
+     * @return totalPhysicalMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPhysicalMemoryBytesGte() {
+        return totalPhysicalMemoryBytesGte;
+    }
+
+    public void setTotalPhysicalMemoryBytesGte(Long totalPhysicalMemoryBytesGte) {
+        this.totalPhysicalMemoryBytesGte = totalPhysicalMemoryBytesGte;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesIn(List<Long> totalPhysicalMemoryBytesIn) {
+
+        this.totalPhysicalMemoryBytesIn = totalPhysicalMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addTotalPhysicalMemoryBytesInItem(Long totalPhysicalMemoryBytesInItem) {
+        if (this.totalPhysicalMemoryBytesIn == null) {
+            this.totalPhysicalMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.totalPhysicalMemoryBytesIn.add(totalPhysicalMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytesIn
+     *
+     * @return totalPhysicalMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getTotalPhysicalMemoryBytesIn() {
+        return totalPhysicalMemoryBytesIn;
+    }
+
+    public void setTotalPhysicalMemoryBytesIn(List<Long> totalPhysicalMemoryBytesIn) {
+        this.totalPhysicalMemoryBytesIn = totalPhysicalMemoryBytesIn;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesLt(Long totalPhysicalMemoryBytesLt) {
+
+        this.totalPhysicalMemoryBytesLt = totalPhysicalMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytesLt
+     *
+     * @return totalPhysicalMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPhysicalMemoryBytesLt() {
+        return totalPhysicalMemoryBytesLt;
+    }
+
+    public void setTotalPhysicalMemoryBytesLt(Long totalPhysicalMemoryBytesLt) {
+        this.totalPhysicalMemoryBytesLt = totalPhysicalMemoryBytesLt;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesLte(Long totalPhysicalMemoryBytesLte) {
+
+        this.totalPhysicalMemoryBytesLte = totalPhysicalMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytesLte
+     *
+     * @return totalPhysicalMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPhysicalMemoryBytesLte() {
+        return totalPhysicalMemoryBytesLte;
+    }
+
+    public void setTotalPhysicalMemoryBytesLte(Long totalPhysicalMemoryBytesLte) {
+        this.totalPhysicalMemoryBytesLte = totalPhysicalMemoryBytesLte;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesNot(Long totalPhysicalMemoryBytesNot) {
+
+        this.totalPhysicalMemoryBytesNot = totalPhysicalMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytesNot
+     *
+     * @return totalPhysicalMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPhysicalMemoryBytesNot() {
+        return totalPhysicalMemoryBytesNot;
+    }
+
+    public void setTotalPhysicalMemoryBytesNot(Long totalPhysicalMemoryBytesNot) {
+        this.totalPhysicalMemoryBytesNot = totalPhysicalMemoryBytesNot;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesNotIn(List<Long> totalPhysicalMemoryBytesNotIn) {
+
+        this.totalPhysicalMemoryBytesNotIn = totalPhysicalMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addTotalPhysicalMemoryBytesNotInItem(
+            Long totalPhysicalMemoryBytesNotInItem) {
+        if (this.totalPhysicalMemoryBytesNotIn == null) {
+            this.totalPhysicalMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.totalPhysicalMemoryBytesNotIn.add(totalPhysicalMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytesNotIn
+     *
+     * @return totalPhysicalMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getTotalPhysicalMemoryBytesNotIn() {
+        return totalPhysicalMemoryBytesNotIn;
+    }
+
+    public void setTotalPhysicalMemoryBytesNotIn(List<Long> totalPhysicalMemoryBytesNotIn) {
+        this.totalPhysicalMemoryBytesNotIn = totalPhysicalMemoryBytesNotIn;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput totalPhysicalMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES_NOT_IN);
     }
 
     public HostWhereInput usbDevicesEvery(UsbDeviceWhereInput usbDevicesEvery) {
@@ -32757,6 +38160,21 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(
                         this.allocatableMemoryBytesNotIn,
                         hostWhereInput.allocatableMemoryBytesNotIn)
+                && Objects.equals(this.allocatedMemoryBytes, hostWhereInput.allocatedMemoryBytes)
+                && Objects.equals(
+                        this.allocatedMemoryBytesGt, hostWhereInput.allocatedMemoryBytesGt)
+                && Objects.equals(
+                        this.allocatedMemoryBytesGte, hostWhereInput.allocatedMemoryBytesGte)
+                && Objects.equals(
+                        this.allocatedMemoryBytesIn, hostWhereInput.allocatedMemoryBytesIn)
+                && Objects.equals(
+                        this.allocatedMemoryBytesLt, hostWhereInput.allocatedMemoryBytesLt)
+                && Objects.equals(
+                        this.allocatedMemoryBytesLte, hostWhereInput.allocatedMemoryBytesLte)
+                && Objects.equals(
+                        this.allocatedMemoryBytesNot, hostWhereInput.allocatedMemoryBytesNot)
+                && Objects.equals(
+                        this.allocatedMemoryBytesNotIn, hostWhereInput.allocatedMemoryBytesNotIn)
                 && Objects.equals(
                         this.allocatedPrioritizedSpace, hostWhereInput.allocatedPrioritizedSpace)
                 && Objects.equals(
@@ -32904,6 +38322,22 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(this.dataIpNotIn, hostWhereInput.dataIpNotIn)
                 && Objects.equals(this.dataIpNotStartsWith, hostWhereInput.dataIpNotStartsWith)
                 && Objects.equals(this.dataIpStartsWith, hostWhereInput.dataIpStartsWith)
+                && Objects.equals(this.dirtyCacheSpace, hostWhereInput.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheSpaceGt, hostWhereInput.dirtyCacheSpaceGt)
+                && Objects.equals(this.dirtyCacheSpaceGte, hostWhereInput.dirtyCacheSpaceGte)
+                && Objects.equals(this.dirtyCacheSpaceIn, hostWhereInput.dirtyCacheSpaceIn)
+                && Objects.equals(this.dirtyCacheSpaceLt, hostWhereInput.dirtyCacheSpaceLt)
+                && Objects.equals(this.dirtyCacheSpaceLte, hostWhereInput.dirtyCacheSpaceLte)
+                && Objects.equals(this.dirtyCacheSpaceNot, hostWhereInput.dirtyCacheSpaceNot)
+                && Objects.equals(this.dirtyCacheSpaceNotIn, hostWhereInput.dirtyCacheSpaceNotIn)
+                && Objects.equals(this.dirtyCacheUsage, hostWhereInput.dirtyCacheUsage)
+                && Objects.equals(this.dirtyCacheUsageGt, hostWhereInput.dirtyCacheUsageGt)
+                && Objects.equals(this.dirtyCacheUsageGte, hostWhereInput.dirtyCacheUsageGte)
+                && Objects.equals(this.dirtyCacheUsageIn, hostWhereInput.dirtyCacheUsageIn)
+                && Objects.equals(this.dirtyCacheUsageLt, hostWhereInput.dirtyCacheUsageLt)
+                && Objects.equals(this.dirtyCacheUsageLte, hostWhereInput.dirtyCacheUsageLte)
+                && Objects.equals(this.dirtyCacheUsageNot, hostWhereInput.dirtyCacheUsageNot)
+                && Objects.equals(this.dirtyCacheUsageNotIn, hostWhereInput.dirtyCacheUsageNotIn)
                 && Objects.equals(
                         this.downgradedPrioritizedSpace, hostWhereInput.downgradedPrioritizedSpace)
                 && Objects.equals(
@@ -32932,6 +38366,15 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(this.entityAsyncStatusNot, hostWhereInput.entityAsyncStatusNot)
                 && Objects.equals(
                         this.entityAsyncStatusNotIn, hostWhereInput.entityAsyncStatusNotIn)
+                && Objects.equals(this.failureCacheSpace, hostWhereInput.failureCacheSpace)
+                && Objects.equals(this.failureCacheSpaceGt, hostWhereInput.failureCacheSpaceGt)
+                && Objects.equals(this.failureCacheSpaceGte, hostWhereInput.failureCacheSpaceGte)
+                && Objects.equals(this.failureCacheSpaceIn, hostWhereInput.failureCacheSpaceIn)
+                && Objects.equals(this.failureCacheSpaceLt, hostWhereInput.failureCacheSpaceLt)
+                && Objects.equals(this.failureCacheSpaceLte, hostWhereInput.failureCacheSpaceLte)
+                && Objects.equals(this.failureCacheSpaceNot, hostWhereInput.failureCacheSpaceNot)
+                && Objects.equals(
+                        this.failureCacheSpaceNotIn, hostWhereInput.failureCacheSpaceNotIn)
                 && Objects.equals(this.failureDataSpace, hostWhereInput.failureDataSpace)
                 && Objects.equals(this.failureDataSpaceGt, hostWhereInput.failureDataSpaceGt)
                 && Objects.equals(this.failureDataSpaceGte, hostWhereInput.failureDataSpaceGte)
@@ -33035,6 +38478,25 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                         this.managementIpNotStartsWith, hostWhereInput.managementIpNotStartsWith)
                 && Objects.equals(
                         this.managementIpStartsWith, hostWhereInput.managementIpStartsWith)
+                && Objects.equals(this.memoryAllocationRate, hostWhereInput.memoryAllocationRate)
+                && Objects.equals(
+                        this.memoryAllocationRateGt, hostWhereInput.memoryAllocationRateGt)
+                && Objects.equals(
+                        this.memoryAllocationRateGte, hostWhereInput.memoryAllocationRateGte)
+                && Objects.equals(
+                        this.memoryAllocationRateIn, hostWhereInput.memoryAllocationRateIn)
+                && Objects.equals(
+                        this.memoryAllocationRateLt, hostWhereInput.memoryAllocationRateLt)
+                && Objects.equals(
+                        this.memoryAllocationRateLte, hostWhereInput.memoryAllocationRateLte)
+                && Objects.equals(
+                        this.memoryAllocationRateNot, hostWhereInput.memoryAllocationRateNot)
+                && Objects.equals(
+                        this.memoryAllocationRateNotIn, hostWhereInput.memoryAllocationRateNotIn)
+                && Objects.equals(
+                        this.memoryOvercommitEnabled, hostWhereInput.memoryOvercommitEnabled)
+                && Objects.equals(
+                        this.memoryOvercommitEnabledNot, hostWhereInput.memoryOvercommitEnabledNot)
                 && Objects.equals(this.mergedStatus, hostWhereInput.mergedStatus)
                 && Objects.equals(this.mergedStatusIn, hostWhereInput.mergedStatusIn)
                 && Objects.equals(this.mergedStatusNot, hostWhereInput.mergedStatusNot)
@@ -33125,6 +38587,60 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(
                         this.osVersionNotStartsWith, hostWhereInput.osVersionNotStartsWith)
                 && Objects.equals(this.osVersionStartsWith, hostWhereInput.osVersionStartsWith)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytes,
+                        hostWhereInput.overcommitActiveMemoryBytes)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytesGt,
+                        hostWhereInput.overcommitActiveMemoryBytesGt)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytesGte,
+                        hostWhereInput.overcommitActiveMemoryBytesGte)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytesIn,
+                        hostWhereInput.overcommitActiveMemoryBytesIn)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytesLt,
+                        hostWhereInput.overcommitActiveMemoryBytesLt)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytesLte,
+                        hostWhereInput.overcommitActiveMemoryBytesLte)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytesNot,
+                        hostWhereInput.overcommitActiveMemoryBytesNot)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytesNotIn,
+                        hostWhereInput.overcommitActiveMemoryBytesNotIn)
+                && Objects.equals(this.overcommitMemoryBytes, hostWhereInput.overcommitMemoryBytes)
+                && Objects.equals(
+                        this.overcommitMemoryBytesGt, hostWhereInput.overcommitMemoryBytesGt)
+                && Objects.equals(
+                        this.overcommitMemoryBytesGte, hostWhereInput.overcommitMemoryBytesGte)
+                && Objects.equals(
+                        this.overcommitMemoryBytesIn, hostWhereInput.overcommitMemoryBytesIn)
+                && Objects.equals(
+                        this.overcommitMemoryBytesLt, hostWhereInput.overcommitMemoryBytesLt)
+                && Objects.equals(
+                        this.overcommitMemoryBytesLte, hostWhereInput.overcommitMemoryBytesLte)
+                && Objects.equals(
+                        this.overcommitMemoryBytesNot, hostWhereInput.overcommitMemoryBytesNot)
+                && Objects.equals(
+                        this.overcommitMemoryBytesNotIn, hostWhereInput.overcommitMemoryBytesNotIn)
+                && Objects.equals(this.overcommitMemoryRatio, hostWhereInput.overcommitMemoryRatio)
+                && Objects.equals(
+                        this.overcommitMemoryRatioGt, hostWhereInput.overcommitMemoryRatioGt)
+                && Objects.equals(
+                        this.overcommitMemoryRatioGte, hostWhereInput.overcommitMemoryRatioGte)
+                && Objects.equals(
+                        this.overcommitMemoryRatioIn, hostWhereInput.overcommitMemoryRatioIn)
+                && Objects.equals(
+                        this.overcommitMemoryRatioLt, hostWhereInput.overcommitMemoryRatioLt)
+                && Objects.equals(
+                        this.overcommitMemoryRatioLte, hostWhereInput.overcommitMemoryRatioLte)
+                && Objects.equals(
+                        this.overcommitMemoryRatioNot, hostWhereInput.overcommitMemoryRatioNot)
+                && Objects.equals(
+                        this.overcommitMemoryRatioNotIn, hostWhereInput.overcommitMemoryRatioNotIn)
                 && Objects.equals(
                         this.perfAllocatedDataSpace, hostWhereInput.perfAllocatedDataSpace)
                 && Objects.equals(
@@ -33272,6 +38788,66 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(
                         this.provisionedMemoryBytesNotIn,
                         hostWhereInput.provisionedMemoryBytesNotIn)
+                && Objects.equals(this.reservedMemoryBytes, hostWhereInput.reservedMemoryBytes)
+                && Objects.equals(this.reservedMemoryBytesGt, hostWhereInput.reservedMemoryBytesGt)
+                && Objects.equals(
+                        this.reservedMemoryBytesGte, hostWhereInput.reservedMemoryBytesGte)
+                && Objects.equals(this.reservedMemoryBytesIn, hostWhereInput.reservedMemoryBytesIn)
+                && Objects.equals(this.reservedMemoryBytesLt, hostWhereInput.reservedMemoryBytesLt)
+                && Objects.equals(
+                        this.reservedMemoryBytesLte, hostWhereInput.reservedMemoryBytesLte)
+                && Objects.equals(
+                        this.reservedMemoryBytesNot, hostWhereInput.reservedMemoryBytesNot)
+                && Objects.equals(
+                        this.reservedMemoryBytesNotIn, hostWhereInput.reservedMemoryBytesNotIn)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytes,
+                        hostWhereInput.runningPauseOvercommitMemoryBytes)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytesGt,
+                        hostWhereInput.runningPauseOvercommitMemoryBytesGt)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytesGte,
+                        hostWhereInput.runningPauseOvercommitMemoryBytesGte)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytesIn,
+                        hostWhereInput.runningPauseOvercommitMemoryBytesIn)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytesLt,
+                        hostWhereInput.runningPauseOvercommitMemoryBytesLt)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytesLte,
+                        hostWhereInput.runningPauseOvercommitMemoryBytesLte)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytesNot,
+                        hostWhereInput.runningPauseOvercommitMemoryBytesNot)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytesNotIn,
+                        hostWhereInput.runningPauseOvercommitMemoryBytesNotIn)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytes,
+                        hostWhereInput.runningPauseReservedMemoryBytes)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytesGt,
+                        hostWhereInput.runningPauseReservedMemoryBytesGt)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytesGte,
+                        hostWhereInput.runningPauseReservedMemoryBytesGte)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytesIn,
+                        hostWhereInput.runningPauseReservedMemoryBytesIn)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytesLt,
+                        hostWhereInput.runningPauseReservedMemoryBytesLt)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytesLte,
+                        hostWhereInput.runningPauseReservedMemoryBytesLte)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytesNot,
+                        hostWhereInput.runningPauseReservedMemoryBytesNot)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytesNotIn,
+                        hostWhereInput.runningPauseReservedMemoryBytesNotIn)
                 && Objects.equals(
                         this.runningPauseVmMemoryBytes, hostWhereInput.runningPauseVmMemoryBytes)
                 && Objects.equals(
@@ -33429,6 +39005,21 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(this.totalDataCapacityNot, hostWhereInput.totalDataCapacityNot)
                 && Objects.equals(
                         this.totalDataCapacityNotIn, hostWhereInput.totalDataCapacityNotIn)
+                && Objects.equals(this.totalLogicalCpuCores, hostWhereInput.totalLogicalCpuCores)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresGt, hostWhereInput.totalLogicalCpuCoresGt)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresGte, hostWhereInput.totalLogicalCpuCoresGte)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresIn, hostWhereInput.totalLogicalCpuCoresIn)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresLt, hostWhereInput.totalLogicalCpuCoresLt)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresLte, hostWhereInput.totalLogicalCpuCoresLte)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresNot, hostWhereInput.totalLogicalCpuCoresNot)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresNotIn, hostWhereInput.totalLogicalCpuCoresNotIn)
                 && Objects.equals(this.totalMemoryBytes, hostWhereInput.totalMemoryBytes)
                 && Objects.equals(this.totalMemoryBytesGt, hostWhereInput.totalMemoryBytesGt)
                 && Objects.equals(this.totalMemoryBytesGte, hostWhereInput.totalMemoryBytesGte)
@@ -33437,6 +39028,26 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(this.totalMemoryBytesLte, hostWhereInput.totalMemoryBytesLte)
                 && Objects.equals(this.totalMemoryBytesNot, hostWhereInput.totalMemoryBytesNot)
                 && Objects.equals(this.totalMemoryBytesNotIn, hostWhereInput.totalMemoryBytesNotIn)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytes, hostWhereInput.totalPhysicalMemoryBytes)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytesGt, hostWhereInput.totalPhysicalMemoryBytesGt)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytesGte,
+                        hostWhereInput.totalPhysicalMemoryBytesGte)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytesIn, hostWhereInput.totalPhysicalMemoryBytesIn)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytesLt, hostWhereInput.totalPhysicalMemoryBytesLt)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytesLte,
+                        hostWhereInput.totalPhysicalMemoryBytesLte)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytesNot,
+                        hostWhereInput.totalPhysicalMemoryBytesNot)
+                && Objects.equals(
+                        this.totalPhysicalMemoryBytesNotIn,
+                        hostWhereInput.totalPhysicalMemoryBytesNotIn)
                 && Objects.equals(this.usbDevicesEvery, hostWhereInput.usbDevicesEvery)
                 && Objects.equals(this.usbDevicesNone, hostWhereInput.usbDevicesNone)
                 && Objects.equals(this.usbDevicesSome, hostWhereInput.usbDevicesSome)
@@ -33568,6 +39179,14 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 allocatableMemoryBytesLte,
                 allocatableMemoryBytesNot,
                 allocatableMemoryBytesNotIn,
+                allocatedMemoryBytes,
+                allocatedMemoryBytesGt,
+                allocatedMemoryBytesGte,
+                allocatedMemoryBytesIn,
+                allocatedMemoryBytesLt,
+                allocatedMemoryBytesLte,
+                allocatedMemoryBytesNot,
+                allocatedMemoryBytesNotIn,
                 allocatedPrioritizedSpace,
                 allocatedPrioritizedSpaceGt,
                 allocatedPrioritizedSpaceGte,
@@ -33679,6 +39298,22 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 dataIpNotIn,
                 dataIpNotStartsWith,
                 dataIpStartsWith,
+                dirtyCacheSpace,
+                dirtyCacheSpaceGt,
+                dirtyCacheSpaceGte,
+                dirtyCacheSpaceIn,
+                dirtyCacheSpaceLt,
+                dirtyCacheSpaceLte,
+                dirtyCacheSpaceNot,
+                dirtyCacheSpaceNotIn,
+                dirtyCacheUsage,
+                dirtyCacheUsageGt,
+                dirtyCacheUsageGte,
+                dirtyCacheUsageIn,
+                dirtyCacheUsageLt,
+                dirtyCacheUsageLte,
+                dirtyCacheUsageNot,
+                dirtyCacheUsageNotIn,
                 downgradedPrioritizedSpace,
                 downgradedPrioritizedSpaceGt,
                 downgradedPrioritizedSpaceGte,
@@ -33691,6 +39326,14 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
                 entityAsyncStatusNotIn,
+                failureCacheSpace,
+                failureCacheSpaceGt,
+                failureCacheSpaceGte,
+                failureCacheSpaceIn,
+                failureCacheSpaceLt,
+                failureCacheSpaceLte,
+                failureCacheSpaceNot,
+                failureCacheSpaceNotIn,
                 failureDataSpace,
                 failureDataSpaceGt,
                 failureDataSpaceGte,
@@ -33785,6 +39428,16 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 managementIpNotIn,
                 managementIpNotStartsWith,
                 managementIpStartsWith,
+                memoryAllocationRate,
+                memoryAllocationRateGt,
+                memoryAllocationRateGte,
+                memoryAllocationRateIn,
+                memoryAllocationRateLt,
+                memoryAllocationRateLte,
+                memoryAllocationRateNot,
+                memoryAllocationRateNotIn,
+                memoryOvercommitEnabled,
+                memoryOvercommitEnabledNot,
                 mergedStatus,
                 mergedStatusIn,
                 mergedStatusNot,
@@ -33866,6 +39519,30 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 osVersionNotIn,
                 osVersionNotStartsWith,
                 osVersionStartsWith,
+                overcommitActiveMemoryBytes,
+                overcommitActiveMemoryBytesGt,
+                overcommitActiveMemoryBytesGte,
+                overcommitActiveMemoryBytesIn,
+                overcommitActiveMemoryBytesLt,
+                overcommitActiveMemoryBytesLte,
+                overcommitActiveMemoryBytesNot,
+                overcommitActiveMemoryBytesNotIn,
+                overcommitMemoryBytes,
+                overcommitMemoryBytesGt,
+                overcommitMemoryBytesGte,
+                overcommitMemoryBytesIn,
+                overcommitMemoryBytesLt,
+                overcommitMemoryBytesLte,
+                overcommitMemoryBytesNot,
+                overcommitMemoryBytesNotIn,
+                overcommitMemoryRatio,
+                overcommitMemoryRatioGt,
+                overcommitMemoryRatioGte,
+                overcommitMemoryRatioIn,
+                overcommitMemoryRatioLt,
+                overcommitMemoryRatioLte,
+                overcommitMemoryRatioNot,
+                overcommitMemoryRatioNotIn,
                 perfAllocatedDataSpace,
                 perfAllocatedDataSpaceGt,
                 perfAllocatedDataSpaceGte,
@@ -33962,6 +39639,30 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 provisionedMemoryBytesLte,
                 provisionedMemoryBytesNot,
                 provisionedMemoryBytesNotIn,
+                reservedMemoryBytes,
+                reservedMemoryBytesGt,
+                reservedMemoryBytesGte,
+                reservedMemoryBytesIn,
+                reservedMemoryBytesLt,
+                reservedMemoryBytesLte,
+                reservedMemoryBytesNot,
+                reservedMemoryBytesNotIn,
+                runningPauseOvercommitMemoryBytes,
+                runningPauseOvercommitMemoryBytesGt,
+                runningPauseOvercommitMemoryBytesGte,
+                runningPauseOvercommitMemoryBytesIn,
+                runningPauseOvercommitMemoryBytesLt,
+                runningPauseOvercommitMemoryBytesLte,
+                runningPauseOvercommitMemoryBytesNot,
+                runningPauseOvercommitMemoryBytesNotIn,
+                runningPauseReservedMemoryBytes,
+                runningPauseReservedMemoryBytesGt,
+                runningPauseReservedMemoryBytesGte,
+                runningPauseReservedMemoryBytesIn,
+                runningPauseReservedMemoryBytesLt,
+                runningPauseReservedMemoryBytesLte,
+                runningPauseReservedMemoryBytesNot,
+                runningPauseReservedMemoryBytesNotIn,
                 runningPauseVmMemoryBytes,
                 runningPauseVmMemoryBytesGt,
                 runningPauseVmMemoryBytesGte,
@@ -34102,6 +39803,14 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 totalDataCapacityLte,
                 totalDataCapacityNot,
                 totalDataCapacityNotIn,
+                totalLogicalCpuCores,
+                totalLogicalCpuCoresGt,
+                totalLogicalCpuCoresGte,
+                totalLogicalCpuCoresIn,
+                totalLogicalCpuCoresLt,
+                totalLogicalCpuCoresLte,
+                totalLogicalCpuCoresNot,
+                totalLogicalCpuCoresNotIn,
                 totalMemoryBytes,
                 totalMemoryBytesGt,
                 totalMemoryBytesGte,
@@ -34110,6 +39819,14 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 totalMemoryBytesLte,
                 totalMemoryBytesNot,
                 totalMemoryBytesNotIn,
+                totalPhysicalMemoryBytes,
+                totalPhysicalMemoryBytesGt,
+                totalPhysicalMemoryBytesGte,
+                totalPhysicalMemoryBytesIn,
+                totalPhysicalMemoryBytesLt,
+                totalPhysicalMemoryBytesLte,
+                totalPhysicalMemoryBytesNot,
+                totalPhysicalMemoryBytesNotIn,
                 usbDevicesEvery,
                 usbDevicesNone,
                 usbDevicesSome,
@@ -34273,6 +39990,30 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 .append("\n");
         sb.append("    allocatableMemoryBytesNotIn: ")
                 .append(toIndentedString(allocatableMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    allocatedMemoryBytes: ")
+                .append(toIndentedString(allocatedMemoryBytes))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesGt: ")
+                .append(toIndentedString(allocatedMemoryBytesGt))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesGte: ")
+                .append(toIndentedString(allocatedMemoryBytesGte))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesIn: ")
+                .append(toIndentedString(allocatedMemoryBytesIn))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesLt: ")
+                .append(toIndentedString(allocatedMemoryBytesLt))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesLte: ")
+                .append(toIndentedString(allocatedMemoryBytesLte))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesNot: ")
+                .append(toIndentedString(allocatedMemoryBytesNot))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesNotIn: ")
+                .append(toIndentedString(allocatedMemoryBytesNotIn))
                 .append("\n");
         sb.append("    allocatedPrioritizedSpace: ")
                 .append(toIndentedString(allocatedPrioritizedSpace))
@@ -34485,6 +40226,50 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 .append(toIndentedString(dataIpNotStartsWith))
                 .append("\n");
         sb.append("    dataIpStartsWith: ").append(toIndentedString(dataIpStartsWith)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheSpaceGt: ")
+                .append(toIndentedString(dirtyCacheSpaceGt))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceGte: ")
+                .append(toIndentedString(dirtyCacheSpaceGte))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceIn: ")
+                .append(toIndentedString(dirtyCacheSpaceIn))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceLt: ")
+                .append(toIndentedString(dirtyCacheSpaceLt))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceLte: ")
+                .append(toIndentedString(dirtyCacheSpaceLte))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceNot: ")
+                .append(toIndentedString(dirtyCacheSpaceNot))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceNotIn: ")
+                .append(toIndentedString(dirtyCacheSpaceNotIn))
+                .append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
+        sb.append("    dirtyCacheUsageGt: ")
+                .append(toIndentedString(dirtyCacheUsageGt))
+                .append("\n");
+        sb.append("    dirtyCacheUsageGte: ")
+                .append(toIndentedString(dirtyCacheUsageGte))
+                .append("\n");
+        sb.append("    dirtyCacheUsageIn: ")
+                .append(toIndentedString(dirtyCacheUsageIn))
+                .append("\n");
+        sb.append("    dirtyCacheUsageLt: ")
+                .append(toIndentedString(dirtyCacheUsageLt))
+                .append("\n");
+        sb.append("    dirtyCacheUsageLte: ")
+                .append(toIndentedString(dirtyCacheUsageLte))
+                .append("\n");
+        sb.append("    dirtyCacheUsageNot: ")
+                .append(toIndentedString(dirtyCacheUsageNot))
+                .append("\n");
+        sb.append("    dirtyCacheUsageNotIn: ")
+                .append(toIndentedString(dirtyCacheUsageNotIn))
+                .append("\n");
         sb.append("    downgradedPrioritizedSpace: ")
                 .append(toIndentedString(downgradedPrioritizedSpace))
                 .append("\n");
@@ -34520,6 +40305,30 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 .append("\n");
         sb.append("    entityAsyncStatusNotIn: ")
                 .append(toIndentedString(entityAsyncStatusNotIn))
+                .append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
+                .append("\n");
+        sb.append("    failureCacheSpaceGt: ")
+                .append(toIndentedString(failureCacheSpaceGt))
+                .append("\n");
+        sb.append("    failureCacheSpaceGte: ")
+                .append(toIndentedString(failureCacheSpaceGte))
+                .append("\n");
+        sb.append("    failureCacheSpaceIn: ")
+                .append(toIndentedString(failureCacheSpaceIn))
+                .append("\n");
+        sb.append("    failureCacheSpaceLt: ")
+                .append(toIndentedString(failureCacheSpaceLt))
+                .append("\n");
+        sb.append("    failureCacheSpaceLte: ")
+                .append(toIndentedString(failureCacheSpaceLte))
+                .append("\n");
+        sb.append("    failureCacheSpaceNot: ")
+                .append(toIndentedString(failureCacheSpaceNot))
+                .append("\n");
+        sb.append("    failureCacheSpaceNotIn: ")
+                .append(toIndentedString(failureCacheSpaceNotIn))
                 .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    failureDataSpaceGt: ")
@@ -34685,6 +40494,36 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
         sb.append("    managementIpStartsWith: ")
                 .append(toIndentedString(managementIpStartsWith))
                 .append("\n");
+        sb.append("    memoryAllocationRate: ")
+                .append(toIndentedString(memoryAllocationRate))
+                .append("\n");
+        sb.append("    memoryAllocationRateGt: ")
+                .append(toIndentedString(memoryAllocationRateGt))
+                .append("\n");
+        sb.append("    memoryAllocationRateGte: ")
+                .append(toIndentedString(memoryAllocationRateGte))
+                .append("\n");
+        sb.append("    memoryAllocationRateIn: ")
+                .append(toIndentedString(memoryAllocationRateIn))
+                .append("\n");
+        sb.append("    memoryAllocationRateLt: ")
+                .append(toIndentedString(memoryAllocationRateLt))
+                .append("\n");
+        sb.append("    memoryAllocationRateLte: ")
+                .append(toIndentedString(memoryAllocationRateLte))
+                .append("\n");
+        sb.append("    memoryAllocationRateNot: ")
+                .append(toIndentedString(memoryAllocationRateNot))
+                .append("\n");
+        sb.append("    memoryAllocationRateNotIn: ")
+                .append(toIndentedString(memoryAllocationRateNotIn))
+                .append("\n");
+        sb.append("    memoryOvercommitEnabled: ")
+                .append(toIndentedString(memoryOvercommitEnabled))
+                .append("\n");
+        sb.append("    memoryOvercommitEnabledNot: ")
+                .append(toIndentedString(memoryOvercommitEnabledNot))
+                .append("\n");
         sb.append("    mergedStatus: ").append(toIndentedString(mergedStatus)).append("\n");
         sb.append("    mergedStatusIn: ").append(toIndentedString(mergedStatusIn)).append("\n");
         sb.append("    mergedStatusNot: ").append(toIndentedString(mergedStatusNot)).append("\n");
@@ -34815,6 +40654,78 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 .append("\n");
         sb.append("    osVersionStartsWith: ")
                 .append(toIndentedString(osVersionStartsWith))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytes: ")
+                .append(toIndentedString(overcommitActiveMemoryBytes))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytesGt: ")
+                .append(toIndentedString(overcommitActiveMemoryBytesGt))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytesGte: ")
+                .append(toIndentedString(overcommitActiveMemoryBytesGte))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytesIn: ")
+                .append(toIndentedString(overcommitActiveMemoryBytesIn))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytesLt: ")
+                .append(toIndentedString(overcommitActiveMemoryBytesLt))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytesLte: ")
+                .append(toIndentedString(overcommitActiveMemoryBytesLte))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytesNot: ")
+                .append(toIndentedString(overcommitActiveMemoryBytesNot))
+                .append("\n");
+        sb.append("    overcommitActiveMemoryBytesNotIn: ")
+                .append(toIndentedString(overcommitActiveMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    overcommitMemoryBytes: ")
+                .append(toIndentedString(overcommitMemoryBytes))
+                .append("\n");
+        sb.append("    overcommitMemoryBytesGt: ")
+                .append(toIndentedString(overcommitMemoryBytesGt))
+                .append("\n");
+        sb.append("    overcommitMemoryBytesGte: ")
+                .append(toIndentedString(overcommitMemoryBytesGte))
+                .append("\n");
+        sb.append("    overcommitMemoryBytesIn: ")
+                .append(toIndentedString(overcommitMemoryBytesIn))
+                .append("\n");
+        sb.append("    overcommitMemoryBytesLt: ")
+                .append(toIndentedString(overcommitMemoryBytesLt))
+                .append("\n");
+        sb.append("    overcommitMemoryBytesLte: ")
+                .append(toIndentedString(overcommitMemoryBytesLte))
+                .append("\n");
+        sb.append("    overcommitMemoryBytesNot: ")
+                .append(toIndentedString(overcommitMemoryBytesNot))
+                .append("\n");
+        sb.append("    overcommitMemoryBytesNotIn: ")
+                .append(toIndentedString(overcommitMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    overcommitMemoryRatio: ")
+                .append(toIndentedString(overcommitMemoryRatio))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioGt: ")
+                .append(toIndentedString(overcommitMemoryRatioGt))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioGte: ")
+                .append(toIndentedString(overcommitMemoryRatioGte))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioIn: ")
+                .append(toIndentedString(overcommitMemoryRatioIn))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioLt: ")
+                .append(toIndentedString(overcommitMemoryRatioLt))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioLte: ")
+                .append(toIndentedString(overcommitMemoryRatioLte))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioNot: ")
+                .append(toIndentedString(overcommitMemoryRatioNot))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioNotIn: ")
+                .append(toIndentedString(overcommitMemoryRatioNotIn))
                 .append("\n");
         sb.append("    perfAllocatedDataSpace: ")
                 .append(toIndentedString(perfAllocatedDataSpace))
@@ -35074,6 +40985,78 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
         sb.append("    provisionedMemoryBytesNotIn: ")
                 .append(toIndentedString(provisionedMemoryBytesNotIn))
                 .append("\n");
+        sb.append("    reservedMemoryBytes: ")
+                .append(toIndentedString(reservedMemoryBytes))
+                .append("\n");
+        sb.append("    reservedMemoryBytesGt: ")
+                .append(toIndentedString(reservedMemoryBytesGt))
+                .append("\n");
+        sb.append("    reservedMemoryBytesGte: ")
+                .append(toIndentedString(reservedMemoryBytesGte))
+                .append("\n");
+        sb.append("    reservedMemoryBytesIn: ")
+                .append(toIndentedString(reservedMemoryBytesIn))
+                .append("\n");
+        sb.append("    reservedMemoryBytesLt: ")
+                .append(toIndentedString(reservedMemoryBytesLt))
+                .append("\n");
+        sb.append("    reservedMemoryBytesLte: ")
+                .append(toIndentedString(reservedMemoryBytesLte))
+                .append("\n");
+        sb.append("    reservedMemoryBytesNot: ")
+                .append(toIndentedString(reservedMemoryBytesNot))
+                .append("\n");
+        sb.append("    reservedMemoryBytesNotIn: ")
+                .append(toIndentedString(reservedMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytes: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytes))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytesGt: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytesGt))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytesGte: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytesGte))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytesIn: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytesIn))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytesLt: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytesLt))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytesLte: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytesLte))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytesNot: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytesNot))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytesNotIn: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytes: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytes))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytesGt: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytesGt))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytesGte: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytesGte))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytesIn: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytesIn))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytesLt: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytesLt))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytesLte: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytesLte))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytesNot: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytesNot))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytesNotIn: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytesNotIn))
+                .append("\n");
         sb.append("    runningPauseVmMemoryBytes: ")
                 .append(toIndentedString(runningPauseVmMemoryBytes))
                 .append("\n");
@@ -35320,6 +41303,30 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
         sb.append("    totalDataCapacityNotIn: ")
                 .append(toIndentedString(totalDataCapacityNotIn))
                 .append("\n");
+        sb.append("    totalLogicalCpuCores: ")
+                .append(toIndentedString(totalLogicalCpuCores))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresGt: ")
+                .append(toIndentedString(totalLogicalCpuCoresGt))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresGte: ")
+                .append(toIndentedString(totalLogicalCpuCoresGte))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresIn: ")
+                .append(toIndentedString(totalLogicalCpuCoresIn))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresLt: ")
+                .append(toIndentedString(totalLogicalCpuCoresLt))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresLte: ")
+                .append(toIndentedString(totalLogicalCpuCoresLte))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresNot: ")
+                .append(toIndentedString(totalLogicalCpuCoresNot))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresNotIn: ")
+                .append(toIndentedString(totalLogicalCpuCoresNotIn))
+                .append("\n");
         sb.append("    totalMemoryBytes: ").append(toIndentedString(totalMemoryBytes)).append("\n");
         sb.append("    totalMemoryBytesGt: ")
                 .append(toIndentedString(totalMemoryBytesGt))
@@ -35341,6 +41348,30 @@ public class HostWhereInput extends com.arcfra.aoc.ConditionalNullable.Condition
                 .append("\n");
         sb.append("    totalMemoryBytesNotIn: ")
                 .append(toIndentedString(totalMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytes: ")
+                .append(toIndentedString(totalPhysicalMemoryBytes))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytesGt: ")
+                .append(toIndentedString(totalPhysicalMemoryBytesGt))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytesGte: ")
+                .append(toIndentedString(totalPhysicalMemoryBytesGte))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytesIn: ")
+                .append(toIndentedString(totalPhysicalMemoryBytesIn))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytesLt: ")
+                .append(toIndentedString(totalPhysicalMemoryBytesLt))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytesLte: ")
+                .append(toIndentedString(totalPhysicalMemoryBytesLte))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytesNot: ")
+                .append(toIndentedString(totalPhysicalMemoryBytesNot))
+                .append("\n");
+        sb.append("    totalPhysicalMemoryBytesNotIn: ")
+                .append(toIndentedString(totalPhysicalMemoryBytesNotIn))
                 .append("\n");
         sb.append("    usbDevicesEvery: ").append(toIndentedString(usbDevicesEvery)).append("\n");
         sb.append("    usbDevicesNone: ").append(toIndentedString(usbDevicesNone)).append("\n");

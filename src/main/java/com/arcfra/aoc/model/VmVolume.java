@@ -43,6 +43,12 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM)
     private Integer elfStoragePolicyReplicaNum;
 
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM =
+            "elf_storage_policy_stripe_num";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM)
+    private Integer elfStoragePolicyStripeNum;
+
     public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION =
             "elf_storage_policy_thin_provision";
 
@@ -103,6 +109,11 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
 
     @SerializedName(SERIALIZED_NAME_PATH)
     private String path;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private String provisionPolicy;
 
     public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE = "resident_in_cache";
 
@@ -407,6 +418,49 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
 
     public boolean getElfStoragePolicyReplicaNum_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+    }
+
+    public VmVolume elfStoragePolicyStripeNum(Integer elfStoragePolicyStripeNum) {
+
+        this.elfStoragePolicyStripeNum = elfStoragePolicyStripeNum;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNum
+     *
+     * @return elfStoragePolicyStripeNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyStripeNum() {
+        return elfStoragePolicyStripeNum;
+    }
+
+    public void setElfStoragePolicyStripeNum(Integer elfStoragePolicyStripeNum) {
+        this.elfStoragePolicyStripeNum = elfStoragePolicyStripeNum;
+    }
+
+    public VmVolume elfStoragePolicyStripeNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        return this;
+    }
+
+    public VmVolume elfStoragePolicyStripeNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
     }
 
     public VmVolume elfStoragePolicyThinProvision(Boolean elfStoragePolicyThinProvision) {
@@ -933,6 +987,49 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
         return this._isPresent_.contains(SERIALIZED_NAME_PATH);
     }
 
+    public VmVolume provisionPolicy(String provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(String provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public VmVolume provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public VmVolume provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
+    }
+
     public VmVolume residentInCache(Boolean residentInCache) {
 
         this.residentInCache = residentInCache;
@@ -1345,6 +1442,8 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
                 && Objects.equals(
                         this.elfStoragePolicyReplicaNum, vmVolume.elfStoragePolicyReplicaNum)
                 && Objects.equals(
+                        this.elfStoragePolicyStripeNum, vmVolume.elfStoragePolicyStripeNum)
+                && Objects.equals(
                         this.elfStoragePolicyThinProvision, vmVolume.elfStoragePolicyThinProvision)
                 && Objects.equals(this.entityAsyncStatus, vmVolume.entityAsyncStatus)
                 && Objects.equals(this.guestSizeUsage, vmVolume.guestSizeUsage)
@@ -1357,6 +1456,7 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
                 && Objects.equals(this.mounting, vmVolume.mounting)
                 && Objects.equals(this.name, vmVolume.name)
                 && Objects.equals(this.path, vmVolume.path)
+                && Objects.equals(this.provisionPolicy, vmVolume.provisionPolicy)
                 && Objects.equals(this.residentInCache, vmVolume.residentInCache)
                 && Objects.equals(this.sharing, vmVolume.sharing)
                 && Objects.equals(this.size, vmVolume.size)
@@ -1386,6 +1486,7 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
                 elfStoragePolicyEcK,
                 elfStoragePolicyEcM,
                 elfStoragePolicyReplicaNum,
+                elfStoragePolicyStripeNum,
                 elfStoragePolicyThinProvision,
                 entityAsyncStatus,
                 guestSizeUsage,
@@ -1398,6 +1499,7 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
                 mounting,
                 name,
                 path,
+                provisionPolicy,
                 residentInCache,
                 sharing,
                 size,
@@ -1432,6 +1534,9 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
         sb.append("    elfStoragePolicyReplicaNum: ")
                 .append(toIndentedString(elfStoragePolicyReplicaNum))
                 .append("\n");
+        sb.append("    elfStoragePolicyStripeNum: ")
+                .append(toIndentedString(elfStoragePolicyStripeNum))
+                .append("\n");
         sb.append("    elfStoragePolicyThinProvision: ")
                 .append(toIndentedString(elfStoragePolicyThinProvision))
                 .append("\n");
@@ -1448,6 +1553,7 @@ public class VmVolume extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
         sb.append("    mounting: ").append(toIndentedString(mounting)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
         sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
         sb.append("    sharing: ").append(toIndentedString(sharing)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");

@@ -23,6 +23,11 @@ public class ContentLibraryImage
     @SerializedName(SERIALIZED_NAME_CREATED_AT)
     private String createdAt;
 
+    public static final String SERIALIZED_NAME_DATASTORES = "datastores";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES)
+    private List<NestedDatastore> datastores = null;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -182,6 +187,57 @@ public class ContentLibraryImage
 
     public boolean getCreatedAt_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT);
+    }
+
+    public ContentLibraryImage datastores(List<NestedDatastore> datastores) {
+
+        this.datastores = datastores;
+        return this;
+    }
+
+    public ContentLibraryImage addDatastoresItem(NestedDatastore datastoresItem) {
+        if (this.datastores == null) {
+            this.datastores = new ArrayList<NestedDatastore>();
+        }
+        this.datastores.add(datastoresItem);
+        return this;
+    }
+
+    /**
+     * Get datastores
+     *
+     * @return datastores
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedDatastore> getDatastores() {
+        return datastores;
+    }
+
+    public void setDatastores(List<NestedDatastore> datastores) {
+        this.datastores = datastores;
+    }
+
+    public ContentLibraryImage datastores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES);
+        return this;
+    }
+
+    public ContentLibraryImage datastores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES);
+        return this;
+    }
+
+    public void setDatastores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES);
+        }
+    }
+
+    public boolean getDatastores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES);
     }
 
     public ContentLibraryImage description(String description) {
@@ -807,6 +863,7 @@ public class ContentLibraryImage
         ContentLibraryImage contentLibraryImage = (ContentLibraryImage) o;
         return Objects.equals(this.clusters, contentLibraryImage.clusters)
                 && Objects.equals(this.createdAt, contentLibraryImage.createdAt)
+                && Objects.equals(this.datastores, contentLibraryImage.datastores)
                 && Objects.equals(this.description, contentLibraryImage.description)
                 && Objects.equals(this.elfImageUuids, contentLibraryImage.elfImageUuids)
                 && Objects.equals(this.elfImages, contentLibraryImage.elfImages)
@@ -836,6 +893,7 @@ public class ContentLibraryImage
         return Objects.hash(
                 clusters,
                 createdAt,
+                datastores,
                 description,
                 elfImageUuids,
                 elfImages,
@@ -864,6 +922,7 @@ public class ContentLibraryImage
         sb.append("class ContentLibraryImage {\n");
         sb.append("    clusters: ").append(toIndentedString(clusters)).append("\n");
         sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+        sb.append("    datastores: ").append(toIndentedString(datastores)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    elfImageUuids: ").append(toIndentedString(elfImageUuids)).append("\n");
         sb.append("    elfImages: ").append(toIndentedString(elfImages)).append("\n");
