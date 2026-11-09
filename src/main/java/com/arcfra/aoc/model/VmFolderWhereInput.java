@@ -243,6 +243,121 @@ public class VmFolderWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
     private String nameStartsWith;
 
+    public static final String SERIALIZED_NAME_PARENT = "parent";
+
+    @SerializedName(SERIALIZED_NAME_PARENT)
+    private VmFolderWhereInput parent;
+
+    public static final String SERIALIZED_NAME_PATH = "path";
+
+    @SerializedName(SERIALIZED_NAME_PATH)
+    private String path;
+
+    public static final String SERIALIZED_NAME_PATH_CONTAINS = "path_contains";
+
+    @SerializedName(SERIALIZED_NAME_PATH_CONTAINS)
+    private String pathContains;
+
+    public static final String SERIALIZED_NAME_PATH_ENDS_WITH = "path_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_PATH_ENDS_WITH)
+    private String pathEndsWith;
+
+    public static final String SERIALIZED_NAME_PATH_GT = "path_gt";
+
+    @SerializedName(SERIALIZED_NAME_PATH_GT)
+    private String pathGt;
+
+    public static final String SERIALIZED_NAME_PATH_GTE = "path_gte";
+
+    @SerializedName(SERIALIZED_NAME_PATH_GTE)
+    private String pathGte;
+
+    public static final String SERIALIZED_NAME_PATH_IN = "path_in";
+
+    @SerializedName(SERIALIZED_NAME_PATH_IN)
+    private List<String> pathIn = null;
+
+    public static final String SERIALIZED_NAME_PATH_LT = "path_lt";
+
+    @SerializedName(SERIALIZED_NAME_PATH_LT)
+    private String pathLt;
+
+    public static final String SERIALIZED_NAME_PATH_LTE = "path_lte";
+
+    @SerializedName(SERIALIZED_NAME_PATH_LTE)
+    private String pathLte;
+
+    public static final String SERIALIZED_NAME_PATH_NOT = "path_not";
+
+    @SerializedName(SERIALIZED_NAME_PATH_NOT)
+    private String pathNot;
+
+    public static final String SERIALIZED_NAME_PATH_NOT_CONTAINS = "path_not_contains";
+
+    @SerializedName(SERIALIZED_NAME_PATH_NOT_CONTAINS)
+    private String pathNotContains;
+
+    public static final String SERIALIZED_NAME_PATH_NOT_ENDS_WITH = "path_not_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_PATH_NOT_ENDS_WITH)
+    private String pathNotEndsWith;
+
+    public static final String SERIALIZED_NAME_PATH_NOT_IN = "path_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PATH_NOT_IN)
+    private List<String> pathNotIn = null;
+
+    public static final String SERIALIZED_NAME_PATH_NOT_STARTS_WITH = "path_not_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_PATH_NOT_STARTS_WITH)
+    private String pathNotStartsWith;
+
+    public static final String SERIALIZED_NAME_PATH_STARTS_WITH = "path_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_PATH_STARTS_WITH)
+    private String pathStartsWith;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM = "total_vm_num";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM)
+    private Integer totalVmNum;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM_GT = "total_vm_num_gt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM_GT)
+    private Integer totalVmNumGt;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM_GTE = "total_vm_num_gte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM_GTE)
+    private Integer totalVmNumGte;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM_IN = "total_vm_num_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM_IN)
+    private List<Integer> totalVmNumIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM_LT = "total_vm_num_lt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM_LT)
+    private Integer totalVmNumLt;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM_LTE = "total_vm_num_lte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM_LTE)
+    private Integer totalVmNumLte;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM_NOT = "total_vm_num_not";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM_NOT)
+    private Integer totalVmNumNot;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM_NOT_IN = "total_vm_num_not_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM_NOT_IN)
+    private List<Integer> totalVmNumNotIn = null;
+
     public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
 
     @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -2350,6 +2465,1027 @@ public class VmFolderWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         return this._isPresent_.contains(SERIALIZED_NAME_NAME_STARTS_WITH);
     }
 
+    public VmFolderWhereInput parent(VmFolderWhereInput parent) {
+
+        this.parent = parent;
+        return this;
+    }
+
+    /**
+     * Get parent
+     *
+     * @return parent
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmFolderWhereInput getParent() {
+        return parent;
+    }
+
+    public void setParent(VmFolderWhereInput parent) {
+        this.parent = parent;
+    }
+
+    public VmFolderWhereInput parent_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PARENT);
+        return this;
+    }
+
+    public VmFolderWhereInput parent_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PARENT);
+        return this;
+    }
+
+    public void setParent_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PARENT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PARENT);
+        }
+    }
+
+    public boolean getParent_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PARENT);
+    }
+
+    public VmFolderWhereInput path(String path) {
+
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return path
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public VmFolderWhereInput path_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH);
+        return this;
+    }
+
+    public VmFolderWhereInput path_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH);
+        return this;
+    }
+
+    public void setPath_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH);
+        }
+    }
+
+    public boolean getPath_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH);
+    }
+
+    public VmFolderWhereInput pathContains(String pathContains) {
+
+        this.pathContains = pathContains;
+        return this;
+    }
+
+    /**
+     * Get pathContains
+     *
+     * @return pathContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathContains() {
+        return pathContains;
+    }
+
+    public void setPathContains(String pathContains) {
+        this.pathContains = pathContains;
+    }
+
+    public VmFolderWhereInput pathContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_CONTAINS);
+        return this;
+    }
+
+    public VmFolderWhereInput pathContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_CONTAINS);
+        return this;
+    }
+
+    public void setPathContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_CONTAINS);
+        }
+    }
+
+    public boolean getPathContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_CONTAINS);
+    }
+
+    public VmFolderWhereInput pathEndsWith(String pathEndsWith) {
+
+        this.pathEndsWith = pathEndsWith;
+        return this;
+    }
+
+    /**
+     * Get pathEndsWith
+     *
+     * @return pathEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathEndsWith() {
+        return pathEndsWith;
+    }
+
+    public void setPathEndsWith(String pathEndsWith) {
+        this.pathEndsWith = pathEndsWith;
+    }
+
+    public VmFolderWhereInput pathEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_ENDS_WITH);
+        return this;
+    }
+
+    public VmFolderWhereInput pathEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_ENDS_WITH);
+        return this;
+    }
+
+    public void setPathEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_ENDS_WITH);
+        }
+    }
+
+    public boolean getPathEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_ENDS_WITH);
+    }
+
+    public VmFolderWhereInput pathGt(String pathGt) {
+
+        this.pathGt = pathGt;
+        return this;
+    }
+
+    /**
+     * Get pathGt
+     *
+     * @return pathGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathGt() {
+        return pathGt;
+    }
+
+    public void setPathGt(String pathGt) {
+        this.pathGt = pathGt;
+    }
+
+    public VmFolderWhereInput pathGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_GT);
+        return this;
+    }
+
+    public VmFolderWhereInput pathGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_GT);
+        return this;
+    }
+
+    public void setPathGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_GT);
+        }
+    }
+
+    public boolean getPathGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_GT);
+    }
+
+    public VmFolderWhereInput pathGte(String pathGte) {
+
+        this.pathGte = pathGte;
+        return this;
+    }
+
+    /**
+     * Get pathGte
+     *
+     * @return pathGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathGte() {
+        return pathGte;
+    }
+
+    public void setPathGte(String pathGte) {
+        this.pathGte = pathGte;
+    }
+
+    public VmFolderWhereInput pathGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_GTE);
+        return this;
+    }
+
+    public VmFolderWhereInput pathGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_GTE);
+        return this;
+    }
+
+    public void setPathGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_GTE);
+        }
+    }
+
+    public boolean getPathGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_GTE);
+    }
+
+    public VmFolderWhereInput pathIn(List<String> pathIn) {
+
+        this.pathIn = pathIn;
+        return this;
+    }
+
+    public VmFolderWhereInput addPathInItem(String pathInItem) {
+        if (this.pathIn == null) {
+            this.pathIn = new ArrayList<String>();
+        }
+        this.pathIn.add(pathInItem);
+        return this;
+    }
+
+    /**
+     * Get pathIn
+     *
+     * @return pathIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getPathIn() {
+        return pathIn;
+    }
+
+    public void setPathIn(List<String> pathIn) {
+        this.pathIn = pathIn;
+    }
+
+    public VmFolderWhereInput pathIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_IN);
+        return this;
+    }
+
+    public VmFolderWhereInput pathIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_IN);
+        return this;
+    }
+
+    public void setPathIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_IN);
+        }
+    }
+
+    public boolean getPathIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_IN);
+    }
+
+    public VmFolderWhereInput pathLt(String pathLt) {
+
+        this.pathLt = pathLt;
+        return this;
+    }
+
+    /**
+     * Get pathLt
+     *
+     * @return pathLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathLt() {
+        return pathLt;
+    }
+
+    public void setPathLt(String pathLt) {
+        this.pathLt = pathLt;
+    }
+
+    public VmFolderWhereInput pathLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_LT);
+        return this;
+    }
+
+    public VmFolderWhereInput pathLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_LT);
+        return this;
+    }
+
+    public void setPathLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_LT);
+        }
+    }
+
+    public boolean getPathLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_LT);
+    }
+
+    public VmFolderWhereInput pathLte(String pathLte) {
+
+        this.pathLte = pathLte;
+        return this;
+    }
+
+    /**
+     * Get pathLte
+     *
+     * @return pathLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathLte() {
+        return pathLte;
+    }
+
+    public void setPathLte(String pathLte) {
+        this.pathLte = pathLte;
+    }
+
+    public VmFolderWhereInput pathLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_LTE);
+        return this;
+    }
+
+    public VmFolderWhereInput pathLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_LTE);
+        return this;
+    }
+
+    public void setPathLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_LTE);
+        }
+    }
+
+    public boolean getPathLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_LTE);
+    }
+
+    public VmFolderWhereInput pathNot(String pathNot) {
+
+        this.pathNot = pathNot;
+        return this;
+    }
+
+    /**
+     * Get pathNot
+     *
+     * @return pathNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathNot() {
+        return pathNot;
+    }
+
+    public void setPathNot(String pathNot) {
+        this.pathNot = pathNot;
+    }
+
+    public VmFolderWhereInput pathNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_NOT);
+        return this;
+    }
+
+    public VmFolderWhereInput pathNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT);
+        return this;
+    }
+
+    public void setPathNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT);
+        }
+    }
+
+    public boolean getPathNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_NOT);
+    }
+
+    public VmFolderWhereInput pathNotContains(String pathNotContains) {
+
+        this.pathNotContains = pathNotContains;
+        return this;
+    }
+
+    /**
+     * Get pathNotContains
+     *
+     * @return pathNotContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathNotContains() {
+        return pathNotContains;
+    }
+
+    public void setPathNotContains(String pathNotContains) {
+        this.pathNotContains = pathNotContains;
+    }
+
+    public VmFolderWhereInput pathNotContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_CONTAINS);
+        return this;
+    }
+
+    public VmFolderWhereInput pathNotContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_CONTAINS);
+        return this;
+    }
+
+    public void setPathNotContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_CONTAINS);
+        }
+    }
+
+    public boolean getPathNotContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_NOT_CONTAINS);
+    }
+
+    public VmFolderWhereInput pathNotEndsWith(String pathNotEndsWith) {
+
+        this.pathNotEndsWith = pathNotEndsWith;
+        return this;
+    }
+
+    /**
+     * Get pathNotEndsWith
+     *
+     * @return pathNotEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathNotEndsWith() {
+        return pathNotEndsWith;
+    }
+
+    public void setPathNotEndsWith(String pathNotEndsWith) {
+        this.pathNotEndsWith = pathNotEndsWith;
+    }
+
+    public VmFolderWhereInput pathNotEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public VmFolderWhereInput pathNotEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public void setPathNotEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_ENDS_WITH);
+        }
+    }
+
+    public boolean getPathNotEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_NOT_ENDS_WITH);
+    }
+
+    public VmFolderWhereInput pathNotIn(List<String> pathNotIn) {
+
+        this.pathNotIn = pathNotIn;
+        return this;
+    }
+
+    public VmFolderWhereInput addPathNotInItem(String pathNotInItem) {
+        if (this.pathNotIn == null) {
+            this.pathNotIn = new ArrayList<String>();
+        }
+        this.pathNotIn.add(pathNotInItem);
+        return this;
+    }
+
+    /**
+     * Get pathNotIn
+     *
+     * @return pathNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getPathNotIn() {
+        return pathNotIn;
+    }
+
+    public void setPathNotIn(List<String> pathNotIn) {
+        this.pathNotIn = pathNotIn;
+    }
+
+    public VmFolderWhereInput pathNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_IN);
+        return this;
+    }
+
+    public VmFolderWhereInput pathNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_IN);
+        return this;
+    }
+
+    public void setPathNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_IN);
+        }
+    }
+
+    public boolean getPathNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_NOT_IN);
+    }
+
+    public VmFolderWhereInput pathNotStartsWith(String pathNotStartsWith) {
+
+        this.pathNotStartsWith = pathNotStartsWith;
+        return this;
+    }
+
+    /**
+     * Get pathNotStartsWith
+     *
+     * @return pathNotStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathNotStartsWith() {
+        return pathNotStartsWith;
+    }
+
+    public void setPathNotStartsWith(String pathNotStartsWith) {
+        this.pathNotStartsWith = pathNotStartsWith;
+    }
+
+    public VmFolderWhereInput pathNotStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public VmFolderWhereInput pathNotStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public void setPathNotStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_NOT_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_NOT_STARTS_WITH);
+        }
+    }
+
+    public boolean getPathNotStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_NOT_STARTS_WITH);
+    }
+
+    public VmFolderWhereInput pathStartsWith(String pathStartsWith) {
+
+        this.pathStartsWith = pathStartsWith;
+        return this;
+    }
+
+    /**
+     * Get pathStartsWith
+     *
+     * @return pathStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPathStartsWith() {
+        return pathStartsWith;
+    }
+
+    public void setPathStartsWith(String pathStartsWith) {
+        this.pathStartsWith = pathStartsWith;
+    }
+
+    public VmFolderWhereInput pathStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH_STARTS_WITH);
+        return this;
+    }
+
+    public VmFolderWhereInput pathStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH_STARTS_WITH);
+        return this;
+    }
+
+    public void setPathStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH_STARTS_WITH);
+        }
+    }
+
+    public boolean getPathStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH_STARTS_WITH);
+    }
+
+    public VmFolderWhereInput totalVmNum(Integer totalVmNum) {
+
+        this.totalVmNum = totalVmNum;
+        return this;
+    }
+
+    /**
+     * Get totalVmNum
+     *
+     * @return totalVmNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalVmNum() {
+        return totalVmNum;
+    }
+
+    public void setTotalVmNum(Integer totalVmNum) {
+        this.totalVmNum = totalVmNum;
+    }
+
+    public VmFolderWhereInput totalVmNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM);
+        return this;
+    }
+
+    public void setTotalVmNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM);
+        }
+    }
+
+    public boolean getTotalVmNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM);
+    }
+
+    public VmFolderWhereInput totalVmNumGt(Integer totalVmNumGt) {
+
+        this.totalVmNumGt = totalVmNumGt;
+        return this;
+    }
+
+    /**
+     * Get totalVmNumGt
+     *
+     * @return totalVmNumGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalVmNumGt() {
+        return totalVmNumGt;
+    }
+
+    public void setTotalVmNumGt(Integer totalVmNumGt) {
+        this.totalVmNumGt = totalVmNumGt;
+    }
+
+    public VmFolderWhereInput totalVmNumGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_GT);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNumGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_GT);
+        return this;
+    }
+
+    public void setTotalVmNumGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_GT);
+        }
+    }
+
+    public boolean getTotalVmNumGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM_GT);
+    }
+
+    public VmFolderWhereInput totalVmNumGte(Integer totalVmNumGte) {
+
+        this.totalVmNumGte = totalVmNumGte;
+        return this;
+    }
+
+    /**
+     * Get totalVmNumGte
+     *
+     * @return totalVmNumGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalVmNumGte() {
+        return totalVmNumGte;
+    }
+
+    public void setTotalVmNumGte(Integer totalVmNumGte) {
+        this.totalVmNumGte = totalVmNumGte;
+    }
+
+    public VmFolderWhereInput totalVmNumGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_GTE);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNumGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_GTE);
+        return this;
+    }
+
+    public void setTotalVmNumGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_GTE);
+        }
+    }
+
+    public boolean getTotalVmNumGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM_GTE);
+    }
+
+    public VmFolderWhereInput totalVmNumIn(List<Integer> totalVmNumIn) {
+
+        this.totalVmNumIn = totalVmNumIn;
+        return this;
+    }
+
+    public VmFolderWhereInput addTotalVmNumInItem(Integer totalVmNumInItem) {
+        if (this.totalVmNumIn == null) {
+            this.totalVmNumIn = new ArrayList<Integer>();
+        }
+        this.totalVmNumIn.add(totalVmNumInItem);
+        return this;
+    }
+
+    /**
+     * Get totalVmNumIn
+     *
+     * @return totalVmNumIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getTotalVmNumIn() {
+        return totalVmNumIn;
+    }
+
+    public void setTotalVmNumIn(List<Integer> totalVmNumIn) {
+        this.totalVmNumIn = totalVmNumIn;
+    }
+
+    public VmFolderWhereInput totalVmNumIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_IN);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNumIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_IN);
+        return this;
+    }
+
+    public void setTotalVmNumIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_IN);
+        }
+    }
+
+    public boolean getTotalVmNumIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM_IN);
+    }
+
+    public VmFolderWhereInput totalVmNumLt(Integer totalVmNumLt) {
+
+        this.totalVmNumLt = totalVmNumLt;
+        return this;
+    }
+
+    /**
+     * Get totalVmNumLt
+     *
+     * @return totalVmNumLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalVmNumLt() {
+        return totalVmNumLt;
+    }
+
+    public void setTotalVmNumLt(Integer totalVmNumLt) {
+        this.totalVmNumLt = totalVmNumLt;
+    }
+
+    public VmFolderWhereInput totalVmNumLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_LT);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNumLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_LT);
+        return this;
+    }
+
+    public void setTotalVmNumLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_LT);
+        }
+    }
+
+    public boolean getTotalVmNumLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM_LT);
+    }
+
+    public VmFolderWhereInput totalVmNumLte(Integer totalVmNumLte) {
+
+        this.totalVmNumLte = totalVmNumLte;
+        return this;
+    }
+
+    /**
+     * Get totalVmNumLte
+     *
+     * @return totalVmNumLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalVmNumLte() {
+        return totalVmNumLte;
+    }
+
+    public void setTotalVmNumLte(Integer totalVmNumLte) {
+        this.totalVmNumLte = totalVmNumLte;
+    }
+
+    public VmFolderWhereInput totalVmNumLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_LTE);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNumLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_LTE);
+        return this;
+    }
+
+    public void setTotalVmNumLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_LTE);
+        }
+    }
+
+    public boolean getTotalVmNumLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM_LTE);
+    }
+
+    public VmFolderWhereInput totalVmNumNot(Integer totalVmNumNot) {
+
+        this.totalVmNumNot = totalVmNumNot;
+        return this;
+    }
+
+    /**
+     * Get totalVmNumNot
+     *
+     * @return totalVmNumNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalVmNumNot() {
+        return totalVmNumNot;
+    }
+
+    public void setTotalVmNumNot(Integer totalVmNumNot) {
+        this.totalVmNumNot = totalVmNumNot;
+    }
+
+    public VmFolderWhereInput totalVmNumNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_NOT);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNumNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_NOT);
+        return this;
+    }
+
+    public void setTotalVmNumNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_NOT);
+        }
+    }
+
+    public boolean getTotalVmNumNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM_NOT);
+    }
+
+    public VmFolderWhereInput totalVmNumNotIn(List<Integer> totalVmNumNotIn) {
+
+        this.totalVmNumNotIn = totalVmNumNotIn;
+        return this;
+    }
+
+    public VmFolderWhereInput addTotalVmNumNotInItem(Integer totalVmNumNotInItem) {
+        if (this.totalVmNumNotIn == null) {
+            this.totalVmNumNotIn = new ArrayList<Integer>();
+        }
+        this.totalVmNumNotIn.add(totalVmNumNotInItem);
+        return this;
+    }
+
+    /**
+     * Get totalVmNumNotIn
+     *
+     * @return totalVmNumNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getTotalVmNumNotIn() {
+        return totalVmNumNotIn;
+    }
+
+    public void setTotalVmNumNotIn(List<Integer> totalVmNumNotIn) {
+        this.totalVmNumNotIn = totalVmNumNotIn;
+    }
+
+    public VmFolderWhereInput totalVmNumNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_NOT_IN);
+        return this;
+    }
+
+    public VmFolderWhereInput totalVmNumNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_NOT_IN);
+        return this;
+    }
+
+    public void setTotalVmNumNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM_NOT_IN);
+        }
+    }
+
+    public boolean getTotalVmNumNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM_NOT_IN);
+    }
+
     public VmFolderWhereInput vmNum(Integer vmNum) {
 
         this.vmNum = vmNum;
@@ -2895,6 +4031,29 @@ public class VmFolderWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 && Objects.equals(this.nameNotIn, vmFolderWhereInput.nameNotIn)
                 && Objects.equals(this.nameNotStartsWith, vmFolderWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameStartsWith, vmFolderWhereInput.nameStartsWith)
+                && Objects.equals(this.parent, vmFolderWhereInput.parent)
+                && Objects.equals(this.path, vmFolderWhereInput.path)
+                && Objects.equals(this.pathContains, vmFolderWhereInput.pathContains)
+                && Objects.equals(this.pathEndsWith, vmFolderWhereInput.pathEndsWith)
+                && Objects.equals(this.pathGt, vmFolderWhereInput.pathGt)
+                && Objects.equals(this.pathGte, vmFolderWhereInput.pathGte)
+                && Objects.equals(this.pathIn, vmFolderWhereInput.pathIn)
+                && Objects.equals(this.pathLt, vmFolderWhereInput.pathLt)
+                && Objects.equals(this.pathLte, vmFolderWhereInput.pathLte)
+                && Objects.equals(this.pathNot, vmFolderWhereInput.pathNot)
+                && Objects.equals(this.pathNotContains, vmFolderWhereInput.pathNotContains)
+                && Objects.equals(this.pathNotEndsWith, vmFolderWhereInput.pathNotEndsWith)
+                && Objects.equals(this.pathNotIn, vmFolderWhereInput.pathNotIn)
+                && Objects.equals(this.pathNotStartsWith, vmFolderWhereInput.pathNotStartsWith)
+                && Objects.equals(this.pathStartsWith, vmFolderWhereInput.pathStartsWith)
+                && Objects.equals(this.totalVmNum, vmFolderWhereInput.totalVmNum)
+                && Objects.equals(this.totalVmNumGt, vmFolderWhereInput.totalVmNumGt)
+                && Objects.equals(this.totalVmNumGte, vmFolderWhereInput.totalVmNumGte)
+                && Objects.equals(this.totalVmNumIn, vmFolderWhereInput.totalVmNumIn)
+                && Objects.equals(this.totalVmNumLt, vmFolderWhereInput.totalVmNumLt)
+                && Objects.equals(this.totalVmNumLte, vmFolderWhereInput.totalVmNumLte)
+                && Objects.equals(this.totalVmNumNot, vmFolderWhereInput.totalVmNumNot)
+                && Objects.equals(this.totalVmNumNotIn, vmFolderWhereInput.totalVmNumNotIn)
                 && Objects.equals(this.vmNum, vmFolderWhereInput.vmNum)
                 && Objects.equals(this.vmNumGt, vmFolderWhereInput.vmNumGt)
                 && Objects.equals(this.vmNumGte, vmFolderWhereInput.vmNumGte)
@@ -2966,6 +4125,29 @@ public class VmFolderWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 nameNotIn,
                 nameNotStartsWith,
                 nameStartsWith,
+                parent,
+                path,
+                pathContains,
+                pathEndsWith,
+                pathGt,
+                pathGte,
+                pathIn,
+                pathLt,
+                pathLte,
+                pathNot,
+                pathNotContains,
+                pathNotEndsWith,
+                pathNotIn,
+                pathNotStartsWith,
+                pathStartsWith,
+                totalVmNum,
+                totalVmNumGt,
+                totalVmNumGte,
+                totalVmNumIn,
+                totalVmNumLt,
+                totalVmNumLte,
+                totalVmNumNot,
+                totalVmNumNotIn,
                 vmNum,
                 vmNumGt,
                 vmNumGte,
@@ -3046,6 +4228,31 @@ public class VmFolderWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 .append(toIndentedString(nameNotStartsWith))
                 .append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
+        sb.append("    parent: ").append(toIndentedString(parent)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    pathContains: ").append(toIndentedString(pathContains)).append("\n");
+        sb.append("    pathEndsWith: ").append(toIndentedString(pathEndsWith)).append("\n");
+        sb.append("    pathGt: ").append(toIndentedString(pathGt)).append("\n");
+        sb.append("    pathGte: ").append(toIndentedString(pathGte)).append("\n");
+        sb.append("    pathIn: ").append(toIndentedString(pathIn)).append("\n");
+        sb.append("    pathLt: ").append(toIndentedString(pathLt)).append("\n");
+        sb.append("    pathLte: ").append(toIndentedString(pathLte)).append("\n");
+        sb.append("    pathNot: ").append(toIndentedString(pathNot)).append("\n");
+        sb.append("    pathNotContains: ").append(toIndentedString(pathNotContains)).append("\n");
+        sb.append("    pathNotEndsWith: ").append(toIndentedString(pathNotEndsWith)).append("\n");
+        sb.append("    pathNotIn: ").append(toIndentedString(pathNotIn)).append("\n");
+        sb.append("    pathNotStartsWith: ")
+                .append(toIndentedString(pathNotStartsWith))
+                .append("\n");
+        sb.append("    pathStartsWith: ").append(toIndentedString(pathStartsWith)).append("\n");
+        sb.append("    totalVmNum: ").append(toIndentedString(totalVmNum)).append("\n");
+        sb.append("    totalVmNumGt: ").append(toIndentedString(totalVmNumGt)).append("\n");
+        sb.append("    totalVmNumGte: ").append(toIndentedString(totalVmNumGte)).append("\n");
+        sb.append("    totalVmNumIn: ").append(toIndentedString(totalVmNumIn)).append("\n");
+        sb.append("    totalVmNumLt: ").append(toIndentedString(totalVmNumLt)).append("\n");
+        sb.append("    totalVmNumLte: ").append(toIndentedString(totalVmNumLte)).append("\n");
+        sb.append("    totalVmNumNot: ").append(toIndentedString(totalVmNumNot)).append("\n");
+        sb.append("    totalVmNumNotIn: ").append(toIndentedString(totalVmNumNotIn)).append("\n");
         sb.append("    vmNum: ").append(toIndentedString(vmNum)).append("\n");
         sb.append("    vmNumGt: ").append(toIndentedString(vmNumGt)).append("\n");
         sb.append("    vmNumGte: ").append(toIndentedString(vmNumGte)).append("\n");

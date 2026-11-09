@@ -22,6 +22,10 @@ public enum HostOrderByInput {
 
     ALLOCATABLE_MEMORY_BYTES_DESC("allocatable_memory_bytes_DESC"),
 
+    ALLOCATED_MEMORY_BYTES_ASC("allocated_memory_bytes_ASC"),
+
+    ALLOCATED_MEMORY_BYTES_DESC("allocated_memory_bytes_DESC"),
+
     ALLOCATED_PRIORITIZED_SPACE_ASC("allocated_prioritized_space_ASC"),
 
     ALLOCATED_PRIORITIZED_SPACE_DESC("allocated_prioritized_space_DESC"),
@@ -66,6 +70,14 @@ public enum HostOrderByInput {
 
     DATA_IP_DESC("data_ip_DESC"),
 
+    DIRTY_CACHE_SPACE_ASC("dirty_cache_space_ASC"),
+
+    DIRTY_CACHE_SPACE_DESC("dirty_cache_space_DESC"),
+
+    DIRTY_CACHE_USAGE_ASC("dirty_cache_usage_ASC"),
+
+    DIRTY_CACHE_USAGE_DESC("dirty_cache_usage_DESC"),
+
     DOWNGRADED_PRIORITIZED_SPACE_ASC("downgraded_prioritized_space_ASC"),
 
     DOWNGRADED_PRIORITIZED_SPACE_DESC("downgraded_prioritized_space_DESC"),
@@ -73,6 +85,10 @@ public enum HostOrderByInput {
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
+
+    FAILURE_CACHE_SPACE_ASC("failure_cache_space_ASC"),
+
+    FAILURE_CACHE_SPACE_DESC("failure_cache_space_DESC"),
 
     FAILURE_DATA_SPACE_ASC("failure_data_space_ASC"),
 
@@ -118,6 +134,14 @@ public enum HostOrderByInput {
 
     MANAGEMENT_IP_DESC("management_ip_DESC"),
 
+    MEMORY_ALLOCATION_RATE_ASC("memory_allocation_rate_ASC"),
+
+    MEMORY_ALLOCATION_RATE_DESC("memory_allocation_rate_DESC"),
+
+    MEMORY_OVERCOMMIT_ENABLED_ASC("memory_overcommit_enabled_ASC"),
+
+    MEMORY_OVERCOMMIT_ENABLED_DESC("memory_overcommit_enabled_DESC"),
+
     MERGED_STATUS_ASC("merged_status_ASC"),
 
     MERGED_STATUS_DESC("merged_status_DESC"),
@@ -149,6 +173,18 @@ public enum HostOrderByInput {
     OS_VERSION_ASC("os_version_ASC"),
 
     OS_VERSION_DESC("os_version_DESC"),
+
+    OVERCOMMIT_ACTIVE_MEMORY_BYTES_ASC("overcommit_active_memory_bytes_ASC"),
+
+    OVERCOMMIT_ACTIVE_MEMORY_BYTES_DESC("overcommit_active_memory_bytes_DESC"),
+
+    OVERCOMMIT_MEMORY_BYTES_ASC("overcommit_memory_bytes_ASC"),
+
+    OVERCOMMIT_MEMORY_BYTES_DESC("overcommit_memory_bytes_DESC"),
+
+    OVERCOMMIT_MEMORY_RATIO_ASC("overcommit_memory_ratio_ASC"),
+
+    OVERCOMMIT_MEMORY_RATIO_DESC("overcommit_memory_ratio_DESC"),
 
     PERF_ALLOCATED_DATA_SPACE_ASC("perf_allocated_data_space_ASC"),
 
@@ -197,6 +233,18 @@ public enum HostOrderByInput {
     PROVISIONED_MEMORY_BYTES_ASC("provisioned_memory_bytes_ASC"),
 
     PROVISIONED_MEMORY_BYTES_DESC("provisioned_memory_bytes_DESC"),
+
+    RESERVED_MEMORY_BYTES_ASC("reserved_memory_bytes_ASC"),
+
+    RESERVED_MEMORY_BYTES_DESC("reserved_memory_bytes_DESC"),
+
+    RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_ASC("running_pause_overcommit_memory_bytes_ASC"),
+
+    RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES_DESC("running_pause_overcommit_memory_bytes_DESC"),
+
+    RUNNING_PAUSE_RESERVED_MEMORY_BYTES_ASC("running_pause_reserved_memory_bytes_ASC"),
+
+    RUNNING_PAUSE_RESERVED_MEMORY_BYTES_DESC("running_pause_reserved_memory_bytes_DESC"),
 
     RUNNING_PAUSE_VM_MEMORY_BYTES_ASC("running_pause_vm_memory_bytes_ASC"),
 
@@ -266,9 +314,17 @@ public enum HostOrderByInput {
 
     TOTAL_DATA_CAPACITY_DESC("total_data_capacity_DESC"),
 
+    TOTAL_LOGICAL_CPU_CORES_ASC("total_logical_cpu_cores_ASC"),
+
+    TOTAL_LOGICAL_CPU_CORES_DESC("total_logical_cpu_cores_DESC"),
+
     TOTAL_MEMORY_BYTES_ASC("total_memory_bytes_ASC"),
 
     TOTAL_MEMORY_BYTES_DESC("total_memory_bytes_DESC"),
+
+    TOTAL_PHYSICAL_MEMORY_BYTES_ASC("total_physical_memory_bytes_ASC"),
+
+    TOTAL_PHYSICAL_MEMORY_BYTES_DESC("total_physical_memory_bytes_DESC"),
 
     USED_CACHE_SPACE_ASC("used_cache_space_ASC"),
 

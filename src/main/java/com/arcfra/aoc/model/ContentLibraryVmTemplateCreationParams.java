@@ -3,12 +3,19 @@ package com.arcfra.aoc.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** ContentLibraryVmTemplateCreationParams */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class ContentLibraryVmTemplateCreationParams
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_STORAGE_CONFIGS = "storage_configs";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIGS)
+    private List<ContentLibraryVmTemplateStoragePlacement> storageConfigs = null;
+
     public static final String SERIALIZED_NAME_CLUSTERS = "clusters";
 
     @SerializedName(SERIALIZED_NAME_CLUSTERS)
@@ -36,6 +43,60 @@ public class ContentLibraryVmTemplateCreationParams
 
     public ContentLibraryVmTemplateCreationParams() {}
 
+    public ContentLibraryVmTemplateCreationParams storageConfigs(
+            List<ContentLibraryVmTemplateStoragePlacement> storageConfigs) {
+
+        this.storageConfigs = storageConfigs;
+        return this;
+    }
+
+    public ContentLibraryVmTemplateCreationParams addStorageConfigsItem(
+            ContentLibraryVmTemplateStoragePlacement storageConfigsItem) {
+        if (this.storageConfigs == null) {
+            this.storageConfigs = new ArrayList<ContentLibraryVmTemplateStoragePlacement>();
+        }
+        this.storageConfigs.add(storageConfigsItem);
+        return this;
+    }
+
+    /**
+     * Template file placements. Provide nonempty storage_configs or clusters.
+     *
+     * @return storageConfigs
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(
+            value = "Template file placements. Provide nonempty storage_configs or clusters.")
+    public List<ContentLibraryVmTemplateStoragePlacement> getStorageConfigs() {
+        return storageConfigs;
+    }
+
+    public void setStorageConfigs(List<ContentLibraryVmTemplateStoragePlacement> storageConfigs) {
+        this.storageConfigs = storageConfigs;
+    }
+
+    public ContentLibraryVmTemplateCreationParams storageConfigs_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIGS);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateCreationParams storageConfigs_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIGS);
+        return this;
+    }
+
+    public void setStorageConfigs_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIGS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIGS);
+        }
+    }
+
+    public boolean getStorageConfigs_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIGS);
+    }
+
     public ContentLibraryVmTemplateCreationParams clusters(ClusterWhereInput clusters) {
 
         this.clusters = clusters;
@@ -47,8 +108,8 @@ public class ContentLibraryVmTemplateCreationParams
      *
      * @return clusters
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public ClusterWhereInput getClusters() {
         return clusters;
     }
@@ -261,7 +322,9 @@ public class ContentLibraryVmTemplateCreationParams
         }
         ContentLibraryVmTemplateCreationParams contentLibraryVmTemplateCreationParams =
                 (ContentLibraryVmTemplateCreationParams) o;
-        return Objects.equals(this.clusters, contentLibraryVmTemplateCreationParams.clusters)
+        return Objects.equals(
+                        this.storageConfigs, contentLibraryVmTemplateCreationParams.storageConfigs)
+                && Objects.equals(this.clusters, contentLibraryVmTemplateCreationParams.clusters)
                 && Objects.equals(
                         this.cloudInitSupported,
                         contentLibraryVmTemplateCreationParams.cloudInitSupported)
@@ -273,13 +336,14 @@ public class ContentLibraryVmTemplateCreationParams
 
     @Override
     public int hashCode() {
-        return Objects.hash(clusters, cloudInitSupported, vm, description, name);
+        return Objects.hash(storageConfigs, clusters, cloudInitSupported, vm, description, name);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class ContentLibraryVmTemplateCreationParams {\n");
+        sb.append("    storageConfigs: ").append(toIndentedString(storageConfigs)).append("\n");
         sb.append("    clusters: ").append(toIndentedString(clusters)).append("\n");
         sb.append("    cloudInitSupported: ")
                 .append(toIndentedString(cloudInitSupported))

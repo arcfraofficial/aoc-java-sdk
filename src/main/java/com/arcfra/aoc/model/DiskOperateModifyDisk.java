@@ -9,6 +9,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class DiskOperateModifyDisk
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_VM_VOLUME_ID = "vm_volume_id";
 
     @SerializedName(SERIALIZED_NAME_VM_VOLUME_ID)
@@ -25,6 +30,49 @@ public class DiskOperateModifyDisk
     private Integer diskIndex;
 
     public DiskOperateModifyDisk() {}
+
+    public DiskOperateModifyDisk storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public DiskOperateModifyDisk storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public DiskOperateModifyDisk storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
 
     public DiskOperateModifyDisk vmVolumeId(String vmVolumeId) {
 
@@ -164,20 +212,22 @@ public class DiskOperateModifyDisk
             return false;
         }
         DiskOperateModifyDisk diskOperateModifyDisk = (DiskOperateModifyDisk) o;
-        return Objects.equals(this.vmVolumeId, diskOperateModifyDisk.vmVolumeId)
+        return Objects.equals(this.storageConfig, diskOperateModifyDisk.storageConfig)
+                && Objects.equals(this.vmVolumeId, diskOperateModifyDisk.vmVolumeId)
                 && Objects.equals(this.bus, diskOperateModifyDisk.bus)
                 && Objects.equals(this.diskIndex, diskOperateModifyDisk.diskIndex);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(vmVolumeId, bus, diskIndex);
+        return Objects.hash(storageConfig, vmVolumeId, bus, diskIndex);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class DiskOperateModifyDisk {\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    vmVolumeId: ").append(toIndentedString(vmVolumeId)).append("\n");
         sb.append("    bus: ").append(toIndentedString(bus)).append("\n");
         sb.append("    diskIndex: ").append(toIndentedString(diskIndex)).append("\n");

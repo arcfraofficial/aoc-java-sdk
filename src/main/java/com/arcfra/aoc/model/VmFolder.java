@@ -32,6 +32,21 @@ public class VmFolder extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name;
 
+    public static final String SERIALIZED_NAME_PARENT = "parent";
+
+    @SerializedName(SERIALIZED_NAME_PARENT)
+    private NestedVmFolder parent;
+
+    public static final String SERIALIZED_NAME_PATH = "path";
+
+    @SerializedName(SERIALIZED_NAME_PATH)
+    private String path;
+
+    public static final String SERIALIZED_NAME_TOTAL_VM_NUM = "total_vm_num";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_VM_NUM)
+    private Integer totalVmNum;
+
     public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
 
     @SerializedName(SERIALIZED_NAME_VM_NUM)
@@ -216,6 +231,135 @@ public class VmFolder extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
         return this._isPresent_.contains(SERIALIZED_NAME_NAME);
     }
 
+    public VmFolder parent(NestedVmFolder parent) {
+
+        this.parent = parent;
+        return this;
+    }
+
+    /**
+     * Get parent
+     *
+     * @return parent
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedVmFolder getParent() {
+        return parent;
+    }
+
+    public void setParent(NestedVmFolder parent) {
+        this.parent = parent;
+    }
+
+    public VmFolder parent_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PARENT);
+        return this;
+    }
+
+    public VmFolder parent_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PARENT);
+        return this;
+    }
+
+    public void setParent_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PARENT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PARENT);
+        }
+    }
+
+    public boolean getParent_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PARENT);
+    }
+
+    public VmFolder path(String path) {
+
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return path
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public VmFolder path_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PATH);
+        return this;
+    }
+
+    public VmFolder path_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PATH);
+        return this;
+    }
+
+    public void setPath_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PATH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PATH);
+        }
+    }
+
+    public boolean getPath_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PATH);
+    }
+
+    public VmFolder totalVmNum(Integer totalVmNum) {
+
+        this.totalVmNum = totalVmNum;
+        return this;
+    }
+
+    /**
+     * Get totalVmNum
+     *
+     * @return totalVmNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalVmNum() {
+        return totalVmNum;
+    }
+
+    public void setTotalVmNum(Integer totalVmNum) {
+        this.totalVmNum = totalVmNum;
+    }
+
+    public VmFolder totalVmNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM);
+        return this;
+    }
+
+    public VmFolder totalVmNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM);
+        return this;
+    }
+
+    public void setTotalVmNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_VM_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_VM_NUM);
+        }
+    }
+
+    public boolean getTotalVmNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_VM_NUM);
+    }
+
     public VmFolder vmNum(Integer vmNum) {
 
         this.vmNum = vmNum;
@@ -323,6 +467,9 @@ public class VmFolder extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
                 && Objects.equals(this.id, vmFolder.id)
                 && Objects.equals(this.localId, vmFolder.localId)
                 && Objects.equals(this.name, vmFolder.name)
+                && Objects.equals(this.parent, vmFolder.parent)
+                && Objects.equals(this.path, vmFolder.path)
+                && Objects.equals(this.totalVmNum, vmFolder.totalVmNum)
                 && Objects.equals(this.vmNum, vmFolder.vmNum)
                 && Objects.equals(this.vms, vmFolder.vms);
     }
@@ -338,7 +485,7 @@ public class VmFolder extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
 
     @Override
     public int hashCode() {
-        return Objects.hash(cluster, id, localId, name, vmNum, vms);
+        return Objects.hash(cluster, id, localId, name, parent, path, totalVmNum, vmNum, vms);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -356,6 +503,9 @@ public class VmFolder extends com.arcfra.aoc.ConditionalNullable.ConditionalNull
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    parent: ").append(toIndentedString(parent)).append("\n");
+        sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    totalVmNum: ").append(toIndentedString(totalVmNum)).append("\n");
         sb.append("    vmNum: ").append(toIndentedString(vmNum)).append("\n");
         sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
         sb.append("}");

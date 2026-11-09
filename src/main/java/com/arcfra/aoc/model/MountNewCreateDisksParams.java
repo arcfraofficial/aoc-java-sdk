@@ -9,6 +9,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class MountNewCreateDisksParams
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_MAX_BANDWIDTH_POLICY = "max_bandwidth_policy";
 
     @SerializedName(SERIALIZED_NAME_MAX_BANDWIDTH_POLICY)
@@ -60,6 +65,49 @@ public class MountNewCreateDisksParams
     private Integer boot;
 
     public MountNewCreateDisksParams() {}
+
+    public MountNewCreateDisksParams storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public MountNewCreateDisksParams storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public MountNewCreateDisksParams storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
 
     public MountNewCreateDisksParams maxBandwidthPolicy(VmDiskIoRestrictType maxBandwidthPolicy) {
 
@@ -500,7 +548,9 @@ public class MountNewCreateDisksParams
             return false;
         }
         MountNewCreateDisksParams mountNewCreateDisksParams = (MountNewCreateDisksParams) o;
-        return Objects.equals(this.maxBandwidthPolicy, mountNewCreateDisksParams.maxBandwidthPolicy)
+        return Objects.equals(this.storageConfig, mountNewCreateDisksParams.storageConfig)
+                && Objects.equals(
+                        this.maxBandwidthPolicy, mountNewCreateDisksParams.maxBandwidthPolicy)
                 && Objects.equals(this.maxBandwidthUnit, mountNewCreateDisksParams.maxBandwidthUnit)
                 && Objects.equals(this.maxBandwidth, mountNewCreateDisksParams.maxBandwidth)
                 && Objects.equals(this.maxIopsPolicy, mountNewCreateDisksParams.maxIopsPolicy)
@@ -515,6 +565,7 @@ public class MountNewCreateDisksParams
     @Override
     public int hashCode() {
         return Objects.hash(
+                storageConfig,
                 maxBandwidthPolicy,
                 maxBandwidthUnit,
                 maxBandwidth,
@@ -531,6 +582,7 @@ public class MountNewCreateDisksParams
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class MountNewCreateDisksParams {\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    maxBandwidthPolicy: ")
                 .append(toIndentedString(maxBandwidthPolicy))
                 .append("\n");

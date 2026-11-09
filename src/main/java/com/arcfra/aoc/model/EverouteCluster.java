@@ -253,8 +253,8 @@ public class EverouteCluster extends com.arcfra.aoc.ConditionalNullable.Conditio
      *
      * @return controllerTemplate
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public NestedEverouteControllerTemplate getControllerTemplate() {
         return controllerTemplate;
     }

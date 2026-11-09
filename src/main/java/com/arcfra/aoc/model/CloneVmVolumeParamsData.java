@@ -9,6 +9,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class CloneVmVolumeParamsData
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private VmVolumeProvisionPolicy provisionPolicy;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -20,6 +25,49 @@ public class CloneVmVolumeParamsData
     private String name;
 
     public CloneVmVolumeParamsData() {}
+
+    public CloneVmVolumeParamsData provisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmVolumeProvisionPolicy getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public CloneVmVolumeParamsData provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public CloneVmVolumeParamsData provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
+    }
 
     public CloneVmVolumeParamsData description(String description) {
 
@@ -116,19 +164,21 @@ public class CloneVmVolumeParamsData
             return false;
         }
         CloneVmVolumeParamsData cloneVmVolumeParamsData = (CloneVmVolumeParamsData) o;
-        return Objects.equals(this.description, cloneVmVolumeParamsData.description)
+        return Objects.equals(this.provisionPolicy, cloneVmVolumeParamsData.provisionPolicy)
+                && Objects.equals(this.description, cloneVmVolumeParamsData.description)
                 && Objects.equals(this.name, cloneVmVolumeParamsData.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(description, name);
+        return Objects.hash(provisionPolicy, description, name);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class CloneVmVolumeParamsData {\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("}");

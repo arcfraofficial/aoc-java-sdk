@@ -27,6 +27,16 @@ public class VmNicWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_O_R)
     private List<VmNicWhereInput> OR = null;
 
+    public static final String SERIALIZED_NAME_DPI_ENABLED = "dpi_enabled";
+
+    @SerializedName(SERIALIZED_NAME_DPI_ENABLED)
+    private Boolean dpiEnabled;
+
+    public static final String SERIALIZED_NAME_DPI_ENABLED_NOT = "dpi_enabled_not";
+
+    @SerializedName(SERIALIZED_NAME_DPI_ENABLED_NOT)
+    private Boolean dpiEnabledNot;
+
     public static final String SERIALIZED_NAME_EGRESS_RATE_LIMIT_BURST_IN_BIT =
             "egress_rate_limit_burst_in_bit";
 
@@ -1014,6 +1024,92 @@ public class VmNicWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
 
     public boolean getOR_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public VmNicWhereInput dpiEnabled(Boolean dpiEnabled) {
+
+        this.dpiEnabled = dpiEnabled;
+        return this;
+    }
+
+    /**
+     * Get dpiEnabled
+     *
+     * @return dpiEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDpiEnabled() {
+        return dpiEnabled;
+    }
+
+    public void setDpiEnabled(Boolean dpiEnabled) {
+        this.dpiEnabled = dpiEnabled;
+    }
+
+    public VmNicWhereInput dpiEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public VmNicWhereInput dpiEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public void setDpiEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        }
+    }
+
+    public boolean getDpiEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DPI_ENABLED);
+    }
+
+    public VmNicWhereInput dpiEnabledNot(Boolean dpiEnabledNot) {
+
+        this.dpiEnabledNot = dpiEnabledNot;
+        return this;
+    }
+
+    /**
+     * Get dpiEnabledNot
+     *
+     * @return dpiEnabledNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDpiEnabledNot() {
+        return dpiEnabledNot;
+    }
+
+    public void setDpiEnabledNot(Boolean dpiEnabledNot) {
+        this.dpiEnabledNot = dpiEnabledNot;
+    }
+
+    public VmNicWhereInput dpiEnabledNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        return this;
+    }
+
+    public VmNicWhereInput dpiEnabledNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        return this;
+    }
+
+    public void setDpiEnabledNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        }
+    }
+
+    public boolean getDpiEnabledNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DPI_ENABLED_NOT);
     }
 
     public VmNicWhereInput egressRateLimitBurstInBit(Double egressRateLimitBurstInBit) {
@@ -8029,6 +8125,8 @@ public class VmNicWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
         return Objects.equals(this.AND, vmNicWhereInput.AND)
                 && Objects.equals(this.NOT, vmNicWhereInput.NOT)
                 && Objects.equals(this.OR, vmNicWhereInput.OR)
+                && Objects.equals(this.dpiEnabled, vmNicWhereInput.dpiEnabled)
+                && Objects.equals(this.dpiEnabledNot, vmNicWhereInput.dpiEnabledNot)
                 && Objects.equals(
                         this.egressRateLimitBurstInBit, vmNicWhereInput.egressRateLimitBurstInBit)
                 && Objects.equals(
@@ -8275,6 +8373,8 @@ public class VmNicWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
                 AND,
                 NOT,
                 OR,
+                dpiEnabled,
+                dpiEnabledNot,
                 egressRateLimitBurstInBit,
                 egressRateLimitBurstInBitGt,
                 egressRateLimitBurstInBitGte,
@@ -8448,6 +8548,8 @@ public class VmNicWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditio
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    dpiEnabled: ").append(toIndentedString(dpiEnabled)).append("\n");
+        sb.append("    dpiEnabledNot: ").append(toIndentedString(dpiEnabledNot)).append("\n");
         sb.append("    egressRateLimitBurstInBit: ")
                 .append(toIndentedString(egressRateLimitBurstInBit))
                 .append("\n");

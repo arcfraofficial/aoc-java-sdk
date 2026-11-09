@@ -8,6 +8,11 @@ import java.util.Objects;
 /** VmCdRomParams */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class VmCdRomParams extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_CONTENT_LIBRARY_IMAGE_ID =
             "content_library_image_id";
 
@@ -35,6 +40,49 @@ public class VmCdRomParams extends com.arcfra.aoc.ConditionalNullable.Conditiona
     private Integer boot;
 
     public VmCdRomParams() {}
+
+    public VmCdRomParams storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public VmCdRomParams storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public VmCdRomParams storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
 
     public VmCdRomParams contentLibraryImageId(String contentLibraryImageId) {
 
@@ -260,7 +308,8 @@ public class VmCdRomParams extends com.arcfra.aoc.ConditionalNullable.Conditiona
             return false;
         }
         VmCdRomParams vmCdRomParams = (VmCdRomParams) o;
-        return Objects.equals(this.contentLibraryImageId, vmCdRomParams.contentLibraryImageId)
+        return Objects.equals(this.storageConfig, vmCdRomParams.storageConfig)
+                && Objects.equals(this.contentLibraryImageId, vmCdRomParams.contentLibraryImageId)
                 && Objects.equals(this.elfImageId, vmCdRomParams.elfImageId)
                 && Objects.equals(this.index, vmCdRomParams.index)
                 && Objects.equals(this.key, vmCdRomParams.key)
@@ -269,13 +318,14 @@ public class VmCdRomParams extends com.arcfra.aoc.ConditionalNullable.Conditiona
 
     @Override
     public int hashCode() {
-        return Objects.hash(contentLibraryImageId, elfImageId, index, key, boot);
+        return Objects.hash(storageConfig, contentLibraryImageId, elfImageId, index, key, boot);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class VmCdRomParams {\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    contentLibraryImageId: ")
                 .append(toIndentedString(contentLibraryImageId))
                 .append("\n");

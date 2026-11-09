@@ -18,6 +18,11 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
     @SerializedName(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED)
     private Boolean accessWriteCompressEnabled;
 
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES = "allocated_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES)
+    private Long allocatedMemoryBytes;
+
     public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
             "allocated_prioritized_space";
 
@@ -45,6 +50,17 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     @SerializedName(SERIALIZED_NAME_AUTO_CONVERGE)
     private Boolean autoConverge;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE =
+            "cap_snapshot_unique_size";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE)
+    private Long capSnapshotUniqueSize;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE = "cap_volume_unique_size";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE)
+    private Long capVolumeUniqueSize;
 
     public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES = "commited_memory_bytes";
 
@@ -75,6 +91,16 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     @SerializedName(SERIALIZED_NAME_DATACENTERS)
     private List<NestedDatacenter> datacenters = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
 
     public static final String SERIALIZED_NAME_DISCONNECTED_DATE = "disconnected_date";
 
@@ -111,6 +137,11 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
     private NestedEverouteCluster everouteCluster;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -224,6 +255,11 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
     @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE)
     private Long maxPhysicalDataCapacityPerNode;
 
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE = "memory_allocation_rate";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE)
+    private Double memoryAllocationRate;
+
     public static final String SERIALIZED_NAME_METRO_AVAILABILITY_CHECKLIST =
             "metro_availability_checklist";
 
@@ -289,6 +325,16 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY)
     private Double overallEfficiency;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO = "overcommit_memory_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO)
+    private Double overcommitMemoryRatio;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO = "overprovision_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO)
+    private Double overprovisionRatio;
 
     public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
             "perf_allocated_data_space";
@@ -588,6 +634,49 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
         return this._isPresent_.contains(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
     }
 
+    public Cluster allocatedMemoryBytes(Long allocatedMemoryBytes) {
+
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytes
+     *
+     * @return allocatedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytes() {
+        return allocatedMemoryBytes;
+    }
+
+    public void setAllocatedMemoryBytes(Long allocatedMemoryBytes) {
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+    }
+
+    public Cluster allocatedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public Cluster allocatedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+    }
+
     public Cluster allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
 
         this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
@@ -801,6 +890,92 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     public boolean getAutoConverge_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_AUTO_CONVERGE);
+    }
+
+    public Cluster capSnapshotUniqueSize(Long capSnapshotUniqueSize) {
+
+        this.capSnapshotUniqueSize = capSnapshotUniqueSize;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSize
+     *
+     * @return capSnapshotUniqueSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSize() {
+        return capSnapshotUniqueSize;
+    }
+
+    public void setCapSnapshotUniqueSize(Long capSnapshotUniqueSize) {
+        this.capSnapshotUniqueSize = capSnapshotUniqueSize;
+    }
+
+    public Cluster capSnapshotUniqueSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        return this;
+    }
+
+    public Cluster capSnapshotUniqueSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+    }
+
+    public Cluster capVolumeUniqueSize(Long capVolumeUniqueSize) {
+
+        this.capVolumeUniqueSize = capVolumeUniqueSize;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSize
+     *
+     * @return capVolumeUniqueSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSize() {
+        return capVolumeUniqueSize;
+    }
+
+    public void setCapVolumeUniqueSize(Long capVolumeUniqueSize) {
+        this.capVolumeUniqueSize = capVolumeUniqueSize;
+    }
+
+    public Cluster capVolumeUniqueSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public Cluster capVolumeUniqueSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
     }
 
     public Cluster commitedMemoryBytes(Long commitedMemoryBytes) {
@@ -1067,6 +1242,92 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     public boolean getDatacenters_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DATACENTERS);
+    }
+
+    public Cluster dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public Cluster dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public Cluster dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public Cluster dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public Cluster dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public Cluster dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
     }
 
     public Cluster disconnectedDate(String disconnectedDate) {
@@ -1373,6 +1634,49 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     public boolean getEverouteCluster_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+    }
+
+    public Cluster failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public Cluster failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public Cluster failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
     }
 
     public Cluster failureDataSpace(Long failureDataSpace) {
@@ -2337,6 +2641,49 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
         return this._isPresent_.contains(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE);
     }
 
+    public Cluster memoryAllocationRate(Double memoryAllocationRate) {
+
+        this.memoryAllocationRate = memoryAllocationRate;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRate
+     *
+     * @return memoryAllocationRate
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRate() {
+        return memoryAllocationRate;
+    }
+
+    public void setMemoryAllocationRate(Double memoryAllocationRate) {
+        this.memoryAllocationRate = memoryAllocationRate;
+    }
+
+    public Cluster memoryAllocationRate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public Cluster memoryAllocationRate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public void setMemoryAllocationRate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        }
+    }
+
+    public boolean getMemoryAllocationRate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+    }
+
     public Cluster metroAvailabilityChecklist(
             NestedMetroAvailabilityChecklist metroAvailabilityChecklist) {
 
@@ -2901,6 +3248,92 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
 
     public boolean getOverallEfficiency_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+    }
+
+    public Cluster overcommitMemoryRatio(Double overcommitMemoryRatio) {
+
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatio
+     *
+     * @return overcommitMemoryRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatio() {
+        return overcommitMemoryRatio;
+    }
+
+    public void setOvercommitMemoryRatio(Double overcommitMemoryRatio) {
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+    }
+
+    public Cluster overcommitMemoryRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public Cluster overcommitMemoryRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+    }
+
+    public Cluster overprovisionRatio(Double overprovisionRatio) {
+
+        this.overprovisionRatio = overprovisionRatio;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatio
+     *
+     * @return overprovisionRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatio() {
+        return overprovisionRatio;
+    }
+
+    public void setOverprovisionRatio(Double overprovisionRatio) {
+        this.overprovisionRatio = overprovisionRatio;
+    }
+
+    public Cluster overprovisionRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        return this;
+    }
+
+    public Cluster overprovisionRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        return this;
+    }
+
+    public void setOverprovisionRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        }
+    }
+
+    public boolean getOverprovisionRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO);
     }
 
     public Cluster perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
@@ -5062,18 +5495,23 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
         }
         Cluster cluster = (Cluster) o;
         return Objects.equals(this.accessWriteCompressEnabled, cluster.accessWriteCompressEnabled)
+                && Objects.equals(this.allocatedMemoryBytes, cluster.allocatedMemoryBytes)
                 && Objects.equals(this.allocatedPrioritizedSpace, cluster.allocatedPrioritizedSpace)
                 && Objects.equals(
                         this.allocatedPrioritizedSpaceUsage, cluster.allocatedPrioritizedSpaceUsage)
                 && Objects.equals(this.applicationHighestVersion, cluster.applicationHighestVersion)
                 && Objects.equals(this.architecture, cluster.architecture)
                 && Objects.equals(this.autoConverge, cluster.autoConverge)
+                && Objects.equals(this.capSnapshotUniqueSize, cluster.capSnapshotUniqueSize)
+                && Objects.equals(this.capVolumeUniqueSize, cluster.capVolumeUniqueSize)
                 && Objects.equals(this.commitedMemoryBytes, cluster.commitedMemoryBytes)
                 && Objects.equals(this.connectState, cluster.connectState)
                 && Objects.equals(this.currentCpuModel, cluster.currentCpuModel)
                 && Objects.equals(this.dataReductionRatio, cluster.dataReductionRatio)
                 && Objects.equals(this.dataReductionSaving, cluster.dataReductionSaving)
                 && Objects.equals(this.datacenters, cluster.datacenters)
+                && Objects.equals(this.dirtyCacheSpace, cluster.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheUsage, cluster.dirtyCacheUsage)
                 && Objects.equals(this.disconnectedDate, cluster.disconnectedDate)
                 && Objects.equals(this.disconnectedReason, cluster.disconnectedReason)
                 && Objects.equals(this.dns, cluster.dns)
@@ -5082,6 +5520,7 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 && Objects.equals(this.enableTiering, cluster.enableTiering)
                 && Objects.equals(this.entityAsyncStatus, cluster.entityAsyncStatus)
                 && Objects.equals(this.everouteCluster, cluster.everouteCluster)
+                && Objects.equals(this.failureCacheSpace, cluster.failureCacheSpace)
                 && Objects.equals(this.failureDataSpace, cluster.failureDataSpace)
                 && Objects.equals(this.hasMetrox, cluster.hasMetrox)
                 && Objects.equals(this.hostNum, cluster.hostNum)
@@ -5105,6 +5544,7 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 && Objects.equals(this.maxPhysicalDataCapacity, cluster.maxPhysicalDataCapacity)
                 && Objects.equals(
                         this.maxPhysicalDataCapacityPerNode, cluster.maxPhysicalDataCapacityPerNode)
+                && Objects.equals(this.memoryAllocationRate, cluster.memoryAllocationRate)
                 && Objects.equals(
                         this.metroAvailabilityChecklist, cluster.metroAvailabilityChecklist)
                 && Objects.equals(this.mgtGateway, cluster.mgtGateway)
@@ -5119,6 +5559,8 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 && Objects.equals(this.nvmeOverTcpEnabled, cluster.nvmeOverTcpEnabled)
                 && Objects.equals(this.nvmfEnabled, cluster.nvmfEnabled)
                 && Objects.equals(this.overallEfficiency, cluster.overallEfficiency)
+                && Objects.equals(this.overcommitMemoryRatio, cluster.overcommitMemoryRatio)
+                && Objects.equals(this.overprovisionRatio, cluster.overprovisionRatio)
                 && Objects.equals(this.perfAllocatedDataSpace, cluster.perfAllocatedDataSpace)
                 && Objects.equals(this.perfFailureDataSpace, cluster.perfFailureDataSpace)
                 && Objects.equals(this.perfTotalDataCapacity, cluster.perfTotalDataCapacity)
@@ -5187,17 +5629,22 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
     public int hashCode() {
         return Objects.hash(
                 accessWriteCompressEnabled,
+                allocatedMemoryBytes,
                 allocatedPrioritizedSpace,
                 allocatedPrioritizedSpaceUsage,
                 applicationHighestVersion,
                 architecture,
                 autoConverge,
+                capSnapshotUniqueSize,
+                capVolumeUniqueSize,
                 commitedMemoryBytes,
                 connectState,
                 currentCpuModel,
                 dataReductionRatio,
                 dataReductionSaving,
                 datacenters,
+                dirtyCacheSpace,
+                dirtyCacheUsage,
                 disconnectedDate,
                 disconnectedReason,
                 dns,
@@ -5205,6 +5652,7 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 enableTiering,
                 entityAsyncStatus,
                 everouteCluster,
+                failureCacheSpace,
                 failureDataSpace,
                 hasMetrox,
                 hostNum,
@@ -5227,6 +5675,7 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 maxChunkNum,
                 maxPhysicalDataCapacity,
                 maxPhysicalDataCapacityPerNode,
+                memoryAllocationRate,
                 metroAvailabilityChecklist,
                 mgtGateway,
                 mgtNetmask,
@@ -5240,6 +5689,8 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 nvmeOverTcpEnabled,
                 nvmfEnabled,
                 overallEfficiency,
+                overcommitMemoryRatio,
+                overprovisionRatio,
                 perfAllocatedDataSpace,
                 perfFailureDataSpace,
                 perfTotalDataCapacity,
@@ -5305,6 +5756,9 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
         sb.append("    accessWriteCompressEnabled: ")
                 .append(toIndentedString(accessWriteCompressEnabled))
                 .append("\n");
+        sb.append("    allocatedMemoryBytes: ")
+                .append(toIndentedString(allocatedMemoryBytes))
+                .append("\n");
         sb.append("    allocatedPrioritizedSpace: ")
                 .append(toIndentedString(allocatedPrioritizedSpace))
                 .append("\n");
@@ -5316,6 +5770,12 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 .append("\n");
         sb.append("    architecture: ").append(toIndentedString(architecture)).append("\n");
         sb.append("    autoConverge: ").append(toIndentedString(autoConverge)).append("\n");
+        sb.append("    capSnapshotUniqueSize: ")
+                .append(toIndentedString(capSnapshotUniqueSize))
+                .append("\n");
+        sb.append("    capVolumeUniqueSize: ")
+                .append(toIndentedString(capVolumeUniqueSize))
+                .append("\n");
         sb.append("    commitedMemoryBytes: ")
                 .append(toIndentedString(commitedMemoryBytes))
                 .append("\n");
@@ -5328,6 +5788,8 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 .append(toIndentedString(dataReductionSaving))
                 .append("\n");
         sb.append("    datacenters: ").append(toIndentedString(datacenters)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
         sb.append("    disconnectedDate: ").append(toIndentedString(disconnectedDate)).append("\n");
         sb.append("    disconnectedReason: ")
                 .append(toIndentedString(disconnectedReason))
@@ -5341,6 +5803,9 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
         sb.append("    everouteCluster: ").append(toIndentedString(everouteCluster)).append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
+                .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    hasMetrox: ").append(toIndentedString(hasMetrox)).append("\n");
         sb.append("    hostNum: ").append(toIndentedString(hostNum)).append("\n");
@@ -5375,6 +5840,9 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
         sb.append("    maxPhysicalDataCapacityPerNode: ")
                 .append(toIndentedString(maxPhysicalDataCapacityPerNode))
                 .append("\n");
+        sb.append("    memoryAllocationRate: ")
+                .append(toIndentedString(memoryAllocationRate))
+                .append("\n");
         sb.append("    metroAvailabilityChecklist: ")
                 .append(toIndentedString(metroAvailabilityChecklist))
                 .append("\n");
@@ -5399,6 +5867,12 @@ public class Cluster extends com.arcfra.aoc.ConditionalNullable.ConditionalNulla
         sb.append("    nvmfEnabled: ").append(toIndentedString(nvmfEnabled)).append("\n");
         sb.append("    overallEfficiency: ")
                 .append(toIndentedString(overallEfficiency))
+                .append("\n");
+        sb.append("    overcommitMemoryRatio: ")
+                .append(toIndentedString(overcommitMemoryRatio))
+                .append("\n");
+        sb.append("    overprovisionRatio: ")
+                .append(toIndentedString(overprovisionRatio))
                 .append("\n");
         sb.append("    perfAllocatedDataSpace: ")
                 .append(toIndentedString(perfAllocatedDataSpace))

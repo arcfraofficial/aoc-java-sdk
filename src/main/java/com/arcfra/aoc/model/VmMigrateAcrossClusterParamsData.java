@@ -14,6 +14,11 @@ public class VmMigrateAcrossClusterParamsData
     @SerializedName(SERIALIZED_NAME_VM_CONFIG)
     private MigrateVmConfig vmConfig;
 
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
 
     @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
@@ -67,6 +72,49 @@ public class VmMigrateAcrossClusterParamsData
 
     public boolean getVmConfig_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_VM_CONFIG);
+    }
+
+    public VmMigrateAcrossClusterParamsData storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public VmMigrateAcrossClusterParamsData storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public VmMigrateAcrossClusterParamsData storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
     }
 
     public VmMigrateAcrossClusterParamsData clusterId(String clusterId) {
@@ -166,13 +214,15 @@ public class VmMigrateAcrossClusterParamsData
         VmMigrateAcrossClusterParamsData vmMigrateAcrossClusterParamsData =
                 (VmMigrateAcrossClusterParamsData) o;
         return Objects.equals(this.vmConfig, vmMigrateAcrossClusterParamsData.vmConfig)
+                && Objects.equals(
+                        this.storageConfig, vmMigrateAcrossClusterParamsData.storageConfig)
                 && Objects.equals(this.clusterId, vmMigrateAcrossClusterParamsData.clusterId)
                 && Objects.equals(this.hostId, vmMigrateAcrossClusterParamsData.hostId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(vmConfig, clusterId, hostId);
+        return Objects.hash(vmConfig, storageConfig, clusterId, hostId);
     }
 
     @Override
@@ -180,6 +230,7 @@ public class VmMigrateAcrossClusterParamsData
         StringBuilder sb = new StringBuilder();
         sb.append("class VmMigrateAcrossClusterParamsData {\n");
         sb.append("    vmConfig: ").append(toIndentedString(vmConfig)).append("\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
         sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
         sb.append("}");

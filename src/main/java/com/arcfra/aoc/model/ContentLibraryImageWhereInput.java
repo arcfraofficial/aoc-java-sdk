@@ -83,6 +83,21 @@ public class ContentLibraryImageWhereInput
     @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT_IN)
     private List<String> createdAtNotIn = null;
 
+    public static final String SERIALIZED_NAME_DATASTORES_EVERY = "datastores_every";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES_EVERY)
+    private DatastoreWhereInput datastoresEvery;
+
+    public static final String SERIALIZED_NAME_DATASTORES_NONE = "datastores_none";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES_NONE)
+    private DatastoreWhereInput datastoresNone;
+
+    public static final String SERIALIZED_NAME_DATASTORES_SOME = "datastores_some";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES_SOME)
+    private DatastoreWhereInput datastoresSome;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -1159,6 +1174,135 @@ public class ContentLibraryImageWhereInput
 
     public boolean getCreatedAtNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+    }
+
+    public ContentLibraryImageWhereInput datastoresEvery(DatastoreWhereInput datastoresEvery) {
+
+        this.datastoresEvery = datastoresEvery;
+        return this;
+    }
+
+    /**
+     * Get datastoresEvery
+     *
+     * @return datastoresEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DatastoreWhereInput getDatastoresEvery() {
+        return datastoresEvery;
+    }
+
+    public void setDatastoresEvery(DatastoreWhereInput datastoresEvery) {
+        this.datastoresEvery = datastoresEvery;
+    }
+
+    public ContentLibraryImageWhereInput datastoresEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES_EVERY);
+        return this;
+    }
+
+    public ContentLibraryImageWhereInput datastoresEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_EVERY);
+        return this;
+    }
+
+    public void setDatastoresEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_EVERY);
+        }
+    }
+
+    public boolean getDatastoresEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES_EVERY);
+    }
+
+    public ContentLibraryImageWhereInput datastoresNone(DatastoreWhereInput datastoresNone) {
+
+        this.datastoresNone = datastoresNone;
+        return this;
+    }
+
+    /**
+     * Get datastoresNone
+     *
+     * @return datastoresNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DatastoreWhereInput getDatastoresNone() {
+        return datastoresNone;
+    }
+
+    public void setDatastoresNone(DatastoreWhereInput datastoresNone) {
+        this.datastoresNone = datastoresNone;
+    }
+
+    public ContentLibraryImageWhereInput datastoresNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES_NONE);
+        return this;
+    }
+
+    public ContentLibraryImageWhereInput datastoresNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_NONE);
+        return this;
+    }
+
+    public void setDatastoresNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_NONE);
+        }
+    }
+
+    public boolean getDatastoresNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES_NONE);
+    }
+
+    public ContentLibraryImageWhereInput datastoresSome(DatastoreWhereInput datastoresSome) {
+
+        this.datastoresSome = datastoresSome;
+        return this;
+    }
+
+    /**
+     * Get datastoresSome
+     *
+     * @return datastoresSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DatastoreWhereInput getDatastoresSome() {
+        return datastoresSome;
+    }
+
+    public void setDatastoresSome(DatastoreWhereInput datastoresSome) {
+        this.datastoresSome = datastoresSome;
+    }
+
+    public ContentLibraryImageWhereInput datastoresSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES_SOME);
+        return this;
+    }
+
+    public ContentLibraryImageWhereInput datastoresSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_SOME);
+        return this;
+    }
+
+    public void setDatastoresSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_SOME);
+        }
+    }
+
+    public boolean getDatastoresSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES_SOME);
     }
 
     public ContentLibraryImageWhereInput description(String description) {
@@ -4984,6 +5128,10 @@ public class ContentLibraryImageWhereInput
                 && Objects.equals(this.createdAtLte, contentLibraryImageWhereInput.createdAtLte)
                 && Objects.equals(this.createdAtNot, contentLibraryImageWhereInput.createdAtNot)
                 && Objects.equals(this.createdAtNotIn, contentLibraryImageWhereInput.createdAtNotIn)
+                && Objects.equals(
+                        this.datastoresEvery, contentLibraryImageWhereInput.datastoresEvery)
+                && Objects.equals(this.datastoresNone, contentLibraryImageWhereInput.datastoresNone)
+                && Objects.equals(this.datastoresSome, contentLibraryImageWhereInput.datastoresSome)
                 && Objects.equals(this.description, contentLibraryImageWhereInput.description)
                 && Objects.equals(
                         this.descriptionContains, contentLibraryImageWhereInput.descriptionContains)
@@ -5128,6 +5276,9 @@ public class ContentLibraryImageWhereInput
                 createdAtLte,
                 createdAtNot,
                 createdAtNotIn,
+                datastoresEvery,
+                datastoresNone,
+                datastoresSome,
                 description,
                 descriptionContains,
                 descriptionEndsWith,
@@ -5241,6 +5392,9 @@ public class ContentLibraryImageWhereInput
         sb.append("    createdAtLte: ").append(toIndentedString(createdAtLte)).append("\n");
         sb.append("    createdAtNot: ").append(toIndentedString(createdAtNot)).append("\n");
         sb.append("    createdAtNotIn: ").append(toIndentedString(createdAtNotIn)).append("\n");
+        sb.append("    datastoresEvery: ").append(toIndentedString(datastoresEvery)).append("\n");
+        sb.append("    datastoresNone: ").append(toIndentedString(datastoresNone)).append("\n");
+        sb.append("    datastoresSome: ").append(toIndentedString(datastoresSome)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    descriptionContains: ")
                 .append(toIndentedString(descriptionContains))

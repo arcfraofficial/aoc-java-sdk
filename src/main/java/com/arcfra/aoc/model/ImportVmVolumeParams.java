@@ -9,6 +9,16 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class ImportVmVolumeParams
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private VmVolumeProvisionPolicy provisionPolicy;
+
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_UPLOAD_TASK_ID = "upload_task_id";
 
     @SerializedName(SERIALIZED_NAME_UPLOAD_TASK_ID)
@@ -41,6 +51,92 @@ public class ImportVmVolumeParams
     private String clusterId;
 
     public ImportVmVolumeParams() {}
+
+    public ImportVmVolumeParams provisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmVolumeProvisionPolicy getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public ImportVmVolumeParams provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public ImportVmVolumeParams provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
+    }
+
+    public ImportVmVolumeParams storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public ImportVmVolumeParams storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public ImportVmVolumeParams storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
 
     public ImportVmVolumeParams uploadTaskId(String uploadTaskId) {
 
@@ -312,7 +408,9 @@ public class ImportVmVolumeParams
             return false;
         }
         ImportVmVolumeParams importVmVolumeParams = (ImportVmVolumeParams) o;
-        return Objects.equals(this.uploadTaskId, importVmVolumeParams.uploadTaskId)
+        return Objects.equals(this.provisionPolicy, importVmVolumeParams.provisionPolicy)
+                && Objects.equals(this.storageConfig, importVmVolumeParams.storageConfig)
+                && Objects.equals(this.uploadTaskId, importVmVolumeParams.uploadTaskId)
                 && Objects.equals(this.name, importVmVolumeParams.name)
                 && Objects.equals(this.elfEcStoragePolicy, importVmVolumeParams.elfEcStoragePolicy)
                 && Objects.equals(
@@ -324,6 +422,8 @@ public class ImportVmVolumeParams
     @Override
     public int hashCode() {
         return Objects.hash(
+                provisionPolicy,
+                storageConfig,
                 uploadTaskId,
                 name,
                 elfEcStoragePolicy,
@@ -336,6 +436,8 @@ public class ImportVmVolumeParams
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class ImportVmVolumeParams {\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    uploadTaskId: ").append(toIndentedString(uploadTaskId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    elfEcStoragePolicy: ")

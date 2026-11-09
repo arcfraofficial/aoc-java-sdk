@@ -1472,6 +1472,21 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT_IN)
     private List<Integer> replicaNumNotIn = null;
 
+    public static final String SERIALIZED_NAME_REPLICATION_PLANS_EVERY = "replication_plans_every";
+
+    @SerializedName(SERIALIZED_NAME_REPLICATION_PLANS_EVERY)
+    private ReplicationPlanWhereInput replicationPlansEvery;
+
+    public static final String SERIALIZED_NAME_REPLICATION_PLANS_NONE = "replication_plans_none";
+
+    @SerializedName(SERIALIZED_NAME_REPLICATION_PLANS_NONE)
+    private ReplicationPlanWhereInput replicationPlansNone;
+
+    public static final String SERIALIZED_NAME_REPLICATION_PLANS_SOME = "replication_plans_some";
+
+    @SerializedName(SERIALIZED_NAME_REPLICATION_PLANS_SOME)
+    private ReplicationPlanWhereInput replicationPlansSome;
+
     public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
 
     @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
@@ -14725,6 +14740,136 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM_NOT_IN);
     }
 
+    public IscsiLunWhereInput replicationPlansEvery(
+            ReplicationPlanWhereInput replicationPlansEvery) {
+
+        this.replicationPlansEvery = replicationPlansEvery;
+        return this;
+    }
+
+    /**
+     * Get replicationPlansEvery
+     *
+     * @return replicationPlansEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationPlanWhereInput getReplicationPlansEvery() {
+        return replicationPlansEvery;
+    }
+
+    public void setReplicationPlansEvery(ReplicationPlanWhereInput replicationPlansEvery) {
+        this.replicationPlansEvery = replicationPlansEvery;
+    }
+
+    public IscsiLunWhereInput replicationPlansEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public IscsiLunWhereInput replicationPlansEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public void setReplicationPlansEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+        }
+    }
+
+    public boolean getReplicationPlansEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_PLANS_EVERY);
+    }
+
+    public IscsiLunWhereInput replicationPlansNone(ReplicationPlanWhereInput replicationPlansNone) {
+
+        this.replicationPlansNone = replicationPlansNone;
+        return this;
+    }
+
+    /**
+     * Get replicationPlansNone
+     *
+     * @return replicationPlansNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationPlanWhereInput getReplicationPlansNone() {
+        return replicationPlansNone;
+    }
+
+    public void setReplicationPlansNone(ReplicationPlanWhereInput replicationPlansNone) {
+        this.replicationPlansNone = replicationPlansNone;
+    }
+
+    public IscsiLunWhereInput replicationPlansNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public IscsiLunWhereInput replicationPlansNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public void setReplicationPlansNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+        }
+    }
+
+    public boolean getReplicationPlansNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_PLANS_NONE);
+    }
+
+    public IscsiLunWhereInput replicationPlansSome(ReplicationPlanWhereInput replicationPlansSome) {
+
+        this.replicationPlansSome = replicationPlansSome;
+        return this;
+    }
+
+    /**
+     * Get replicationPlansSome
+     *
+     * @return replicationPlansSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationPlanWhereInput getReplicationPlansSome() {
+        return replicationPlansSome;
+    }
+
+    public void setReplicationPlansSome(ReplicationPlanWhereInput replicationPlansSome) {
+        this.replicationPlansSome = replicationPlansSome;
+    }
+
+    public IscsiLunWhereInput replicationPlansSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public IscsiLunWhereInput replicationPlansSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public void setReplicationPlansSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+        }
+    }
+
+    public boolean getReplicationPlansSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_PLANS_SOME);
+    }
+
     public IscsiLunWhereInput resiliencyType(ResiliencyType resiliencyType) {
 
         this.resiliencyType = resiliencyType;
@@ -18117,6 +18262,12 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 && Objects.equals(this.replicaNumLte, iscsiLunWhereInput.replicaNumLte)
                 && Objects.equals(this.replicaNumNot, iscsiLunWhereInput.replicaNumNot)
                 && Objects.equals(this.replicaNumNotIn, iscsiLunWhereInput.replicaNumNotIn)
+                && Objects.equals(
+                        this.replicationPlansEvery, iscsiLunWhereInput.replicationPlansEvery)
+                && Objects.equals(
+                        this.replicationPlansNone, iscsiLunWhereInput.replicationPlansNone)
+                && Objects.equals(
+                        this.replicationPlansSome, iscsiLunWhereInput.replicationPlansSome)
                 && Objects.equals(this.resiliencyType, iscsiLunWhereInput.resiliencyType)
                 && Objects.equals(this.resiliencyTypeIn, iscsiLunWhereInput.resiliencyTypeIn)
                 && Objects.equals(this.resiliencyTypeNot, iscsiLunWhereInput.resiliencyTypeNot)
@@ -18494,6 +18645,9 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
                 replicaNumLte,
                 replicaNumNot,
                 replicaNumNotIn,
+                replicationPlansEvery,
+                replicationPlansNone,
+                replicationPlansSome,
                 resiliencyType,
                 resiliencyTypeIn,
                 resiliencyTypeNot,
@@ -18996,6 +19150,15 @@ public class IscsiLunWhereInput extends com.arcfra.aoc.ConditionalNullable.Condi
         sb.append("    replicaNumLte: ").append(toIndentedString(replicaNumLte)).append("\n");
         sb.append("    replicaNumNot: ").append(toIndentedString(replicaNumNot)).append("\n");
         sb.append("    replicaNumNotIn: ").append(toIndentedString(replicaNumNotIn)).append("\n");
+        sb.append("    replicationPlansEvery: ")
+                .append(toIndentedString(replicationPlansEvery))
+                .append("\n");
+        sb.append("    replicationPlansNone: ")
+                .append(toIndentedString(replicationPlansNone))
+                .append("\n");
+        sb.append("    replicationPlansSome: ")
+                .append(toIndentedString(replicationPlansSome))
+                .append("\n");
         sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
         sb.append("    resiliencyTypeIn: ").append(toIndentedString(resiliencyTypeIn)).append("\n");
         sb.append("    resiliencyTypeNot: ")

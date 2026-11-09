@@ -34,6 +34,11 @@ public class VmdkCdromModify extends com.arcfra.aoc.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_INDEX)
     private Integer index;
 
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public VmdkCdromModify() {}
 
     public VmdkCdromModify removed(Boolean removed) {
@@ -251,6 +256,49 @@ public class VmdkCdromModify extends com.arcfra.aoc.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_INDEX);
     }
 
+    public VmdkCdromModify storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public VmdkCdromModify storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public VmdkCdromModify storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -264,12 +312,13 @@ public class VmdkCdromModify extends com.arcfra.aoc.ConditionalNullable.Conditio
                 && Objects.equals(this.contentLibraryImageId, vmdkCdromModify.contentLibraryImageId)
                 && Objects.equals(this.elfImageId, vmdkCdromModify.elfImageId)
                 && Objects.equals(this.boot, vmdkCdromModify.boot)
-                && Objects.equals(this.index, vmdkCdromModify.index);
+                && Objects.equals(this.index, vmdkCdromModify.index)
+                && Objects.equals(this.storageConfig, vmdkCdromModify.storageConfig);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(removed, contentLibraryImageId, elfImageId, boot, index);
+        return Objects.hash(removed, contentLibraryImageId, elfImageId, boot, index, storageConfig);
     }
 
     @Override
@@ -283,6 +332,7 @@ public class VmdkCdromModify extends com.arcfra.aoc.ConditionalNullable.Conditio
         sb.append("    elfImageId: ").append(toIndentedString(elfImageId)).append("\n");
         sb.append("    boot: ").append(toIndentedString(boot)).append("\n");
         sb.append("    index: ").append(toIndentedString(index)).append("\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("}");
         return sb.toString();
     }
