@@ -12,6 +12,8 @@ import java.io.IOException;
 public enum Bus {
     IDE("IDE"),
 
+    SATA("SATA"),
+
     SCSI("SCSI"),
 
     USB("USB"),

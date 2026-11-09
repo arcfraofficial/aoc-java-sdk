@@ -10,6 +10,11 @@ import java.util.Objects;
 /** VmCloneParams */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class VmCloneParams extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_OWNER = "owner";
 
     @SerializedName(SERIALIZED_NAME_OWNER)
@@ -156,6 +161,49 @@ public class VmCloneParams extends com.arcfra.aoc.ConditionalNullable.Conditiona
     private String clusterId;
 
     public VmCloneParams() {}
+
+    public VmCloneParams storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public VmCloneParams storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public VmCloneParams storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
 
     public VmCloneParams owner(VmOwnerParams owner) {
 
@@ -1429,7 +1477,8 @@ public class VmCloneParams extends com.arcfra.aoc.ConditionalNullable.Conditiona
             return false;
         }
         VmCloneParams vmCloneParams = (VmCloneParams) o;
-        return Objects.equals(this.owner, vmCloneParams.owner)
+        return Objects.equals(this.storageConfig, vmCloneParams.storageConfig)
+                && Objects.equals(this.owner, vmCloneParams.owner)
                 && Objects.equals(this.gpuDevices, vmCloneParams.gpuDevices)
                 && Objects.equals(this.isFullCopy, vmCloneParams.isFullCopy)
                 && Objects.equals(this.srcVmId, vmCloneParams.srcVmId)
@@ -1463,6 +1512,7 @@ public class VmCloneParams extends com.arcfra.aoc.ConditionalNullable.Conditiona
     @Override
     public int hashCode() {
         return Objects.hash(
+                storageConfig,
                 owner,
                 gpuDevices,
                 isFullCopy,
@@ -1498,6 +1548,7 @@ public class VmCloneParams extends com.arcfra.aoc.ConditionalNullable.Conditiona
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class VmCloneParams {\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
         sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
         sb.append("    isFullCopy: ").append(toIndentedString(isFullCopy)).append("\n");

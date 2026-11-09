@@ -3,14 +3,17 @@ package com.arcfra.aoc.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 /** NestedVirtualPrivateCloudService */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class NestedVirtualPrivateCloudService
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_EVEROUTE_CLUSTER = "everoute_cluster";
+
+    @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
+    private NestedEverouteCluster everouteCluster;
+
     public static final String SERIALIZED_NAME_ID = "id";
 
     @SerializedName(SERIALIZED_NAME_ID)
@@ -21,13 +24,50 @@ public class NestedVirtualPrivateCloudService
     @SerializedName(SERIALIZED_NAME_INTERNAL_CIDR)
     private String internalCidr;
 
-    public static final String SERIALIZED_NAME_TEP_IP_POOLS = "tep_ip_pools";
-
-    @SerializedName(SERIALIZED_NAME_TEP_IP_POOLS)
-    private List<NestedVirtualPrivateCloudServiceTepIpPool> tepIpPools =
-            new ArrayList<NestedVirtualPrivateCloudServiceTepIpPool>();
-
     public NestedVirtualPrivateCloudService() {}
+
+    public NestedVirtualPrivateCloudService everouteCluster(NestedEverouteCluster everouteCluster) {
+
+        this.everouteCluster = everouteCluster;
+        return this;
+    }
+
+    /**
+     * Get everouteCluster
+     *
+     * @return everouteCluster
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedEverouteCluster getEverouteCluster() {
+        return everouteCluster;
+    }
+
+    public void setEverouteCluster(NestedEverouteCluster everouteCluster) {
+        this.everouteCluster = everouteCluster;
+    }
+
+    public NestedVirtualPrivateCloudService everouteCluster_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+        return this;
+    }
+
+    public NestedVirtualPrivateCloudService everouteCluster_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+        return this;
+    }
+
+    public void setEverouteCluster_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+        }
+    }
+
+    public boolean getEverouteCluster_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+    }
 
     public NestedVirtualPrivateCloudService id(String id) {
 
@@ -115,56 +155,6 @@ public class NestedVirtualPrivateCloudService
         return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_CIDR);
     }
 
-    public NestedVirtualPrivateCloudService tepIpPools(
-            List<NestedVirtualPrivateCloudServiceTepIpPool> tepIpPools) {
-
-        this.tepIpPools = tepIpPools;
-        return this;
-    }
-
-    public NestedVirtualPrivateCloudService addTepIpPoolsItem(
-            NestedVirtualPrivateCloudServiceTepIpPool tepIpPoolsItem) {
-        this.tepIpPools.add(tepIpPoolsItem);
-        return this;
-    }
-
-    /**
-     * Get tepIpPools
-     *
-     * @return tepIpPools
-     */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
-    public List<NestedVirtualPrivateCloudServiceTepIpPool> getTepIpPools() {
-        return tepIpPools;
-    }
-
-    public void setTepIpPools(List<NestedVirtualPrivateCloudServiceTepIpPool> tepIpPools) {
-        this.tepIpPools = tepIpPools;
-    }
-
-    public NestedVirtualPrivateCloudService tepIpPools_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_TEP_IP_POOLS);
-        return this;
-    }
-
-    public NestedVirtualPrivateCloudService tepIpPools_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_TEP_IP_POOLS);
-        return this;
-    }
-
-    public void setTepIpPools_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_TEP_IP_POOLS);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_TEP_IP_POOLS);
-        }
-    }
-
-    public boolean getTepIpPools_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_TEP_IP_POOLS);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -175,23 +165,24 @@ public class NestedVirtualPrivateCloudService
         }
         NestedVirtualPrivateCloudService nestedVirtualPrivateCloudService =
                 (NestedVirtualPrivateCloudService) o;
-        return Objects.equals(this.id, nestedVirtualPrivateCloudService.id)
-                && Objects.equals(this.internalCidr, nestedVirtualPrivateCloudService.internalCidr)
-                && Objects.equals(this.tepIpPools, nestedVirtualPrivateCloudService.tepIpPools);
+        return Objects.equals(
+                        this.everouteCluster, nestedVirtualPrivateCloudService.everouteCluster)
+                && Objects.equals(this.id, nestedVirtualPrivateCloudService.id)
+                && Objects.equals(this.internalCidr, nestedVirtualPrivateCloudService.internalCidr);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, internalCidr, tepIpPools);
+        return Objects.hash(everouteCluster, id, internalCidr);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class NestedVirtualPrivateCloudService {\n");
+        sb.append("    everouteCluster: ").append(toIndentedString(everouteCluster)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    internalCidr: ").append(toIndentedString(internalCidr)).append("\n");
-        sb.append("    tepIpPools: ").append(toIndentedString(tepIpPools)).append("\n");
         sb.append("}");
         return sb.toString();
     }

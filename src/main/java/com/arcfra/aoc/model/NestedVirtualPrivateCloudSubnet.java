@@ -9,6 +9,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class NestedVirtualPrivateCloudSubnet
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_CIDR = "cidr";
+
+    @SerializedName(SERIALIZED_NAME_CIDR)
+    private String cidr;
+
     public static final String SERIALIZED_NAME_ID = "id";
 
     @SerializedName(SERIALIZED_NAME_ID)
@@ -20,6 +25,49 @@ public class NestedVirtualPrivateCloudSubnet
     private String name;
 
     public NestedVirtualPrivateCloudSubnet() {}
+
+    public NestedVirtualPrivateCloudSubnet cidr(String cidr) {
+
+        this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * Get cidr
+     *
+     * @return cidr
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getCidr() {
+        return cidr;
+    }
+
+    public void setCidr(String cidr) {
+        this.cidr = cidr;
+    }
+
+    public NestedVirtualPrivateCloudSubnet cidr_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CIDR);
+        return this;
+    }
+
+    public NestedVirtualPrivateCloudSubnet cidr_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CIDR);
+        return this;
+    }
+
+    public void setCidr_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CIDR);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CIDR);
+        }
+    }
+
+    public boolean getCidr_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CIDR);
+    }
 
     public NestedVirtualPrivateCloudSubnet id(String id) {
 
@@ -117,19 +165,21 @@ public class NestedVirtualPrivateCloudSubnet
         }
         NestedVirtualPrivateCloudSubnet nestedVirtualPrivateCloudSubnet =
                 (NestedVirtualPrivateCloudSubnet) o;
-        return Objects.equals(this.id, nestedVirtualPrivateCloudSubnet.id)
+        return Objects.equals(this.cidr, nestedVirtualPrivateCloudSubnet.cidr)
+                && Objects.equals(this.id, nestedVirtualPrivateCloudSubnet.id)
                 && Objects.equals(this.name, nestedVirtualPrivateCloudSubnet.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(cidr, id, name);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class NestedVirtualPrivateCloudSubnet {\n");
+        sb.append("    cidr: ").append(toIndentedString(cidr)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("}");

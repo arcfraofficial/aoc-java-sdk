@@ -309,6 +309,54 @@ public class VmVolumeSnapshotWhereInput
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN)
     private List<Integer> elfStoragePolicyReplicaNumNotIn = null;
 
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM =
+            "elf_storage_policy_stripe_num";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM)
+    private Integer elfStoragePolicyStripeNum;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GT =
+            "elf_storage_policy_stripe_num_gt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GT)
+    private Integer elfStoragePolicyStripeNumGt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GTE =
+            "elf_storage_policy_stripe_num_gte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GTE)
+    private Integer elfStoragePolicyStripeNumGte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_IN =
+            "elf_storage_policy_stripe_num_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_IN)
+    private List<Integer> elfStoragePolicyStripeNumIn = null;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LT =
+            "elf_storage_policy_stripe_num_lt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LT)
+    private Integer elfStoragePolicyStripeNumLt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LTE =
+            "elf_storage_policy_stripe_num_lte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LTE)
+    private Integer elfStoragePolicyStripeNumLte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT =
+            "elf_storage_policy_stripe_num_not";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT)
+    private Integer elfStoragePolicyStripeNumNot;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT_IN =
+            "elf_storage_policy_stripe_num_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT_IN)
+    private List<Integer> elfStoragePolicyStripeNumNotIn = null;
+
     public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION =
             "elf_storage_policy_thin_provision";
 
@@ -607,6 +655,82 @@ public class VmVolumeSnapshotWhereInput
 
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
     private String nameStartsWith;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private String provisionPolicy;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_CONTAINS =
+            "provision_policy_contains";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_CONTAINS)
+    private String provisionPolicyContains;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_ENDS_WITH =
+            "provision_policy_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_ENDS_WITH)
+    private String provisionPolicyEndsWith;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_GT = "provision_policy_gt";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_GT)
+    private String provisionPolicyGt;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_GTE = "provision_policy_gte";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_GTE)
+    private String provisionPolicyGte;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_IN = "provision_policy_in";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_IN)
+    private List<String> provisionPolicyIn = null;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_LT = "provision_policy_lt";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_LT)
+    private String provisionPolicyLt;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_LTE = "provision_policy_lte";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_LTE)
+    private String provisionPolicyLte;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_NOT = "provision_policy_not";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_NOT)
+    private String provisionPolicyNot;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_NOT_CONTAINS =
+            "provision_policy_not_contains";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_NOT_CONTAINS)
+    private String provisionPolicyNotContains;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_NOT_ENDS_WITH =
+            "provision_policy_not_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_NOT_ENDS_WITH)
+    private String provisionPolicyNotEndsWith;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_NOT_IN = "provision_policy_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_NOT_IN)
+    private List<String> provisionPolicyNotIn = null;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_NOT_STARTS_WITH =
+            "provision_policy_not_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_NOT_STARTS_WITH)
+    private String provisionPolicyNotStartsWith;
+
+    public static final String SERIALIZED_NAME_PROVISION_POLICY_STARTS_WITH =
+            "provision_policy_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY_STARTS_WITH)
+    private String provisionPolicyStartsWith;
 
     public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE = "resident_in_cache";
 
@@ -3356,6 +3480,375 @@ public class VmVolumeSnapshotWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN);
     }
 
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNum(Integer elfStoragePolicyStripeNum) {
+
+        this.elfStoragePolicyStripeNum = elfStoragePolicyStripeNum;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNum
+     *
+     * @return elfStoragePolicyStripeNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyStripeNum() {
+        return elfStoragePolicyStripeNum;
+    }
+
+    public void setElfStoragePolicyStripeNum(Integer elfStoragePolicyStripeNum) {
+        this.elfStoragePolicyStripeNum = elfStoragePolicyStripeNum;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumGt(
+            Integer elfStoragePolicyStripeNumGt) {
+
+        this.elfStoragePolicyStripeNumGt = elfStoragePolicyStripeNumGt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNumGt
+     *
+     * @return elfStoragePolicyStripeNumGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyStripeNumGt() {
+        return elfStoragePolicyStripeNumGt;
+    }
+
+    public void setElfStoragePolicyStripeNumGt(Integer elfStoragePolicyStripeNumGt) {
+        this.elfStoragePolicyStripeNumGt = elfStoragePolicyStripeNumGt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GT);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNumGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GT);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNumGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumGte(
+            Integer elfStoragePolicyStripeNumGte) {
+
+        this.elfStoragePolicyStripeNumGte = elfStoragePolicyStripeNumGte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNumGte
+     *
+     * @return elfStoragePolicyStripeNumGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyStripeNumGte() {
+        return elfStoragePolicyStripeNumGte;
+    }
+
+    public void setElfStoragePolicyStripeNumGte(Integer elfStoragePolicyStripeNumGte) {
+        this.elfStoragePolicyStripeNumGte = elfStoragePolicyStripeNumGte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNumGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNumGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_GTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumIn(
+            List<Integer> elfStoragePolicyStripeNumIn) {
+
+        this.elfStoragePolicyStripeNumIn = elfStoragePolicyStripeNumIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyStripeNumInItem(
+            Integer elfStoragePolicyStripeNumInItem) {
+        if (this.elfStoragePolicyStripeNumIn == null) {
+            this.elfStoragePolicyStripeNumIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyStripeNumIn.add(elfStoragePolicyStripeNumInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNumIn
+     *
+     * @return elfStoragePolicyStripeNumIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyStripeNumIn() {
+        return elfStoragePolicyStripeNumIn;
+    }
+
+    public void setElfStoragePolicyStripeNumIn(List<Integer> elfStoragePolicyStripeNumIn) {
+        this.elfStoragePolicyStripeNumIn = elfStoragePolicyStripeNumIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNumIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNumIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumLt(
+            Integer elfStoragePolicyStripeNumLt) {
+
+        this.elfStoragePolicyStripeNumLt = elfStoragePolicyStripeNumLt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNumLt
+     *
+     * @return elfStoragePolicyStripeNumLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyStripeNumLt() {
+        return elfStoragePolicyStripeNumLt;
+    }
+
+    public void setElfStoragePolicyStripeNumLt(Integer elfStoragePolicyStripeNumLt) {
+        this.elfStoragePolicyStripeNumLt = elfStoragePolicyStripeNumLt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LT);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNumLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LT);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNumLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumLte(
+            Integer elfStoragePolicyStripeNumLte) {
+
+        this.elfStoragePolicyStripeNumLte = elfStoragePolicyStripeNumLte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNumLte
+     *
+     * @return elfStoragePolicyStripeNumLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyStripeNumLte() {
+        return elfStoragePolicyStripeNumLte;
+    }
+
+    public void setElfStoragePolicyStripeNumLte(Integer elfStoragePolicyStripeNumLte) {
+        this.elfStoragePolicyStripeNumLte = elfStoragePolicyStripeNumLte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNumLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNumLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_LTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumNot(
+            Integer elfStoragePolicyStripeNumNot) {
+
+        this.elfStoragePolicyStripeNumNot = elfStoragePolicyStripeNumNot;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNumNot
+     *
+     * @return elfStoragePolicyStripeNumNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyStripeNumNot() {
+        return elfStoragePolicyStripeNumNot;
+    }
+
+    public void setElfStoragePolicyStripeNumNot(Integer elfStoragePolicyStripeNumNot) {
+        this.elfStoragePolicyStripeNumNot = elfStoragePolicyStripeNumNot;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNumNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNumNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumNotIn(
+            List<Integer> elfStoragePolicyStripeNumNotIn) {
+
+        this.elfStoragePolicyStripeNumNotIn = elfStoragePolicyStripeNumNotIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyStripeNumNotInItem(
+            Integer elfStoragePolicyStripeNumNotInItem) {
+        if (this.elfStoragePolicyStripeNumNotIn == null) {
+            this.elfStoragePolicyStripeNumNotIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyStripeNumNotIn.add(elfStoragePolicyStripeNumNotInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyStripeNumNotIn
+     *
+     * @return elfStoragePolicyStripeNumNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyStripeNumNotIn() {
+        return elfStoragePolicyStripeNumNotIn;
+    }
+
+    public void setElfStoragePolicyStripeNumNotIn(List<Integer> elfStoragePolicyStripeNumNotIn) {
+        this.elfStoragePolicyStripeNumNotIn = elfStoragePolicyStripeNumNotIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyStripeNumNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyStripeNumNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyStripeNumNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+    }
+
     public VmVolumeSnapshotWhereInput elfStoragePolicyThinProvision(
             Boolean elfStoragePolicyThinProvision) {
 
@@ -5979,6 +6472,627 @@ public class VmVolumeSnapshotWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NAME_STARTS_WITH);
     }
 
+    public VmVolumeSnapshotWhereInput provisionPolicy(String provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(String provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyContains(String provisionPolicyContains) {
+
+        this.provisionPolicyContains = provisionPolicyContains;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyContains
+     *
+     * @return provisionPolicyContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyContains() {
+        return provisionPolicyContains;
+    }
+
+    public void setProvisionPolicyContains(String provisionPolicyContains) {
+        this.provisionPolicyContains = provisionPolicyContains;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_CONTAINS);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_CONTAINS);
+        return this;
+    }
+
+    public void setProvisionPolicyContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_CONTAINS);
+        }
+    }
+
+    public boolean getProvisionPolicyContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_CONTAINS);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyEndsWith(String provisionPolicyEndsWith) {
+
+        this.provisionPolicyEndsWith = provisionPolicyEndsWith;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyEndsWith
+     *
+     * @return provisionPolicyEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyEndsWith() {
+        return provisionPolicyEndsWith;
+    }
+
+    public void setProvisionPolicyEndsWith(String provisionPolicyEndsWith) {
+        this.provisionPolicyEndsWith = provisionPolicyEndsWith;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_ENDS_WITH);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_ENDS_WITH);
+        return this;
+    }
+
+    public void setProvisionPolicyEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_ENDS_WITH);
+        }
+    }
+
+    public boolean getProvisionPolicyEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_ENDS_WITH);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyGt(String provisionPolicyGt) {
+
+        this.provisionPolicyGt = provisionPolicyGt;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyGt
+     *
+     * @return provisionPolicyGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyGt() {
+        return provisionPolicyGt;
+    }
+
+    public void setProvisionPolicyGt(String provisionPolicyGt) {
+        this.provisionPolicyGt = provisionPolicyGt;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_GT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_GT);
+        return this;
+    }
+
+    public void setProvisionPolicyGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_GT);
+        }
+    }
+
+    public boolean getProvisionPolicyGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_GT);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyGte(String provisionPolicyGte) {
+
+        this.provisionPolicyGte = provisionPolicyGte;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyGte
+     *
+     * @return provisionPolicyGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyGte() {
+        return provisionPolicyGte;
+    }
+
+    public void setProvisionPolicyGte(String provisionPolicyGte) {
+        this.provisionPolicyGte = provisionPolicyGte;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_GTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_GTE);
+        return this;
+    }
+
+    public void setProvisionPolicyGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_GTE);
+        }
+    }
+
+    public boolean getProvisionPolicyGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_GTE);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyIn(List<String> provisionPolicyIn) {
+
+        this.provisionPolicyIn = provisionPolicyIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addProvisionPolicyInItem(String provisionPolicyInItem) {
+        if (this.provisionPolicyIn == null) {
+            this.provisionPolicyIn = new ArrayList<String>();
+        }
+        this.provisionPolicyIn.add(provisionPolicyInItem);
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyIn
+     *
+     * @return provisionPolicyIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getProvisionPolicyIn() {
+        return provisionPolicyIn;
+    }
+
+    public void setProvisionPolicyIn(List<String> provisionPolicyIn) {
+        this.provisionPolicyIn = provisionPolicyIn;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_IN);
+        return this;
+    }
+
+    public void setProvisionPolicyIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_IN);
+        }
+    }
+
+    public boolean getProvisionPolicyIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyLt(String provisionPolicyLt) {
+
+        this.provisionPolicyLt = provisionPolicyLt;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyLt
+     *
+     * @return provisionPolicyLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyLt() {
+        return provisionPolicyLt;
+    }
+
+    public void setProvisionPolicyLt(String provisionPolicyLt) {
+        this.provisionPolicyLt = provisionPolicyLt;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_LT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_LT);
+        return this;
+    }
+
+    public void setProvisionPolicyLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_LT);
+        }
+    }
+
+    public boolean getProvisionPolicyLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_LT);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyLte(String provisionPolicyLte) {
+
+        this.provisionPolicyLte = provisionPolicyLte;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyLte
+     *
+     * @return provisionPolicyLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyLte() {
+        return provisionPolicyLte;
+    }
+
+    public void setProvisionPolicyLte(String provisionPolicyLte) {
+        this.provisionPolicyLte = provisionPolicyLte;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_LTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_LTE);
+        return this;
+    }
+
+    public void setProvisionPolicyLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_LTE);
+        }
+    }
+
+    public boolean getProvisionPolicyLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_LTE);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNot(String provisionPolicyNot) {
+
+        this.provisionPolicyNot = provisionPolicyNot;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyNot
+     *
+     * @return provisionPolicyNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyNot() {
+        return provisionPolicyNot;
+    }
+
+    public void setProvisionPolicyNot(String provisionPolicyNot) {
+        this.provisionPolicyNot = provisionPolicyNot;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT);
+        return this;
+    }
+
+    public void setProvisionPolicyNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT);
+        }
+    }
+
+    public boolean getProvisionPolicyNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_NOT);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotContains(
+            String provisionPolicyNotContains) {
+
+        this.provisionPolicyNotContains = provisionPolicyNotContains;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyNotContains
+     *
+     * @return provisionPolicyNotContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyNotContains() {
+        return provisionPolicyNotContains;
+    }
+
+    public void setProvisionPolicyNotContains(String provisionPolicyNotContains) {
+        this.provisionPolicyNotContains = provisionPolicyNotContains;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_CONTAINS);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_CONTAINS);
+        return this;
+    }
+
+    public void setProvisionPolicyNotContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_CONTAINS);
+        }
+    }
+
+    public boolean getProvisionPolicyNotContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_NOT_CONTAINS);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotEndsWith(
+            String provisionPolicyNotEndsWith) {
+
+        this.provisionPolicyNotEndsWith = provisionPolicyNotEndsWith;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyNotEndsWith
+     *
+     * @return provisionPolicyNotEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyNotEndsWith() {
+        return provisionPolicyNotEndsWith;
+    }
+
+    public void setProvisionPolicyNotEndsWith(String provisionPolicyNotEndsWith) {
+        this.provisionPolicyNotEndsWith = provisionPolicyNotEndsWith;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public void setProvisionPolicyNotEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_ENDS_WITH);
+        }
+    }
+
+    public boolean getProvisionPolicyNotEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_NOT_ENDS_WITH);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotIn(List<String> provisionPolicyNotIn) {
+
+        this.provisionPolicyNotIn = provisionPolicyNotIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addProvisionPolicyNotInItem(String provisionPolicyNotInItem) {
+        if (this.provisionPolicyNotIn == null) {
+            this.provisionPolicyNotIn = new ArrayList<String>();
+        }
+        this.provisionPolicyNotIn.add(provisionPolicyNotInItem);
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyNotIn
+     *
+     * @return provisionPolicyNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getProvisionPolicyNotIn() {
+        return provisionPolicyNotIn;
+    }
+
+    public void setProvisionPolicyNotIn(List<String> provisionPolicyNotIn) {
+        this.provisionPolicyNotIn = provisionPolicyNotIn;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_IN);
+        return this;
+    }
+
+    public void setProvisionPolicyNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_IN);
+        }
+    }
+
+    public boolean getProvisionPolicyNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_NOT_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotStartsWith(
+            String provisionPolicyNotStartsWith) {
+
+        this.provisionPolicyNotStartsWith = provisionPolicyNotStartsWith;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyNotStartsWith
+     *
+     * @return provisionPolicyNotStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyNotStartsWith() {
+        return provisionPolicyNotStartsWith;
+    }
+
+    public void setProvisionPolicyNotStartsWith(String provisionPolicyNotStartsWith) {
+        this.provisionPolicyNotStartsWith = provisionPolicyNotStartsWith;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyNotStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public void setProvisionPolicyNotStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_NOT_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_NOT_STARTS_WITH);
+        }
+    }
+
+    public boolean getProvisionPolicyNotStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_NOT_STARTS_WITH);
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyStartsWith(String provisionPolicyStartsWith) {
+
+        this.provisionPolicyStartsWith = provisionPolicyStartsWith;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicyStartsWith
+     *
+     * @return provisionPolicyStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicyStartsWith() {
+        return provisionPolicyStartsWith;
+    }
+
+    public void setProvisionPolicyStartsWith(String provisionPolicyStartsWith) {
+        this.provisionPolicyStartsWith = provisionPolicyStartsWith;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_STARTS_WITH);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput provisionPolicyStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_STARTS_WITH);
+        return this;
+    }
+
+    public void setProvisionPolicyStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY_STARTS_WITH);
+        }
+    }
+
+    public boolean getProvisionPolicyStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY_STARTS_WITH);
+    }
+
     public VmVolumeSnapshotWhereInput residentInCache(Boolean residentInCache) {
 
         this.residentInCache = residentInCache;
@@ -8569,6 +9683,30 @@ public class VmVolumeSnapshotWhereInput
                         this.elfStoragePolicyReplicaNumNotIn,
                         vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumNotIn)
                 && Objects.equals(
+                        this.elfStoragePolicyStripeNum,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNum)
+                && Objects.equals(
+                        this.elfStoragePolicyStripeNumGt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNumGt)
+                && Objects.equals(
+                        this.elfStoragePolicyStripeNumGte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNumGte)
+                && Objects.equals(
+                        this.elfStoragePolicyStripeNumIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNumIn)
+                && Objects.equals(
+                        this.elfStoragePolicyStripeNumLt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNumLt)
+                && Objects.equals(
+                        this.elfStoragePolicyStripeNumLte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNumLte)
+                && Objects.equals(
+                        this.elfStoragePolicyStripeNumNot,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNumNot)
+                && Objects.equals(
+                        this.elfStoragePolicyStripeNumNotIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyStripeNumNotIn)
+                && Objects.equals(
                         this.elfStoragePolicyThinProvision,
                         vmVolumeSnapshotWhereInput.elfStoragePolicyThinProvision)
                 && Objects.equals(
@@ -8648,6 +9786,39 @@ public class VmVolumeSnapshotWhereInput
                 && Objects.equals(
                         this.nameNotStartsWith, vmVolumeSnapshotWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameStartsWith, vmVolumeSnapshotWhereInput.nameStartsWith)
+                && Objects.equals(this.provisionPolicy, vmVolumeSnapshotWhereInput.provisionPolicy)
+                && Objects.equals(
+                        this.provisionPolicyContains,
+                        vmVolumeSnapshotWhereInput.provisionPolicyContains)
+                && Objects.equals(
+                        this.provisionPolicyEndsWith,
+                        vmVolumeSnapshotWhereInput.provisionPolicyEndsWith)
+                && Objects.equals(
+                        this.provisionPolicyGt, vmVolumeSnapshotWhereInput.provisionPolicyGt)
+                && Objects.equals(
+                        this.provisionPolicyGte, vmVolumeSnapshotWhereInput.provisionPolicyGte)
+                && Objects.equals(
+                        this.provisionPolicyIn, vmVolumeSnapshotWhereInput.provisionPolicyIn)
+                && Objects.equals(
+                        this.provisionPolicyLt, vmVolumeSnapshotWhereInput.provisionPolicyLt)
+                && Objects.equals(
+                        this.provisionPolicyLte, vmVolumeSnapshotWhereInput.provisionPolicyLte)
+                && Objects.equals(
+                        this.provisionPolicyNot, vmVolumeSnapshotWhereInput.provisionPolicyNot)
+                && Objects.equals(
+                        this.provisionPolicyNotContains,
+                        vmVolumeSnapshotWhereInput.provisionPolicyNotContains)
+                && Objects.equals(
+                        this.provisionPolicyNotEndsWith,
+                        vmVolumeSnapshotWhereInput.provisionPolicyNotEndsWith)
+                && Objects.equals(
+                        this.provisionPolicyNotIn, vmVolumeSnapshotWhereInput.provisionPolicyNotIn)
+                && Objects.equals(
+                        this.provisionPolicyNotStartsWith,
+                        vmVolumeSnapshotWhereInput.provisionPolicyNotStartsWith)
+                && Objects.equals(
+                        this.provisionPolicyStartsWith,
+                        vmVolumeSnapshotWhereInput.provisionPolicyStartsWith)
                 && Objects.equals(this.residentInCache, vmVolumeSnapshotWhereInput.residentInCache)
                 && Objects.equals(
                         this.residentInCacheNot, vmVolumeSnapshotWhereInput.residentInCacheNot)
@@ -8792,6 +9963,14 @@ public class VmVolumeSnapshotWhereInput
                 elfStoragePolicyReplicaNumLte,
                 elfStoragePolicyReplicaNumNot,
                 elfStoragePolicyReplicaNumNotIn,
+                elfStoragePolicyStripeNum,
+                elfStoragePolicyStripeNumGt,
+                elfStoragePolicyStripeNumGte,
+                elfStoragePolicyStripeNumIn,
+                elfStoragePolicyStripeNumLt,
+                elfStoragePolicyStripeNumLte,
+                elfStoragePolicyStripeNumNot,
+                elfStoragePolicyStripeNumNotIn,
                 elfStoragePolicyThinProvision,
                 elfStoragePolicyThinProvisionNot,
                 entityAsyncStatus,
@@ -8851,6 +10030,20 @@ public class VmVolumeSnapshotWhereInput
                 nameNotIn,
                 nameNotStartsWith,
                 nameStartsWith,
+                provisionPolicy,
+                provisionPolicyContains,
+                provisionPolicyEndsWith,
+                provisionPolicyGt,
+                provisionPolicyGte,
+                provisionPolicyIn,
+                provisionPolicyLt,
+                provisionPolicyLte,
+                provisionPolicyNot,
+                provisionPolicyNotContains,
+                provisionPolicyNotEndsWith,
+                provisionPolicyNotIn,
+                provisionPolicyNotStartsWith,
+                provisionPolicyStartsWith,
                 residentInCache,
                 residentInCacheNot,
                 sharedSize,
@@ -9039,6 +10232,30 @@ public class VmVolumeSnapshotWhereInput
         sb.append("    elfStoragePolicyReplicaNumNotIn: ")
                 .append(toIndentedString(elfStoragePolicyReplicaNumNotIn))
                 .append("\n");
+        sb.append("    elfStoragePolicyStripeNum: ")
+                .append(toIndentedString(elfStoragePolicyStripeNum))
+                .append("\n");
+        sb.append("    elfStoragePolicyStripeNumGt: ")
+                .append(toIndentedString(elfStoragePolicyStripeNumGt))
+                .append("\n");
+        sb.append("    elfStoragePolicyStripeNumGte: ")
+                .append(toIndentedString(elfStoragePolicyStripeNumGte))
+                .append("\n");
+        sb.append("    elfStoragePolicyStripeNumIn: ")
+                .append(toIndentedString(elfStoragePolicyStripeNumIn))
+                .append("\n");
+        sb.append("    elfStoragePolicyStripeNumLt: ")
+                .append(toIndentedString(elfStoragePolicyStripeNumLt))
+                .append("\n");
+        sb.append("    elfStoragePolicyStripeNumLte: ")
+                .append(toIndentedString(elfStoragePolicyStripeNumLte))
+                .append("\n");
+        sb.append("    elfStoragePolicyStripeNumNot: ")
+                .append(toIndentedString(elfStoragePolicyStripeNumNot))
+                .append("\n");
+        sb.append("    elfStoragePolicyStripeNumNotIn: ")
+                .append(toIndentedString(elfStoragePolicyStripeNumNotIn))
+                .append("\n");
         sb.append("    elfStoragePolicyThinProvision: ")
                 .append(toIndentedString(elfStoragePolicyThinProvision))
                 .append("\n");
@@ -9128,6 +10345,46 @@ public class VmVolumeSnapshotWhereInput
                 .append(toIndentedString(nameNotStartsWith))
                 .append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
+        sb.append("    provisionPolicyContains: ")
+                .append(toIndentedString(provisionPolicyContains))
+                .append("\n");
+        sb.append("    provisionPolicyEndsWith: ")
+                .append(toIndentedString(provisionPolicyEndsWith))
+                .append("\n");
+        sb.append("    provisionPolicyGt: ")
+                .append(toIndentedString(provisionPolicyGt))
+                .append("\n");
+        sb.append("    provisionPolicyGte: ")
+                .append(toIndentedString(provisionPolicyGte))
+                .append("\n");
+        sb.append("    provisionPolicyIn: ")
+                .append(toIndentedString(provisionPolicyIn))
+                .append("\n");
+        sb.append("    provisionPolicyLt: ")
+                .append(toIndentedString(provisionPolicyLt))
+                .append("\n");
+        sb.append("    provisionPolicyLte: ")
+                .append(toIndentedString(provisionPolicyLte))
+                .append("\n");
+        sb.append("    provisionPolicyNot: ")
+                .append(toIndentedString(provisionPolicyNot))
+                .append("\n");
+        sb.append("    provisionPolicyNotContains: ")
+                .append(toIndentedString(provisionPolicyNotContains))
+                .append("\n");
+        sb.append("    provisionPolicyNotEndsWith: ")
+                .append(toIndentedString(provisionPolicyNotEndsWith))
+                .append("\n");
+        sb.append("    provisionPolicyNotIn: ")
+                .append(toIndentedString(provisionPolicyNotIn))
+                .append("\n");
+        sb.append("    provisionPolicyNotStartsWith: ")
+                .append(toIndentedString(provisionPolicyNotStartsWith))
+                .append("\n");
+        sb.append("    provisionPolicyStartsWith: ")
+                .append(toIndentedString(provisionPolicyStartsWith))
+                .append("\n");
         sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
         sb.append("    residentInCacheNot: ")
                 .append(toIndentedString(residentInCacheNot))

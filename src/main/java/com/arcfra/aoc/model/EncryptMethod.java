@@ -14,6 +14,8 @@ public enum EncryptMethod {
 
     PLAIN_TEXT("PLAIN_TEXT"),
 
+    SM4_CTR("SM4_CTR"),
+
     ENCRYPTMETHOD_UNSUPPORTED_ENUM("ENCRYPTMETHOD_UNSUPPORTED_ENUM");
     private String value;
 

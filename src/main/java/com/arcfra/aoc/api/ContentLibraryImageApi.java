@@ -66,12 +66,13 @@ public class ContentLibraryImageApi {
      * Build call for createContentLibraryImage
      *
      * @param _file (required)
-     * @param clusters (required)
+     * @param clusters (optional)
      * @param name (optional)
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param description (optional)
      * @param uploadTaskId (optional)
+     * @param datastores (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -93,6 +94,7 @@ public class ContentLibraryImageApi {
             String sizeUnit,
             String description,
             String uploadTaskId,
+            String datastores,
             final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
@@ -148,6 +150,10 @@ public class ContentLibraryImageApi {
             localVarFormParams.put("upload_task_id", uploadTaskId);
         }
 
+        if (datastores != null) {
+            localVarFormParams.put("datastores", datastores);
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -185,6 +191,7 @@ public class ContentLibraryImageApi {
             String sizeUnit,
             String description,
             String uploadTaskId,
+            String datastores,
             final ApiCallback _callback)
             throws ApiException {
 
@@ -192,13 +199,6 @@ public class ContentLibraryImageApi {
         if (_file == null) {
             throw new ApiException(
                     "Missing the required parameter '_file' when calling"
-                            + " createContentLibraryImage(Async)");
-        }
-
-        // verify the required parameter 'clusters' is set
-        if (clusters == null) {
-            throw new ApiException(
-                    "Missing the required parameter 'clusters' when calling"
                             + " createContentLibraryImage(Async)");
         }
 
@@ -211,18 +211,20 @@ public class ContentLibraryImageApi {
                         sizeUnit,
                         description,
                         uploadTaskId,
+                        datastores,
                         _callback);
         return localVarCall;
     }
 
     /**
      * @param _file (required)
-     * @param clusters (required)
+     * @param clusters (optional)
      * @param name (optional)
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param description (optional)
      * @param uploadTaskId (optional)
+     * @param datastores (optional)
      * @return List&lt;UploadTask&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -243,22 +245,31 @@ public class ContentLibraryImageApi {
             String size,
             String sizeUnit,
             String description,
-            String uploadTaskId)
+            String uploadTaskId,
+            String datastores)
             throws ApiException {
         ApiResponse<List<UploadTask>> localVarResp =
                 createContentLibraryImageWithHttpInfo(
-                        _file, clusters, name, size, sizeUnit, description, uploadTaskId);
+                        _file,
+                        clusters,
+                        name,
+                        size,
+                        sizeUnit,
+                        description,
+                        uploadTaskId,
+                        datastores);
         return localVarResp.getData();
     }
 
     /**
      * @param _file (required)
-     * @param clusters (required)
+     * @param clusters (optional)
      * @param name (optional)
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param description (optional)
      * @param uploadTaskId (optional)
+     * @param datastores (optional)
      * @return ApiResponse&lt;List&lt;UploadTask&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -279,11 +290,20 @@ public class ContentLibraryImageApi {
             String size,
             String sizeUnit,
             String description,
-            String uploadTaskId)
+            String uploadTaskId,
+            String datastores)
             throws ApiException {
         okhttp3.Call localVarCall =
                 createContentLibraryImageValidateBeforeCall(
-                        _file, clusters, name, size, sizeUnit, description, uploadTaskId, null);
+                        _file,
+                        clusters,
+                        name,
+                        size,
+                        sizeUnit,
+                        description,
+                        uploadTaskId,
+                        datastores,
+                        null);
         Type localVarReturnType = new TypeToken<List<UploadTask>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -292,12 +312,13 @@ public class ContentLibraryImageApi {
      * (asynchronously)
      *
      * @param _file (required)
-     * @param clusters (required)
+     * @param clusters (optional)
      * @param name (optional)
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param description (optional)
      * @param uploadTaskId (optional)
+     * @param datastores (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -320,6 +341,7 @@ public class ContentLibraryImageApi {
             String sizeUnit,
             String description,
             String uploadTaskId,
+            String datastores,
             final ApiCallback<List<UploadTask>> _callback)
             throws ApiException {
 
@@ -332,6 +354,7 @@ public class ContentLibraryImageApi {
                         sizeUnit,
                         description,
                         uploadTaskId,
+                        datastores,
                         _callback);
         Type localVarReturnType = new TypeToken<List<UploadTask>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
@@ -1029,7 +1052,10 @@ public class ContentLibraryImageApi {
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      * </table>
+     *
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call importContentLibraryImageCall(
             ContentLibraryImageImportParams contentLibraryImageImportParams,
             final ApiCallback _callback)
@@ -1087,6 +1113,7 @@ public class ContentLibraryImageApi {
                 _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call importContentLibraryImageValidateBeforeCall(
             ContentLibraryImageImportParams contentLibraryImageImportParams,
@@ -1118,7 +1145,10 @@ public class ContentLibraryImageApi {
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      * </table>
+     *
+     * @deprecated
      */
+    @Deprecated
     public UploadTask importContentLibraryImage(
             ContentLibraryImageImportParams contentLibraryImageImportParams) throws ApiException {
         ApiResponse<UploadTask> localVarResp =
@@ -1139,7 +1169,10 @@ public class ContentLibraryImageApi {
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      * </table>
+     *
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<UploadTask> importContentLibraryImageWithHttpInfo(
             ContentLibraryImageImportParams contentLibraryImageImportParams) throws ApiException {
         okhttp3.Call localVarCall =
@@ -1164,7 +1197,10 @@ public class ContentLibraryImageApi {
      * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
      * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
      * </table>
+     *
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call importContentLibraryImageAsync(
             ContentLibraryImageImportParams contentLibraryImageImportParams,
             final ApiCallback<UploadTask> _callback)
@@ -1174,6 +1210,170 @@ public class ContentLibraryImageApi {
                 importContentLibraryImageValidateBeforeCall(
                         contentLibraryImageImportParams, _callback);
         Type localVarReturnType = new TypeToken<UploadTask>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for importContentLibraryImageV2
+     *
+     * @param contentLibraryImageImportParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call importContentLibraryImageV2Call(
+            ContentLibraryImageImportParams contentLibraryImageImportParams,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = contentLibraryImageImportParams;
+
+        // create path and map variables
+        String localVarPath = "/import-content-library-image-v2";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call importContentLibraryImageV2ValidateBeforeCall(
+            ContentLibraryImageImportParams contentLibraryImageImportParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'contentLibraryImageImportParams' is set
+        if (contentLibraryImageImportParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'contentLibraryImageImportParams' when calling"
+                            + " importContentLibraryImageV2(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                importContentLibraryImageV2Call(contentLibraryImageImportParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param contentLibraryImageImportParams (required)
+     * @return List&lt;UploadTask&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<UploadTask> importContentLibraryImageV2(
+            ContentLibraryImageImportParams contentLibraryImageImportParams) throws ApiException {
+        ApiResponse<List<UploadTask>> localVarResp =
+                importContentLibraryImageV2WithHttpInfo(contentLibraryImageImportParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param contentLibraryImageImportParams (required)
+     * @return ApiResponse&lt;List&lt;UploadTask&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<UploadTask>> importContentLibraryImageV2WithHttpInfo(
+            ContentLibraryImageImportParams contentLibraryImageImportParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                importContentLibraryImageV2ValidateBeforeCall(
+                        contentLibraryImageImportParams, null);
+        Type localVarReturnType = new TypeToken<List<UploadTask>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param contentLibraryImageImportParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call importContentLibraryImageV2Async(
+            ContentLibraryImageImportParams contentLibraryImageImportParams,
+            final ApiCallback<List<UploadTask>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                importContentLibraryImageV2ValidateBeforeCall(
+                        contentLibraryImageImportParams, _callback);
+        Type localVarReturnType = new TypeToken<List<UploadTask>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

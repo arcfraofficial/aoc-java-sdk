@@ -26,6 +26,16 @@ public class MigrateVmConfig extends com.arcfra.aoc.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_NETWORK_MAPPING)
     private List<VlanMapping> networkMapping = new ArrayList<VlanMapping>();
 
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private VmVolumeProvisionPolicy provisionPolicy;
+
+    public static final String SERIALIZED_NAME_MIGRATE_MODE = "migrate_mode";
+
+    @SerializedName(SERIALIZED_NAME_MIGRATE_MODE)
+    private MigrateMode migrateMode;
+
     public static final String SERIALIZED_NAME_MIGRATE_TYPE = "migrate_type";
 
     @SerializedName(SERIALIZED_NAME_MIGRATE_TYPE)
@@ -186,6 +196,92 @@ public class MigrateVmConfig extends com.arcfra.aoc.ConditionalNullable.Conditio
 
     public boolean getNetworkMapping_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_NETWORK_MAPPING);
+    }
+
+    public MigrateVmConfig provisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmVolumeProvisionPolicy getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public MigrateVmConfig provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public MigrateVmConfig provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
+    }
+
+    public MigrateVmConfig migrateMode(MigrateMode migrateMode) {
+
+        this.migrateMode = migrateMode;
+        return this;
+    }
+
+    /**
+     * Get migrateMode
+     *
+     * @return migrateMode
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public MigrateMode getMigrateMode() {
+        return migrateMode;
+    }
+
+    public void setMigrateMode(MigrateMode migrateMode) {
+        this.migrateMode = migrateMode;
+    }
+
+    public MigrateVmConfig migrateMode_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MIGRATE_MODE);
+        return this;
+    }
+
+    public MigrateVmConfig migrateMode_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MIGRATE_MODE);
+        return this;
+    }
+
+    public void setMigrateMode_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MIGRATE_MODE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MIGRATE_MODE);
+        }
+    }
+
+    public boolean getMigrateMode_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MIGRATE_MODE);
     }
 
     public MigrateVmConfig migrateType(MigrateType migrateType) {
@@ -418,6 +514,8 @@ public class MigrateVmConfig extends com.arcfra.aoc.ConditionalNullable.Conditio
         return Objects.equals(this.removeUnmovableDevices, migrateVmConfig.removeUnmovableDevices)
                 && Objects.equals(this.newName, migrateVmConfig.newName)
                 && Objects.equals(this.networkMapping, migrateVmConfig.networkMapping)
+                && Objects.equals(this.provisionPolicy, migrateVmConfig.provisionPolicy)
+                && Objects.equals(this.migrateMode, migrateVmConfig.migrateMode)
                 && Objects.equals(this.migrateType, migrateVmConfig.migrateType)
                 && Objects.equals(this.elfEcStoragePolicy, migrateVmConfig.elfEcStoragePolicy)
                 && Objects.equals(
@@ -432,6 +530,8 @@ public class MigrateVmConfig extends com.arcfra.aoc.ConditionalNullable.Conditio
                 removeUnmovableDevices,
                 newName,
                 networkMapping,
+                provisionPolicy,
+                migrateMode,
                 migrateType,
                 elfEcStoragePolicy,
                 elfReplicaStoragePolicy,
@@ -448,6 +548,8 @@ public class MigrateVmConfig extends com.arcfra.aoc.ConditionalNullable.Conditio
                 .append("\n");
         sb.append("    newName: ").append(toIndentedString(newName)).append("\n");
         sb.append("    networkMapping: ").append(toIndentedString(networkMapping)).append("\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
+        sb.append("    migrateMode: ").append(toIndentedString(migrateMode)).append("\n");
         sb.append("    migrateType: ").append(toIndentedString(migrateType)).append("\n");
         sb.append("    elfEcStoragePolicy: ")
                 .append(toIndentedString(elfEcStoragePolicy))

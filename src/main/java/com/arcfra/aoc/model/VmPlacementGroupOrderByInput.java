@@ -42,6 +42,10 @@ public enum VmPlacementGroupOrderByInput {
 
     NAME_DESC("name_DESC"),
 
+    USAGE_ASC("usage_ASC"),
+
+    USAGE_DESC("usage_DESC"),
+
     VM_HOST_MUST_ENABLED_ASC("vm_host_must_enabled_ASC"),
 
     VM_HOST_MUST_ENABLED_DESC("vm_host_must_enabled_DESC"),

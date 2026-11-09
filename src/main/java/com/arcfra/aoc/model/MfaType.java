@@ -14,6 +14,10 @@ public enum MfaType {
 
     SMS("Sms"),
 
+    TOTP("Totp"),
+
+    TOTPRECOVERYCODE("TotpRecoveryCode"),
+
     MFATYPE_UNSUPPORTED_ENUM("MFATYPE_UNSUPPORTED_ENUM");
     private String value;
 

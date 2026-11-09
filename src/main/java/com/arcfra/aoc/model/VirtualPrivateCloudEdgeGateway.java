@@ -18,6 +18,11 @@ public class VirtualPrivateCloudEdgeGateway
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
     private String description;
 
+    public static final String SERIALIZED_NAME_EDGE_GATEWAY_GROUP = "edge_gateway_group";
+
+    @SerializedName(SERIALIZED_NAME_EDGE_GATEWAY_GROUP)
+    private NestedVirtualPrivateCloudEdgeGatewayGroup edgeGatewayGroup;
+
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -42,6 +47,11 @@ public class VirtualPrivateCloudEdgeGateway
 
     @SerializedName(SERIALIZED_NAME_VDSES)
     private List<NestedVds> vdses = null;
+
+    public static final String SERIALIZED_NAME_VPC_SERVICE = "vpc_service";
+
+    @SerializedName(SERIALIZED_NAME_VPC_SERVICE)
+    private NestedVirtualPrivateCloudService vpcService;
 
     public VirtualPrivateCloudEdgeGateway() {}
 
@@ -86,6 +96,50 @@ public class VirtualPrivateCloudEdgeGateway
 
     public boolean getDescription_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION);
+    }
+
+    public VirtualPrivateCloudEdgeGateway edgeGatewayGroup(
+            NestedVirtualPrivateCloudEdgeGatewayGroup edgeGatewayGroup) {
+
+        this.edgeGatewayGroup = edgeGatewayGroup;
+        return this;
+    }
+
+    /**
+     * Get edgeGatewayGroup
+     *
+     * @return edgeGatewayGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedVirtualPrivateCloudEdgeGatewayGroup getEdgeGatewayGroup() {
+        return edgeGatewayGroup;
+    }
+
+    public void setEdgeGatewayGroup(NestedVirtualPrivateCloudEdgeGatewayGroup edgeGatewayGroup) {
+        this.edgeGatewayGroup = edgeGatewayGroup;
+    }
+
+    public VirtualPrivateCloudEdgeGateway edgeGatewayGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EDGE_GATEWAY_GROUP);
+        return this;
+    }
+
+    public VirtualPrivateCloudEdgeGateway edgeGatewayGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EDGE_GATEWAY_GROUP);
+        return this;
+    }
+
+    public void setEdgeGatewayGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EDGE_GATEWAY_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EDGE_GATEWAY_GROUP);
+        }
+    }
+
+    public boolean getEdgeGatewayGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EDGE_GATEWAY_GROUP);
     }
 
     public VirtualPrivateCloudEdgeGateway entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -312,6 +366,49 @@ public class VirtualPrivateCloudEdgeGateway
         return this._isPresent_.contains(SERIALIZED_NAME_VDSES);
     }
 
+    public VirtualPrivateCloudEdgeGateway vpcService(NestedVirtualPrivateCloudService vpcService) {
+
+        this.vpcService = vpcService;
+        return this;
+    }
+
+    /**
+     * Get vpcService
+     *
+     * @return vpcService
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedVirtualPrivateCloudService getVpcService() {
+        return vpcService;
+    }
+
+    public void setVpcService(NestedVirtualPrivateCloudService vpcService) {
+        this.vpcService = vpcService;
+    }
+
+    public VirtualPrivateCloudEdgeGateway vpcService_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VPC_SERVICE);
+        return this;
+    }
+
+    public VirtualPrivateCloudEdgeGateway vpcService_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VPC_SERVICE);
+        return this;
+    }
+
+    public void setVpcService_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VPC_SERVICE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VPC_SERVICE);
+        }
+    }
+
+    public boolean getVpcService_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VPC_SERVICE);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -324,11 +421,14 @@ public class VirtualPrivateCloudEdgeGateway
                 (VirtualPrivateCloudEdgeGateway) o;
         return Objects.equals(this.description, virtualPrivateCloudEdgeGateway.description)
                 && Objects.equals(
+                        this.edgeGatewayGroup, virtualPrivateCloudEdgeGateway.edgeGatewayGroup)
+                && Objects.equals(
                         this.entityAsyncStatus, virtualPrivateCloudEdgeGateway.entityAsyncStatus)
                 && Objects.equals(this.id, virtualPrivateCloudEdgeGateway.id)
                 && Objects.equals(this.name, virtualPrivateCloudEdgeGateway.name)
                 && Objects.equals(this.status, virtualPrivateCloudEdgeGateway.status)
-                && Objects.equals(this.vdses, virtualPrivateCloudEdgeGateway.vdses);
+                && Objects.equals(this.vdses, virtualPrivateCloudEdgeGateway.vdses)
+                && Objects.equals(this.vpcService, virtualPrivateCloudEdgeGateway.vpcService);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -342,7 +442,15 @@ public class VirtualPrivateCloudEdgeGateway
 
     @Override
     public int hashCode() {
-        return Objects.hash(description, entityAsyncStatus, id, name, status, vdses);
+        return Objects.hash(
+                description,
+                edgeGatewayGroup,
+                entityAsyncStatus,
+                id,
+                name,
+                status,
+                vdses,
+                vpcService);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -357,6 +465,7 @@ public class VirtualPrivateCloudEdgeGateway
         StringBuilder sb = new StringBuilder();
         sb.append("class VirtualPrivateCloudEdgeGateway {\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    edgeGatewayGroup: ").append(toIndentedString(edgeGatewayGroup)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -364,6 +473,7 @@ public class VirtualPrivateCloudEdgeGateway
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    status: ").append(toIndentedString(status)).append("\n");
         sb.append("    vdses: ").append(toIndentedString(vdses)).append("\n");
+        sb.append("    vpcService: ").append(toIndentedString(vpcService)).append("\n");
         sb.append("}");
         return sb.toString();
     }

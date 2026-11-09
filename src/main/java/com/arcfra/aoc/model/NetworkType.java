@@ -12,6 +12,12 @@ import java.io.IOException;
 public enum NetworkType {
     ACCESS("ACCESS"),
 
+    CUSTOM("CUSTOM"),
+
+    ERSPAN("ERSPAN"),
+
+    INTERNAL("INTERNAL"),
+
     MANAGEMENT("MANAGEMENT"),
 
     MIGRATION("MIGRATION"),

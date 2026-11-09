@@ -22,6 +22,14 @@ public enum VmFolderOrderByInput {
 
     NAME_DESC("name_DESC"),
 
+    PATH_ASC("path_ASC"),
+
+    PATH_DESC("path_DESC"),
+
+    TOTAL_VM_NUM_ASC("total_vm_num_ASC"),
+
+    TOTAL_VM_NUM_DESC("total_vm_num_DESC"),
+
     VM_NUM_ASC("vm_num_ASC"),
 
     VM_NUM_DESC("vm_num_DESC"),
