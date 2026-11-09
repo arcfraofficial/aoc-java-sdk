@@ -9,6 +9,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
 public class VmFolderCreationParams
         extends com.arcfra.aoc.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_PARENT_ID = "parent_id";
+
+    @SerializedName(SERIALIZED_NAME_PARENT_ID)
+    private String parentId;
+
     public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
 
     @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
@@ -20,6 +25,49 @@ public class VmFolderCreationParams
     private String name;
 
     public VmFolderCreationParams() {}
+
+    public VmFolderCreationParams parentId(String parentId) {
+
+        this.parentId = parentId;
+        return this;
+    }
+
+    /**
+     * Get parentId
+     *
+     * @return parentId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
+    public VmFolderCreationParams parentId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PARENT_ID);
+        return this;
+    }
+
+    public VmFolderCreationParams parentId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PARENT_ID);
+        return this;
+    }
+
+    public void setParentId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PARENT_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PARENT_ID);
+        }
+    }
+
+    public boolean getParentId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PARENT_ID);
+    }
 
     public VmFolderCreationParams clusterId(String clusterId) {
 
@@ -116,19 +164,21 @@ public class VmFolderCreationParams
             return false;
         }
         VmFolderCreationParams vmFolderCreationParams = (VmFolderCreationParams) o;
-        return Objects.equals(this.clusterId, vmFolderCreationParams.clusterId)
+        return Objects.equals(this.parentId, vmFolderCreationParams.parentId)
+                && Objects.equals(this.clusterId, vmFolderCreationParams.clusterId)
                 && Objects.equals(this.name, vmFolderCreationParams.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(clusterId, name);
+        return Objects.hash(parentId, clusterId, name);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class VmFolderCreationParams {\n");
+        sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
         sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("}");

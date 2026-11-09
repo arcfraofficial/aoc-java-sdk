@@ -110,6 +110,11 @@ public class VmImportParams extends com.arcfra.aoc.ConditionalNullable.Condition
     @SerializedName(SERIALIZED_NAME_HOST_ID)
     private String hostId;
 
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
 
     @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
@@ -1000,6 +1005,49 @@ public class VmImportParams extends com.arcfra.aoc.ConditionalNullable.Condition
         return this._isPresent_.contains(SERIALIZED_NAME_HOST_ID);
     }
 
+    public VmImportParams storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public VmImportParams storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public VmImportParams storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
+
     public VmImportParams clusterId(String clusterId) {
 
         this.clusterId = clusterId;
@@ -1206,6 +1254,7 @@ public class VmImportParams extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(this.description, vmImportParams.description)
                 && Objects.equals(this.name, vmImportParams.name)
                 && Objects.equals(this.hostId, vmImportParams.hostId)
+                && Objects.equals(this.storageConfig, vmImportParams.storageConfig)
                 && Objects.equals(this.clusterId, vmImportParams.clusterId)
                 && Objects.equals(this.uploadTasks, vmImportParams.uploadTasks)
                 && Objects.equals(this.ownerId, vmImportParams.ownerId)
@@ -1235,6 +1284,7 @@ public class VmImportParams extends com.arcfra.aoc.ConditionalNullable.Condition
                 description,
                 name,
                 hostId,
+                storageConfig,
                 clusterId,
                 uploadTasks,
                 ownerId,
@@ -1267,6 +1317,7 @@ public class VmImportParams extends com.arcfra.aoc.ConditionalNullable.Condition
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
         sb.append("    uploadTasks: ").append(toIndentedString(uploadTasks)).append("\n");
         sb.append("    ownerId: ").append(toIndentedString(ownerId)).append("\n");

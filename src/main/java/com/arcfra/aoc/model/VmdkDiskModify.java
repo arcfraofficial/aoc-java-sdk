@@ -44,6 +44,16 @@ public class VmdkDiskModify extends com.arcfra.aoc.ConditionalNullable.Condition
     @SerializedName(SERIALIZED_NAME_VMDK_NAME)
     private String vmdkName;
 
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private VmVolumeProvisionPolicy provisionPolicy;
+
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public VmdkDiskModify() {}
 
     public VmdkDiskModify elfEcStoragePolicy(
@@ -350,6 +360,92 @@ public class VmdkDiskModify extends com.arcfra.aoc.ConditionalNullable.Condition
         return this._isPresent_.contains(SERIALIZED_NAME_VMDK_NAME);
     }
 
+    public VmdkDiskModify provisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmVolumeProvisionPolicy getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(VmVolumeProvisionPolicy provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public VmdkDiskModify provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public VmdkDiskModify provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
+    }
+
+    public VmdkDiskModify storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public VmdkDiskModify storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public VmdkDiskModify storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -366,7 +462,9 @@ public class VmdkDiskModify extends com.arcfra.aoc.ConditionalNullable.Condition
                 && Objects.equals(this.bus, vmdkDiskModify.bus)
                 && Objects.equals(this.volumeName, vmdkDiskModify.volumeName)
                 && Objects.equals(this.boot, vmdkDiskModify.boot)
-                && Objects.equals(this.vmdkName, vmdkDiskModify.vmdkName);
+                && Objects.equals(this.vmdkName, vmdkDiskModify.vmdkName)
+                && Objects.equals(this.provisionPolicy, vmdkDiskModify.provisionPolicy)
+                && Objects.equals(this.storageConfig, vmdkDiskModify.storageConfig);
     }
 
     @Override
@@ -378,7 +476,9 @@ public class VmdkDiskModify extends com.arcfra.aoc.ConditionalNullable.Condition
                 bus,
                 volumeName,
                 boot,
-                vmdkName);
+                vmdkName,
+                provisionPolicy,
+                storageConfig);
     }
 
     @Override
@@ -396,6 +496,8 @@ public class VmdkDiskModify extends com.arcfra.aoc.ConditionalNullable.Condition
         sb.append("    volumeName: ").append(toIndentedString(volumeName)).append("\n");
         sb.append("    boot: ").append(toIndentedString(boot)).append("\n");
         sb.append("    vmdkName: ").append(toIndentedString(vmdkName)).append("\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("}");
         return sb.toString();
     }

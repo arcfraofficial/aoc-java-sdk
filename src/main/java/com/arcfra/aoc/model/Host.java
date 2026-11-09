@@ -29,6 +29,11 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
     @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES)
     private Long allocatableMemoryBytes;
 
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES = "allocated_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES)
+    private Long allocatedMemoryBytes;
+
     public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
             "allocated_prioritized_space";
 
@@ -106,6 +111,16 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
     @SerializedName(SERIALIZED_NAME_DATA_IP)
     private String dataIp;
 
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
+
     public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
             "downgraded_prioritized_space";
 
@@ -116,6 +131,11 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
     private EntityAsyncStatus entityAsyncStatus;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -183,6 +203,17 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
     @SerializedName(SERIALIZED_NAME_MANAGEMENT_IP)
     private String managementIp;
 
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE = "memory_allocation_rate";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE)
+    private Double memoryAllocationRate;
+
+    public static final String SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED =
+            "memory_overcommit_enabled";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED)
+    private Boolean memoryOvercommitEnabled;
+
     public static final String SERIALIZED_NAME_MERGED_STATUS = "merged_status";
 
     @SerializedName(SERIALIZED_NAME_MERGED_STATUS)
@@ -227,6 +258,22 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_OS_VERSION)
     private String osVersion;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES =
+            "overcommit_active_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES)
+    private Long overcommitActiveMemoryBytes;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES = "overcommit_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES)
+    private Long overcommitMemoryBytes;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO = "overcommit_memory_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO)
+    private Double overcommitMemoryRatio;
 
     public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
             "perf_allocated_data_space";
@@ -291,6 +338,23 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES)
     private Long provisionedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_RESERVED_MEMORY_BYTES = "reserved_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_RESERVED_MEMORY_BYTES)
+    private Long reservedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES =
+            "running_pause_overcommit_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES)
+    private Long runningPauseOvercommitMemoryBytes;
+
+    public static final String SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES =
+            "running_pause_reserved_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES)
+    private Long runningPauseReservedMemoryBytes;
 
     public static final String SERIALIZED_NAME_RUNNING_PAUSE_VM_MEMORY_BYTES =
             "running_pause_vm_memory_bytes";
@@ -378,10 +442,21 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
     @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
     private Long totalDataCapacity;
 
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES = "total_logical_cpu_cores";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES)
+    private Integer totalLogicalCpuCores;
+
     public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
 
     @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
     private Long totalMemoryBytes;
+
+    public static final String SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES =
+            "total_physical_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES)
+    private Long totalPhysicalMemoryBytes;
 
     public static final String SERIALIZED_NAME_USB_DEVICES = "usb_devices";
 
@@ -568,6 +643,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getAllocatableMemoryBytes_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES);
+    }
+
+    public Host allocatedMemoryBytes(Long allocatedMemoryBytes) {
+
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytes
+     *
+     * @return allocatedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytes() {
+        return allocatedMemoryBytes;
+    }
+
+    public void setAllocatedMemoryBytes(Long allocatedMemoryBytes) {
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+    }
+
+    public Host allocatedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public Host allocatedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
     }
 
     public Host allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
@@ -1230,6 +1348,92 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         return this._isPresent_.contains(SERIALIZED_NAME_DATA_IP);
     }
 
+    public Host dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public Host dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public Host dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public Host dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public Host dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public Host dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+    }
+
     public Host downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
 
         this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
@@ -1314,6 +1518,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getEntityAsyncStatus_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+    }
+
+    public Host failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public Host failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public Host failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
     }
 
     public Host failureDataSpace(Long failureDataSpace) {
@@ -1891,6 +2138,92 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         return this._isPresent_.contains(SERIALIZED_NAME_MANAGEMENT_IP);
     }
 
+    public Host memoryAllocationRate(Double memoryAllocationRate) {
+
+        this.memoryAllocationRate = memoryAllocationRate;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRate
+     *
+     * @return memoryAllocationRate
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRate() {
+        return memoryAllocationRate;
+    }
+
+    public void setMemoryAllocationRate(Double memoryAllocationRate) {
+        this.memoryAllocationRate = memoryAllocationRate;
+    }
+
+    public Host memoryAllocationRate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public Host memoryAllocationRate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public void setMemoryAllocationRate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        }
+    }
+
+    public boolean getMemoryAllocationRate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+    }
+
+    public Host memoryOvercommitEnabled(Boolean memoryOvercommitEnabled) {
+
+        this.memoryOvercommitEnabled = memoryOvercommitEnabled;
+        return this;
+    }
+
+    /**
+     * Get memoryOvercommitEnabled
+     *
+     * @return memoryOvercommitEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getMemoryOvercommitEnabled() {
+        return memoryOvercommitEnabled;
+    }
+
+    public void setMemoryOvercommitEnabled(Boolean memoryOvercommitEnabled) {
+        this.memoryOvercommitEnabled = memoryOvercommitEnabled;
+    }
+
+    public Host memoryOvercommitEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        return this;
+    }
+
+    public Host memoryOvercommitEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        return this;
+    }
+
+    public void setMemoryOvercommitEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+        }
+    }
+
+    public boolean getMemoryOvercommitEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_OVERCOMMIT_ENABLED);
+    }
+
     public Host mergedStatus(HostMergedStatus mergedStatus) {
 
         this.mergedStatus = mergedStatus;
@@ -2284,6 +2617,135 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getOsVersion_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_OS_VERSION);
+    }
+
+    public Host overcommitActiveMemoryBytes(Long overcommitActiveMemoryBytes) {
+
+        this.overcommitActiveMemoryBytes = overcommitActiveMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get overcommitActiveMemoryBytes
+     *
+     * @return overcommitActiveMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitActiveMemoryBytes() {
+        return overcommitActiveMemoryBytes;
+    }
+
+    public void setOvercommitActiveMemoryBytes(Long overcommitActiveMemoryBytes) {
+        this.overcommitActiveMemoryBytes = overcommitActiveMemoryBytes;
+    }
+
+    public Host overcommitActiveMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        return this;
+    }
+
+    public Host overcommitActiveMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setOvercommitActiveMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getOvercommitActiveMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_ACTIVE_MEMORY_BYTES);
+    }
+
+    public Host overcommitMemoryBytes(Long overcommitMemoryBytes) {
+
+        this.overcommitMemoryBytes = overcommitMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryBytes
+     *
+     * @return overcommitMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getOvercommitMemoryBytes() {
+        return overcommitMemoryBytes;
+    }
+
+    public void setOvercommitMemoryBytes(Long overcommitMemoryBytes) {
+        this.overcommitMemoryBytes = overcommitMemoryBytes;
+    }
+
+    public Host overcommitMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public Host overcommitMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setOvercommitMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getOvercommitMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_BYTES);
+    }
+
+    public Host overcommitMemoryRatio(Double overcommitMemoryRatio) {
+
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatio
+     *
+     * @return overcommitMemoryRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatio() {
+        return overcommitMemoryRatio;
+    }
+
+    public void setOvercommitMemoryRatio(Double overcommitMemoryRatio) {
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+    }
+
+    public Host overcommitMemoryRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public Host overcommitMemoryRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
     }
 
     public Host perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
@@ -2800,6 +3262,135 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getProvisionedMemoryBytes_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_PROVISIONED_MEMORY_BYTES);
+    }
+
+    public Host reservedMemoryBytes(Long reservedMemoryBytes) {
+
+        this.reservedMemoryBytes = reservedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get reservedMemoryBytes
+     *
+     * @return reservedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getReservedMemoryBytes() {
+        return reservedMemoryBytes;
+    }
+
+    public void setReservedMemoryBytes(Long reservedMemoryBytes) {
+        this.reservedMemoryBytes = reservedMemoryBytes;
+    }
+
+    public Host reservedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public Host reservedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setReservedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getReservedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESERVED_MEMORY_BYTES);
+    }
+
+    public Host runningPauseOvercommitMemoryBytes(Long runningPauseOvercommitMemoryBytes) {
+
+        this.runningPauseOvercommitMemoryBytes = runningPauseOvercommitMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get runningPauseOvercommitMemoryBytes
+     *
+     * @return runningPauseOvercommitMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseOvercommitMemoryBytes() {
+        return runningPauseOvercommitMemoryBytes;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytes(Long runningPauseOvercommitMemoryBytes) {
+        this.runningPauseOvercommitMemoryBytes = runningPauseOvercommitMemoryBytes;
+    }
+
+    public Host runningPauseOvercommitMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public Host runningPauseOvercommitMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setRunningPauseOvercommitMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getRunningPauseOvercommitMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_OVERCOMMIT_MEMORY_BYTES);
+    }
+
+    public Host runningPauseReservedMemoryBytes(Long runningPauseReservedMemoryBytes) {
+
+        this.runningPauseReservedMemoryBytes = runningPauseReservedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get runningPauseReservedMemoryBytes
+     *
+     * @return runningPauseReservedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getRunningPauseReservedMemoryBytes() {
+        return runningPauseReservedMemoryBytes;
+    }
+
+    public void setRunningPauseReservedMemoryBytes(Long runningPauseReservedMemoryBytes) {
+        this.runningPauseReservedMemoryBytes = runningPauseReservedMemoryBytes;
+    }
+
+    public Host runningPauseReservedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public Host runningPauseReservedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setRunningPauseReservedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getRunningPauseReservedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RUNNING_PAUSE_RESERVED_MEMORY_BYTES);
     }
 
     public Host runningPauseVmMemoryBytes(Long runningPauseVmMemoryBytes) {
@@ -3533,6 +4124,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_DATA_CAPACITY);
     }
 
+    public Host totalLogicalCpuCores(Integer totalLogicalCpuCores) {
+
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCores
+     *
+     * @return totalLogicalCpuCores
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCores() {
+        return totalLogicalCpuCores;
+    }
+
+    public void setTotalLogicalCpuCores(Integer totalLogicalCpuCores) {
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+    }
+
+    public Host totalLogicalCpuCores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public Host totalLogicalCpuCores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+    }
+
     public Host totalMemoryBytes(Long totalMemoryBytes) {
 
         this.totalMemoryBytes = totalMemoryBytes;
@@ -3574,6 +4208,49 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
 
     public boolean getTotalMemoryBytes_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_MEMORY_BYTES);
+    }
+
+    public Host totalPhysicalMemoryBytes(Long totalPhysicalMemoryBytes) {
+
+        this.totalPhysicalMemoryBytes = totalPhysicalMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get totalPhysicalMemoryBytes
+     *
+     * @return totalPhysicalMemoryBytes
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public Long getTotalPhysicalMemoryBytes() {
+        return totalPhysicalMemoryBytes;
+    }
+
+    public void setTotalPhysicalMemoryBytes(Long totalPhysicalMemoryBytes) {
+        this.totalPhysicalMemoryBytes = totalPhysicalMemoryBytes;
+    }
+
+    public Host totalPhysicalMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        return this;
+    }
+
+    public Host totalPhysicalMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setTotalPhysicalMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getTotalPhysicalMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PHYSICAL_MEMORY_BYTES);
     }
 
     public Host usbDevices(List<NestedUsbDevice> usbDevices) {
@@ -4078,6 +4755,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(
                         this.allocableCpuCoresForVmExclusive, host.allocableCpuCoresForVmExclusive)
                 && Objects.equals(this.allocatableMemoryBytes, host.allocatableMemoryBytes)
+                && Objects.equals(this.allocatedMemoryBytes, host.allocatedMemoryBytes)
                 && Objects.equals(this.allocatedPrioritizedSpace, host.allocatedPrioritizedSpace)
                 && Objects.equals(
                         this.allocatedPrioritizedSpaceUsage, host.allocatedPrioritizedSpaceUsage)
@@ -4094,8 +4772,11 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.cpuTemperatureCelsius, host.cpuTemperatureCelsius)
                 && Objects.equals(this.cpuVendor, host.cpuVendor)
                 && Objects.equals(this.dataIp, host.dataIp)
+                && Objects.equals(this.dirtyCacheSpace, host.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheUsage, host.dirtyCacheUsage)
                 && Objects.equals(this.downgradedPrioritizedSpace, host.downgradedPrioritizedSpace)
                 && Objects.equals(this.entityAsyncStatus, host.entityAsyncStatus)
+                && Objects.equals(this.failureCacheSpace, host.failureCacheSpace)
                 && Objects.equals(this.failureDataSpace, host.failureDataSpace)
                 && Objects.equals(this.gpuDevices, host.gpuDevices)
                 && Objects.equals(this.hddDataCapacity, host.hddDataCapacity)
@@ -4109,6 +4790,8 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.localId, host.localId)
                 && Objects.equals(this.lsmCapDiskSafeUmount, host.lsmCapDiskSafeUmount)
                 && Objects.equals(this.managementIp, host.managementIp)
+                && Objects.equals(this.memoryAllocationRate, host.memoryAllocationRate)
+                && Objects.equals(this.memoryOvercommitEnabled, host.memoryOvercommitEnabled)
                 && Objects.equals(this.mergedStatus, host.mergedStatus)
                 && Objects.equals(this.model, host.model)
                 && Objects.equals(this.name, host.name)
@@ -4118,6 +4801,10 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.nodeTopoLocalId, host.nodeTopoLocalId)
                 && Objects.equals(this.osMemoryBytes, host.osMemoryBytes)
                 && Objects.equals(this.osVersion, host.osVersion)
+                && Objects.equals(
+                        this.overcommitActiveMemoryBytes, host.overcommitActiveMemoryBytes)
+                && Objects.equals(this.overcommitMemoryBytes, host.overcommitMemoryBytes)
+                && Objects.equals(this.overcommitMemoryRatio, host.overcommitMemoryRatio)
                 && Objects.equals(this.perfAllocatedDataSpace, host.perfAllocatedDataSpace)
                 && Objects.equals(this.perfFailureDataSpace, host.perfFailureDataSpace)
                 && Objects.equals(this.perfTotalDataCapacity, host.perfTotalDataCapacity)
@@ -4130,6 +4817,12 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.prioSpacePercentage, host.prioSpacePercentage)
                 && Objects.equals(this.provisionedCpuCores, host.provisionedCpuCores)
                 && Objects.equals(this.provisionedMemoryBytes, host.provisionedMemoryBytes)
+                && Objects.equals(this.reservedMemoryBytes, host.reservedMemoryBytes)
+                && Objects.equals(
+                        this.runningPauseOvercommitMemoryBytes,
+                        host.runningPauseOvercommitMemoryBytes)
+                && Objects.equals(
+                        this.runningPauseReservedMemoryBytes, host.runningPauseReservedMemoryBytes)
                 && Objects.equals(this.runningPauseVmMemoryBytes, host.runningPauseVmMemoryBytes)
                 && Objects.equals(this.runningVmNum, host.runningVmNum)
                 && Objects.equals(this.scvmCpu, host.scvmCpu)
@@ -4147,7 +4840,9 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.totalCpuHz, host.totalCpuHz)
                 && Objects.equals(this.totalCpuSockets, host.totalCpuSockets)
                 && Objects.equals(this.totalDataCapacity, host.totalDataCapacity)
+                && Objects.equals(this.totalLogicalCpuCores, host.totalLogicalCpuCores)
                 && Objects.equals(this.totalMemoryBytes, host.totalMemoryBytes)
+                && Objects.equals(this.totalPhysicalMemoryBytes, host.totalPhysicalMemoryBytes)
                 && Objects.equals(this.usbDevices, host.usbDevices)
                 && Objects.equals(this.usedCacheSpace, host.usedCacheSpace)
                 && Objects.equals(this.usedCpuHz, host.usedCpuHz)
@@ -4176,6 +4871,7 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 accessIp,
                 allocableCpuCoresForVmExclusive,
                 allocatableMemoryBytes,
+                allocatedMemoryBytes,
                 allocatedPrioritizedSpace,
                 allocatedPrioritizedSpaceUsage,
                 chunkId,
@@ -4191,8 +4887,11 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 cpuTemperatureCelsius,
                 cpuVendor,
                 dataIp,
+                dirtyCacheSpace,
+                dirtyCacheUsage,
                 downgradedPrioritizedSpace,
                 entityAsyncStatus,
+                failureCacheSpace,
                 failureDataSpace,
                 gpuDevices,
                 hddDataCapacity,
@@ -4206,6 +4905,8 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 localId,
                 lsmCapDiskSafeUmount,
                 managementIp,
+                memoryAllocationRate,
+                memoryOvercommitEnabled,
                 mergedStatus,
                 model,
                 name,
@@ -4215,6 +4916,9 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 nodeTopoLocalId,
                 osMemoryBytes,
                 osVersion,
+                overcommitActiveMemoryBytes,
+                overcommitMemoryBytes,
+                overcommitMemoryRatio,
                 perfAllocatedDataSpace,
                 perfFailureDataSpace,
                 perfTotalDataCapacity,
@@ -4227,6 +4931,9 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 prioSpacePercentage,
                 provisionedCpuCores,
                 provisionedMemoryBytes,
+                reservedMemoryBytes,
+                runningPauseOvercommitMemoryBytes,
+                runningPauseReservedMemoryBytes,
                 runningPauseVmMemoryBytes,
                 runningVmNum,
                 scvmCpu,
@@ -4244,7 +4951,9 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 totalCpuHz,
                 totalCpuSockets,
                 totalDataCapacity,
+                totalLogicalCpuCores,
                 totalMemoryBytes,
+                totalPhysicalMemoryBytes,
                 usbDevices,
                 usedCacheSpace,
                 usedCpuHz,
@@ -4276,6 +4985,9 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         sb.append("    allocatableMemoryBytes: ")
                 .append(toIndentedString(allocatableMemoryBytes))
                 .append("\n");
+        sb.append("    allocatedMemoryBytes: ")
+                .append(toIndentedString(allocatedMemoryBytes))
+                .append("\n");
         sb.append("    allocatedPrioritizedSpace: ")
                 .append(toIndentedString(allocatedPrioritizedSpace))
                 .append("\n");
@@ -4301,11 +5013,16 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 .append("\n");
         sb.append("    cpuVendor: ").append(toIndentedString(cpuVendor)).append("\n");
         sb.append("    dataIp: ").append(toIndentedString(dataIp)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
         sb.append("    downgradedPrioritizedSpace: ")
                 .append(toIndentedString(downgradedPrioritizedSpace))
                 .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
                 .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");
@@ -4322,6 +5039,12 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
                 .append(toIndentedString(lsmCapDiskSafeUmount))
                 .append("\n");
         sb.append("    managementIp: ").append(toIndentedString(managementIp)).append("\n");
+        sb.append("    memoryAllocationRate: ")
+                .append(toIndentedString(memoryAllocationRate))
+                .append("\n");
+        sb.append("    memoryOvercommitEnabled: ")
+                .append(toIndentedString(memoryOvercommitEnabled))
+                .append("\n");
         sb.append("    mergedStatus: ").append(toIndentedString(mergedStatus)).append("\n");
         sb.append("    model: ").append(toIndentedString(model)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -4333,6 +5056,15 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         sb.append("    nodeTopoLocalId: ").append(toIndentedString(nodeTopoLocalId)).append("\n");
         sb.append("    osMemoryBytes: ").append(toIndentedString(osMemoryBytes)).append("\n");
         sb.append("    osVersion: ").append(toIndentedString(osVersion)).append("\n");
+        sb.append("    overcommitActiveMemoryBytes: ")
+                .append(toIndentedString(overcommitActiveMemoryBytes))
+                .append("\n");
+        sb.append("    overcommitMemoryBytes: ")
+                .append(toIndentedString(overcommitMemoryBytes))
+                .append("\n");
+        sb.append("    overcommitMemoryRatio: ")
+                .append(toIndentedString(overcommitMemoryRatio))
+                .append("\n");
         sb.append("    perfAllocatedDataSpace: ")
                 .append(toIndentedString(perfAllocatedDataSpace))
                 .append("\n");
@@ -4363,6 +5095,15 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         sb.append("    provisionedMemoryBytes: ")
                 .append(toIndentedString(provisionedMemoryBytes))
                 .append("\n");
+        sb.append("    reservedMemoryBytes: ")
+                .append(toIndentedString(reservedMemoryBytes))
+                .append("\n");
+        sb.append("    runningPauseOvercommitMemoryBytes: ")
+                .append(toIndentedString(runningPauseOvercommitMemoryBytes))
+                .append("\n");
+        sb.append("    runningPauseReservedMemoryBytes: ")
+                .append(toIndentedString(runningPauseReservedMemoryBytes))
+                .append("\n");
         sb.append("    runningPauseVmMemoryBytes: ")
                 .append(toIndentedString(runningPauseVmMemoryBytes))
                 .append("\n");
@@ -4386,7 +5127,13 @@ public class Host extends com.arcfra.aoc.ConditionalNullable.ConditionalNullable
         sb.append("    totalDataCapacity: ")
                 .append(toIndentedString(totalDataCapacity))
                 .append("\n");
+        sb.append("    totalLogicalCpuCores: ")
+                .append(toIndentedString(totalLogicalCpuCores))
+                .append("\n");
         sb.append("    totalMemoryBytes: ").append(toIndentedString(totalMemoryBytes)).append("\n");
+        sb.append("    totalPhysicalMemoryBytes: ")
+                .append(toIndentedString(totalPhysicalMemoryBytes))
+                .append("\n");
         sb.append("    usbDevices: ").append(toIndentedString(usbDevices)).append("\n");
         sb.append("    usedCacheSpace: ").append(toIndentedString(usedCacheSpace)).append("\n");
         sb.append("    usedCpuHz: ").append(toIndentedString(usedCpuHz)).append("\n");

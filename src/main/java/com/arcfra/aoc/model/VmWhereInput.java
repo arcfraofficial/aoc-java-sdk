@@ -27,6 +27,32 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
     @SerializedName(SERIALIZED_NAME_O_R)
     private List<VmWhereInput> OR = null;
 
+    public static final String SERIALIZED_NAME_ANTI_MALWARE_ENABLED = "anti_malware_enabled";
+
+    @SerializedName(SERIALIZED_NAME_ANTI_MALWARE_ENABLED)
+    private Boolean antiMalwareEnabled;
+
+    public static final String SERIALIZED_NAME_ANTI_MALWARE_ENABLED_NOT =
+            "anti_malware_enabled_not";
+
+    @SerializedName(SERIALIZED_NAME_ANTI_MALWARE_ENABLED_NOT)
+    private Boolean antiMalwareEnabledNot;
+
+    public static final String SERIALIZED_NAME_BACKUP_PLANS_EVERY = "backup_plans_every";
+
+    @SerializedName(SERIALIZED_NAME_BACKUP_PLANS_EVERY)
+    private BackupPlanWhereInput backupPlansEvery;
+
+    public static final String SERIALIZED_NAME_BACKUP_PLANS_NONE = "backup_plans_none";
+
+    @SerializedName(SERIALIZED_NAME_BACKUP_PLANS_NONE)
+    private BackupPlanWhereInput backupPlansNone;
+
+    public static final String SERIALIZED_NAME_BACKUP_PLANS_SOME = "backup_plans_some";
+
+    @SerializedName(SERIALIZED_NAME_BACKUP_PLANS_SOME)
+    private BackupPlanWhereInput backupPlansSome;
+
     public static final String SERIALIZED_NAME_BIOS_UUID = "bios_uuid";
 
     @SerializedName(SERIALIZED_NAME_BIOS_UUID)
@@ -430,6 +456,16 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
 
     @SerializedName(SERIALIZED_NAME_DNS_SERVERS_STARTS_WITH)
     private String dnsServersStartsWith;
+
+    public static final String SERIALIZED_NAME_DPI_ENABLED = "dpi_enabled";
+
+    @SerializedName(SERIALIZED_NAME_DPI_ENABLED)
+    private Boolean dpiEnabled;
+
+    public static final String SERIALIZED_NAME_DPI_ENABLED_NOT = "dpi_enabled_not";
+
+    @SerializedName(SERIALIZED_NAME_DPI_ENABLED_NOT)
+    private Boolean dpiEnabledNot;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -863,6 +899,165 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
 
     @SerializedName(SERIALIZED_NAME_INTERNAL_NOT)
     private Boolean internalNot;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT = "internal_product";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT)
+    private String internalProduct;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_CONTAINS =
+            "internal_product_contains";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_CONTAINS)
+    private String internalProductContains;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_ENDS_WITH =
+            "internal_product_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_ENDS_WITH)
+    private String internalProductEndsWith;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_GT = "internal_product_gt";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_GT)
+    private String internalProductGt;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_GTE = "internal_product_gte";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_GTE)
+    private String internalProductGte;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_IN = "internal_product_in";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_IN)
+    private List<String> internalProductIn = null;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_LT = "internal_product_lt";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_LT)
+    private String internalProductLt;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_LTE = "internal_product_lte";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_LTE)
+    private String internalProductLte;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME = "internal_product_name";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME)
+    private String internalProductName;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_CONTAINS =
+            "internal_product_name_contains";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_CONTAINS)
+    private String internalProductNameContains;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_ENDS_WITH =
+            "internal_product_name_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_ENDS_WITH)
+    private String internalProductNameEndsWith;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GT =
+            "internal_product_name_gt";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GT)
+    private String internalProductNameGt;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GTE =
+            "internal_product_name_gte";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GTE)
+    private String internalProductNameGte;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_IN =
+            "internal_product_name_in";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_IN)
+    private List<String> internalProductNameIn = null;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LT =
+            "internal_product_name_lt";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LT)
+    private String internalProductNameLt;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LTE =
+            "internal_product_name_lte";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LTE)
+    private String internalProductNameLte;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT =
+            "internal_product_name_not";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT)
+    private String internalProductNameNot;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_CONTAINS =
+            "internal_product_name_not_contains";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_CONTAINS)
+    private String internalProductNameNotContains;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_ENDS_WITH =
+            "internal_product_name_not_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_ENDS_WITH)
+    private String internalProductNameNotEndsWith;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_IN =
+            "internal_product_name_not_in";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_IN)
+    private List<String> internalProductNameNotIn = null;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_STARTS_WITH =
+            "internal_product_name_not_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_STARTS_WITH)
+    private String internalProductNameNotStartsWith;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_STARTS_WITH =
+            "internal_product_name_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_STARTS_WITH)
+    private String internalProductNameStartsWith;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NOT = "internal_product_not";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT)
+    private String internalProductNot;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_CONTAINS =
+            "internal_product_not_contains";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_CONTAINS)
+    private String internalProductNotContains;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_ENDS_WITH =
+            "internal_product_not_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_ENDS_WITH)
+    private String internalProductNotEndsWith;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_IN = "internal_product_not_in";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_IN)
+    private List<String> internalProductNotIn = null;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_STARTS_WITH =
+            "internal_product_not_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_STARTS_WITH)
+    private String internalProductNotStartsWith;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_STARTS_WITH =
+            "internal_product_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_STARTS_WITH)
+    private String internalProductStartsWith;
 
     public static final String SERIALIZED_NAME_IO_POLICY = "io_policy";
 
@@ -2438,6 +2633,221 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
 
     public boolean getOR_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public VmWhereInput antiMalwareEnabled(Boolean antiMalwareEnabled) {
+
+        this.antiMalwareEnabled = antiMalwareEnabled;
+        return this;
+    }
+
+    /**
+     * Get antiMalwareEnabled
+     *
+     * @return antiMalwareEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getAntiMalwareEnabled() {
+        return antiMalwareEnabled;
+    }
+
+    public void setAntiMalwareEnabled(Boolean antiMalwareEnabled) {
+        this.antiMalwareEnabled = antiMalwareEnabled;
+    }
+
+    public VmWhereInput antiMalwareEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        return this;
+    }
+
+    public VmWhereInput antiMalwareEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        return this;
+    }
+
+    public void setAntiMalwareEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        }
+    }
+
+    public boolean getAntiMalwareEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+    }
+
+    public VmWhereInput antiMalwareEnabledNot(Boolean antiMalwareEnabledNot) {
+
+        this.antiMalwareEnabledNot = antiMalwareEnabledNot;
+        return this;
+    }
+
+    /**
+     * Get antiMalwareEnabledNot
+     *
+     * @return antiMalwareEnabledNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getAntiMalwareEnabledNot() {
+        return antiMalwareEnabledNot;
+    }
+
+    public void setAntiMalwareEnabledNot(Boolean antiMalwareEnabledNot) {
+        this.antiMalwareEnabledNot = antiMalwareEnabledNot;
+    }
+
+    public VmWhereInput antiMalwareEnabledNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED_NOT);
+        return this;
+    }
+
+    public VmWhereInput antiMalwareEnabledNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED_NOT);
+        return this;
+    }
+
+    public void setAntiMalwareEnabledNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED_NOT);
+        }
+    }
+
+    public boolean getAntiMalwareEnabledNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ANTI_MALWARE_ENABLED_NOT);
+    }
+
+    public VmWhereInput backupPlansEvery(BackupPlanWhereInput backupPlansEvery) {
+
+        this.backupPlansEvery = backupPlansEvery;
+        return this;
+    }
+
+    /**
+     * Get backupPlansEvery
+     *
+     * @return backupPlansEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BackupPlanWhereInput getBackupPlansEvery() {
+        return backupPlansEvery;
+    }
+
+    public void setBackupPlansEvery(BackupPlanWhereInput backupPlansEvery) {
+        this.backupPlansEvery = backupPlansEvery;
+    }
+
+    public VmWhereInput backupPlansEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS_EVERY);
+        return this;
+    }
+
+    public VmWhereInput backupPlansEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS_EVERY);
+        return this;
+    }
+
+    public void setBackupPlansEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS_EVERY);
+        }
+    }
+
+    public boolean getBackupPlansEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BACKUP_PLANS_EVERY);
+    }
+
+    public VmWhereInput backupPlansNone(BackupPlanWhereInput backupPlansNone) {
+
+        this.backupPlansNone = backupPlansNone;
+        return this;
+    }
+
+    /**
+     * Get backupPlansNone
+     *
+     * @return backupPlansNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BackupPlanWhereInput getBackupPlansNone() {
+        return backupPlansNone;
+    }
+
+    public void setBackupPlansNone(BackupPlanWhereInput backupPlansNone) {
+        this.backupPlansNone = backupPlansNone;
+    }
+
+    public VmWhereInput backupPlansNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS_NONE);
+        return this;
+    }
+
+    public VmWhereInput backupPlansNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS_NONE);
+        return this;
+    }
+
+    public void setBackupPlansNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS_NONE);
+        }
+    }
+
+    public boolean getBackupPlansNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BACKUP_PLANS_NONE);
+    }
+
+    public VmWhereInput backupPlansSome(BackupPlanWhereInput backupPlansSome) {
+
+        this.backupPlansSome = backupPlansSome;
+        return this;
+    }
+
+    /**
+     * Get backupPlansSome
+     *
+     * @return backupPlansSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BackupPlanWhereInput getBackupPlansSome() {
+        return backupPlansSome;
+    }
+
+    public void setBackupPlansSome(BackupPlanWhereInput backupPlansSome) {
+        this.backupPlansSome = backupPlansSome;
+    }
+
+    public VmWhereInput backupPlansSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS_SOME);
+        return this;
+    }
+
+    public VmWhereInput backupPlansSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS_SOME);
+        return this;
+    }
+
+    public void setBackupPlansSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BACKUP_PLANS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BACKUP_PLANS_SOME);
+        }
+    }
+
+    public boolean getBackupPlansSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BACKUP_PLANS_SOME);
     }
 
     public VmWhereInput biosUuid(String biosUuid) {
@@ -5947,6 +6357,92 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
 
     public boolean getDnsServersStartsWith_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DNS_SERVERS_STARTS_WITH);
+    }
+
+    public VmWhereInput dpiEnabled(Boolean dpiEnabled) {
+
+        this.dpiEnabled = dpiEnabled;
+        return this;
+    }
+
+    /**
+     * Get dpiEnabled
+     *
+     * @return dpiEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDpiEnabled() {
+        return dpiEnabled;
+    }
+
+    public void setDpiEnabled(Boolean dpiEnabled) {
+        this.dpiEnabled = dpiEnabled;
+    }
+
+    public VmWhereInput dpiEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public VmWhereInput dpiEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public void setDpiEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        }
+    }
+
+    public boolean getDpiEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DPI_ENABLED);
+    }
+
+    public VmWhereInput dpiEnabledNot(Boolean dpiEnabledNot) {
+
+        this.dpiEnabledNot = dpiEnabledNot;
+        return this;
+    }
+
+    /**
+     * Get dpiEnabledNot
+     *
+     * @return dpiEnabledNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDpiEnabledNot() {
+        return dpiEnabledNot;
+    }
+
+    public void setDpiEnabledNot(Boolean dpiEnabledNot) {
+        this.dpiEnabledNot = dpiEnabledNot;
+    }
+
+    public VmWhereInput dpiEnabledNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        return this;
+    }
+
+    public VmWhereInput dpiEnabledNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        return this;
+    }
+
+    public void setDpiEnabledNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED_NOT);
+        }
+    }
+
+    public boolean getDpiEnabledNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DPI_ENABLED_NOT);
     }
 
     public VmWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -9747,6 +10243,1242 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
 
     public boolean getInternalNot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_NOT);
+    }
+
+    public VmWhereInput internalProduct(String internalProduct) {
+
+        this.internalProduct = internalProduct;
+        return this;
+    }
+
+    /**
+     * Get internalProduct
+     *
+     * @return internalProduct
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProduct() {
+        return internalProduct;
+    }
+
+    public void setInternalProduct(String internalProduct) {
+        this.internalProduct = internalProduct;
+    }
+
+    public VmWhereInput internalProduct_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        return this;
+    }
+
+    public VmWhereInput internalProduct_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        return this;
+    }
+
+    public void setInternalProduct_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        }
+    }
+
+    public boolean getInternalProduct_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT);
+    }
+
+    public VmWhereInput internalProductContains(String internalProductContains) {
+
+        this.internalProductContains = internalProductContains;
+        return this;
+    }
+
+    /**
+     * Get internalProductContains
+     *
+     * @return internalProductContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductContains() {
+        return internalProductContains;
+    }
+
+    public void setInternalProductContains(String internalProductContains) {
+        this.internalProductContains = internalProductContains;
+    }
+
+    public VmWhereInput internalProductContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_CONTAINS);
+        return this;
+    }
+
+    public VmWhereInput internalProductContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_CONTAINS);
+        return this;
+    }
+
+    public void setInternalProductContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_CONTAINS);
+        }
+    }
+
+    public boolean getInternalProductContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_CONTAINS);
+    }
+
+    public VmWhereInput internalProductEndsWith(String internalProductEndsWith) {
+
+        this.internalProductEndsWith = internalProductEndsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductEndsWith
+     *
+     * @return internalProductEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductEndsWith() {
+        return internalProductEndsWith;
+    }
+
+    public void setInternalProductEndsWith(String internalProductEndsWith) {
+        this.internalProductEndsWith = internalProductEndsWith;
+    }
+
+    public VmWhereInput internalProductEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_ENDS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_ENDS_WITH);
+        return this;
+    }
+
+    public void setInternalProductEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_ENDS_WITH);
+        }
+    }
+
+    public boolean getInternalProductEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_ENDS_WITH);
+    }
+
+    public VmWhereInput internalProductGt(String internalProductGt) {
+
+        this.internalProductGt = internalProductGt;
+        return this;
+    }
+
+    /**
+     * Get internalProductGt
+     *
+     * @return internalProductGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductGt() {
+        return internalProductGt;
+    }
+
+    public void setInternalProductGt(String internalProductGt) {
+        this.internalProductGt = internalProductGt;
+    }
+
+    public VmWhereInput internalProductGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_GT);
+        return this;
+    }
+
+    public VmWhereInput internalProductGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_GT);
+        return this;
+    }
+
+    public void setInternalProductGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_GT);
+        }
+    }
+
+    public boolean getInternalProductGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_GT);
+    }
+
+    public VmWhereInput internalProductGte(String internalProductGte) {
+
+        this.internalProductGte = internalProductGte;
+        return this;
+    }
+
+    /**
+     * Get internalProductGte
+     *
+     * @return internalProductGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductGte() {
+        return internalProductGte;
+    }
+
+    public void setInternalProductGte(String internalProductGte) {
+        this.internalProductGte = internalProductGte;
+    }
+
+    public VmWhereInput internalProductGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_GTE);
+        return this;
+    }
+
+    public VmWhereInput internalProductGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_GTE);
+        return this;
+    }
+
+    public void setInternalProductGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_GTE);
+        }
+    }
+
+    public boolean getInternalProductGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_GTE);
+    }
+
+    public VmWhereInput internalProductIn(List<String> internalProductIn) {
+
+        this.internalProductIn = internalProductIn;
+        return this;
+    }
+
+    public VmWhereInput addInternalProductInItem(String internalProductInItem) {
+        if (this.internalProductIn == null) {
+            this.internalProductIn = new ArrayList<String>();
+        }
+        this.internalProductIn.add(internalProductInItem);
+        return this;
+    }
+
+    /**
+     * Get internalProductIn
+     *
+     * @return internalProductIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getInternalProductIn() {
+        return internalProductIn;
+    }
+
+    public void setInternalProductIn(List<String> internalProductIn) {
+        this.internalProductIn = internalProductIn;
+    }
+
+    public VmWhereInput internalProductIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_IN);
+        return this;
+    }
+
+    public VmWhereInput internalProductIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_IN);
+        return this;
+    }
+
+    public void setInternalProductIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_IN);
+        }
+    }
+
+    public boolean getInternalProductIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_IN);
+    }
+
+    public VmWhereInput internalProductLt(String internalProductLt) {
+
+        this.internalProductLt = internalProductLt;
+        return this;
+    }
+
+    /**
+     * Get internalProductLt
+     *
+     * @return internalProductLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductLt() {
+        return internalProductLt;
+    }
+
+    public void setInternalProductLt(String internalProductLt) {
+        this.internalProductLt = internalProductLt;
+    }
+
+    public VmWhereInput internalProductLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_LT);
+        return this;
+    }
+
+    public VmWhereInput internalProductLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_LT);
+        return this;
+    }
+
+    public void setInternalProductLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_LT);
+        }
+    }
+
+    public boolean getInternalProductLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_LT);
+    }
+
+    public VmWhereInput internalProductLte(String internalProductLte) {
+
+        this.internalProductLte = internalProductLte;
+        return this;
+    }
+
+    /**
+     * Get internalProductLte
+     *
+     * @return internalProductLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductLte() {
+        return internalProductLte;
+    }
+
+    public void setInternalProductLte(String internalProductLte) {
+        this.internalProductLte = internalProductLte;
+    }
+
+    public VmWhereInput internalProductLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_LTE);
+        return this;
+    }
+
+    public VmWhereInput internalProductLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_LTE);
+        return this;
+    }
+
+    public void setInternalProductLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_LTE);
+        }
+    }
+
+    public boolean getInternalProductLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_LTE);
+    }
+
+    public VmWhereInput internalProductName(String internalProductName) {
+
+        this.internalProductName = internalProductName;
+        return this;
+    }
+
+    /**
+     * Get internalProductName
+     *
+     * @return internalProductName
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductName() {
+        return internalProductName;
+    }
+
+    public void setInternalProductName(String internalProductName) {
+        this.internalProductName = internalProductName;
+    }
+
+    public VmWhereInput internalProductName_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        return this;
+    }
+
+    public VmWhereInput internalProductName_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        return this;
+    }
+
+    public void setInternalProductName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        }
+    }
+
+    public boolean getInternalProductName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+    }
+
+    public VmWhereInput internalProductNameContains(String internalProductNameContains) {
+
+        this.internalProductNameContains = internalProductNameContains;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameContains
+     *
+     * @return internalProductNameContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameContains() {
+        return internalProductNameContains;
+    }
+
+    public void setInternalProductNameContains(String internalProductNameContains) {
+        this.internalProductNameContains = internalProductNameContains;
+    }
+
+    public VmWhereInput internalProductNameContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_CONTAINS);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_CONTAINS);
+        return this;
+    }
+
+    public void setInternalProductNameContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_CONTAINS);
+        }
+    }
+
+    public boolean getInternalProductNameContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_CONTAINS);
+    }
+
+    public VmWhereInput internalProductNameEndsWith(String internalProductNameEndsWith) {
+
+        this.internalProductNameEndsWith = internalProductNameEndsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameEndsWith
+     *
+     * @return internalProductNameEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameEndsWith() {
+        return internalProductNameEndsWith;
+    }
+
+    public void setInternalProductNameEndsWith(String internalProductNameEndsWith) {
+        this.internalProductNameEndsWith = internalProductNameEndsWith;
+    }
+
+    public VmWhereInput internalProductNameEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_ENDS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_ENDS_WITH);
+        return this;
+    }
+
+    public void setInternalProductNameEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_ENDS_WITH);
+        }
+    }
+
+    public boolean getInternalProductNameEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_ENDS_WITH);
+    }
+
+    public VmWhereInput internalProductNameGt(String internalProductNameGt) {
+
+        this.internalProductNameGt = internalProductNameGt;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameGt
+     *
+     * @return internalProductNameGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameGt() {
+        return internalProductNameGt;
+    }
+
+    public void setInternalProductNameGt(String internalProductNameGt) {
+        this.internalProductNameGt = internalProductNameGt;
+    }
+
+    public VmWhereInput internalProductNameGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GT);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GT);
+        return this;
+    }
+
+    public void setInternalProductNameGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GT);
+        }
+    }
+
+    public boolean getInternalProductNameGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GT);
+    }
+
+    public VmWhereInput internalProductNameGte(String internalProductNameGte) {
+
+        this.internalProductNameGte = internalProductNameGte;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameGte
+     *
+     * @return internalProductNameGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameGte() {
+        return internalProductNameGte;
+    }
+
+    public void setInternalProductNameGte(String internalProductNameGte) {
+        this.internalProductNameGte = internalProductNameGte;
+    }
+
+    public VmWhereInput internalProductNameGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GTE);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GTE);
+        return this;
+    }
+
+    public void setInternalProductNameGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GTE);
+        }
+    }
+
+    public boolean getInternalProductNameGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_GTE);
+    }
+
+    public VmWhereInput internalProductNameIn(List<String> internalProductNameIn) {
+
+        this.internalProductNameIn = internalProductNameIn;
+        return this;
+    }
+
+    public VmWhereInput addInternalProductNameInItem(String internalProductNameInItem) {
+        if (this.internalProductNameIn == null) {
+            this.internalProductNameIn = new ArrayList<String>();
+        }
+        this.internalProductNameIn.add(internalProductNameInItem);
+        return this;
+    }
+
+    /**
+     * Get internalProductNameIn
+     *
+     * @return internalProductNameIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getInternalProductNameIn() {
+        return internalProductNameIn;
+    }
+
+    public void setInternalProductNameIn(List<String> internalProductNameIn) {
+        this.internalProductNameIn = internalProductNameIn;
+    }
+
+    public VmWhereInput internalProductNameIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_IN);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_IN);
+        return this;
+    }
+
+    public void setInternalProductNameIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_IN);
+        }
+    }
+
+    public boolean getInternalProductNameIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_IN);
+    }
+
+    public VmWhereInput internalProductNameLt(String internalProductNameLt) {
+
+        this.internalProductNameLt = internalProductNameLt;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameLt
+     *
+     * @return internalProductNameLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameLt() {
+        return internalProductNameLt;
+    }
+
+    public void setInternalProductNameLt(String internalProductNameLt) {
+        this.internalProductNameLt = internalProductNameLt;
+    }
+
+    public VmWhereInput internalProductNameLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LT);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LT);
+        return this;
+    }
+
+    public void setInternalProductNameLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LT);
+        }
+    }
+
+    public boolean getInternalProductNameLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LT);
+    }
+
+    public VmWhereInput internalProductNameLte(String internalProductNameLte) {
+
+        this.internalProductNameLte = internalProductNameLte;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameLte
+     *
+     * @return internalProductNameLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameLte() {
+        return internalProductNameLte;
+    }
+
+    public void setInternalProductNameLte(String internalProductNameLte) {
+        this.internalProductNameLte = internalProductNameLte;
+    }
+
+    public VmWhereInput internalProductNameLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LTE);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LTE);
+        return this;
+    }
+
+    public void setInternalProductNameLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LTE);
+        }
+    }
+
+    public boolean getInternalProductNameLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_LTE);
+    }
+
+    public VmWhereInput internalProductNameNot(String internalProductNameNot) {
+
+        this.internalProductNameNot = internalProductNameNot;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameNot
+     *
+     * @return internalProductNameNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameNot() {
+        return internalProductNameNot;
+    }
+
+    public void setInternalProductNameNot(String internalProductNameNot) {
+        this.internalProductNameNot = internalProductNameNot;
+    }
+
+    public VmWhereInput internalProductNameNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT);
+        return this;
+    }
+
+    public void setInternalProductNameNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT);
+        }
+    }
+
+    public boolean getInternalProductNameNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT);
+    }
+
+    public VmWhereInput internalProductNameNotContains(String internalProductNameNotContains) {
+
+        this.internalProductNameNotContains = internalProductNameNotContains;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameNotContains
+     *
+     * @return internalProductNameNotContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameNotContains() {
+        return internalProductNameNotContains;
+    }
+
+    public void setInternalProductNameNotContains(String internalProductNameNotContains) {
+        this.internalProductNameNotContains = internalProductNameNotContains;
+    }
+
+    public VmWhereInput internalProductNameNotContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_CONTAINS);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameNotContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_CONTAINS);
+        return this;
+    }
+
+    public void setInternalProductNameNotContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_CONTAINS);
+        }
+    }
+
+    public boolean getInternalProductNameNotContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_CONTAINS);
+    }
+
+    public VmWhereInput internalProductNameNotEndsWith(String internalProductNameNotEndsWith) {
+
+        this.internalProductNameNotEndsWith = internalProductNameNotEndsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameNotEndsWith
+     *
+     * @return internalProductNameNotEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameNotEndsWith() {
+        return internalProductNameNotEndsWith;
+    }
+
+    public void setInternalProductNameNotEndsWith(String internalProductNameNotEndsWith) {
+        this.internalProductNameNotEndsWith = internalProductNameNotEndsWith;
+    }
+
+    public VmWhereInput internalProductNameNotEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameNotEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public void setInternalProductNameNotEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_ENDS_WITH);
+        }
+    }
+
+    public boolean getInternalProductNameNotEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_ENDS_WITH);
+    }
+
+    public VmWhereInput internalProductNameNotIn(List<String> internalProductNameNotIn) {
+
+        this.internalProductNameNotIn = internalProductNameNotIn;
+        return this;
+    }
+
+    public VmWhereInput addInternalProductNameNotInItem(String internalProductNameNotInItem) {
+        if (this.internalProductNameNotIn == null) {
+            this.internalProductNameNotIn = new ArrayList<String>();
+        }
+        this.internalProductNameNotIn.add(internalProductNameNotInItem);
+        return this;
+    }
+
+    /**
+     * Get internalProductNameNotIn
+     *
+     * @return internalProductNameNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getInternalProductNameNotIn() {
+        return internalProductNameNotIn;
+    }
+
+    public void setInternalProductNameNotIn(List<String> internalProductNameNotIn) {
+        this.internalProductNameNotIn = internalProductNameNotIn;
+    }
+
+    public VmWhereInput internalProductNameNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_IN);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_IN);
+        return this;
+    }
+
+    public void setInternalProductNameNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_IN);
+        }
+    }
+
+    public boolean getInternalProductNameNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_IN);
+    }
+
+    public VmWhereInput internalProductNameNotStartsWith(String internalProductNameNotStartsWith) {
+
+        this.internalProductNameNotStartsWith = internalProductNameNotStartsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameNotStartsWith
+     *
+     * @return internalProductNameNotStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameNotStartsWith() {
+        return internalProductNameNotStartsWith;
+    }
+
+    public void setInternalProductNameNotStartsWith(String internalProductNameNotStartsWith) {
+        this.internalProductNameNotStartsWith = internalProductNameNotStartsWith;
+    }
+
+    public VmWhereInput internalProductNameNotStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameNotStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public void setInternalProductNameNotStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_STARTS_WITH);
+        }
+    }
+
+    public boolean getInternalProductNameNotStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_NOT_STARTS_WITH);
+    }
+
+    public VmWhereInput internalProductNameStartsWith(String internalProductNameStartsWith) {
+
+        this.internalProductNameStartsWith = internalProductNameStartsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductNameStartsWith
+     *
+     * @return internalProductNameStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNameStartsWith() {
+        return internalProductNameStartsWith;
+    }
+
+    public void setInternalProductNameStartsWith(String internalProductNameStartsWith) {
+        this.internalProductNameStartsWith = internalProductNameStartsWith;
+    }
+
+    public VmWhereInput internalProductNameStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_STARTS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductNameStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_STARTS_WITH);
+        return this;
+    }
+
+    public void setInternalProductNameStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_STARTS_WITH);
+        }
+    }
+
+    public boolean getInternalProductNameStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME_STARTS_WITH);
+    }
+
+    public VmWhereInput internalProductNot(String internalProductNot) {
+
+        this.internalProductNot = internalProductNot;
+        return this;
+    }
+
+    /**
+     * Get internalProductNot
+     *
+     * @return internalProductNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNot() {
+        return internalProductNot;
+    }
+
+    public void setInternalProductNot(String internalProductNot) {
+        this.internalProductNot = internalProductNot;
+    }
+
+    public VmWhereInput internalProductNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT);
+        return this;
+    }
+
+    public VmWhereInput internalProductNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT);
+        return this;
+    }
+
+    public void setInternalProductNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT);
+        }
+    }
+
+    public boolean getInternalProductNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT);
+    }
+
+    public VmWhereInput internalProductNotContains(String internalProductNotContains) {
+
+        this.internalProductNotContains = internalProductNotContains;
+        return this;
+    }
+
+    /**
+     * Get internalProductNotContains
+     *
+     * @return internalProductNotContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNotContains() {
+        return internalProductNotContains;
+    }
+
+    public void setInternalProductNotContains(String internalProductNotContains) {
+        this.internalProductNotContains = internalProductNotContains;
+    }
+
+    public VmWhereInput internalProductNotContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_CONTAINS);
+        return this;
+    }
+
+    public VmWhereInput internalProductNotContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_CONTAINS);
+        return this;
+    }
+
+    public void setInternalProductNotContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_CONTAINS);
+        }
+    }
+
+    public boolean getInternalProductNotContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_CONTAINS);
+    }
+
+    public VmWhereInput internalProductNotEndsWith(String internalProductNotEndsWith) {
+
+        this.internalProductNotEndsWith = internalProductNotEndsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductNotEndsWith
+     *
+     * @return internalProductNotEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNotEndsWith() {
+        return internalProductNotEndsWith;
+    }
+
+    public void setInternalProductNotEndsWith(String internalProductNotEndsWith) {
+        this.internalProductNotEndsWith = internalProductNotEndsWith;
+    }
+
+    public VmWhereInput internalProductNotEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductNotEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public void setInternalProductNotEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_ENDS_WITH);
+        }
+    }
+
+    public boolean getInternalProductNotEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_ENDS_WITH);
+    }
+
+    public VmWhereInput internalProductNotIn(List<String> internalProductNotIn) {
+
+        this.internalProductNotIn = internalProductNotIn;
+        return this;
+    }
+
+    public VmWhereInput addInternalProductNotInItem(String internalProductNotInItem) {
+        if (this.internalProductNotIn == null) {
+            this.internalProductNotIn = new ArrayList<String>();
+        }
+        this.internalProductNotIn.add(internalProductNotInItem);
+        return this;
+    }
+
+    /**
+     * Get internalProductNotIn
+     *
+     * @return internalProductNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getInternalProductNotIn() {
+        return internalProductNotIn;
+    }
+
+    public void setInternalProductNotIn(List<String> internalProductNotIn) {
+        this.internalProductNotIn = internalProductNotIn;
+    }
+
+    public VmWhereInput internalProductNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_IN);
+        return this;
+    }
+
+    public VmWhereInput internalProductNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_IN);
+        return this;
+    }
+
+    public void setInternalProductNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_IN);
+        }
+    }
+
+    public boolean getInternalProductNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_IN);
+    }
+
+    public VmWhereInput internalProductNotStartsWith(String internalProductNotStartsWith) {
+
+        this.internalProductNotStartsWith = internalProductNotStartsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductNotStartsWith
+     *
+     * @return internalProductNotStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductNotStartsWith() {
+        return internalProductNotStartsWith;
+    }
+
+    public void setInternalProductNotStartsWith(String internalProductNotStartsWith) {
+        this.internalProductNotStartsWith = internalProductNotStartsWith;
+    }
+
+    public VmWhereInput internalProductNotStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductNotStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public void setInternalProductNotStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_STARTS_WITH);
+        }
+    }
+
+    public boolean getInternalProductNotStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NOT_STARTS_WITH);
+    }
+
+    public VmWhereInput internalProductStartsWith(String internalProductStartsWith) {
+
+        this.internalProductStartsWith = internalProductStartsWith;
+        return this;
+    }
+
+    /**
+     * Get internalProductStartsWith
+     *
+     * @return internalProductStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductStartsWith() {
+        return internalProductStartsWith;
+    }
+
+    public void setInternalProductStartsWith(String internalProductStartsWith) {
+        this.internalProductStartsWith = internalProductStartsWith;
+    }
+
+    public VmWhereInput internalProductStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_STARTS_WITH);
+        return this;
+    }
+
+    public VmWhereInput internalProductStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_STARTS_WITH);
+        return this;
+    }
+
+    public void setInternalProductStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_STARTS_WITH);
+        }
+    }
+
+    public boolean getInternalProductStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_STARTS_WITH);
     }
 
     public VmWhereInput ioPolicy(VmDiskIoPolicy ioPolicy) {
@@ -22267,6 +23999,11 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
         return Objects.equals(this.AND, vmWhereInput.AND)
                 && Objects.equals(this.NOT, vmWhereInput.NOT)
                 && Objects.equals(this.OR, vmWhereInput.OR)
+                && Objects.equals(this.antiMalwareEnabled, vmWhereInput.antiMalwareEnabled)
+                && Objects.equals(this.antiMalwareEnabledNot, vmWhereInput.antiMalwareEnabledNot)
+                && Objects.equals(this.backupPlansEvery, vmWhereInput.backupPlansEvery)
+                && Objects.equals(this.backupPlansNone, vmWhereInput.backupPlansNone)
+                && Objects.equals(this.backupPlansSome, vmWhereInput.backupPlansSome)
                 && Objects.equals(this.biosUuid, vmWhereInput.biosUuid)
                 && Objects.equals(this.biosUuidContains, vmWhereInput.biosUuidContains)
                 && Objects.equals(this.biosUuidEndsWith, vmWhereInput.biosUuidEndsWith)
@@ -22348,6 +24085,8 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
                 && Objects.equals(
                         this.dnsServersNotStartsWith, vmWhereInput.dnsServersNotStartsWith)
                 && Objects.equals(this.dnsServersStartsWith, vmWhereInput.dnsServersStartsWith)
+                && Objects.equals(this.dpiEnabled, vmWhereInput.dpiEnabled)
+                && Objects.equals(this.dpiEnabledNot, vmWhereInput.dpiEnabledNot)
                 && Objects.equals(this.entityAsyncStatus, vmWhereInput.entityAsyncStatus)
                 && Objects.equals(this.entityAsyncStatusIn, vmWhereInput.entityAsyncStatusIn)
                 && Objects.equals(this.entityAsyncStatusNot, vmWhereInput.entityAsyncStatusNot)
@@ -22437,6 +24176,52 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
                 && Objects.equals(this.inRecycleBinNot, vmWhereInput.inRecycleBinNot)
                 && Objects.equals(this.internal, vmWhereInput.internal)
                 && Objects.equals(this.internalNot, vmWhereInput.internalNot)
+                && Objects.equals(this.internalProduct, vmWhereInput.internalProduct)
+                && Objects.equals(
+                        this.internalProductContains, vmWhereInput.internalProductContains)
+                && Objects.equals(
+                        this.internalProductEndsWith, vmWhereInput.internalProductEndsWith)
+                && Objects.equals(this.internalProductGt, vmWhereInput.internalProductGt)
+                && Objects.equals(this.internalProductGte, vmWhereInput.internalProductGte)
+                && Objects.equals(this.internalProductIn, vmWhereInput.internalProductIn)
+                && Objects.equals(this.internalProductLt, vmWhereInput.internalProductLt)
+                && Objects.equals(this.internalProductLte, vmWhereInput.internalProductLte)
+                && Objects.equals(this.internalProductName, vmWhereInput.internalProductName)
+                && Objects.equals(
+                        this.internalProductNameContains, vmWhereInput.internalProductNameContains)
+                && Objects.equals(
+                        this.internalProductNameEndsWith, vmWhereInput.internalProductNameEndsWith)
+                && Objects.equals(this.internalProductNameGt, vmWhereInput.internalProductNameGt)
+                && Objects.equals(this.internalProductNameGte, vmWhereInput.internalProductNameGte)
+                && Objects.equals(this.internalProductNameIn, vmWhereInput.internalProductNameIn)
+                && Objects.equals(this.internalProductNameLt, vmWhereInput.internalProductNameLt)
+                && Objects.equals(this.internalProductNameLte, vmWhereInput.internalProductNameLte)
+                && Objects.equals(this.internalProductNameNot, vmWhereInput.internalProductNameNot)
+                && Objects.equals(
+                        this.internalProductNameNotContains,
+                        vmWhereInput.internalProductNameNotContains)
+                && Objects.equals(
+                        this.internalProductNameNotEndsWith,
+                        vmWhereInput.internalProductNameNotEndsWith)
+                && Objects.equals(
+                        this.internalProductNameNotIn, vmWhereInput.internalProductNameNotIn)
+                && Objects.equals(
+                        this.internalProductNameNotStartsWith,
+                        vmWhereInput.internalProductNameNotStartsWith)
+                && Objects.equals(
+                        this.internalProductNameStartsWith,
+                        vmWhereInput.internalProductNameStartsWith)
+                && Objects.equals(this.internalProductNot, vmWhereInput.internalProductNot)
+                && Objects.equals(
+                        this.internalProductNotContains, vmWhereInput.internalProductNotContains)
+                && Objects.equals(
+                        this.internalProductNotEndsWith, vmWhereInput.internalProductNotEndsWith)
+                && Objects.equals(this.internalProductNotIn, vmWhereInput.internalProductNotIn)
+                && Objects.equals(
+                        this.internalProductNotStartsWith,
+                        vmWhereInput.internalProductNotStartsWith)
+                && Objects.equals(
+                        this.internalProductStartsWith, vmWhereInput.internalProductStartsWith)
                 && Objects.equals(this.ioPolicy, vmWhereInput.ioPolicy)
                 && Objects.equals(this.ioPolicyIn, vmWhereInput.ioPolicyIn)
                 && Objects.equals(this.ioPolicyNot, vmWhereInput.ioPolicyNot)
@@ -22744,6 +24529,11 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
                 AND,
                 NOT,
                 OR,
+                antiMalwareEnabled,
+                antiMalwareEnabledNot,
+                backupPlansEvery,
+                backupPlansNone,
+                backupPlansSome,
                 biosUuid,
                 biosUuidContains,
                 biosUuidEndsWith,
@@ -22823,6 +24613,8 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
                 dnsServersNotIn,
                 dnsServersNotStartsWith,
                 dnsServersStartsWith,
+                dpiEnabled,
+                dpiEnabledNot,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -22908,6 +24700,34 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
                 inRecycleBinNot,
                 internal,
                 internalNot,
+                internalProduct,
+                internalProductContains,
+                internalProductEndsWith,
+                internalProductGt,
+                internalProductGte,
+                internalProductIn,
+                internalProductLt,
+                internalProductLte,
+                internalProductName,
+                internalProductNameContains,
+                internalProductNameEndsWith,
+                internalProductNameGt,
+                internalProductNameGte,
+                internalProductNameIn,
+                internalProductNameLt,
+                internalProductNameLte,
+                internalProductNameNot,
+                internalProductNameNotContains,
+                internalProductNameNotEndsWith,
+                internalProductNameNotIn,
+                internalProductNameNotStartsWith,
+                internalProductNameStartsWith,
+                internalProductNot,
+                internalProductNotContains,
+                internalProductNotEndsWith,
+                internalProductNotIn,
+                internalProductNotStartsWith,
+                internalProductStartsWith,
                 ioPolicy,
                 ioPolicyIn,
                 ioPolicyNot,
@@ -23204,6 +25024,15 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    antiMalwareEnabled: ")
+                .append(toIndentedString(antiMalwareEnabled))
+                .append("\n");
+        sb.append("    antiMalwareEnabledNot: ")
+                .append(toIndentedString(antiMalwareEnabledNot))
+                .append("\n");
+        sb.append("    backupPlansEvery: ").append(toIndentedString(backupPlansEvery)).append("\n");
+        sb.append("    backupPlansNone: ").append(toIndentedString(backupPlansNone)).append("\n");
+        sb.append("    backupPlansSome: ").append(toIndentedString(backupPlansSome)).append("\n");
         sb.append("    biosUuid: ").append(toIndentedString(biosUuid)).append("\n");
         sb.append("    biosUuidContains: ").append(toIndentedString(biosUuidContains)).append("\n");
         sb.append("    biosUuidEndsWith: ").append(toIndentedString(biosUuidEndsWith)).append("\n");
@@ -23327,6 +25156,8 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
         sb.append("    dnsServersStartsWith: ")
                 .append(toIndentedString(dnsServersStartsWith))
                 .append("\n");
+        sb.append("    dpiEnabled: ").append(toIndentedString(dpiEnabled)).append("\n");
+        sb.append("    dpiEnabledNot: ").append(toIndentedString(dpiEnabledNot)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -23452,6 +25283,88 @@ public class VmWhereInput extends com.arcfra.aoc.ConditionalNullable.Conditional
         sb.append("    inRecycleBinNot: ").append(toIndentedString(inRecycleBinNot)).append("\n");
         sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
         sb.append("    internalNot: ").append(toIndentedString(internalNot)).append("\n");
+        sb.append("    internalProduct: ").append(toIndentedString(internalProduct)).append("\n");
+        sb.append("    internalProductContains: ")
+                .append(toIndentedString(internalProductContains))
+                .append("\n");
+        sb.append("    internalProductEndsWith: ")
+                .append(toIndentedString(internalProductEndsWith))
+                .append("\n");
+        sb.append("    internalProductGt: ")
+                .append(toIndentedString(internalProductGt))
+                .append("\n");
+        sb.append("    internalProductGte: ")
+                .append(toIndentedString(internalProductGte))
+                .append("\n");
+        sb.append("    internalProductIn: ")
+                .append(toIndentedString(internalProductIn))
+                .append("\n");
+        sb.append("    internalProductLt: ")
+                .append(toIndentedString(internalProductLt))
+                .append("\n");
+        sb.append("    internalProductLte: ")
+                .append(toIndentedString(internalProductLte))
+                .append("\n");
+        sb.append("    internalProductName: ")
+                .append(toIndentedString(internalProductName))
+                .append("\n");
+        sb.append("    internalProductNameContains: ")
+                .append(toIndentedString(internalProductNameContains))
+                .append("\n");
+        sb.append("    internalProductNameEndsWith: ")
+                .append(toIndentedString(internalProductNameEndsWith))
+                .append("\n");
+        sb.append("    internalProductNameGt: ")
+                .append(toIndentedString(internalProductNameGt))
+                .append("\n");
+        sb.append("    internalProductNameGte: ")
+                .append(toIndentedString(internalProductNameGte))
+                .append("\n");
+        sb.append("    internalProductNameIn: ")
+                .append(toIndentedString(internalProductNameIn))
+                .append("\n");
+        sb.append("    internalProductNameLt: ")
+                .append(toIndentedString(internalProductNameLt))
+                .append("\n");
+        sb.append("    internalProductNameLte: ")
+                .append(toIndentedString(internalProductNameLte))
+                .append("\n");
+        sb.append("    internalProductNameNot: ")
+                .append(toIndentedString(internalProductNameNot))
+                .append("\n");
+        sb.append("    internalProductNameNotContains: ")
+                .append(toIndentedString(internalProductNameNotContains))
+                .append("\n");
+        sb.append("    internalProductNameNotEndsWith: ")
+                .append(toIndentedString(internalProductNameNotEndsWith))
+                .append("\n");
+        sb.append("    internalProductNameNotIn: ")
+                .append(toIndentedString(internalProductNameNotIn))
+                .append("\n");
+        sb.append("    internalProductNameNotStartsWith: ")
+                .append(toIndentedString(internalProductNameNotStartsWith))
+                .append("\n");
+        sb.append("    internalProductNameStartsWith: ")
+                .append(toIndentedString(internalProductNameStartsWith))
+                .append("\n");
+        sb.append("    internalProductNot: ")
+                .append(toIndentedString(internalProductNot))
+                .append("\n");
+        sb.append("    internalProductNotContains: ")
+                .append(toIndentedString(internalProductNotContains))
+                .append("\n");
+        sb.append("    internalProductNotEndsWith: ")
+                .append(toIndentedString(internalProductNotEndsWith))
+                .append("\n");
+        sb.append("    internalProductNotIn: ")
+                .append(toIndentedString(internalProductNotIn))
+                .append("\n");
+        sb.append("    internalProductNotStartsWith: ")
+                .append(toIndentedString(internalProductNotStartsWith))
+                .append("\n");
+        sb.append("    internalProductStartsWith: ")
+                .append(toIndentedString(internalProductStartsWith))
+                .append("\n");
         sb.append("    ioPolicy: ").append(toIndentedString(ioPolicy)).append("\n");
         sb.append("    ioPolicyIn: ").append(toIndentedString(ioPolicyIn)).append("\n");
         sb.append("    ioPolicyNot: ").append(toIndentedString(ioPolicyNot)).append("\n");

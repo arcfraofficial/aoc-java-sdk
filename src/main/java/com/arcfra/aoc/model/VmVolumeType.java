@@ -14,6 +14,8 @@ public enum VmVolumeType {
 
     VOLUME_ISCSI("KVM_VOLUME_ISCSI"),
 
+    VOLUME_VCFS("KVM_VOLUME_VCFS"),
+
     VMVOLUMETYPE_UNSUPPORTED_ENUM("VMVOLUMETYPE_UNSUPPORTED_ENUM");
     private String value;
 

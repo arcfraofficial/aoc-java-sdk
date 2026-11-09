@@ -3,7 +3,9 @@ package com.arcfra.aoc.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Arrays;
 import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /** ContentLibraryImageImportData */
 @javax.annotation.Generated(value = "JavaAocClientCodegen")
@@ -23,6 +25,11 @@ public class ContentLibraryImageImportData
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
     private String description;
+
+    public static final String SERIALIZED_NAME_DATASTORE = "datastore";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORE)
+    private DatastoreWhereInput datastore;
 
     public static final String SERIALIZED_NAME_CLUSTER = "cluster";
 
@@ -160,6 +167,49 @@ public class ContentLibraryImageImportData
         return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION);
     }
 
+    public ContentLibraryImageImportData datastore(DatastoreWhereInput datastore) {
+
+        this.datastore = datastore;
+        return this;
+    }
+
+    /**
+     * Get datastore
+     *
+     * @return datastore
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DatastoreWhereInput getDatastore() {
+        return datastore;
+    }
+
+    public void setDatastore(DatastoreWhereInput datastore) {
+        this.datastore = datastore;
+    }
+
+    public ContentLibraryImageImportData datastore_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORE);
+        return this;
+    }
+
+    public ContentLibraryImageImportData datastore_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORE);
+        return this;
+    }
+
+    public void setDatastore_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORE);
+        }
+    }
+
+    public boolean getDatastore_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORE);
+    }
+
     public ContentLibraryImageImportData cluster(ClusterWhereInput cluster) {
 
         this.cluster = cluster;
@@ -171,8 +221,8 @@ public class ContentLibraryImageImportData
      *
      * @return cluster
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public ClusterWhereInput getCluster() {
         return cluster;
     }
@@ -216,12 +266,29 @@ public class ContentLibraryImageImportData
         return Objects.equals(this.url, contentLibraryImageImportData.url)
                 && Objects.equals(this.name, contentLibraryImageImportData.name)
                 && Objects.equals(this.description, contentLibraryImageImportData.description)
+                && Objects.equals(this.datastore, contentLibraryImageImportData.datastore)
                 && Objects.equals(this.cluster, contentLibraryImageImportData.cluster);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(url, name, description, cluster);
+        return Objects.hash(url, name, description, datastore, cluster);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
     }
 
     @Override
@@ -231,6 +298,7 @@ public class ContentLibraryImageImportData
         sb.append("    url: ").append(toIndentedString(url)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    datastore: ").append(toIndentedString(datastore)).append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
         sb.append("}");
         return sb.toString();

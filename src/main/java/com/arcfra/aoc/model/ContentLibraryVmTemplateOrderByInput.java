@@ -94,6 +94,10 @@ public enum ContentLibraryVmTemplateOrderByInput {
 
     TEMPLATE_CONFIG_DESC("template_config_DESC"),
 
+    USAGE_ASC("usage_ASC"),
+
+    USAGE_DESC("usage_DESC"),
+
     VCPU_ASC("vcpu_ASC"),
 
     VCPU_DESC("vcpu_DESC"),

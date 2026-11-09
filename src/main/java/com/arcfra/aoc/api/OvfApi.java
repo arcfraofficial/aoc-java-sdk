@@ -397,6 +397,8 @@ public class OvfApi {
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param uploadTaskId (optional)
+     * @param storageClusterId (optional)
+     * @param datastoreId (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -416,6 +418,8 @@ public class OvfApi {
             String size,
             String sizeUnit,
             String uploadTaskId,
+            String storageClusterId,
+            String datastoreId,
             final ApiCallback _callback)
             throws ApiException {
         String basePath = null;
@@ -467,6 +471,14 @@ public class OvfApi {
             localVarFormParams.put("upload_task_id", uploadTaskId);
         }
 
+        if (storageClusterId != null) {
+            localVarFormParams.put("storage_cluster_id", storageClusterId);
+        }
+
+        if (datastoreId != null) {
+            localVarFormParams.put("datastore_id", datastoreId);
+        }
+
         final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -503,6 +515,8 @@ public class OvfApi {
             String size,
             String sizeUnit,
             String uploadTaskId,
+            String storageClusterId,
+            String datastoreId,
             final ApiCallback _callback)
             throws ApiException {
 
@@ -513,7 +527,16 @@ public class OvfApi {
         }
 
         okhttp3.Call localVarCall =
-                uploadElfFileCall(_file, clusterId, name, size, sizeUnit, uploadTaskId, _callback);
+                uploadElfFileCall(
+                        _file,
+                        clusterId,
+                        name,
+                        size,
+                        sizeUnit,
+                        uploadTaskId,
+                        storageClusterId,
+                        datastoreId,
+                        _callback);
         return localVarCall;
     }
 
@@ -524,6 +547,8 @@ public class OvfApi {
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param uploadTaskId (optional)
+     * @param storageClusterId (optional)
+     * @param datastoreId (optional)
      * @return UploadTask
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -542,10 +567,20 @@ public class OvfApi {
             String name,
             String size,
             String sizeUnit,
-            String uploadTaskId)
+            String uploadTaskId,
+            String storageClusterId,
+            String datastoreId)
             throws ApiException {
         ApiResponse<UploadTask> localVarResp =
-                uploadElfFileWithHttpInfo(_file, clusterId, name, size, sizeUnit, uploadTaskId);
+                uploadElfFileWithHttpInfo(
+                        _file,
+                        clusterId,
+                        name,
+                        size,
+                        sizeUnit,
+                        uploadTaskId,
+                        storageClusterId,
+                        datastoreId);
         return localVarResp.getData();
     }
 
@@ -556,6 +591,8 @@ public class OvfApi {
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param uploadTaskId (optional)
+     * @param storageClusterId (optional)
+     * @param datastoreId (optional)
      * @return ApiResponse&lt;UploadTask&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
      *     response body
@@ -574,11 +611,21 @@ public class OvfApi {
             String name,
             String size,
             String sizeUnit,
-            String uploadTaskId)
+            String uploadTaskId,
+            String storageClusterId,
+            String datastoreId)
             throws ApiException {
         okhttp3.Call localVarCall =
                 uploadElfFileValidateBeforeCall(
-                        _file, clusterId, name, size, sizeUnit, uploadTaskId, null);
+                        _file,
+                        clusterId,
+                        name,
+                        size,
+                        sizeUnit,
+                        uploadTaskId,
+                        storageClusterId,
+                        datastoreId,
+                        null);
         Type localVarReturnType = new TypeToken<UploadTask>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -592,6 +639,8 @@ public class OvfApi {
      * @param size (optional)
      * @param sizeUnit (optional)
      * @param uploadTaskId (optional)
+     * @param storageClusterId (optional)
+     * @param datastoreId (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body
@@ -612,12 +661,22 @@ public class OvfApi {
             String size,
             String sizeUnit,
             String uploadTaskId,
+            String storageClusterId,
+            String datastoreId,
             final ApiCallback<UploadTask> _callback)
             throws ApiException {
 
         okhttp3.Call localVarCall =
                 uploadElfFileValidateBeforeCall(
-                        _file, clusterId, name, size, sizeUnit, uploadTaskId, _callback);
+                        _file,
+                        clusterId,
+                        name,
+                        size,
+                        sizeUnit,
+                        uploadTaskId,
+                        storageClusterId,
+                        datastoreId,
+                        _callback);
         Type localVarReturnType = new TypeToken<UploadTask>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

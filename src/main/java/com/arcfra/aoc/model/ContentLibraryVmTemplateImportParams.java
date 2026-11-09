@@ -71,6 +71,16 @@ public class ContentLibraryVmTemplateImportParams
     @SerializedName(SERIALIZED_NAME_PARSED_OVF)
     private ParsedOVF parsedOvf;
 
+    public static final String SERIALIZED_NAME_TEMPLATE_ARCHITECTURE = "template_architecture";
+
+    @SerializedName(SERIALIZED_NAME_TEMPLATE_ARCHITECTURE)
+    private Architecture templateArchitecture;
+
+    public static final String SERIALIZED_NAME_STORAGE_CONFIG = "storage_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CONFIG)
+    private StorageConfig storageConfig;
+
     public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
 
     @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
@@ -530,12 +540,20 @@ public class ContentLibraryVmTemplateImportParams
     }
 
     /**
-     * Get uploadTasks
+     * Successful VMDK upload task IDs. For clustered-storage template imports, upload to the
+     * explicit or inferred storage_config.storage_cluster_id; otherwise upload to cluster_id. Use
+     * that target as cluster_id of /upload-elf-file.
      *
      * @return uploadTasks
      */
     @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @ApiModelProperty(
+            required = true,
+            value =
+                    "Successful VMDK upload task IDs. For clustered-storage template imports,"
+                        + " upload to the explicit or inferred storage_config.storage_cluster_id;"
+                        + " otherwise upload to cluster_id. Use that target as cluster_id of"
+                        + " /upload-elf-file.")
     public List<String> getUploadTasks() {
         return uploadTasks;
     }
@@ -609,6 +627,93 @@ public class ContentLibraryVmTemplateImportParams
         return this._isPresent_.contains(SERIALIZED_NAME_PARSED_OVF);
     }
 
+    public ContentLibraryVmTemplateImportParams templateArchitecture(
+            Architecture templateArchitecture) {
+
+        this.templateArchitecture = templateArchitecture;
+        return this;
+    }
+
+    /**
+     * Get templateArchitecture
+     *
+     * @return templateArchitecture
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Architecture getTemplateArchitecture() {
+        return templateArchitecture;
+    }
+
+    public void setTemplateArchitecture(Architecture templateArchitecture) {
+        this.templateArchitecture = templateArchitecture;
+    }
+
+    public ContentLibraryVmTemplateImportParams templateArchitecture_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TEMPLATE_ARCHITECTURE);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateImportParams templateArchitecture_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TEMPLATE_ARCHITECTURE);
+        return this;
+    }
+
+    public void setTemplateArchitecture_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TEMPLATE_ARCHITECTURE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TEMPLATE_ARCHITECTURE);
+        }
+    }
+
+    public boolean getTemplateArchitecture_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TEMPLATE_ARCHITECTURE);
+    }
+
+    public ContentLibraryVmTemplateImportParams storageConfig(StorageConfig storageConfig) {
+
+        this.storageConfig = storageConfig;
+        return this;
+    }
+
+    /**
+     * Get storageConfig
+     *
+     * @return storageConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public StorageConfig getStorageConfig() {
+        return storageConfig;
+    }
+
+    public void setStorageConfig(StorageConfig storageConfig) {
+        this.storageConfig = storageConfig;
+    }
+
+    public ContentLibraryVmTemplateImportParams storageConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateImportParams storageConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        return this;
+    }
+
+    public void setStorageConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CONFIG);
+        }
+    }
+
+    public boolean getStorageConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CONFIG);
+    }
+
     public ContentLibraryVmTemplateImportParams clusterId(String clusterId) {
 
         this.clusterId = clusterId;
@@ -677,6 +782,11 @@ public class ContentLibraryVmTemplateImportParams
                 && Objects.equals(
                         this.uploadTasks, contentLibraryVmTemplateImportParams.uploadTasks)
                 && Objects.equals(this.parsedOvf, contentLibraryVmTemplateImportParams.parsedOvf)
+                && Objects.equals(
+                        this.templateArchitecture,
+                        contentLibraryVmTemplateImportParams.templateArchitecture)
+                && Objects.equals(
+                        this.storageConfig, contentLibraryVmTemplateImportParams.storageConfig)
                 && Objects.equals(this.clusterId, contentLibraryVmTemplateImportParams.clusterId);
     }
 
@@ -695,6 +805,8 @@ public class ContentLibraryVmTemplateImportParams
                 name,
                 uploadTasks,
                 parsedOvf,
+                templateArchitecture,
+                storageConfig,
                 clusterId);
     }
 
@@ -714,6 +826,10 @@ public class ContentLibraryVmTemplateImportParams
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    uploadTasks: ").append(toIndentedString(uploadTasks)).append("\n");
         sb.append("    parsedOvf: ").append(toIndentedString(parsedOvf)).append("\n");
+        sb.append("    templateArchitecture: ")
+                .append(toIndentedString(templateArchitecture))
+                .append("\n");
+        sb.append("    storageConfig: ").append(toIndentedString(storageConfig)).append("\n");
         sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
         sb.append("}");
         return sb.toString();
